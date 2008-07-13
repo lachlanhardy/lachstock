@@ -6,7 +6,7 @@ function twitterCallback2(json) {
 
   var para = document.createElement("p");
   var status = document.createElement("strong");
-  var time = document.createElement("a");
+  var link = document.createElement("a");
 
   var twitters = json;
 	var username = "";
@@ -16,21 +16,30 @@ function twitterCallback2(json) {
 		statusText = document.createTextNode(twitters[i].text);
 		status.appendChild(statusText);
 
-		timeText = document.createTextNode(relative_time(twitters[i].created_at));
-		time.appendChild(timeText);
-
-		time.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id; 
+    // timeText = document.createTextNode(relative_time(twitters[i].created_at));
+    // time.appendChild(timeText);
+    // 
+    // time.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id; 
 
 	}
 
   para.appendChild(status);
-  para.appendChild(time);
+  // para.appendChild(time);
 
   popetweets.appendChild(para);
 
-  var wrapper = document.getElementById('page');
-  var wrapperParent = wrapper.parentNode;
-  wrapperParent.insertBefore(popetweets, wrapper);
+  // var wrapper = document.getElementById('page');
+  // var wrapperParent = wrapper.parentNode;
+  // wrapperParent.insertBefore(popetweets, wrapper);
+
+  // $("button").click(function () {
+  //      $(this).replaceWith("<div>" + $(this).text() + "</div>");
+  //    });
+  
+  var tweetStatus = document.getElementById('status');
+ 
+  $(tweetStatus).replaceWith(popetweets);
+
 
 }
 
