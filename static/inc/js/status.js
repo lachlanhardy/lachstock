@@ -2,7 +2,7 @@
 function twitterCallback2(json) {
 
   var popetweets = document.createElement("div");
-  popetweets.id = "popetweets";
+  popetweets.id = "status";
 
   var para = document.createElement("p");
   var status = document.createElement("strong");

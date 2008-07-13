@@ -30,7 +30,7 @@ TOC
 		
 		/* --- =Headings --- */
 		h1, h2, h3, h4, h5, h6 {font-family: 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; margin: 0 0 0.5em;}
-		h1 {background: #0e0e0e; border-bottom: 2px solid #666; color: #fff; font-size: 3em; font-weight: 700; letter-spacing: 0.06em; padding: 0.2em; text-align: center;}
+		h1 {font-size: 3em;}
 		h2 {font-size: 1.6em;}
 		h3 {font-size: 1.5em;}
 		h4 {font-size: 1.4em;}
@@ -59,7 +59,11 @@ TOC
 /* - =Structure - */
 body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roman", Times, serif; margin: 0; padding: 0;}
 	
-#page {font-size: 1.5em; margin: 4em auto 0; position: relative; width: 70em;}
+#page {font-size: 1.5em; margin: 2em; position: relative; width: 70em;}
+
+  #header {background: #0e0e0e; border-bottom: 2px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em;}
+    #header h1 {background: #0e0e0e; color: #ff8000; float: left; font-weight: 700; letter-spacing: 0.06em; margin: 0 0.3em 0 0; width: auto;}
+    #header #status {font-size: 1.8em; line-height: 2.6;}
 
   /* -- =Columns -- */
   .column {float: left; margin: 0 1em 0 0; width: 34em;}
