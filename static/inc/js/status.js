@@ -5,7 +5,7 @@ function twitterCallback2(json) {
 
   var para = document.createElement("p");
   var status = document.createElement("strong");
-  var link = document.createElement("a");
+  var tweetLink = document.createElement("a");
 
   var twitters = json;
 	var username = "";
@@ -14,9 +14,25 @@ function twitterCallback2(json) {
     username = twitters[i].user.screen_name;
         
     if (twitters[i].text.substr(0,1) != "@"){
-      statusText = document.createTextNode(twitters[i].text);     
+
+      // URL regex. I think that's everything, but it's probably not
+      var regexp = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
+      //var test = twitters[i].text.replace(regexp,'<a href="$1">$1</a>');
+      
+      var test = twitters[i].text.replace(regexp, '');
+      var match = twitters[i].text.match(regexp);
+      
+      var statusLink = document.createElement("a");
+      statusLink.href = match;
+      statusLinkText = document.createTextNode(match);
+      statusLink.appendChild(statusLinkText);
+      
+      statusText = document.createTextNode(test);  
+ 
       status.appendChild(statusText);
-      // link.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
+      status.appendChild(statusLink);
+       
+      // tweetLink.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
       break;
     }
   }
