@@ -61,9 +61,9 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
 	
 #page {font-size: 1.5em; margin: 2em; position: relative; width: 70em;}
 
-  #header {background: #0e0e0e; border-bottom: 2px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em;}
-    #header h1 {background: #0e0e0e; color: #ff8000; float: left; font-weight: 700; letter-spacing: 0.06em; margin: 0 0.3em 0 0; width: auto;}
-    #header #status {font-size: 1.8em; line-height: 2.6;}
+  #header {background: #0e0e0e; border-bottom: 2px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
+    #header h1 {background: #0e0e0e; color: #ff8000; float: left; font-weight: 700; letter-spacing: 0.06em; margin: 0; width: auto;}
+    #header #status {font-size: 1.8em; margin: 0 0 0.2em 10em; padding: 0.65em 0 0 0;}
 
   /* -- =Columns -- */
   .column {float: left; margin: 0 1em 0 0; width: 34em;}
@@ -72,7 +72,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
   #facets ul li a:after{background: #fff; color: #333; content: "("attr(href)")"; font-size: 0.6em; padding: 0 0 0 1em;} 
 	
 	/* -- =Footer -- */
-	#footer {background: #fff; clear: both; color: #666; margin: 0 auto 1em auto; padding: 8em 0 0 0; width: 70em;}
+	#footer {background: #fff; clear: both; color: #666; margin: 0 auto 1em auto; padding: 8em 0 0 0; width: 71em;}
 	  #footer p {display: inline;}
 	  #footer ul {display: inline;}
 	    #footer ul li {display: inline;}
