@@ -12,15 +12,12 @@ function twitterCallback2(json) {
 
   for (var i=0, ii = twitters.length; i<ii; i++){
     username = twitters[i].user.screen_name;
-    
-    var checkReply = twitters[i].text;
-    checkReply = checkReply.substr(0,1);
-    
-    if (checkReply != "@"){
+        
+    if (twitters[i].text.substr(0,1) != "@"){
       statusText = document.createTextNode(twitters[i].text);     
       status.appendChild(statusText);
       // link.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
-      i =  ii;
+      break;
     }
   }
 
