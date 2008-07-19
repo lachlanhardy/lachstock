@@ -19,17 +19,20 @@ function twitterCallback2(json) {
     if (tweetText.substr(0,1) != "@"){
       
       // URL regex. I think that's everything, but it's probably not
-      var regexp = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
-      var test = twitters[i].text.replace(regexp,'<a href="$1">$1</a>');
+      var urlRegex = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
+      var statusText = twitters[i].text.replace(urlRegex,'<a href="$1">$1</a>');
       
-      var match = tweetText.match(regexp);
+      var userRegex = /(\s@+[a-zA-Z_]{1,})/gi;
+      statusText = statusText.replace(userRegex,'<a href="http://twitter.com/$1">$1</a>');
       
-      var statusLink = document.createElement("a");
-      statusLink.href = match;
+      var symRegex = /(http:\/\/twitter.com\/\s@)/gi;
+      statusText = statusText.replace(symRegex, 'http://twitter.com/');
       
-      $(status).html(test);  
+      $(status).html(statusText);  
       
-      status.appendChild(statusLink);
+      //var statusLink = document.createElement("a");
+      //statusLink.href = match;
+      //status.appendChild(statusLink);
        
       // tweetLink.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
       break;
