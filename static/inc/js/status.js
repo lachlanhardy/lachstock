@@ -9,27 +9,26 @@ function twitterCallback2(json) {
 
   var twitters = json;
 	var username = "";
-
+  var tweetText = "";
+  
   for (var i=0, ii = twitters.length; i<ii; i++){
     username = twitters[i].user.screen_name;
+    
+    tweetText = twitters[i].text;
         
-    if (twitters[i].text.substr(0,1) != "@"){
-
+    if (tweetText.substr(0,1) != "@"){
+      
       // URL regex. I think that's everything, but it's probably not
       var regexp = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
-      //var test = twitters[i].text.replace(regexp,'<a href="$1">$1</a>');
+      var test = twitters[i].text.replace(regexp,'<a href="$1">$1</a>');
       
-      var test = twitters[i].text.replace(regexp, '');
-      var match = twitters[i].text.match(regexp);
+      var match = tweetText.match(regexp);
       
       var statusLink = document.createElement("a");
       statusLink.href = match;
-      statusLinkText = document.createTextNode(match);
-      statusLink.appendChild(statusLinkText);
       
-      statusText = document.createTextNode(test);  
- 
-      status.appendChild(statusText);
+      $(status).html(test);  
+      
       status.appendChild(statusLink);
        
       // tweetLink.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
@@ -48,7 +47,9 @@ function twitterCallback2(json) {
 }
 
 var addTwitter = function(_) {
-  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=5";
+  // test URL
+  var url = "test/lachlanhardy.json";
+  //  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=5";
   var script = document.createElement('script');
   script.setAttribute('src', url);
   document.body.appendChild(script);
