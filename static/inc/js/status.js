@@ -48,8 +48,8 @@ function twitterCallback2(json) {
 
 var addTwitter = function(_) {
   // test URL
-  var url = "test/lachlanhardy.json";
-  //  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=5";
+  //var url = "test/lachlanhardy.json";
+  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=5";
   var script = document.createElement('script');
   script.setAttribute('src', url);
   document.body.appendChild(script);
