@@ -30,16 +30,22 @@ function twitterCallback2(json) {
       
       $(status).html(statusText);  
       
-      //var statusLink = document.createElement("a");
-      //statusLink.href = match;
-      //status.appendChild(statusLink);
-       
-      // tweetLink.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
+      var statusLink = document.createElement("a"); 
+      statusLink.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
+      statusLink.id ="status-link";
+      
       break;
     }
   }
+  
+  var twitterLogo = document.createElement("img");
+  twitterLogo.alt = "link to status";
+  twitterLogo.src = "inc/js/images/twitter-logo.gif";
+  
+  statusLink.appendChild(twitterLogo);
 
   para.appendChild(status);
+  para.appendChild(statusLink);
 
   tweetStatus.appendChild(para);
   
@@ -51,8 +57,8 @@ function twitterCallback2(json) {
 
 var addTwitter = function(_) {
   // test URL
-  //var url = "test/lachlanhardy.json";
-  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=5";
+  var url = "test/lachlanhardy.json";
+  //var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
   var script = document.createElement('script');
   script.setAttribute('src', url);
   document.body.appendChild(script);
