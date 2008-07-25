@@ -63,6 +63,9 @@ var addTwitter = function(_) {
 };
   	
 $(document).ready(function(){
+  // making sexy unobtrusive CSS possible since 2006
+	//document.body.className = (document.body.className +' '||'') + 'js';
+	$("html").addClass("js");
   addTwitter();
 });
 
