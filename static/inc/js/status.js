@@ -56,7 +56,9 @@ function twitterCallback2(json) {
 }
 
 var addTwitter = function(_) {
-  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
+  // test URL
+  var url = "test/lachlanhardy.json";
+  //var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
   var script = document.createElement('script');
   script.setAttribute('src', url);
   document.body.appendChild(script);
@@ -64,8 +66,8 @@ var addTwitter = function(_) {
   	
 $(document).ready(function(){
   // making sexy unobtrusive CSS possible since 2006
-	//document.body.className = (document.body.className +' '||'') + 'js';
 	$("html").addClass("js");
+	
   addTwitter();
 });
 
