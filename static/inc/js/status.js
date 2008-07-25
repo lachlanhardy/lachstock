@@ -40,7 +40,7 @@ function twitterCallback2(json) {
   
   var twitterLogo = document.createElement("img");
   twitterLogo.alt = "link to status";
-  twitterLogo.src = "inc/js/images/twitter-logo.gif";
+  twitterLogo.src = "inc/js/img/twitter-link.png";
   
   statusLink.appendChild(twitterLogo);
 
@@ -56,9 +56,7 @@ function twitterCallback2(json) {
 }
 
 var addTwitter = function(_) {
-  // test URL
-  var url = "test/lachlanhardy.json";
-  //var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
+  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
   var script = document.createElement('script');
   script.setAttribute('src', url);
   document.body.appendChild(script);
