@@ -1,12 +1,6 @@
 function twitterCallback2(json) {
 
-  var tweetStatus = document.createElement("div");
-  tweetStatus.id = "status";
-
-  var para = document.createElement("p");
   var status = document.createElement("strong");
-  var tweetLink = document.createElement("a");
-
   var twitters = json;
 	var username = "";
   var tweetText = "";
@@ -44,15 +38,11 @@ function twitterCallback2(json) {
   
   statusLink.appendChild(twitterLogo);
 
-  para.appendChild(status);
-  para.appendChild(statusLink);
-
-  tweetStatus.appendChild(para);
+  var para = document.createElement("p");
+  $(para).append(status);
+  $(para).append(statusLink);
   
-  var loadStatus = document.getElementById('status');
- 
-  $(loadStatus).replaceWith(tweetStatus);
-
+  $("#status").empty().append($(para));
 }
 
 var addTwitter = function(_) {
