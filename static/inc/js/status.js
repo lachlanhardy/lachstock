@@ -47,12 +47,13 @@ function twitterCallback2(json) {
   $("#status").empty().append(para);
 }
 
-var addTwitter = function(_) {
-  // test URL
-  //var url = "test/lachlanhardy.json";
-  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
+var addTwitter = function() {
+
   var script = $(document.createElement("script"));
-  script.attr("src", url);
+  script.attr("src", "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10");
+  //test URL
+  //script.attr("src", "test/lachlanhardy.json";);
+  
   $("body").append(script);
 };
   	
@@ -62,5 +63,3 @@ $(document).ready(function(){
 	
   addTwitter();
 });
-
-
