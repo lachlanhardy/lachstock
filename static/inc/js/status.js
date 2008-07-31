@@ -1,6 +1,6 @@
 function twitterCallback2(json) {
 
-  var status = document.createElement("strong");
+  var status = $(document.createElement("strong"));
   var twitters = json;
 	var username = "";
   var tweetText = "";
@@ -13,45 +13,47 @@ function twitterCallback2(json) {
     if (tweetText.substr(0,1) != "@"){
       
       // URL regex. I think that's everything, but it's probably not
-      var urlRegex = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
-      var statusText = twitters[i].text.replace(urlRegex,'<a href="$1">$1</a>');
+      var statusText = twitters[i].text.replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1">$1</a>');
       
-      var userRegex = /(\s@+[a-zA-Z_]{1,})/gi;
-      statusText = statusText.replace(userRegex,'<a href="http://twitter.com/$1">$1</a>');
+      // real comments
+      statusText = statusText.replace(/(\s@+[a-zA-Z_]{1,})/gi,'<a href="http://twitter.com/$1">$1</a>');
       
-      var symRegex = /(http:\/\/twitter.com\/\s@)/gi;
-      statusText = statusText.replace(symRegex, 'http://twitter.com/');
+      // real comments
+      statusText = statusText.replace(/(http:\/\/twitter.com\/\s@)/gi, 'http://twitter.com/');
       
       $(status).html(statusText);  
       
-      var statusLink = document.createElement("a"); 
-      statusLink.href = "http://twitter.com/" + username + "/statuses/" + twitters[i].id;
-      statusLink.id ="status-link";
+      var statusLink = $(document.createElement("a")); 
+      statusLink.attr({
+        href: "http://twitter.com/" + username + "/statuses/" + twitters[i].id,
+        id: "status-link"
+      });
       
       break;
     }
   }
   
-  var twitterLogo = document.createElement("img");
-  twitterLogo.alt = "link to status";
-  twitterLogo.src = "inc/js/img/twitter-link.png";
+  var twitterLogo = $(document.createElement("img"));
+  twitterLogo.attr({
+    alt: "link to status", 
+    src: "inc/js/img/twitter-link.png"
+  });
   
-  statusLink.appendChild(twitterLogo);
+  statusLink.append(twitterLogo);
 
-  var para = document.createElement("p");
-  $(para).append(status);
-  $(para).append(statusLink);
+  var para = $(document.createElement("p"));
+  para.append(status).append(statusLink);
   
-  $("#status").empty().append($(para));
+  $("#status").empty().append(para);
 }
 
 var addTwitter = function(_) {
   // test URL
-  var url = "test/lachlanhardy.json";
-  //var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
-  var script = document.createElement('script');
-  script.setAttribute('src', url);
-  document.body.appendChild(script);
+  //var url = "test/lachlanhardy.json";
+  var url = "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10";
+  var script = $(document.createElement("script"));
+  script.attr("src", url);
+  $("body").append(script);
 };
   	
 $(document).ready(function(){
