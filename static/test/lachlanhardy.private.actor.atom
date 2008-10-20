@@ -4,20 +4,20 @@
   <link type="text/html" rel="alternate" href="https://github.com/"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/lachlanhardy.private.actor.atom?token=e70ee0c70a3baa6a35e77f83ceb5791f"/>
   <title>lachlanhardy's Private Activity Feed</title>
-  <updated>2008-08-30T08:49:08-07:00</updated>
+  <updated>2008-10-19T23:21:23-07:00</updated>
   <entry>
-    <id>tag:github.com,2008:CommitEvent/10681628</id>
-    <published>2008-08-30T08:49:08-07:00</published>
-    <updated>2008-08-30T08:49:08-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/lachlanhardy/lachstock/commit/60c06a13b50eec6ffbd1188c32a8544343000fb1"/>
-    <title>lachlanhardy committed to lachlanhardy/lachstock</title>
+    <id>tag:github.com,2008:CommitEvent/17042962</id>
+    <published>2008-10-19T23:21:23-07:00</published>
+    <updated>2008-10-19T23:21:23-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/webjam/webjam/commit/70340c8c78dc3b94c895df6162ebdd89803ef340"/>
+    <title>lachlanhardy committed to webjam/webjam</title>
     <content type="html">
   
   &lt;div class="details"&gt;
     
     &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/lachlanhardy/lachstock/commit/60c06a13b50eec6ffbd1188c32a8544343000fb1"&gt;60c06a13b50eec6ffbd1188c32a8544343000fb1&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; updating index &lt;/p&gt;
+      &lt;p&gt; &lt;a href="http://github.com/webjam/webjam/commit/70340c8c78dc3b94c895df6162ebdd89803ef340"&gt;70340c8c78dc3b94c895df6162ebdd89803ef340&lt;/a&gt; &lt;/p&gt;
+      &lt;p&gt; updating tasklist &lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -28,17 +28,17 @@
     </author>
   </entry>
   <entry>
-    <id>tag:github.com,2008:ForkEvent/10680931</id>
-    <published>2008-08-30T07:46:59-07:00</published>
-    <updated>2008-08-30T07:46:59-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/lachlanhardy/github-commit-badge/"/>
-    <title>lachlanhardy forked github-commit-badge</title>
+    <id>tag:github.com,2008:MemberEvent/16866810</id>
+    <published>2008-10-20T20:04:40-07:00</published>
+    <updated>2008-10-20T20:04:40-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy removed cjheath from gitjour</title>
     <content type="html">
 &lt;div class="details"&gt;
   
   &lt;div class="message"&gt;
     
-      Forked repository is at &lt;a href="http://github.com/lachlanhardy/github-commit-badge/tree"&gt;lachlanhardy/github-commit-badge&lt;/a&gt;
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
     
   &lt;/div&gt;
 &lt;/div&gt;
@@ -49,170 +49,163 @@
     </author>
   </entry>
   <entry>
-    <id>tag:github.com,2008:CommitEvent/10666817</id>
-    <published>2008-08-30T02:23:01-07:00</published>
-    <updated>2008-08-30T02:23:01-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/lachlanhardy/lachstock/commit/56bf3732ca265555fe2809150279a55627c2eab1"/>
-    <title>lachlanhardy committed to lachlanhardy/lachstock</title>
-    <content type="html">
-  
-  &lt;div class="details"&gt;
-    
-    &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/lachlanhardy/lachstock/commit/56bf3732ca265555fe2809150279a55627c2eab1"&gt;56bf3732ca265555fe2809150279a55627c2eab1&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; deleting survey image &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</content>
-    <author>
-      <name>lachlanhardy</name>
-      <email>lachlan@lachstock.com.au</email>
-    </author>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:CommitEvent/10666816</id>
-    <published>2008-08-30T02:23:01-07:00</published>
-    <updated>2008-08-30T02:23:01-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/lachlanhardy/lachstock/commit/17f2d7662eef2bf32285925ec6ab0070c003ac86"/>
-    <title>lachlanhardy committed to lachlanhardy/lachstock</title>
-    <content type="html">
-  
-  &lt;div class="details"&gt;
-    
-    &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/lachlanhardy/lachstock/commit/17f2d7662eef2bf32285925ec6ab0070c003ac86"&gt;17f2d7662eef2bf32285925ec6ab0070c003ac86&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; fixed vcard fn link to not indicate linkiness &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</content>
-    <author>
-      <name>lachlanhardy</name>
-      <email>lachlan@lachstock.com.au</email>
-    </author>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:CommitEvent/10666815</id>
-    <published>2008-08-30T02:23:00-07:00</published>
-    <updated>2008-08-30T02:23:00-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/lachlanhardy/lachstock/commit/1f3f69f64150c0636b1a53a98037b2158e45e6ee"/>
-    <title>lachlanhardy committed to lachlanhardy/lachstock</title>
-    <content type="html">
-  
-  &lt;div class="details"&gt;
-    
-    &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/lachlanhardy/lachstock/commit/1f3f69f64150c0636b1a53a98037b2158e45e6ee"&gt;1f3f69f64150c0636b1a53a98037b2158e45e6ee&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; removing ALA survey link &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</content>
-    <author>
-      <name>lachlanhardy</name>
-      <email>lachlan@lachstock.com.au</email>
-    </author>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:CommitEvent/10662036</id>
-    <published>2008-08-30T00:49:56-07:00</published>
-    <updated>2008-08-30T00:49:56-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/lachlanhardy/lachstock/commit/f9169778c4df79b421f2c812317cf1f676d30d41"/>
-    <title>lachlanhardy committed to lachlanhardy/lachstock</title>
-    <content type="html">
-  
-  &lt;div class="details"&gt;
-    
-    &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/lachlanhardy/lachstock/commit/f9169778c4df79b421f2c812317cf1f676d30d41"&gt;f9169778c4df79b421f2c812317cf1f676d30d41&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; Merge branch 'master' into eaut &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</content>
-    <author>
-      <name>lachlanhardy</name>
-      <email>lachlan@lachstock.com.au</email>
-    </author>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:CommitEvent/10662035</id>
-    <published>2008-08-30T00:49:56-07:00</published>
-    <updated>2008-08-30T00:49:56-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/lachlanhardy/lachstock/commit/73535fc6ee148265205ab432e40ce22afc8eb384"/>
-    <title>lachlanhardy committed to lachlanhardy/lachstock</title>
-    <content type="html">
-  
-  &lt;div class="details"&gt;
-    
-    &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/lachlanhardy/lachstock/commit/73535fc6ee148265205ab432e40ce22afc8eb384"&gt;73535fc6ee148265205ab432e40ce22afc8eb384&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; adding XRDS file &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</content>
-    <author>
-      <name>lachlanhardy</name>
-      <email>lachlan@lachstock.com.au</email>
-    </author>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:CommitEvent/10325197</id>
-    <published>2008-08-27T15:24:08-07:00</published>
-    <updated>2008-08-27T15:24:08-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/toolmantim/webjam/commit/f9cf0287ef49f184b394e1e65c8d1d2e38b93652"/>
-    <title>lachlanhardy committed to toolmantim/webjam</title>
-    <content type="html">
-  
-  &lt;div class="details"&gt;
-    
-    &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/toolmantim/webjam/commit/f9cf0287ef49f184b394e1e65c8d1d2e38b93652"&gt;f9cf0287ef49f184b394e1e65c8d1d2e38b93652&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; Merge branch 'master' of git://github.com/DylanFM/webjam into dylanFM &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</content>
-    <author>
-      <name>lachlanhardy</name>
-      <email>lachlan@lachstock.com.au</email>
-    </author>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:CommitEvent/10325196</id>
-    <published>2008-08-27T15:24:07-07:00</published>
-    <updated>2008-08-27T15:24:07-07:00</updated>
-    <link type="text/html" rel="alternate" href="http://github.com/toolmantim/webjam/commit/41397188b03518987e81136214f1b1119def2941"/>
-    <title>lachlanhardy committed to toolmantim/webjam</title>
-    <content type="html">
-  
-  &lt;div class="details"&gt;
-    
-    &lt;div class="message"&gt;
-      &lt;p&gt; &lt;a href="http://github.com/toolmantim/webjam/commit/41397188b03518987e81136214f1b1119def2941"&gt;41397188b03518987e81136214f1b1119def2941&lt;/a&gt; &lt;/p&gt;
-      &lt;p&gt; adding schema &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</content>
-    <author>
-      <name>lachlanhardy</name>
-      <email>lachlan@lachstock.com.au</email>
-    </author>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:WatchEvent/9898692</id>
-    <published>2008-08-25T04:20:24-07:00</published>
-    <updated>2008-08-25T04:20:24-07:00</updated>
+    <id>tag:github.com,2008:MemberEvent/16866766</id>
+    <published>2008-10-18T20:04:05-07:00</published>
+    <updated>2008-10-18T20:04:05-07:00</updated>
     <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
-    <title>lachlanhardy started watching webjam</title>
+    <title>lachlanhardy added cjheath to gitjour</title>
     <content type="html">
 &lt;div class="details"&gt;
   
   &lt;div class="message"&gt;
-    webjam is at &lt;a href="http://github.com/DylanFM/webjam/tree"&gt;DylanFM/webjam&lt;/a&gt;
+    
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <author>
+      <name>lachlanhardy</name>
+      <email>lachlan@lachstock.com.au</email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:MemberEvent/16866733</id>
+    <published>2008-10-18T20:03:28-07:00</published>
+    <updated>2008-10-18T20:03:28-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy added mbailey to gitjour</title>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <author>
+      <name>lachlanhardy</name>
+      <email>lachlan@lachstock.com.au</email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:MemberEvent/16866709</id>
+    <published>2008-10-18T20:03:10-07:00</published>
+    <updated>2008-10-18T20:03:10-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy added hassox to gitjour</title>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <author>
+      <name>lachlanhardy</name>
+      <email>lachlan@lachstock.com.au</email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:MemberEvent/16866673</id>
+    <published>2008-10-18T20:03:02-07:00</published>
+    <updated>2008-10-18T20:03:02-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy added drnic to gitjour</title>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <author>
+      <name>lachlanhardy</name>
+      <email>lachlan@lachstock.com.au</email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:MemberEvent/16866412</id>
+    <published>2008-10-18T20:02:46-07:00</published>
+    <updated>2008-10-18T20:02:46-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy added toolmantim to gitjour</title>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <author>
+      <name>lachlanhardy</name>
+      <email>lachlan@lachstock.com.au</email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:MemberEvent/16866377</id>
+    <published>2008-10-18T20:02:33-07:00</published>
+    <updated>2008-10-18T20:02:33-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy added Radar to gitjour</title>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <author>
+      <name>lachlanhardy</name>
+      <email>lachlan@lachstock.com.au</email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:MemberEvent/16866350</id>
+    <published>2008-10-18T20:02:21-07:00</published>
+    <updated>2008-10-18T20:02:21-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy added benschwarz to gitjour</title>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gitjour is at &lt;a href="http://github.com/lachlanhardy/gitjour/tree"&gt;lachlanhardy/gitjour&lt;/a&gt;  
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <author>
+      <name>lachlanhardy</name>
+      <email>lachlan@lachstock.com.au</email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/16865426</id>
+    <published>2008-10-18T19:43:16-07:00</published>
+    <updated>2008-10-18T19:43:16-07:00</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/lachlanhardy"/>
+    <title>lachlanhardy started watching leonardo</title>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    leonardo is at &lt;a href="http://github.com/benschwarz/leonardo/tree"&gt;benschwarz/leonardo&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </content>

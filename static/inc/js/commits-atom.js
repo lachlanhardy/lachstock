@@ -13,57 +13,77 @@ function githubCallback(json) {
   
   $.ajax({
     url: "test/lachlanhardy.private.actor.atom",
+    //url: "https://github.com/lachlanhardy.private.actor.atom?token=e70ee0c70a3baa6a35e77f83ceb5791f",
     cache: false,
     success: function(xml){
       url = $("entry:first link", xml).attr("href");
       var v = url.match(/http:\/\/github.com\/([^\/]*)\/([^\/]*)\/commit\/([^\/]*)$/);
-      alert(v); 
       
       var user = v[1];
       var repo = v[2];
       var id = v[3];
-      // alert("http://github.com/api/v1/json/" + user + "/" + repo + "/commit/" + id + "?callback=?");
       $.getJSON("http://github.com/api/v1/json/" + user + "/" + repo + "/commit/" + id + "?callback=?",
         function(data){
-          alert(data.commit.message);
+          
+          var dl = $(document.createElement("dl"));
+          var dt = $(document.createElement("dt"));
+          var dtAnchor = $(document.createElement("a"));
+          dtAnchor.attr("href", url).text(data.commit.message);
+          dt.append(dtAnchor);
+          
+          var ddRepo = $(document.createElement("dd"));
+          ddRepo.addClass("repo");
+          var ddRepoAnchor = $(document.createElement("a"));
+          ddRepoAnchor.attr("href", "#").text("repo name");
+          ddRepo.append(ddRepoAnchor);
+          
+          var ddFilenames = $(document.createElement("dd"));
+          ddFilenames.addClass("filenames");
+          
+          var filenamesUl = $(document.createElement("ul"));
+
+          $(data.commit.modified).each(function(i){
+            filenamesUl.append($(document.createElement("li")).text(data.commit.modified[i].filename));
+          });
+          ddFilenames.append(filenamesUl);
+          
+          var ddDate = $(document.createElement("dd"));
+          
+          var theDate = parseDate(data.commit.committed_date);
+          
+          ddDate.addClass("date").text(theDate).attr("title", theDate);
+          ddDate.prettyDate();
+          setInterval(function(){ ddDate.prettyDate(); }, 5000);
+          
+          dl.append(dt).append(ddRepo).append(ddFilenames);
+          dl.append(ddDate);
+          
+          $("#github *").replaceWith(dl);
+          
            } 
          );
-      
-      // $("#results").append(xml);
     }
   });
-  
-  
-    // 
-    // 
-    // $.each(commits, function(i){
-    //   if (!commits[i]["private"]) {
-    //     repos.push(commits[i]);
-    //   }
-    // });
-    // 
-    // $.each(repos, function(i){
-    //     $.getJSON("http://github.com/api/v1/json/" + username + "/" + repos[i].name + "/commits/master?callback=?",
-    //       function(data){
-    //         data.commits.sort(sorter);
-    //         data.commits[0].name = repos[i].name;
-    //         data.commits[0].description = repos[i].description;
-    //         data.commits[0].repoURL = repos[i].url;
-    //         comts.push(data.commits[0]);
-    //         if (repos.length == comts.length) {
-    //           comts.sort(sorter);
-    //           alert(comts[0].name);
-    //         }
-    //       } 
-    //     );
-    // });
 }
+
+function parseDate(theDate) {
+  var timeZone = 10; // or "-3" as appropriate
+  
+  theDate = theDate.substring(0,19) + "Z";
+  var theirTime = theDate.substring(11,13);
+  var ourTime = parseInt(theirTime) + 7 + timeZone;
+  if (ourTime > 24) {
+    ourTime = ourTime - 24;
+  };
+  theDate = theDate.replace("T" + theirTime, "T" + ourTime);
+  return theDate;
+};
 
 var addGithub = function() {
 
   var mainScript = $(document.createElement("script"));
-  mainScript.attr("src", "http://github.com/api/v1/json/lachlanhardy?callback=githubCallback");
-  // mainScript.attr("src", "test/github.js");
+  //mainScript.attr("src", "http://github.com/api/v1/json/lachlanhardy?callback=githubCallback");
+  mainScript.attr("src", "test/github.js");
   
   $("body").append(mainScript);
 };
