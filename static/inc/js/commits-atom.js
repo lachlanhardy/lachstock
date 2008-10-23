@@ -21,8 +21,10 @@ function githubCallback(json) {
         
         // only for CommitEvents right now - need to bust out other events as options
         if (eventType == "CommitEvent") {
-          url = feed.value.items[i].link;
-          return url;
+          if (url == "") {
+            url = feed.value.items[i].link;
+            return url;
+          }
         }
       });
       
@@ -91,8 +93,8 @@ function parseDate(theDate) {
 var addGithub = function() {
 
   var mainScript = $(document.createElement("script"));
-  //mainScript.attr("src", "http://github.com/api/v1/json/lachlanhardy?callback=githubCallback");
-  mainScript.attr("src", "test/github.js");
+  mainScript.attr("src", "http://github.com/api/v1/json/lachlanhardy?callback=githubCallback");
+  // mainScript.attr("src", "test/github.js");
   
   $("body").append(mainScript);
 };
