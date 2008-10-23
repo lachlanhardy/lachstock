@@ -80,6 +80,7 @@ function githubCallback(json) {
 function parseDate(theDate) {
   var timeZone = 10; // or "-3" as appropriate
   
+  // TODO: need to add date changing functionality too
   theDate = theDate.substring(0,19) + "Z";
   var theirTime = theDate.substring(11,13);
   var ourTime = parseInt(theirTime) + 7 + timeZone;
