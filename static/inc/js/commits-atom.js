@@ -10,13 +10,22 @@ function githubCallback(json) {
   };
   
   var url = "";
-  
-  $.ajax({
-    url: "test/lachlanhardy.private.actor.atom",
-    //url: "https://github.com/lachlanhardy.private.actor.atom?token=e70ee0c70a3baa6a35e77f83ceb5791f",
-    cache: false,
-    success: function(xml){
-      url = $("entry:first link", xml).attr("href");
+
+ $.getJSON("http://pipes.yahoo.com/pipes/pipe.run?_id=VARThu_f3RGx59sz1b3fcQ&_render=json&username=" + username + "&_callback=?",
+    function(feed){
+      
+      $(feed.value.items).each(function(i){
+        var v = feed.value.items[i]['y:id'].value;
+        var idValue = v.match(/([^\/]*):([^\/]*)\/([^\/]*)$/);
+        var eventType = idValue[2];
+        
+        // only for CommitEvents right now - need to bust out other events as options
+        if (eventType != "CommitEvent") {
+          url = feed.value.items[i].link;
+          return url;
+        }
+      });
+      
       var v = url.match(/http:\/\/github.com\/([^\/]*)\/([^\/]*)\/commit\/([^\/]*)$/);
       
       var user = v[1];
@@ -63,7 +72,7 @@ function githubCallback(json) {
            } 
          );
     }
-  });
+  );
 }
 
 function parseDate(theDate) {
