@@ -21,8 +21,10 @@ function githubCallback(json) {
         
         // only for CommitEvents right now - need to bust out other events as options
         if (eventType == "CommitEvent") {
-          url = feed.value.items[i].link;
-          return url;
+          if (url == "") {
+            url = feed.value.items[i].link;
+            return url;
+          }
         }
       });
       
