@@ -20,7 +20,7 @@ function githubCallback(json) {
         var eventType = idValue[2];
         
         // only for CommitEvents right now - need to bust out other events as options
-        if (eventType != "CommitEvent") {
+        if (eventType == "CommitEvent") {
           url = feed.value.items[i].link;
           return url;
         }
@@ -67,10 +67,10 @@ function githubCallback(json) {
           dl.append(dt).append(ddRepo).append(ddFilenames);
           dl.append(ddDate);
           
-          $("#github *").replaceWith(dl);
+          $("#github p").replaceWith(dl);
           
-           } 
-         );
+        } 
+      );
     }
   );
 }
