@@ -20,6 +20,23 @@ function githubCallback(json) {
         var eventType = idValue[2];
         
         // only for CommitEvents right now - need to bust out other events as options
+        switch(eventType) {
+          case 'CommitEvent':
+            if (url == "") {
+              url = feed.value.items[i].link;
+              return url;
+            }
+            break;
+          case 'FollowEvent':
+            //
+            break;
+          case 'GistEvent':
+            //
+            break;
+          case 'WikiEvent':
+            //
+            break;
+        }
         if (eventType == "CommitEvent") {
           if (url == "") {
             url = feed.value.items[i].link;
