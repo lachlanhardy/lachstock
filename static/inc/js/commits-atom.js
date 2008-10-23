@@ -91,8 +91,8 @@ function parseDate(theDate) {
 var addGithub = function() {
 
   var mainScript = $(document.createElement("script"));
-  //mainScript.attr("src", "http://github.com/api/v1/json/lachlanhardy?callback=githubCallback");
-  mainScript.attr("src", "test/github.js");
+  mainScript.attr("src", "http://github.com/api/v1/json/lachlanhardy?callback=githubCallback");
+  // mainScript.attr("src", "test/github.js");
   
   $("body").append(mainScript);
 };
