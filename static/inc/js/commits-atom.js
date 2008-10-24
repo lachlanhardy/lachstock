@@ -62,7 +62,7 @@ function githubCallback(json) {
           var ddRepo = $(document.createElement("dd"));
           ddRepo.addClass("repo");
           var ddRepoAnchor = $(document.createElement("a"));
-          ddRepoAnchor.attr("href", "#").text("repo name");
+          ddRepoAnchor.attr("href", "#").text(user + "/" + repo);
           ddRepo.append(ddRepoAnchor);
           
           var ddFilenames = $(document.createElement("dd"));
