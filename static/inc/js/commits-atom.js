@@ -24,7 +24,9 @@ function githubCallback(json) {
           case 'CommitEvent':
             if (url == "") {
               url = feed.value.items[i].link;
+              titleText = " committed to ";
               return url;
+              return titleText;
             }
             break;
           case 'FollowEvent':
@@ -37,12 +39,6 @@ function githubCallback(json) {
             //
             break;
         }
-        if (eventType == "CommitEvent") {
-          if (url == "") {
-            url = feed.value.items[i].link;
-            return url;
-          }
-        }
       });
       
       var v = url.match(/http:\/\/github.com\/([^\/]*)\/([^\/]*)\/commit\/([^\/]*)$/);
@@ -50,20 +46,36 @@ function githubCallback(json) {
       var user = v[1];
       var repo = v[2];
       var id = v[3];
-      $.getJSON("http://github.com/api/v1/json/" + user + "/" + repo + "/commit/" + id + "?callback=?",
+      var repoName = user + "/" + repo;
+      
+      $.getJSON("http://github.com/api/v1/json/" + repoName + "/commit/" + id + "?callback=?",
         function(data){
           
           var dl = $(document.createElement("dl"));
           var dt = $(document.createElement("dt"));
-          var dtAnchor = $(document.createElement("a"));
-          dtAnchor.attr("href", url).text(data.commit.message);
-          dt.append(dtAnchor);
+          var strong = $(document.createElement("strong"));
+        
+          var dtUser = $(document.createElement("a"));
+          dtUser.attr("href", "http://github.com/" + username).text(username);
+          strong.append(dtUser).append(titleText);
           
-          var ddRepo = $(document.createElement("dd"));
-          ddRepo.addClass("repo");
-          var ddRepoAnchor = $(document.createElement("a"));
-          ddRepoAnchor.attr("href", "#").text(user + "/" + repo);
-          ddRepo.append(ddRepoAnchor);
+          var repoAnchor = $(document.createElement("a"));
+          repoAnchor.attr("href", "http://github.com/" + repoName).text(repoName);
+          strong.append(repoAnchor);
+          
+          var dateSpan = $(document.createElement("span"));
+          var theDate = parseDate(data.commit.committed_date); // converts date to format Pretty Date recognises
+          dateSpan.addClass("date").text(theDate).attr("title", theDate);
+          dateSpan.prettyDate();
+          setInterval(function(){ dateSpan.prettyDate(); }, 5000);
+          
+          // add STRONG and dateSpan to DT
+          dt.append(strong).append(dateSpan);
+          
+          var ddMessage = $(document.createElement("dd"));
+          messageAnchor = $(document.createElement("a"));
+          messageAnchor.attr("href", url).text(data.commit.message);
+          ddMessage.append(messageAnchor);
           
           var ddFilenames = $(document.createElement("dd"));
           ddFilenames.addClass("filenames");
@@ -75,16 +87,7 @@ function githubCallback(json) {
           });
           ddFilenames.append(filenamesUl);
           
-          var ddDate = $(document.createElement("dd"));
-          
-          var theDate = parseDate(data.commit.committed_date);
-          
-          ddDate.addClass("date").text(theDate).attr("title", theDate);
-          ddDate.prettyDate();
-          setInterval(function(){ ddDate.prettyDate(); }, 5000);
-          
-          dl.append(dt).append(ddRepo).append(ddFilenames);
-          dl.append(ddDate);
+          dl.append(dt).append(ddMessage).append(ddFilenames);
           
           $("#github p").replaceWith(dl);
           
