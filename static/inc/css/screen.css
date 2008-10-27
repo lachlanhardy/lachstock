@@ -77,6 +77,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
   /* -- =Columns -- */
   .column {border-left: 1em solid #BFE4FF; float: left; margin: 0 0 0 1em; padding: 0 0 0 1em; width: 19em;}
     .item {margin: 0 0 1em 0;}
+    .featured {background: #BFE4FF; border-left: 1em solid #80C9FF; margin: 0 0 1em -2em; padding: 0 0 1em 1em;}
     
   .vcard a.fn,
   .vcard a.fn:link,
@@ -86,9 +87,9 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
   .vcard a.fn:focus {background: #fff; color: #0e0e0e; text-decoration: none;}
   
   #facets ul li a:after{background: #fff; color: #333; content: "("attr(href)")"; font-size: 0.6em; padding: 0 0 0 1em;} 
-  #blog {background: #ff8; border-left: 0.5em solid #a4ff88; font-size: 2em; margin: 0 0 1em -1em; padding: 0 0 0 0.5em;}
+  #blog {border-width: 0.5em; font-size: 2em; margin: 0 0 0 -1em; padding: 0 0 0 0.5em;}
   
-  #github {background: #BFE4FF; border-left: 1em solid #80C9FF; margin: 0 0 1em -2em; padding: 0 0 0 1em; width: 28em;}
+  #github {width: 28em;}
     #github dl {margin: 0 0 1em 0;}
       #github dt {font-weight: 700; margin: 0 0 0.5em 0;}
         #github dt strong {display: block;}
