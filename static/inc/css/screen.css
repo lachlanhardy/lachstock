@@ -59,7 +59,7 @@ TOC
 /* - =Structure - */
 body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roman", Times, serif; margin: 0; padding: 0;}
 	
-#page {font-size: 1.5em; padding: 1em 1em 1em 0; position: relative; width: 66em;}
+#page {border-top: 1em solid #BFE4FF; font-size: 1.5em; padding: 0 1em 1em 0; position: relative;}
 
   #header {background: #0e0e0e; border-bottom: 2px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
     #header h1 {background: #0e0e0e; color: #ff8000; float: left; font-weight: 700; letter-spacing: 0.06em; margin: 0; width: auto;}
@@ -75,8 +75,10 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
       #status:hover #status-link {visibility: visible;}
 
   /* -- =Columns -- */
-  .column {border-left: 1em solid #BFE4FF; float: left; margin: 0 0 0 1em; padding: 0 0 0 1em; width: 19em;}
+  .column {border-left: 1em solid #BFE4FF; float: left; margin: 0 0 0 1em; padding: 1em 0 0 1em; position: relative; width: 19em;}
+    .column span.marker {border-left: 1em solid #80C9FF; display: block; left: -1em; line-height: 1; position: absolute; top: -1em;}
     .item {margin: 0 0 1em 0;}
+    .featured {background: #BFE4FF; border-left: 1em solid #80C9FF; margin: 0 0 1em -2em; padding: 0 0 1em 1em;}
     
   .vcard a.fn,
   .vcard a.fn:link,
@@ -86,10 +88,22 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
   .vcard a.fn:focus {background: #fff; color: #0e0e0e; text-decoration: none;}
   
   #facets ul li a:after{background: #fff; color: #333; content: "("attr(href)")"; font-size: 0.6em; padding: 0 0 0 1em;} 
-  #blog {background: #ff8; border-left: 0.5em solid #a4ff88; font-size: 2em; margin: 0 0 1em -1em; padding: 0 0 0 0.5em;}
+  #blog {border-width: 0.5em; font-size: 2em; margin: 0 0 0 -1em; padding: 0 0 0 0.5em;}
   
-  #github dd.repo {display: none;}
-	
+  #github {width: 28em;}
+    #github dl {margin: 0 0 1em 0;}
+      #github dt {font-weight: 700; margin: 0 0 0.5em 0;}
+        #github dt strong {display: block;}
+          #github dt a {}
+        #github dt span.date {font-size: 0.8em; font-style: italic;}
+      #github dd {margin: 0 0 0 1em;}
+        #github dd.repo {}
+          #github dd.repo a {}
+        #github dd.filenames {background: transparent; color: #666;}
+          #github dd.filenames ul {padding: 0 0 0 1.4em;}
+            #github dd.filenames li {list-style-type: disc;}
+        #github dd.date {}
+
 	/* -- =Footer -- */
 	#footer {background: #fff; clear: both; color: #666; margin: 0 auto 1em auto; padding: 8em 0 0 0; width: 71em;}
 	  #footer p {display: inline;}
