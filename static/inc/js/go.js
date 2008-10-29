@@ -3,5 +3,5 @@ $(document).ready(function(){
 	$("html").addClass("js");
 	
   addTwitter();
-  addGithub();
+  githubActivity();
 });
