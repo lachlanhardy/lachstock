@@ -31,23 +31,24 @@ TOC
 		/* --- =Headings --- */
 		h1, h2, h3, h4, h5, h6 {font-family: 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; margin: 0 0 0.5em;}
 		h1 {font-size: 3em;}
-		h2 {font-size: 1.6em;}
-		h3 {font-size: 1.5em;}
-		h4 {font-size: 1.4em;}
+		h2 {font-size: 1.5em;}
+		h3 {font-size: 1.4em;}
+		h4 {font-size: 1.3em;}
 		h5 {font-size: 1.2em;}
 		h6 {font-size: 1.1em;}
 
 		
 		/* --- =Body Text --- */
-		#content p,
-		#content li,
-		#content ol,
-		#content ul {margin: 0 0 0.5em;}
-		#content p {font-size: 1.07em; line-height: 1.5; margin: 0 0 2em 0;}
-		#content ul {}
-			#content ul li {font-size: 1.07em; list-style-position: inside; list-style-type: circle;}
-		#content ol {}
-			#content ol li {font-size: 1.07em; list-style-position: inside; list-style-type: decimal;}
+		#page p,
+		#page li,
+		#page ol,
+		#page ul {margin: 0 0 0.5em;}
+		#page p {font-size: 1.07em; line-height: 1.5;}
+		#page ul {}
+			#page ul li {font-size: 1.07em; list-style-position: inside; list-style-type: circle;}
+		#page ol {}
+			#page ol li {font-size: 1.07em; list-style-position: inside; list-style-type: decimal;}
+			
 			
 		.amp {background: #0e0e0e; color: #666; font: italic 100 1.25em Baskerville, "Goudy Old Style", "Palatino", Georgia, "Book Antiqua", serif; position: relative; top: 2px;}
 		
@@ -80,6 +81,8 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
     .item {margin: 0 0 1em 0;}
     .featured {background: #BFE4FF; border-left: 1em solid #80C9FF; margin: 0 0 1em -2em; padding: 0 0 1em 1em;}
     
+      #page .item ul li {list-style-type: none;}
+      
   .vcard a.fn,
   .vcard a.fn:link,
   .vcard a.fn:visited,
@@ -87,7 +90,6 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
   .vcard a.fn:active,
   .vcard a.fn:focus {background: #fff; color: #0e0e0e; text-decoration: none;}
   
-  #facets ul li a:after{background: #fff; color: #333; content: "("attr(href)")"; font-size: 0.6em; padding: 0 0 0 1em;} 
   #blog {border-width: 0.5em; font-size: 2em; margin: 0 0 0 -1em; padding: 0 0 0 0.5em;}
   
   #github {width: 28em;}
