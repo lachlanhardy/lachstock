@@ -4,4 +4,5 @@ $(document).ready(function(){
 	
   addTwitter();
   githubActivity();
+  flickrPic();
 });
