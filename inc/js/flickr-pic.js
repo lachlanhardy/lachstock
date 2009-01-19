@@ -11,5 +11,17 @@ function flickrPic() {
                 .attr("href", item.link)
                 .append(img)
                 .appendTo("#flickr-pic");
+                
+            var author = item.author;
+            author = author.match(/\(([a-zA-z0-9 *]*)\)/);
+            
+            var attributionLink = $("<a/>")
+                                            .attr("href", item.link)
+                                            .append("Image by " + author[1]);
+            
+            $("<p/>")
+                    .addClass("attribution")
+                    .append(attributionLink)
+                    .appendTo("#flickr-pic");
         });
 }
