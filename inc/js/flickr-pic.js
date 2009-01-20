@@ -33,6 +33,7 @@ function flickrPic() {
               "stroke-opacity": .3
             }).rotate(11);   
 
+            $("#flickr-pic").css("margin", "-1.5em 0 1em 0");
             r.image(item.media.m, 70, 75, imgWidth, imgHeight).rotate(11);
             
             var author = item.author;
