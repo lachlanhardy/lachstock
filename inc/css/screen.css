@@ -105,6 +105,15 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
           #github dd.filenames ul {padding: 0 0 0 1.4em;}
             #github dd.filenames li {list-style-type: disc; margin: 0;}
         #github dd.date {}
+        
+  #flickr-pic {}
+    #flickr-pic img {
+      background:#fff;
+      padding: 20px 20px 30px 20px;
+      border:1px solid #d3dada;
+      margin:1em;
+
+    }
 
 	/* -- =Footer -- */
 	#footer {background: #fff; clear: both; color: #666; margin: 0 auto 1em auto; padding: 8em 0 0 0; width: 71em;}
