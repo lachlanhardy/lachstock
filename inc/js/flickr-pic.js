@@ -38,7 +38,7 @@ function flickrPic() {
             var author = item.author;
             author = author.match(/\(([a-zA-z0-9 *]*)\)/);
             
-            r.text(paperWidth - 70, paperHeight + 40, "Image: " + author[1])
+            r.text(paperWidth - 70, paperHeight + 40, "Taken by " + author[1])
                 .attr({"font": '700 10px "Zapfino", "Marker Felt", "Papyrus", "URW Chancery L"'})
                 .rotate(9);
             
