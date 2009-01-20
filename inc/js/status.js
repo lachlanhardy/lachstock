@@ -2,7 +2,7 @@ function twitterCallback2(json) {
 
   var status = $(document.createElement("strong"));
   var twitters = json;
-	var username = "";
+  var username = "";
   var tweetText = "";
   
   for (var i=0, ii = twitters.length; i<ii; i++){
