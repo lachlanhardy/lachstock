@@ -10,8 +10,8 @@ function flickrPic() {
                 .attr("id", "polaroid")
                 .prependTo("#flickr-pic");
             
-            var imgWidth = parseInt(item.description.match(/width="(\d*)/)[1]);
-            var imgHeight = parseInt(item.description.match(/height="(\d*)/)[1]);
+            var imgWidth = parseInt(item.description.match(/width="(\d*)/)[1], 10);
+            var imgHeight = parseInt(item.description.match(/height="(\d*)/)[1], 10);
                        
             var paperWidth = (imgWidth + 40);
             var paperHeight = (imgHeight + 60);
@@ -41,6 +41,18 @@ function flickrPic() {
             r.text(paperWidth - 70, paperHeight + 40, "Image: " + author[1])
                 .attr({"font": '700 10px "Zapfino", "Marker Felt", "Papyrus", "URW Chancery L"'})
                 .rotate(9);
+            
+            var refreshLink = $("<a/>").text("Try another image.")
+                                       .attr("href", "#refresh")
+                                       .click(function(e){
+                                           $("#flickr-pic p span").remove();
+                                           refreshLink.remove();
+                                           r.remove();
+                                           flickrPic();
+                                           e.preventDefault();
+                                       });
+            
+            $("#flickr-pic p").append(" <span>Not me?</span> ").append(refreshLink);
             
         });
 }
