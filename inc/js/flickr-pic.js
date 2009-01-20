@@ -15,7 +15,11 @@ function flickrPic() {
                        
             var paperWidth = (imgWidth + 40);
             var paperHeight = (imgHeight + 60);
-                
+            
+            var rotations = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+            var rotation = Math.ceil(Math.random() * (rotations.length - 1));
+            console.log(rotations[rotation]);
+            
             var r = Raphael("polaroid", paperWidth + 100, paperHeight + 100);
             
             r.rect(55, 63, paperWidth, paperHeight).attr({
@@ -24,24 +28,24 @@ function flickrPic() {
               stroke: "#000",
               "stroke-width": 4,
               "stroke-opacity": .3
-            }).rotate(10);
+            }).rotate(rotations[rotation] - 1);
 
             r.rect(50, 55, paperWidth, paperHeight).attr({
               fill: "#fff",
               stroke: "#ddd",
               "stroke-width": 2,
               "stroke-opacity": .3
-            }).rotate(11);   
+            }).rotate(rotations[rotation]);   
 
             $("#flickr-pic").css("margin", "-1.5em 0 1em 0");
-            r.image(item.media.m, 70, 75, imgWidth, imgHeight).rotate(11);
+            r.image(item.media.m, 70, 75, imgWidth, imgHeight).rotate(rotations[rotation]);
             
             var author = item.author;
             author = author.match(/\(([a-zA-z0-9 *]*)\)/);
             
-            r.text(paperWidth - 70, paperHeight + 40, "Taken by " + author[1])
+            r.text(paperWidth - 85, paperHeight + 40, "Taken by " + author[1])
                 .attr({"font": '700 10px "Zapfino", "Marker Felt", "Papyrus", "URW Chancery L"'})
-                .rotate(9);
+                .rotate(rotations[rotation] - 2);
             
             var refreshLink = $("<a/>").text("Try another image.")
                                        .attr("href", "#refresh")
