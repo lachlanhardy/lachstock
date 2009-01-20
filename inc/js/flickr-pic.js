@@ -46,6 +46,7 @@ function flickrPic() {
             var refreshLink = $("<a/>").text("Try another image.")
                                        .attr("href", "#refresh")
                                        .click(function(e){
+                                           $("#flickr-pic").css("margin", "0 0 1em 0");
                                            $("#flickr-pic p span").remove();
                                            refreshLink.remove();
                                            r.remove();
