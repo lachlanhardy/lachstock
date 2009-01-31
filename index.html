@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-au">
 <head>
-  <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
-	<!-- You see that above here? I'm too busy to bloody test in IE8 constantly until it's out and stable. Thus I've turned into exactly what I was afraid of when they added that feature - a lazy developer
-	  It also invalidates my HTML5 - which is something I'm highly ambivalent about at present -->
-	<meta http-equiv="X-XRDS-Location" content="http://lachstock.com.au/xrds">
-	
+	<meta charset="UTF-8">
+  
+  <!-- This is invalid in HTML 5 but I can't find a way around it yet. Lame. -->
+  <meta http-equiv="X-XRDS-Location" content="http://lachstock.com.au/xrds">
+
 	<title>Lachlan Hardy Presents: Lachstock</title>
 	
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -17,7 +15,7 @@
   
 	<!-- OpenID 
 		see http://claimid.com/openid for how
-		Yes, I'm recommending ClaimID - best one yet
+		I think ClaimID might be dead, but I've yet to find a solution I'd like to switch to.
 		-->
 	<link rel="openid.server" href="http://openid.claimid.com/server">
 	<link rel="openid.delegate" href="http://openid.claimid.com/lachlanhardy">
@@ -31,7 +29,7 @@
 	  <meta name="verify-v1" content="Ai0t9Ys7j76GMrjSEP+rDLIhtNL/ruGT8Lu9frCnBUg=">
 	<!-- // verification -->
 	
-	<!-- Trialling the Google jQuery hosting - http://code.google.com/apis/ajaxlibs/ -->
+	<!-- Google jQuery hosting - http://code.google.com/apis/ajaxlibs/ -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
   <!-- // Google's jQuery hosting -->
   
@@ -110,15 +108,13 @@
         
         <p><a href="http://scenariogirl.com/">My wife</a> and I have been fostering a <a href="http://flickr.com/photos/lachlanhardy/3202569459/">whippet-in-need</a> on behalf of a rescue organisation until they find her a permanent home.</p>
 
-        <p>Last week she was hit by a car and <a href="http://www.pledgie.com/campaigns/2730">suffered a number of injuries</a>, including a broken leg.</p>
-
-        <p>She was kept by the RSPCA for 4 days without treatment for her injuries except for some pain killers and a bandage, but we've gotten her to a vet who will operate on her leg for a reduced fee.</p>
+        <p>Last week she was hit by a car and <a href="http://www.pledgie.com/campaigns/2730">suffered a number of injuries</a>, including a leg with two bones broken in multiple places each.</p>
         
         <p>The rescue organisation needs money to pay the vet.</p>
         
-        <p><a href='http://www.pledgie.com/campaigns/2730'><img alt='Click here to lend your support to: Surgery for fractured leg &amp; cheek and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/2730.png?skin_name=chrome' border='0' ></a></p>
+        <p><a href="http://www.pledgie.com/campaigns/2730"><img alt="Click here to lend your support to: Surgery for fractured leg &amp; cheek and make a donation at www.pledgie.com !" src="http://www.pledgie.com/campaigns/2730.png?skin_name=chrome" ></a></p>
         
-        <p>Crunchie has suffered horribly at the hands of humans. Please tell everyone you can and <a href='http://www.pledgie.com/campaigns/2730'>please donate yourself</a>, if you can.</p>
+        <p>People have been amazingly generous, but her surgery cost even more than anticipated so <a href='http://www.pledgie.com/campaigns/2730'>please donate</a>, or pass the word on, if you can.</p>
         
         
       </div> <!-- // .item #crunchie -->
@@ -182,13 +178,11 @@
     <p>This is both my testbed and my exemplar so code and practices are alternately things I would never do in production, things I wish I could do in production or things I strongly recommend. Ideally, they move from the former through to the latter. Part of that is validation:</p>
     <ul>
       <li>
-        <a href="http://validator.nu/?doc=http%3A%2F%2Flachstock.com.au">trying HTML 5</a>
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Flachstock.com.au">HTML 5</a>
       </li>
+      <li> and </li>
       <li>
-        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Flachstock.com.au%2F&amp;charset=(detect+automatically)&amp;doctype=HTML+4.01+Strict&amp;outline=1&amp;group=1&amp;verbose=1">faking HTML 4.01</a>
-      </li>
-      <li>
-        <a href="http://jigsaw.w3.org/css-validator/validator?profile=css21&amp;warning=0&amp;uri=http%3A%2F%2Flachstock.com.au%2F">doing CSS 2.1</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?profile=css21&amp;warning=0&amp;uri=http%3A%2F%2Flachstock.com.au%2F">CSS 2.1</a>
       </li>
     </ul>
   </div> <!-- // #footer -->
