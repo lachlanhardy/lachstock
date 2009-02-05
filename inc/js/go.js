@@ -4,5 +4,5 @@ $(document).ready(function(){
 	
   addTwitter();
   githubActivity();
-  callFlickr();
+  $("#flickr-pic").flickrPolaroid();
 });
