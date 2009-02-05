@@ -2,8 +2,7 @@
     $.fn.flickrPolaroid = function(options) {  
 
         var defaults = {
-            tags: "lachlanhardy",
-            numResults: 20
+            tags: "lachlanhardy"
         };
         var options = $.extend(defaults, options);
 
