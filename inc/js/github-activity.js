@@ -1,13 +1,14 @@
 function githubActivity() {
 
-	var username = "lachlanhardy";
-  var url = "";
+    var username = "lachlanhardy";
+    var url = "";
 
- $.getJSON("http://pipes.yahoo.com/pipes/pipe.run?_id=VARThu_f3RGx59sz1b3fcQ&_render=json&username=" + username + "&_callback=?",
+ $.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20atom%20where%20url%3D%22http%3A%2F%2Fgithub.com%2F" + username + ".atom%22&format=json&callback=?",
     function(feed){
       
-      $(feed.value.items).each(function(i){
-        var v = feed.value.items[i]['y:id'].value;
+      var item = feed.query.results.entry; 
+      $(item).each(function(i){
+        var v = item[i].id;
         var idValue = v.match(/([^\/]*):([^\/]*)\/([^\/]*)$/);
         var eventType = idValue[2];
         
@@ -15,7 +16,7 @@ function githubActivity() {
         switch(eventType) {
           case 'CommitEvent':
             if (url == "") {
-              url = feed.value.items[i].link;
+              url = item[i].link.href;
               titleText = " committed to ";
               return url;
               return titleText;
@@ -103,7 +104,7 @@ function parseDate(dateTime) {
   // TODO: need to add date changing functionality too
   dateTime = dateTime.substring(0,19) + "Z";
   var theirTime = dateTime.substring(11,13);
-  var ourTime = parseInt(theirTime) + 7 + timeZone;
+  var ourTime = parseInt(theirTime,1) + 7 + timeZone;
   if (ourTime > 24) {
     ourTime = ourTime - 24;
   };
