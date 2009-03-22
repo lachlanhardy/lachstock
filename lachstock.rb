@@ -12,14 +12,15 @@ end
 
 get '/:category' do 
   @category = params[:category]
+  @category_title = params[:category]
   @folders = Dir.glob("views/*/")
-  # @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
   view File.join(@category, "/index").to_sym
 end
 
 # getting tags from permanent urls
 get '/:category/:name' do 
   @category = params[:category]
+  @category_title = params[:category].gsub(/(.+)s$/, '\1')
   @name = params[:name]
   @folders = Dir.glob("views/*/")
   @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
