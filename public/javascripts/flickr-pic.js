@@ -72,15 +72,15 @@
 
             }
 
-
             function callFlickr() {
             $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + options.tags +" &format=json&jsoncallback=?",
                 function(data){
-                    $("#polaroid").add("span", canvas).add("#refresh-link").remove();
+                    var text = $("p span", canvas);
+                    $("#polaroid").add(text).add("#refresh-link").remove();
+
                     flickrPic(data);
                 });
             };
-
             
             callFlickr();
             

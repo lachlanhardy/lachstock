@@ -36,7 +36,7 @@ function twitterCallback2(json) {
   var twitterLogo = $(document.createElement("img"));
   twitterLogo.attr({
     alt: "link to status", 
-    src: "inc/js/img/twitter-link.png"
+    src: "/javascripts/images/twitter-link.png"
   });
   
   statusLink.append(twitterLogo);
