@@ -104,7 +104,13 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
             .comment .vcard {position: relative;}
                 .comment .vcard img.photo {border: 2px solid #bfe4ff; left: -145px; position: absolute; top: 0;}
                 #comments .lachstock .photo {border-color: #ff8000;}
-                .comment .vcard .fn {display: block; font-size: 2em; line-height: 1;}
+                .comment .vcard .fn {background: #fff; color: #000; display: block; font-size: 2em; line-height: 1;}
+                  .comment .vcard a.fn:link,
+                  .comment .vcard a.fn:visited {background: #fff; color: #0e0e0e; text-decoration: none;}
+                  .comment .vcard a.fn:hover,
+                  .comment .vcard a.fn:active,
+                  .comment .vcard a.fn:focus {background: #fff; color: #ff8000;}
+            
             .comment .comment-details {background: #fff; color: #555; font-size: 0.8em; margin: 0.4em 0 0.4em 0.1em;}
         
         #post-comment {margin: 3em 0 1em -2em; padding: 0 1em 1em 1em;}
