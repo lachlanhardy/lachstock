@@ -244,60 +244,9 @@
         %a{:href => "/articles/74-twitter-adds-a-breakdown/#c310", :title => "Permalink for this comment"}
           20090321 at 1417
       .comment-body
-        %p
-          To be honest, I used to look at every single person as they added me to see who they were and if I wanted to follow them back (I never block unless they’re inappropriate). Then a couple months ago, twitter decided that every email I own (6 different domains) didn’t work (yes, of course they do). And I no longer get any notification. I filed a ticket on it, but nothing’s happened.
-        %p
-          This means that I have to remember to go in and see who has followed recently (which with Mr. Tweet can be a whole lot). So I’ve gotten rather slack because I’ve been busy lately. I glance and if I recognize them I follow. But until the weekends when I have time to click every single one, I don’t really see who’s there.
-        %p
-          As a rule, I follow people I know, people I want to know (have heard of), people that are interesting regarding my industry and people that are funny as crap. :)  I don’t see a point in blocking the others since I don’t even know they’re there if I don’t follow them. Maybe I’m silly.
-        %p
-          It was great to spend time with you last week Lachlan! :)
-          Stef.
+        %p To be honest, I used to look at every single person as they added me to see who they were and if I wanted to follow them back (I never block unless they’re inappropriate). Then a couple months ago, twitter decided that every email I own (6 different domains) didn’t work (yes, of course they do). And I no longer get any notification. I filed a ticket on it, but nothing’s happened.
+        %p This means that I have to remember to go in and see who has followed recently (which with Mr. Tweet can be a whole lot). So I’ve gotten rather slack because I’ve been busy lately. I glance and if I recognize them I follow. But until the weekends when I have time to click every single one, I don’t really see who’s there.
+        %p As a rule, I follow people I know, people I want to know (have heard of), people that are interesting regarding my industry and people that are funny as crap. :)  I don’t see a point in blocking the others since I don’t even know they’re there if I don’t follow them. Maybe I’m silly.
+        %p It was great to spend time with you last week Lachlan! :)
+        %p Stef.
 
-    #post-comment
-      %h2 Heckle me
-      %p
-        Required fields are
-        %strong emphasised
-        \.
-
-      %form#post_form{:action => "http://log.lachstock.com.au/comments/add", :method => "post"}
-        %input#do{:name => "do", :type => "hidden", :value => "1"}
-        %input#human_check{:name => "human_check", :type => "hidden", :value => "0"}
-        %input#return_url{:name => "return_url", :type => "hidden", :value => "/articles/74-twitter-adds-a-breakdown/"}
-        %input#link{:name => "link", :type => "hidden", :value => "74-twitter-adds-breakdown"}
-        %input#comment_post_id{:name => "comment[post_id]", :type => "hidden", :value => "22"}
-        #comment_form
-          %table#comment_form{:cellspacing => "0", :cellpadding => "0"}
-            %tr
-              %td.labels
-                %label{:for => "comment_name"}
-                  Name:
-              %td.fields
-                %input#comment_name{:name => "comment[name]", :size => "30", :type => "text"}
-            %tr
-              %td.labels
-                %label{:for => "comment_email"}
-                  %b
-                    Email:
-              %td.fields
-                %input#comment_email{:name => "comment[email]", :size => "30", :type => "text"}
-            %tr
-              %td.labels
-                %label{:for => "comment_url"}
-                  URL:
-              %td.fields
-                %input#comment_url{:name => "comment[url]", :size => "30", :type => "text"}
-            %tr
-              %td.labels
-                %label{:for => "tag_name"}
-                  %b
-                    Comment:
-              %td.fields
-                %textarea#comment_body_raw{:name => "comment[body_raw]", :onkeypress => "this.form.elements['human_check'].value = '8'", :wrap => "virtual", :rows => "20", :cols => "45"}
-            %tr
-              %td.labels
-                
-              %td.fields
-                .submit_area
-                  %input.submit{:name => "commit", :type => "submit", :value => "Submit comment", :onclick => "this.form.elements['human_check'].value = '8'"}
