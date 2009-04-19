@@ -4,6 +4,6 @@ $(document).ready(function(){
 	
   addTwitter();
   githubActivity();
+  seinfeldBadge();
   $("#flickr-pic").flickrPolaroid();
-  seinfeldCan();
 });

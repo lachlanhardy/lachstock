@@ -15,10 +15,9 @@
                 var rndNum = Math.ceil(Math.random() * (data.items.length - 1));
                 var item = data.items[rndNum];
 
-                $("<a/>")
-                    .attr("href", item.link)
-                    .attr("id", "polaroid")
-                    .prependTo(canvas);
+                $("<a/>").attr("href", item.link)
+                         .attr("id", "polaroid")
+                         .prependTo(canvas);
 
                 var imgWidth = parseInt(item.description.match(/width="(\d*)/)[1], 10);
                 var imgHeight = parseInt(item.description.match(/height="(\d*)/)[1], 10);
@@ -53,8 +52,8 @@
                 author = author.match(/\(([a-zA-z0-9 *]*)\)/);
 
                 r.text(paperWidth - 85, paperHeight + 40, "Taken by " + author[1])
-                    .attr({"font": '700 10px "Zapfino", "Marker Felt", "Papyrus", "URW Chancery L"'})
-                    .rotate(rotations[rotation] - 2);
+                 .attr({"font": '700 10px "Zapfino", "Marker Felt", "Papyrus", "URW Chancery L"'})
+                 .rotate(rotations[rotation] - 2);
 
                 var refreshLink = $("<a/>").text("Try another image.")
                                            .attr("id", "refresh-link")

@@ -1,4 +1,4 @@
-function seinfeldCan() {
+function seinfeldBadge() {
    $(".seinfeld-badge").each(function() {
         var seinfeld = $(this);
         var username = seinfeld.attr("class").replace(/.*user-([a-z0-9]+).*/gi, "$1");
