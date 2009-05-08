@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
+require 'smoke'
 
 # homepage
 get '/' do
@@ -24,10 +25,23 @@ get '/:category/:name' do
   @name = params[:name]
   @folders = Dir.glob("views/*/")
   @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
+  # avatars = comment_avatars
+  comment_avatars
+  
+  @avatars = Smoke[:ruby].output
   view File.join(@category, "/", @name).to_sym
 end
 
 helpers do
+  def comment_avatars
+    Smoke.yql(:ruby) do
+      select  :all
+      from    "search.web"
+      where   :query, "ruby"
+      
+      # discard :title, /tuesday/i
+    end
+  end
   def filtered_filenames(paths)
     paths ||= []
     paths.collect { |path|
