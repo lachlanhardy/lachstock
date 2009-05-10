@@ -1,5 +1,3 @@
-- @number_of_comments = 2
-
 %p.category= "#{@category_title}:"
 
 .column
@@ -14,11 +12,7 @@
         %a{ :href => "http://log.lachstock.com.au/past/2007/3/28/joining_the_conversation/", :title => "Permalink for this post" }
           20070328 at 0025
   .item_content
-
-    -if @avatars
-      - @avatars.each do |avatar|
-        = avatar
-      
+        
     %p This has been a long time coming. I’ve always followed the conversation. I read every site. I scoured the web for content as an increasingly voracious consumer. I stuffed more and more of everything into my brain and I couldn’t get enough.
     %p Then I got the agency job. One that had me slaving 14-18 hours most days to produce slick high-quality standards-compliant accessible websites, usually for government departments. I never installed a feed reader on my new machine. I never had time.
     
@@ -53,27 +47,5 @@
       %a{ :href => "http://log.lachstock.com.au/past/2007/4/3/bitter_twitches/", :title => "Next post" }
         next
   
-  #comments
-    = partial :comment_blurb  
-    #c1.comment
-      .vcard
-        %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/66003446/glenda_small.jpg", :height => "96", :alt => "A guest: goodwitch", :width => "96"}
-        %a.url.fn{:href => "http://glendathegood.com", :title => "View goodwitch's website"} goodwitch
-      .comment_details
-        posted on
-        %a{:href => "/articles/joining-the-conversation/#c1", :title => "Permalink for this comment"} 20070328 at 0105
-      .comment_body
-        %p Cheers!  I know exactly how you feel.  Same thing happened to me at SXSWi2005.  In almost the exact same way…Flickr account, addiction, blog, first post, not knowing what I’d write about…but damn sure that I wasn’t just going to take…that I must know something that I could give back.
-        %p So…thanks for joining the conversation and giving us a view that is uniquely Lach.
-    
-    #c2.comment
-      .vcard
-        %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/61831453/funkycoda_red.png", :height => "96", :alt => "A guest: Ajay Ranipeta", :width => "96"}
-        %a.url.fn{:href => "http://www.aggregatedsolutions.com/", :title => "View Ajay Ranipeta's website"} Ajay Ranipeta
-      .comment_details
-        posted on
-        %a{ :href => "/articles/joining-the-conversation/#c2", :title => "Permalink for this comment"} 20070328 at 0343
-      .comment_body
-        %p Finally, Lachlan’s blogging. I remember it was Russ who got me onto flickr, and soon after i got hit by the flickritis. And blogiritis too.. and now twitteritis.. it’s sweet!! totally agree re: ideas growing.
-        %p Looking forward to some interesting logs of stuff Hardy.
-    
+  = comment_builder(@name)
+
