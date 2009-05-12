@@ -1,0 +1,27 @@
+
+#c290.comment_content
+.comment_author
+%a{ :href => "http://dylanfm.com", :title => "View Dylan's website" }
+Dylan
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/10/29/pimping-your-github-commits-js/#c290", :title => "Permalink for this comment" }
+20081030 at 0938
+.comment_body
+%p
+Nice one! I saw you create the repository the other day and wondered what would grow within it.
+%p
+I’ve got a feature request/suggestion. How about ajaxy pagination between commits? Ordered by date I suppose.
+#c291.comment_content
+.comment_author
+%a{ :href => "http://lachstock.com.au", :title => "View Lachlan Hardy's website" }
+Lachlan Hardy
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/10/29/pimping-your-github-commits-js/#c291", :title => "Permalink for this comment" }
+20081031 at 1147
+.comment_body
+%p
+Yeah, I extracted it from my Lachstock code. Which means we lost the history, but that’s cool.
+%p
+Sweet idea! Should definitely add that.
