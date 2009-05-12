@@ -1,0 +1,179 @@
+
+            .item_details
+              %h1
+                Meshing with Meraki
+              %p
+                %strong
+                  Posted by
+                  %a{ :href => "http://log.lachstock.com.au/past/authors/2", :title => "View all posts by lachlanhardy" }
+                    lachlanhardy
+                  on
+                  %a{ :href => "http://log.lachstock.com.au/past/2007/10/15/meshing-with-meraki/", :title => "Permalink for this post" }
+                    20071015 at 2009
+            .item_content
+              %p
+                %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1577657986/" }
+                  %img{ :src => "http://farm3.static.flickr.com/2004/1577657986_cc46801f83_m.jpg", :alt => "Meraki Mini box" }
+                Given all the excitement caused by mentions in
+                %a{ :href => "http://blog.futurestreetconsulting.com/?p=39" }
+                  Mark Pesce’s phenomenal closing keynote
+                for
+                %a{ :href => "http://webdirections.org/" }
+                  Web Directions
+                , it’s about time I wrote something about my favourite bit of hardware, the
+                %a{ :href => "http://meraki.com/oursolution/hardware/mini/" }
+                  Meraki Mini
+                \.
+              %p
+                %a{ :href => "http://scenariogirl.com/" }
+                  Lisa
+                and I have been using three Minis for our home network for the last 6 months. They’re easy to install, fun to play around with and kinda cute.
+              %p
+                Our previous access point (a
+                %a{ :href => "http://www.dynalink.com.au/modemsadsl_cur.htm?prod=RTA1025W" }
+                  Dynalink RTA1025W
+                , an excellent bit of kit that still serves as our ADSL 2 modem, firewall etc) didn’t have the range to reach the front room of our house from the very back wall where our phone point is located. I’d been reading about some cool new wifi tech from a couple of startups:
+                %a{ :href => "http://www.fon.com/" }
+                  Fon
+                ,
+                %a{ :href => "http://whisher.com/" }
+                  Whisher
+                and
+                %a{ :href => "http://meraki.com/" }
+                  Meraki
+                \. The latter sounded like it had less complications and dependencies, so I signed up for beta testing.
+              %p
+                I bought three Minis because it was the default purchase bundle and I wanted to have some flexibility, but it turns out that two cover the length of our house quite nicely. The third typically ensures strong signal throughout our network, but it gets unplugged and moved around as necessary if we want that powerpoint.
+              %p
+                Enough history, let’s set these babies up!
+              %h2
+                Installing a Meraki Network
+              %h3
+                Preliminaries
+              %p
+                Firstly, go
+                %a{ :href => "https://store.meraki.com/" }
+                  buy your beauties
+                \. Choose Standard Edition if you just want to do your house or office.  Pro is for those whose plans require either more control or billing. Note that Pro Minis cost $100 US more each. There’s no difference in hardware, but they’re charging you for the use to which you could put it (billing…)
+              %p
+                Make sure to select the appropriate country type of power adapter when ordering. I spent a whole Sunday afternoon trawling
+                %a{ :href => "http://www.paddysmarkets.com.au/" }
+                  Paddy’s Markets
+                looking for cheap US/AU converters after my Minis arrived. They now offer Australian ones, as well as US, UK and EU, but they didn’t then.
+              %p
+                Next, wait impatiently for them to arrive, refreshing the UPS tracking notifications every 1-2 minutes.
+                %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1577654750/" }
+                  %img{ :src => "http://farm3.static.flickr.com/2261/1577654750_b6330e44cd_m.jpg", :alt => "Packaging strewn everywhere" }
+              %p
+                Once they arrive, leave work early, rush home, ignore your loved ones and tear the boxes open.
+              %p
+                Put the little suckers together, making sure you’ve got all the bits. Record the IP, serial number and MAC address on the bottom/back of each one.
+              %h3
+                The Hookup
+              %p
+                Configuration is easiest if you plug them all into one powerboard next to your computer. You can move them afterwards without a flutter - the joys of mesh networks!
+              %p
+                Grab the Mini of your choice. It doesn’t matter which one, they’re all the same. Connect it to the net. This will be your gateway.
+              %p
+                Mine’s connected in through the aforementioned Dynalink, but you can plug it straight into any kind of modem, firewall, router, patch-board or whatever.
+              %p
+                Jump on your nearest computer, pull up your browser of choice, open a new tab/window and head to the IP address you recorded from your gateway Mini. Should be something like: http://6.1.24.190. This hosts the admin console for that specific Mini. The username is ‘admin’ and the password will be your serial number.
+              %p
+                Here’s where you check your signal strength etc. You’ll need it later, when you spread them out. You can also register them to your network here, but it’s probably easiest to do them all in bulk on the main admin console.
+              %p
+                %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1576766127/" }
+                  %img{ :src => "http://farm3.static.flickr.com/2183/1576766127_a1d414e325_m.jpg", :alt => "Functioning Meraki Mini" }
+              %p
+                Head to
+                %a{ :href => "http://dashboard.meraki.com/" }
+                  http://dashboard.meraki.com/
+                and log in to your account. Once you get over the fact that you just bought hardware that has a serious well-developed and reasonably designed site interface, go to the Configure tab and choose Add Nodes. From there, it’s just a matter of plugging in your order details and some MAC addresses (from the back of the repeaters).
+              %p
+                You now have a mesh network!
+              %p
+                (Okay, you already did, from the second you connected the first Mini to the internet. But now you can see it!)
+              %h3
+                Playing with Meraki Mesh
+              %p
+                %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1576768047/" }
+                  %img{ :src => "http://farm3.static.flickr.com/2082/1576768047_a171559359_m.jpg", :alt => "Functioning Meraki Mini" }
+                Spread your repeaters through the house, making sure you get them in good positions by checking signal strength in the console. Place them as close to windows as you can. Try to face them out into the world. Your place will be covered by proximity, anyway, so you want to make sure that your free public tier is available to as many others as possible.
+              %p
+                Check out all the options in the console. Depending on which edition you bought, there are quite a few! You can place your repeaters on a Google map, make private networks, set bandwidth throttles, ban hoggish users, set up personalised messages and branding, analyse your usage data or device use and heaps more. There’s even an API that lets your publish your data (
+                %a{ :href => "http://dashboard.meraki.com/api/network/FreeTheNet" }
+                  here’s mine
+                ).
+              %h2
+                Free The Net
+              %p
+                If I know my geeks, and I’m damn sure I do, you’re now champing at the bit to get yourself some hot Meraki-on-Meraki action. That’s awesome.
+                %a{ :href => "https://store.meraki.com/" }
+                  Do it
+                \!
+              %p
+                But consider this, the true benefits of a mesh network don’t lie in making a sexy little hardware system for your personal use. The benefits come
+                %a{ :href => "http://sf.meraki.com/" }
+                  when you convince your neighbours to do it too
+                \. And then you and they convince their neighbours. And before you know it, you have free wifi network access at that cafe on the corner or that park around the block with the cool bench. That’s just the start of the vision Mark Pesce was talking about at Web Directions. That’s just the start of everything that’s coming.
+              %p
+                Convince your friends. Convince your families. Buy them for friends’ birthdays. Talk to the folks in the local cafes, restaurants and community stores. Give one to your grandma. Tell the user groups you belong to.
+              %p
+                Imagine if every web standards geek you know buys these. If every programmer you know does, or all the flash nerds, designers, producers, information architects, producers and usability consultants.
+              %p
+                Wifi
+                %strong
+                  will
+                be ubiquitous. The network will be everywhere, but who’ll own it? The corporates? The telcos? The government? What about the rest of us?
+              %p
+                I’m calling on the people who give a fuck. Let’s make our own network!
+              %p
+                Buy your Merakis. Keep the free public tier and leave it called “freethenet”. Make it available to as many people as you can. Place your Minis where they’ll do most benefit and tell everybody you know.
+              %p
+                Make this happen. The people are the network. The network is our future. Free the net!
+            .item_meta
+              .item_tags
+                Tags:
+                %a{ :href => "http://log.lachstock.com.au/past/tags/LisaHerrod", :title => "View posts tagged with &quot;LisaHerrod&quot;" }
+                  LisaHerrod
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/calltoaction", :title => "View posts tagged with &quot;calltoaction&quot;" }
+                  calltoaction
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/geeks", :title => "View posts tagged with &quot;geeks&quot;" }
+                  geeks
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/howto", :title => "View posts tagged with &quot;howto&quot;" }
+                  howto
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/installation", :title => "View posts tagged with &quot;installation&quot;" }
+                  installation
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/markpesce", :title => "View posts tagged with &quot;markpesce&quot;" }
+                  markpesce
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/meraki", :title => "View posts tagged with &quot;meraki&quot;" }
+                  meraki
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/meshnetworking", :title => "View posts tagged with &quot;meshnetworking&quot;" }
+                  meshnetworking
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/network", :title => "View posts tagged with &quot;network&quot;" }
+                  network
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/setup", :title => "View posts tagged with &quot;setup&quot;" }
+                  setup
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/thepeoplearethenetwork", :title => "View posts tagged with &quot;thepeoplearethenetwork&quot;" }
+                  thepeoplearethenetwork
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/wifi", :title => "View posts tagged with &quot;wifi&quot;" }
+                  wifi
+              .item_hierarchy
+                Hierarchy:
+                %a{ :href => "http://log.lachstock.com.au/past/2007/5/20/make-the-leap/", :title => "Previous post" }
+                  previous
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/2007/10/17/meraki-madness/", :title => "Next post" }
+                  next
+          
+          
