@@ -1,7 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - Get all blog posts into site
- - Get all comments into site
  - Tidy post HAML
  - Tidy comment YAML
  - DRY posts
