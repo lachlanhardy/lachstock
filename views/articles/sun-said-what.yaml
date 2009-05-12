@@ -1,0 +1,46 @@
+
+#c98.comment_content
+.comment_author
+%a{ :href => "http://www.halans.be", :title => "View Halans's website" }
+Halans
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/10/22/sun-said-what/#c98", :title => "Permalink for this comment" }
+20071023 at 1149
+.comment_body
+%p
+Was as the Sun Developer Day last week. You would expect to be going away all inspired and ready to code some cool stuff… Hmmm, nope, not in case of Sun… I wonder if Sun is still relevant actually. One of the things they talked about was how they made money, because they are giving the software all away for free. They said that if we the developers write cool stuff (using their software), loads of people would use it, so you would need a decent infrastructure. As an example they said that Facebook adds about 100 servers per month. So in the end they are just a hardware company. I guess they want to start selling consumer hardware now, so we can run those client-side apps?
+#c99.comment_content
+.comment_author
+%a{ :href => "http://scenariogirl.com", :title => "View Lisa's website" }
+Lisa
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/10/22/sun-said-what/#c99", :title => "Permalink for this comment" }
+20071023 at 1501
+.comment_body
+%p
+Sun are totally irrelevant in the web development arena from what I hear, so it doesn’t surprise me at all to see you say that JJ.
+#c103.comment_content
+.comment_author
+%a{ :href => "http://lachstock.com.au", :title => "View Lachlan Hardy's website" }
+Lachlan Hardy
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/10/22/sun-said-what/#c103", :title => "Permalink for this comment" }
+20071024 at 1443
+.comment_body
+%p
+Good points! I remember being really surprised when I first realised Sun sold hardware but it makes more and more sense
+%p
+Most Java devs I know don’t care about accessibility etc on the front end, but for some reason it still shocked me to read those quotes
+#c111.comment_content
+.comment_author
+Craigus
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/10/22/sun-said-what/#c111", :title => "Permalink for this comment" }
+20071206 at 0916
+.comment_body
+%p
+If only I’d read this I may have been able to wow you with your own information :)
