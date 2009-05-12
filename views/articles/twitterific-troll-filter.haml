@@ -1,0 +1,100 @@
+
+            .item_details
+              %h1
+                A Twitterrific Troll Filter
+              %p
+                %strong
+                  Posted by
+                  %a{ :href => "http://log.lachstock.com.au/past/authors/2", :title => "View all posts by lachlanhardy" }
+                    lachlanhardy
+                  on
+                  %a{ :href => "http://log.lachstock.com.au/past/2008/8/3/twitterrific-troll-filter/", :title => "Permalink for this post" }
+                    20080803 at 1120
+            .item_content
+              %p
+                Talking to some friends recently about the signal-to-noise ratio on Twitter, I realised they hadn’t seen the
+                %a{ :href => "http://www.marusin.com/2008/02/12/setting-twitterific-power-user-preferences/" }
+                  Twitterific readme
+                file. It contains some &ldquo;Power User&rdquo; settings that you can run in your terminal. Some you may find useful; others not so much.
+              %p
+                I only use two. The first is straightforward. The discontinuity of real names in Twitterific jars me. I prefer the consistency of usernames everywhere, so I use a simple switch to
+                %code
+                  displayScreenName
+                instead. The real value, however, lies in the
+                %code
+                  tweetTextFilter
+                command.
+              %p
+                This command allows you to define an
+                %a{ :href => "http://icu-project.org/userguide/regexp.html" }
+                  ICU regular expression
+                to filter pretty much anything under the sun. My example below isn’t very complicated. It simply blocks all tweets that mention either Techcrunch, or &lsquo;griefer&rsquo;, or refer to a user by name of &lsquo;fanboi&rsquo;. The difference between the last two being that I see no references to &lsquo;griefer&rsquo; at all, whereas I can still see when &lsquo;fanboi&rsquo; replies to me but not when others reply to, or reference, her or him. The first file is just my .gitignore file to exclude the actual filter I use.
+              %p
+                %strong
+                  Update:
+                I’ve added the &lsquo;Olympics&rsquo; and &lsquo;080808&rsquo; because I’m a grouch. (Well, partly because I’m stupidly busy, but mostly because I’m a grouch.)
+              %script{ :src => "http://gist.github.com/4061.js" }
+              %p
+                I decided to post this after seeing
+                %span.vcard
+                  %a.fn.url{ :href => "http://tantek.com/", :rel => "colleague friend met" }
+                    Tantek&apos;s
+                  work towards a
+                  %a{ :href => "http://tantek.pbwiki.com/TrollFilter" }
+                    Troll Filter for Twitter searches
+                  \. There are people and sites I prefer to exclude from my life where possible. Mostly because they continually take time and energy for little return.
+              %p
+                This is a simple method for cutting those sites/people from at least one part of your life. I still follow the occasional link to Techcrunch and similar sites that’s been encoded by TinyURL et al because I’m not quite ready for a
+                %a{ :href => "http://gilesbowkett.blogspot.com/2008/07/web-distraction-blocking-temporary.html" }
+                  scorched earth
+                policy, but every other mention slips me by. And guess what? I don’t miss it at all.
+              %p
+                As for the infrequent and occasional griefer or fanboi-inspiring micro-celebrity in my life, I carry on blissfully ignorant of whatever negative emotions they typically cause in me that earned them the brand.
+              %p
+                I&apos;ve posted the
+                %a{ :href => "http://gist.github.com/4061" }
+                  commands on Github’s Gist
+                for anybody who wants to fork it and add their own parameters (and because I wanted to try out
+                %a{ :href => "http://gist.github.com/" }
+                  Gist
+                ). I’d love to see anybody expand on this, or any of the other power options. If you want to confirm your regular expressions do what you planned, there is a
+                %a{ :href => "http://demo.icu-project.org/icu-bin/redemo" }
+                  live testing page available
+                \.
+            .item_meta
+              .item_tags
+                Tags:
+                %a{ :href => "http://log.lachstock.com.au/past/tags/OSX", :title => "View posts tagged with &quot;OSX&quot;" }
+                  OSX
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/Tantek", :title => "View posts tagged with &quot;Tantek&quot;" }
+                  Tantek
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/Twitter", :title => "View posts tagged with &quot;Twitter&quot;" }
+                  Twitter
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/Twitterrific", :title => "View posts tagged with &quot;Twitterrific&quot;" }
+                  Twitterrific
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/bash", :title => "View posts tagged with &quot;bash&quot;" }
+                  bash
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/custom", :title => "View posts tagged with &quot;custom&quot;" }
+                  custom
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/filter", :title => "View posts tagged with &quot;filter&quot;" }
+                  filter
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/regularexpressions", :title => "View posts tagged with &quot;regularexpressions&quot;" }
+                  regularexpressions
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/tags/troll", :title => "View posts tagged with &quot;troll&quot;" }
+                  troll
+              .item_hierarchy
+                Hierarchy:
+                %a{ :href => "http://log.lachstock.com.au/past/2008/7/27/action-reaction/", :title => "Previous post" }
+                  previous
+                ,
+                %a{ :href => "http://log.lachstock.com.au/past/2008/8/18/internet-gurus/", :title => "Next post" }
+                  next
+          
