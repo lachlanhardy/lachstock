@@ -1,0 +1,72 @@
+- if @comments
+  #comments
+    %h2 Comments
+    %p.notice Currently, comments are currently disabled on this site.
+    %p.blurb
+      = "There are #{@comments.length} comments on this post."
+      -# %a{ :href => "#post", :title => "Post your own" } Post your own
+  
+    - @comments.each_with_index do |comment, index|
+      - comment_id = "#c#{index + 1}"
+      .comment{:id => comment_id}
+        .vcard
+          = comment['username']
+          - unless comment['username'].nil?
+            %img.photo{:src => comment_avatars(comment['username']), :height => "96", :alt => "A guest: #{comment['name']}", :width => "96"}
+          - if comment['url'] != nil
+            %a.url.fn{:href => comment['url'], :title => "View #{comment['name']}'s website"}= comment['name']
+          - else
+            %span.fn= comment['name']
+        .comment_details
+          posted on
+          %a{:href => comment_id, :title => "Permalink for this comment"}= comment['timestamp']
+        .comment_body
+          = comment['body']
+          
+  / #post-comment
+  /   %h2 Heckle me
+  /   %p
+  /     Required fields are
+  /     %strong emphasised
+  /     \.
+  / 
+  /   %form#post_form{:action => "http://log.lachstock.com.au/comments/add", :method => "post"}
+  /     %input#do{:name => "do", :type => "hidden", :value => "1"}
+  /     %input#human_check{:name => "human_check", :type => "hidden", :value => "0"}
+  /     %input#return_url{:name => "return_url", :type => "hidden", :value => "/articles/74-twitter-adds-a-breakdown/"}
+  /     %input#link{:name => "link", :type => "hidden", :value => "74-twitter-adds-breakdown"}
+  /     %input#comment_post_id{:name => "comment[post_id]", :type => "hidden", :value => "22"}
+  /     #comment_form
+  /       %table#comment_form{:cellspacing => "0", :cellpadding => "0"}
+  /         %tr
+  /           %td.labels
+  /             %label{:for => "comment_name"}
+  /               Name:
+  /           %td.fields
+  /             %input#comment_name{:name => "comment[name]", :size => "30", :type => "text"}
+  /         %tr
+  /           %td.labels
+  /             %label{:for => "comment_email"}
+  /               %b
+  /                 Email:
+  /           %td.fields
+  /             %input#comment_email{:name => "comment[email]", :size => "30", :type => "text"}
+  /         %tr
+  /           %td.labels
+  /             %label{:for => "comment_url"}
+  /               URL:
+  /           %td.fields
+  /             %input#comment_url{:name => "comment[url]", :size => "30", :type => "text"}
+  /         %tr
+  /           %td.labels
+  /             %label{:for => "tag_name"}
+  /               %b
+  /                 Comment:
+  /           %td.fields
+  /             %textarea#comment_body_raw{:name => "comment[body_raw]", :onkeypress => "this.form.elements['human_check'].value = '8'", :wrap => "virtual", :rows => "20", :cols => "45"}
+  /         %tr
+  /           %td.labels
+  / 
+  /           %td.fields
+  /             .submit_area
+  /               %input.submit{:name => "commit", :type => "submit", :value => "Submit comment", :onclick => "this.form.elements['human_check'].value = '8'"}

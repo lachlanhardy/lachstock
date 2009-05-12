@@ -38,7 +38,7 @@ helpers do
   end
   def comment_builder
     @comments = YAML::load(File.open("views/" + @category + "/" + @name + "/comments.yaml"))
-    haml(:"_comment", :layout => false)
+    haml(:"_comments", :layout => false)
   end
   def filtered_filenames(paths)
     paths ||= []
