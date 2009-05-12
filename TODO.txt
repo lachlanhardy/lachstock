@@ -1,0 +1,18 @@
+Tasks to be done before launch, in priority order:
+
+ - Get all blog posts into site
+ - Get all comments into YAML
+ - Set up caching for API requests
+
+
+Others things to do, in priority order:
+
+ - Set up post-commit hook action for redeploy
+ - Transform avatars to 96x96 and store locally against username and origin
+ - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
+ - Set up commenting
+ - Add Photos section
+ - Add Pool Room
+ - Add bookmarks
+ - Add tweets
+
