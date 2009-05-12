@@ -1,8 +1,13 @@
 Tasks to be done before launch, in priority order:
 
  - Get all blog posts into site
- - Get all comments into YAML
+ - Get all comments into site
+ - Tidy post HAML
+ - Tidy comment YAML
+ - DRY posts
  - Set up caching for API requests
+ - Catch exceptions in case calls fuck up
+ - set up URI rewrites
 
 
 Others things to do, in priority order:

@@ -1,0 +1,225 @@
+
+
+#c41.comment_content
+.comment_author
+%a{ :href => "http://leftjustified.net/", :title => "View Andrew K.'s website" }
+Andrew K.
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c41", :title => "Permalink for this comment" }
+20070517 at 1113
+.comment_body
+%p
+Maybe you should add a switch on your “Heckle me” comment form heading – sometimes it can say “Heckle me”, other times it can say “Stroke my ego”; depending on the type of post.
+%p
+…c’mon, you know you want to ;)
+#c42.comment_content
+.comment_author
+%a{ :href => "http://lachstock.com.au", :title => "View Lachlan Hardy's website" }
+Lachlan Hardy
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c42", :title => "Permalink for this comment" }
+20070517 at 1119
+.comment_body
+%p
+People could select whether their comment was heckling or supportive? I kinda like that idea!
+%p
+I figure comments have to be one or the other (or a combination of both). Nobody makes a comment if they’re neutral or disinterested
+%p
+I wonder what you could do with that metadata? Hmmm…
+#c43.comment_content
+.comment_author
+%a{ :href => "http://weblog.200ok.com.au/", :title => "View Ben Buchanan's website" }
+Ben Buchanan
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c43", :title => "Permalink for this comment" }
+20070517 at 1128
+.comment_body
+%p
+I always liked Zeldman’s habit of giving the “hat tip” to people who sent him great links.
+%p
+Another example is LinkedIn lets you endorse people’s work.
+%p
+But anyway… If we’re going to be social online, we should be sociable! :) People are getting more serious/emotional about their use of online social networking, so the time is long gone when manners could be skipped without repercussions.
+%p
+People used to think online communication was utterly trivial (many still do), but now they’re realising it’s just as real as other communications. At the end of the day it’s still 2+ humans with some tech crap in between, same as mail, phones, telegraph, semaphore, smoke signals…
+#c44.comment_content
+.comment_author
+%a{ :href => "http://leftjustified.net/", :title => "View Andrew K.'s website" }
+Andrew K.
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c44", :title => "Permalink for this comment" }
+20070517 at 1130
+.comment_body
+%p
+You could make a graph of “love / hate over time” Then in the footer or something – “I am currently: feeling the love” or “currently: getting roasted”
+%p
+Probably a sparklines-style graph (bitworking.org has a great web service for generating them) to give an overview of readers opinions.
+#c45.comment_content
+.comment_author
+%a{ :href => "http://molly.com/", :title => "View Molly E. Holzschlag's website" }
+Molly E. Holzschlag
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c45", :title => "Permalink for this comment" }
+20070517 at 1955
+.comment_body
+%p
+This is reminiscent of the XFN discussions and whether any negative relationships such as “enemy” should be included.
+%p
+It’s funny, yes, but Lachlan’s point is really important. Appreciation matters. It can, in fact save lives - this written from one who knows.
+#c46.comment_content
+.comment_author
+%a{ :href => "http://weblog.kilic.net/", :title => "View Serdar Kili\303\247's website" }
+Serdar Kiliç
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c46", :title => "Permalink for this comment" }
+20070517 at 2152
+.comment_body
+%p
+I was thinking about this just the other day. There’s nearly not enough “thank you“‘s going around, whether it be online or not. So thank you for bringing this to light.
+#c47.comment_content
+.comment_author
+%a{ :href => "http://blog.acidlabs.org/", :title => "View Stephen Collins's website" }
+Stephen Collins
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c47", :title => "Permalink for this comment" }
+20070517 at 2250
+.comment_body
+%p
+Completely agree, and the via: methodology is starting to take root on delicious, in much the same way as ma.gnolia’s thanks.  But it’s still ad hoc.
+%p
+Molly’s XFN thoughts are also interesting.
+%p
+Too many social apps use the notion of a “friend” to mean something very much less.  Friend needs to mean friend, other relationships need to be identifiable and notable and the ability to say thanks, just because, should be everywhere.
+%p
+Nice one.  And thanks!
+#c48.comment_content
+.comment_author
+%a{ :href => "http://lachstock.com.au", :title => "View Lachlan Hardy's website" }
+Lachlan Hardy
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c48", :title => "Permalink for this comment" }
+20070518 at 0138
+.comment_body
+%p
+LinkedIn was the other example that I forgot! That was what sparked this post - I got a recommendation and it made me feel good! ;)
+%p
+Great idea, Andrew. I’ve been wanting to use sparklines somewhere for ages! I might give the Rails library a go instead of bitworking
+%p
+Molly, I’m sure we can come up with ways to indicate disagreement that aren’t necessarily negative. I’ve been saying for years that blogs need to evolve beyond the current plateau of functionality, and now that I have one, I’d better do something about that
+%p
+Thanks, Serdar!
+%p
+I agree, Stephen. Certain terms have become convention regardless of fit-for-purpose. ‘Favourite’ is probably my next most disliked after ‘Friend’. Most of those items aren’t favourites of mine - I just want to mark them for later
+%p
+And thanks, I’d not noticed ‘via:’ before.
+#c49.comment_content
+.comment_author
+%a{ :href => "http://cdevroe.com/", :title => "View Colin Devroe's website" }
+Colin Devroe
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c49", :title => "Permalink for this comment" }
+20070518 at 2214
+.comment_body
+%p
+Great post Lachlan.  Don’t forget that for some people, just favoriting a photo/video/bookmark/whatever is a way of saying “thanks”.  I much prefer Ma.gnolia’s approach because it actually says “give thanks”.
+%p
+Oh, and me - commenting on this post - is my way of saying thanks for writing it.
+%p
+Now get outside, enjoy some sun, and write me a thank you card. :-)
+#c50.comment_content
+.comment_author
+%a{ :href => "http://www.onlinespiele-1.de", :title => "View Spiele's website" }
+Spiele
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c50", :title => "Permalink for this comment" }
+20070519 at 0010
+.comment_body
+%p
+Stephen: I think you have made a very meaningfull and important point there. There’s just this one thing. How do you feel when being offline for a few hours or even days? Is that OK? Should everyone get to where we are regarding that?
+#c60.comment_content
+.comment_author
+%a{ :href => "http://kathy.pioupiouland.com", :title => "View Kathy C.'s website" }
+Kathy C.
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c60", :title => "Permalink for this comment" }
+20070529 at 1721
+.comment_body
+%p
+Great note Lachlan, and I agree with Colin’s comment, there are non-explicit ways of “thanking” people, but if they were more explicit it would add to the feeling of appreciation on all sides.  Myspace is another one with possibilities, giving kudos for a blog post or comment, for example, Facebook has “gifts” (I think this is not a free option, it’s about $1 for 2 gifts or something like that.  It’s cheap but does add to the meaning of a gift when you recieve it…) that appear on your profile…
+%br
+There are so many possibilities, but even the smallest things like adding a friend (a real one, not just a mass-befriender) to your network helps grease those social cogs…
+#c61.comment_content
+.comment_author
+%a{ :href => "http://www.webdirections.org", :title => "View Maxine Sherrin's website" }
+Maxine Sherrin
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c61", :title => "Permalink for this comment" }
+20070606 at 1241
+.comment_body
+%p
+Awwwwwww. I read this post and now I am
+%a{ :href => "http://www.youtube.com/watch?v=tHjiGvdFl_E" }
+humming this
+……….
+#c62.comment_content
+.comment_author
+%a{ :href => "http://www.second-life.com", :title => "View second life millionaire's website" }
+second life millionaire
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c62", :title => "Permalink for this comment" }
+20070619 at 0446
+.comment_body
+%p
+non-expilcit ways of thanking? how about virtual induldgement on SL? just kidding…
+%p
+in germany there’s a great site called www.gutetaten.de - for those of you proficient enough in german. cheers!
+#c119.comment_content
+.comment_author
+%a{ :href => "http://www.soocial.com/", :title => "View Simon de Haan's website" }
+Simon de Haan
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c119", :title => "Permalink for this comment" }
+20071221 at 1816
+.comment_body
+%p
+Hm “social grease”, love the term and it really does convey the idea well.
+%p
+I’d be keen for ideas on how one could integrate that whole “relationally social” (as not technical sharing / social) aspect into a service like Soocial.com’s.
+%p
+A first step I guess could be to do like Dopplr, thank all the beta users for their involvement and patience, which I think is a brilliant move. Other than that, Soocial doesn’t support any ‘sharing’ as of yet so those points of contact where one could “share the love” do not exist yet. I guess we could share some more love when one sends out an invite.
+%p
+Thanks for giving this idea some traction :)
+#c164.comment_content
+.comment_author
+Tobi
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c164", :title => "Permalink for this comment" }
+20080513 at 0649
+.comment_body
+%p
+Man - i think we all should learn how to SWITCH OFF more often. Social life is also what happens while we&acute;re at the keyboard…thank god its summer. I pray that we&acute;ll make it! ;-)
+#c166.comment_content
+.comment_author
+Neuwagen
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2007/5/16/share_the_love/#c166", :title => "Permalink for this comment" }
+20080520 at 1018
+.comment_body
+%p
+Thank you Lachlan for this beautiful post! It&acute;s so true what you say -  lets start to make this world (and the net) a better place! Making someone smile or giving someone the opportunity to make someone smile is a beautiful and important thing. Aftr all we&acute;re still human.Even on the net. Let&acute;s share the love!
