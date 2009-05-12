@@ -34,7 +34,7 @@ end
 
 helpers do
   def comment_avatars(username)
-    # Twitter.user(username)[:profile_image_url].gsub(/_normal/, "")
+    Twitter.user(username)[:profile_image_url].gsub(/_normal/, "") unless Twitter.user(username)
     puts Twitter.user(username)
   end
   def comment_builder(filename)
