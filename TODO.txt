@@ -5,6 +5,9 @@ Tasks to be done before launch, in priority order:
  - Tidy post HAML
  - Tidy comment YAML
  - DRY posts
+ - Sort out tagging (do it or hide it?)
+ - Sort out page navigation
+ - Sort out site navigation
  - Set up caching for API requests
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
