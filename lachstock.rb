@@ -19,7 +19,7 @@ get '/:category' do
   @category = params[:category]
   @category_title = params[:category]
   @folders = Dir.glob("views/*/")
-  @items = Dir.glob("views/" + @category + "/*")
+  @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
   view File.join(@category, "/index").to_sym
 end
 
@@ -41,6 +41,14 @@ helpers do
       @comments = YAML::load(File.open("views/" + @category + "/" + @name + "/comments.yaml"))
       haml(:"_comments", :layout => false)
     end
+  end
+  def filtered_filenames(paths)
+    paths ||= []
+    paths.collect { |path|
+      path.split("/").last
+    }.reject { |name|
+      name == "index.haml" || name == "test"
+    }
   end
   def view(view)
     haml view, :options => {:format => :html5,
