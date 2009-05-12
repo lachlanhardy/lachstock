@@ -37,7 +37,11 @@
         %p thinks less is the new more.
     #page
     
-      = yield
+      -if @category_title == "article"
+        %p.category= "#{@category_title}:"
+        .column
+          = yield
+          = comment_builder
       
     #footer
       %p 

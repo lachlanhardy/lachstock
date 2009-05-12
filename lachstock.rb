@@ -29,16 +29,15 @@ get '/:category/:name' do
   @name = params[:name]
   @folders = Dir.glob("views/*/")
   @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
-  view File.join(@category, "/", @name).to_sym
+  view File.join(@category, "/", @name, "/index").to_sym
 end
 
 helpers do
   def comment_avatars(username)
-    Twitter.user(username)[:profile_image_url].gsub(/_normal/, "") unless Twitter.user(username)
-    puts Twitter.user(username)
+    # Twitter.user(username)[:profile_image_url].gsub(/_normal/, "") unless Twitter.user(username)
   end
-  def comment_builder(filename)
-    @comments = YAML::load(File.open("views/" + @category + "/" + filename + ".yaml"))
+  def comment_builder
+    @comments = YAML::load(File.open("views/" + @category + "/" + @name + "/comments.yaml"))
     haml(:"_comment", :layout => false)
   end
   def filtered_filenames(paths)
