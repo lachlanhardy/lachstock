@@ -1,0 +1,262 @@
+
+#c150.comment_content
+.comment_author
+%a{ :href => "http://adactio.com/", :title => "View Jeremy Keith's website" }
+Jeremy Keith
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c150", :title => "Permalink for this comment" }
+20080401 at 1959
+.comment_body
+%p
+But Lachlan, the fact that you are entering your Google password
+%em
+on Google
+or your Yahoo password
+%em
+on Yahoo
+makes all the difference. Do you have any data to back up your assertion that most users don’t check the URL of the page they are authenticating with? The anecdotal evidence that I’ve heard (albeit from just a smattering of users) is that they feel distinctly uncomfortable entering their username/password from one site on another …but that they over-ride these concerns in order to import their friends’ contact details. A correct authentication process soothes these concerns though, as you said, users still need to check the URL and check for the SSL lock symbol.
+%p
+I think the main issue you’re pointing to is one that affects every single document on the Web: how can you trust the page currently loaded in your browser? Trustworthy URLs and SSL can help people make up their minds but the issue is fundamentally subjective. For example, one person reads an article and believes it because it is on Wikipedia; another person reads the same article and doesn’t believe it for exactly the same reason.
+%p
+This isn’t even a new problem. For as long as any kind of recorded media has existed, the trust issue has been there: how can you believe what you read in a newspaper, hear on a radio, or see on TV? Trust cannot be solved by technology. But technology (like API authentication) can go a heck of a long way to helping people make up their own minds.
+%p
+Another example…
+%p
+I’m entering my name, email address and URL in the form fields provided here. But how do you really know it’s me? You can’t be 100% sure. A technology like OpenID would go a long way to establishing trust&mdash;trust that I am who I’m claiming to be. But even that can theoretically be gamed.
+%p
+So yes, I agree that there is no perfect way to establish trust on the Web (or IRL, for that matter) but there’s still a huge difference between entering a username/password combo for site X on site X and entering a username/password combo for site X on site Y.
+#c151.comment_content
+.comment_author
+%a{ :href => "http://incrementalism.net", :title => "View Tim Moore's website" }
+Tim Moore
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c151", :title => "Permalink for this comment" }
+20080402 at 0047
+.comment_body
+%p
+I think that client-side certificates can go a long way to help with this kind of problem, as well as just being really convenient and brain-dead simple! MyOpenID.com already implements this form of authentication, and I hope other issuers will follow suit.
+%p
+See
+%a{ :href => "http://drnicwilliams.com/2008/02/22/zero-sign-on-with-client-certificates/", :title => "Zero Sign On -- 1 better or Infinitely better than Single Sign On?" }
+Dr. Nic’s tutorial
+for set-up instructions.
+#c152.comment_content
+.comment_author
+%a{ :href => "http://lachstock.com.au/", :title => "View Lachlan Hardy's website" }
+Lachlan Hardy
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c152", :title => "Permalink for this comment" }
+20080402 at 1056
+.comment_body
+%p
+You’re absolutely right, Jeremy. That
+%em
+does
+make a huge difference. Perhaps I didn’t emphasise my delight with it enough. Not entering credentials for X into Y is a massive step that we, as an ethical industry, need to take.
+%p
+As these authentication methods spread, they will absolutely cut down on the effectiveness of current phishing techniques. I just wonder what the phishers will do when that happens.
+%p
+I have no data about likelihood of users to check the URL and SSL status. I wish I did! Does anyone? Do the people who study such things release the data?
+%p
+And I can tell it’s you by the cogent argument and philosophical bent. ;)
+%p
+Tim makes a great point about client-side certificates. Trust Dr Nic to be in the middle of that! I’ll be following it with interest. Thanks, Tim!
+#c153.comment_content
+.comment_author
+%a{ :href => "http://factoryjoe.com", :title => "View Chris Messina's website" }
+Chris Messina
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c153", :title => "Permalink for this comment" }
+20080402 at 1140
+.comment_body
+%p
+(Let’s hope you’re running OpenID here so that I can verify that it’s the Real Chris Messina^tm leaving this comment! ;))
+%p
+So, I take your point and share your concern, to a degree.
+%p
+The other thing you’re not thinking about here is the paper trail aspect. With delegated authorization, each remote site looking to access your account will need to have a consumer key (depending, of course, how the API is set up). Now, this fact alone won’t scuttle obtaining someone’s Gmail credentials if they’re tricked into visiting a fraudulent originating site, but really you’re just moving the risk around in that case.
+%p
+The difference should be that, just like people
+%em
+should
+(and CAN) check their credit card statements for suspicious-looking activities, eventually, sites like Gmail and Yahoo should allow similar paper trails to be collected and reported back to the user, detailing every access and the actions taken using which credentials and remote keys. Today, with the password anti-pattern, it’s impossible to differentiate where requests are coming from or to prohibit access from a compromised key, since you’re using your actual credentials all the time.
+%p
+So, in addition to watching the URL bar (a good practice regardless), I’d also like to see data brokers start recording access logs and exposing them to users. At least then, if you’ve ben phished, you’ll be able to see that, oh, hmm, for reason, that site that I gave my u/p to the other day never showed up in my logs… perhaps it’s time to change my password (and, in doing so, fortunately, it won’t necessarily break all the other legitimate sites to whom I’ve assigned limited access tokens)!
+#c154.comment_content
+.comment_author
+%a{ :href => "http://weblog.200ok.com.au/", :title => "View Ben Buchanan's website" }
+Ben Buchanan
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c154", :title => "Permalink for this comment" }
+20080402 at 1309
+.comment_body
+%p
+Do users check URLs and SSL credentials? Some, a few, maybe.
+%p
+I reckon a lot of users won’t realise that having Hotmail open in another tab makes it suspicious to be asked for your Hotmail user/password.
+%p
+My own observation is that most users don’t understand security well enough to make an informed choice; or they simply don’t care about computer/online security (usually because they are not aware of the real risks). I’ve seen people with their username and password stuck to the monitor in a clearly visible reception desk.
+%p
+Consider the study in 2004 that found
+%a{ :href => "http://news.bbc.co.uk/2/hi/technology/3639679.stm" }
+70% of users would willingly give up their password for a chocolate bar
+\. I’ve personally discovered that people will open almost any “security” door - including a university cashier booth - if you offer them lollies and look like you’re having fun (see:
+%a{ :href => "http://www.200ok.com.au/team_random/" }
+re-gruntling
+).
+%p
+Sub in “have fun with friends” for “get a chocolate bar”. I think a lot of people out there will take the risk because they feel the return is worth it or because they simply don’t realise/believe there’s a risk.
+#c156.comment_content
+.comment_author
+%a{ :href => "http://alanhogan.com", :title => "View Alan Hogan's website" }
+Alan Hogan
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c156", :title => "Permalink for this comment" }
+20080403 at 0418
+.comment_body
+%p
+@Chris Messina and @Jeremy Keith nailed it above. This is a big improvement, and Gmail et al should definitely have a “paper trail” equivalent.
+%p
+Similarly, I’ve long wished that every time I sign in to a website, it would say, “You last logged in 4 days ago from 192.0.0.1 (Cupertino, CA) browsing with Opera 9.5. Sound fishy? Click here to report it and change your password”
+#c157.comment_content
+.comment_author
+%a{ :href => "http://lachstock.com.au/", :title => "View Lachlan Hardy's website" }
+Lachlan Hardy
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c157", :title => "Permalink for this comment" }
+20080403 at 1658
+.comment_body
+%p
+Ah, Chris, I wish I were running OpenID! I will be as soon as I finish the db migration script from Simplelog to
+%a{ :href => "http://enkiblog" }
+Enki
+(which requires OpenID for everything).
+%p
+I hadn’t considered the paper trail aspect. That has definitely got a lot of potential for giving users more control over their online interactions and data sharing. Very exciting!
+%p
+Glad to see you’ve retained your skepticism, Ben! Yeah, I still don’t believe most folks care or value their passwords. I have some passwords I value less - if that makes sense. I use them on sites I don’t trust yet.
+%p
+Cool idea, Alan. Especially if it were implemented on OpenID providing sites such ClaimID and myVidoop etc!
+#c175.comment_content
+.comment_author
+%a{ :href => "http://www.vacik.com", :title => "View Natalia's website" }
+Natalia
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c175", :title => "Permalink for this comment" }
+20080612 at 0258
+.comment_body
+%p
+I think openID can reduce the amount of spam on the net. If the only thing was to provide an ID in the comment section then a lot of spammers would simple give up.
+#c178.comment_content
+.comment_author
+%a{ :href => "http://lachstock.com.au", :title => "View Lachlan Hardy's website" }
+Lachlan Hardy
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c178", :title => "Permalink for this comment" }
+20080614 at 1830
+.comment_body
+%p
+I don’t agree, Natalia. It may have that effect in the relatively short time, but as OpenID begins to see ever more uptake, I think that serious spammers, the ones writing bots etc, will build their own OpenID servers that don’t require login and simply authenticate anyone who asks.
+#c298.comment_content
+.comment_author
+%a{ :href => "http://rhnh.net", :title => "View Xavier Shay's website" }
+Xavier Shay
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c298", :title => "Permalink for this comment" }
+20090105 at 1051
+.comment_body
+%p
+That’s not just speculation either, the anonymous OpenID thing has already been done a few times over now - it’s really quite trivial to setup (phpMyID, change a few lines, voila).
+#c299.comment_content
+.comment_author
+Rasmus Lauridsen
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c299", :title => "Permalink for this comment" }
+20090105 at 1136
+.comment_body
+%p
+@lachlan @xavier
+%p
+Yes you are right
+Its not going to be long before we start seeing block lists a la the ones that we have seen in email.
+%p
+Q&amp;D use case
+%p
+Site recieves openid url
+Site checks against blocked domain list
+\&gt;if site not in list, move on and authenticate.
+\&gt;if site in list, tell person to get lost or use better domain.
+%p
+But is Openid meant to fight spam?
+I dont think so, the way its set up as you say doesn’t really guarantee that you are who you are. It guarantees that the server asked says that you are who you say you are. Can you trust the server to tell the truth about who you are? No
+Yoou can combat this problem with white lists of servers that you trust and accept ids from. That of course means bye bye to  the flexibility of openid.
+And you can’t really still trust it since someone might have taken over your whitelisted server.
+%p
+Spam I think must be fought at different levels, not in openid. Use the same tools you already use now to decide if you want to trust the person with some functionality on your site. Whatever you deem sufficiant to trust a person. (mail reply, moderation and so on)
+You could even set up a whitelist of openid servers that you trust to not be spammers, and allow them more rights off the bat, than non whitelisted domains. It all comes down to you as admin to figure out what constitutes trusted info.
+#c300.comment_content
+.comment_author
+%a{ :href => "http://singpolyma.net", :title => "View Stephen Paul Weber's website" }
+Stephen Paul Weber
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c300", :title => "Permalink for this comment" }
+20090105 at 2336
+.comment_body
+%p
+You’re missing one key thing.  Technologies like OAuth make it so that the service no longer needs to user the antiquated username/password technology to authenticate you!  Proprietary techonolgies like the vidoop image shield, or open standards like client side TLS certificates, or two-factor phone authentication, or OpenID (which in tun can and does use any of these methods) can be used
+%em
+instead
+\.
+%p
+Phishing only really works when there’s passphrases involved.
+#c301.comment_content
+.comment_author
+%a{ :href => "http://blog.wi.id.au", :title => "View Wade M's website" }
+Wade M
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c301", :title => "Permalink for this comment" }
+20090106 at 1621
+.comment_body
+%p
+@Stephen,
+%p
+2-Factor-Authentication is not going to stop phishing, nor is a shunt for OpenID. EG of 2 factor phishing below
+%p
+http://www.theregister.co.uk/2007/04/19/phishing
+%em
+evades
+two-factor_authentication/
+%p
+Phishing will always exist. The solution doesn’t exist in any technology, it exists in user education.
+%p
+–Wade
+#c302.comment_content
+.comment_author
+%a{ :href => "http://www.frankieroberto.com", :title => "View Frankie Roberto's website" }
+Frankie Roberto
+.comment_details
+posted on
+%a{ :href => "http://log.lachstock.com.au/past/2008/4/1/phishing-fools/#c302", :title => "Permalink for this comment" }
+20090109 at 0142
+.comment_body
+%p
+GMail already does have an activity log/paper trail, although only for sessions using full username/password - I can’t see a log for oAuth based requests yet.
+%p
+It’s a bit hidden though. If you open Gmail in more than one browser at once, you get a message in the footer like:
+%p
+“This account is open in 1 other location at this IP ().   Last account activity: 48 minutes ago on this computer.  Details [which links to a popup containing a full log]”
+%p
+Frankie
