@@ -2,6 +2,7 @@ Tasks to be done before launch, in priority order:
 
  - Tidy post HAML
  - Tidy comment YAML
+ - fix favicon lame 404 action
  - DRY posts
  - Sort out archive ordering etc
  - Sort out tagging (do it or hide it?)

@@ -32,14 +32,20 @@ get '/:category/:name' do
   view File.join(@category, "/", @name, "/index").to_sym
 end
 
+get '*/' do
+  redirect params[:splat].to_s
+end
+
 helpers do
   def comment_avatars(username)
     # Twitter.user(username)[:profile_image_url].gsub(/_normal/, "") unless Twitter.user(username)
   end
   def comment_builder
     unless @name.nil?
-      @comments = YAML::load(File.open("views/" + @category + "/" + @name + "/comments.yaml"))
-      haml(:"_comments", :layout => false)
+      if File.exist? "#{options.views}/#{@category}/#{@name}/comments.yaml"
+        @comments = YAML.load_file("views/#{@category}/#{@name}/comments.yaml")
+        haml(:"_comments", :layout => false)
+      end
     end
   end
   def filtered_filenames(paths)
