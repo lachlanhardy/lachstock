@@ -10,6 +10,7 @@ Tasks to be done before launch, in priority order:
  - Set up caching for API requests
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
+ - set up proper IMG stylings in CSS
 
 
 Others things to do, in priority order:
