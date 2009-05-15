@@ -1,7 +1,7 @@
 - if @comments
   #comments
     %h2 Comments
-    %p.notice Currently, comments are currently disabled on this site.
+    %p.notice Comments are currently disabled on this site.
     %p.blurb
       = "There are #{@comments.length} comments on this post."
       -# %a{ :href => "#post", :title => "Post your own" } Post your own
@@ -10,7 +10,6 @@
       - comment_id = "#c#{index + 1}"
       .comment{:id => comment_id}
         .vcard
-          = comment['username']
           - unless comment['username'].nil?
             %img.photo{:src => comment_avatars(comment['username']), :height => "96", :alt => "A guest: #{comment['name']}", :width => "96"}
           - if comment['url'] != nil

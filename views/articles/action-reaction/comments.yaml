@@ -1,33 +1,26 @@
+-
+    name: Myles Eftos
+    username: madpilot
+    url: http://myles.eftos.id.au/blog
+    timestamp: 20080727 at 2306
+    body: |
+        <p>Whilst I’m still in awe of those crazy people that seem to always be on, I’ve definately had to invoke some similar ideas to get rid of distractions whilst trying to get work done.</p>
+        <ol>
+            <li>Turn off email/twitter/blog readers etc etc for blocks of time. I’ve found I can work on a project for about two hours before shiny things start distracting me. After the block, then I check emails</li>
+            <li>Only respond to email that is urgent right away. I find there is a significant context switch to respond to correspondence properly. If a client has to wait two hours to get a response, the world isn’t going to end.</li>
+            <li>Down time. I used to feel guilty for sitting in front of the couch watching mindless tv, then realised I need to switch off your brain. Hanging out with mates for coffee/drinks has the same effect.</li>
+            <li>Make time your our own stuff (I suck at this). This gives you time to actually act, otherwise your spend your whole time spinning your wheels.</li>
+            <li>Pick one social network - I only use Twitter (I don’t count sites that have social networks tacked on like flickr), I don’t bother trying to dilute my attention with facebook, plurk etc etc.</li>
+            <li>Oh, your bang on the money with talking to smart people - they provide inspiration, and that is what drives people to act.</li>
+        </ol>
 
-#c205.comment_content
-.comment_author
-%a{ :href => "http://myles.eftos.id.au/blog", :title => "View Myles Eftos's website" }
-Myles Eftos
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/7/27/action-reaction/#c205", :title => "Permalink for this comment" }
-20080727 at 2306
-.comment_body
-%p
-Whilst I’m still in awe of those crazy people that seem to always be on, I’ve definately had to invoke some similar ideas to get rid of distractions whilst trying to get work done.
-%ol
-%li
-%p
-  Turn off email/twitter/blog readers etc etc for blocks of time. I’ve found I can work on a project for about two hours before shiny things start distracting me. After the block, then I check emails
-%li
-%p
-  Only respond to email that is urgent right away. I find there is a significant context switch to respond to correspondence properly. If a client has to wait two hours to get a response, the world isn’t going to end.
-%li
-%p
-  Down time. I used to feel guilty for sitting in front of the couch watching mindless tv, then realised I need to switch off your brain. Hanging out with mates for coffee/drinks has the same effect.
-%li
-%p
-  Make time your our own stuff (I suck at this). This gives you time to actually act, otherwise your spend your whole time spinning your wheels.
-%li
-%p
-  Pick one social network - I only use Twitter (I don’t count sites that have social networks tacked on like flickr), I don’t bother trying to dilute my attention with facebook, plurk etc etc.
-%p
-Oh, your bang on the money with talking to smart people - they provide inspiration, and that is what drives people to act.
+-
+    name: Myles Eftos
+    username: madpilot
+    url: http://myles.eftos.id.au/blog
+    timestamp: 20080727 at 2306
+    body: |
+        <p>Whilst I’m still in awe of those crazy people that seem to always be on, I’ve definately had to invoke some similar ideas to get rid of distractions whilst trying to get work done.</p>    
 #c206.comment_content
 .comment_author
 %a{ :href => "http://www.purecaffeine.com", :title => "View NathanaelB's website" }
