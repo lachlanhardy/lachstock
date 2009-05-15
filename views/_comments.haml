@@ -8,7 +8,7 @@
   
     - @comments.each_with_index do |comment, index|
       - comment_id = "#c#{index + 1}"
-      .comment{:id => comment_id}
+      .comment{:id => comment_id, :class => (comment['username'] == "lachlanhardy" ? "lachstock" : "")}
         .vcard
           - unless comment['username'].nil?
             %img.photo{:src => comment_avatars(comment['username']), :height => "96", :alt => "A guest: #{comment['name']}", :width => "96"}
