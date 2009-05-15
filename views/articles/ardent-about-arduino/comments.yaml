@@ -1,111 +1,64 @@
+-
+    name: Marcus
+    username: schappim
+    url: http://www.littlebirdelectronics.com/collections/frontpage/products/arduino-workshop-ticket
+    timestamp: 20080508 at 1608
+    body: |
+        <p>Hi Lachstock peeps, enter the code LACHSTOCK to save a $20 at the checkout. When purchasing your Syd ticket.</p>
+        <p>Melbourne ticket will be on the site soon. Email me email@littlebirdelectronics.com if you need more information.</p>
+        <p>Cheers,</p>
+        <p>Marcus :-)</p>
+        
+-
+    name: Andrew K.
+    username: ~
+    url: http://leftjustified.net/
+    timestamp: 20080508 at 1617
+    body: |
+        <p>I’m stoked to see that a) you’re into this Lach and b) there’s going to be a workshop down here in Melbourne!</p>
 
-#c158.comment_content
-.comment_author
-%a{ :href => "http://www.littlebirdelectronics.com/collections/frontpage/products/arduino-workshop-ticket", :title => "View Marcus's website" }
-Marcus
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/5/8/ardent-about-arduino/#c158", :title => "Permalink for this comment" }
-20080508 at 1608
-.comment_body
-%p
-Hi Lachstock peeps, enter the code LACHSTOCK to save a $20 at the checkout. When purchasing your Syd ticket.
-%p
-Melbourne ticket will be on the site soon. Email me email@littlebirdelectronics.com if you need more information.
-%p
-Cheers,
-%p
-Marcus :-)
-#c159.comment_content
-.comment_author
-%a{ :href => "http://leftjustified.net/", :title => "View Andrew K.'s website" }
-Andrew K.
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/5/8/ardent-about-arduino/#c159", :title => "Permalink for this comment" }
-20080508 at 1617
-.comment_body
-%p
-I’m stoked to see that
-a) you’re into this Lach
-and
-b) there’s going to be a workshop down here in Melbourne!
-#c160.comment_content
-.comment_author
-%a{ :href => "http://blog.allen.com.au", :title => "View Matt Allen's website" }
-Matt Allen
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/5/8/ardent-about-arduino/#c160", :title => "Permalink for this comment" }
-20080508 at 1636
-.comment_body
-%p
-Dang! RailsConf is on at the same time. Marcus, are you going to be running any others?
-%p
-Matta
-#c161.comment_content
-.comment_author
-%a{ :href => "http://scenariogirl.com", :title => "View Lisa's website" }
-Lisa
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/5/8/ardent-about-arduino/#c161", :title => "Permalink for this comment" }
-20080508 at 1640
-.comment_body
-%p
-Wow that looks cool! I can’t program, but it looks like a stack of fun.
-%p
-Are there a lot of experimental projects evolving out of Arduino?
-#c162.comment_content
-.comment_author
-%a{ :href => "http://valhallaisland.com", :title => "View Jim Whimpey's website" }
-Jim Whimpey
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/5/8/ardent-about-arduino/#c162", :title => "Permalink for this comment" }
-20080508 at 1650
-.comment_body
-%p
-This kind of stuff all looks so cool. Lego has been doing this kind of stuff for ages with Robolab. You can start by making apps visually in Robolab but there’s also a Java API that hooks into everything, the robots have engines, different kinds of sensors, etc. It would be a great thing to give young children but for the software programmer, it’s extremely cool to see physical results of your code.
-%p
-I think it’s time I moved to Sydney or Melbourne, where all the action is.
-#c163.comment_content
-.comment_author
-%a{ :href => "http://blog.sharp.id.au", :title => "View Rob Sharp's website" }
-Rob Sharp
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/5/8/ardent-about-arduino/#c163", :title => "Permalink for this comment" }
-20080508 at 1654
-.comment_body
-%p
-Dopplr uber-geek
-%a{ :href => "http://www.hackdiary.com/" }
-Matt Biddulph
-recently
-%a{ :href => "http://www.slideshare.net/mattb/coders-need-to-learn-hardware-hacking-now/" }
-gave a talk on hardware hacking
-, to
-%a{ :href => "http://2007.xtech.org/" }
-XTech
-and he also has a post where
-%a{ :href => "http://www.hackdiary.com/archives/000101.html" }
-he links together first and second life
-with an arduino. All are worth checking out!
-#c165.comment_content
-.comment_author
-%a{ :href => "http://lachstock.com.au/", :title => "View Lachlan Hardy's website" }
-Lachlan Hardy
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/5/8/ardent-about-arduino/#c165", :title => "Permalink for this comment" }
-20080514 at 1639
-.comment_body
-%p
-I just bought my ticket!
-%p
-Thanks for the discount code, Marcus! Very cool :)
-%p
-You’d be very welcome in Sydney, Jim! But don’t you have that little degree thing to finish? ;)
-%p
-Thanks for the links, Rob!
+-
+    name: Matt Allen
+    username: mattallen
+    url: http://blog.allen.com.au
+    timestamp: 20080508 at 1636
+    body: |
+        <p>Dang! RailsConf is on at the same time. Marcus, are you going to be running any others?</p>
+        <p>Matta</p>
+
+-
+    name: Lisa
+    username: scenariogirl
+    url: http://scenariogirl.com
+    timestamp: 20080508 at 1640
+    body: |
+        <p>Wow that looks cool! I can’t program, but it looks like a stack of fun.</p>
+        <p>Are there a lot of experimental projects evolving out of Arduino?</p>
+        
+-
+    name: Jim Whimpey
+    username: jimwhimpey
+    url: http://valhallaisland.com
+    timestamp: 20080508 at 1650
+    body: |
+        <p>This kind of stuff all looks so cool. Lego has been doing this kind of stuff for ages with Robolab. You can start by making apps visually in Robolab but there’s also a Java API that hooks into everything, the robots have engines, different kinds of sensors, etc. It would be a great thing to give young children but for the software programmer, it’s extremely cool to see physical results of your code.</p>
+        <p>I think it’s time I moved to Sydney or Melbourne, where all the action is.</p>
+        
+-
+    name: Rob Sharp
+    username: quannum
+    url: http://blog.sharp.id.au
+    timestamp: 20080508 at 1654
+    body: |
+        <p>Dopplr uber-geek <a href="http://www.hackdiary.com/">Matt Biddulph</a> recently <a href="http://www.slideshare.net/mattb/coders-need-to-learn-hardware-hacking-now/">gave a talk on hardware hacking</a>, to <a href="http://2007.xtech.org/">XTech</a> and he also has a post where <a href="http://www.hackdiary.com/archives/000101.html">he links together first and second life</a> with an arduino. All are worth checking out!</p>
+        
+-
+    name: Lachlan Hardy
+    username: lachlanhardy
+    url: http://lachstock.com.au/
+    timestamp: 20080514 at 1639
+    body: |
+        <p>I just bought my ticket!</p>
+        <p>Thanks for the discount code, Marcus! Very cool :)</p>
+        <p>You’d be very welcome in Sydney, Jim! But don’t you have that little degree thing to finish? ;)</p>
+        <p>Thanks for the links, Rob!</p>
