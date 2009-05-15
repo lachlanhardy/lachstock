@@ -23,7 +23,6 @@ get '/:category' do
   view File.join(@category, "/index").to_sym
 end
 
-# getting tags from permanent urls
 get '/:category/:name' do 
   @category = params[:category]
   @category_title = params[:category].gsub(/(.+)s$/, '\1')
@@ -32,6 +31,7 @@ get '/:category/:name' do
   view File.join(@category, "/", @name, "/index").to_sym
 end
 
+# Hot redirect for consistent URLs
 get '*/' do
   redirect params[:splat].to_s
 end
