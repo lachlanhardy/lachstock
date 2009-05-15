@@ -1,0 +1,130 @@
+#c1.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/66003446/glenda_small.jpg", :height => "96", :alt => "A guest: goodwitch", :width => "96"}
+    %a.url.fn{:href => "http://glendathegood.com", :title => "View goodwitch's website"} goodwitch
+  .comment_details
+    posted on
+    %a{:href => "/articles/joining-the-conversation/#c1", :title => "Permalink for this comment"} 20070328 at 0105
+  .comment_body
+    %p Cheers!  I know exactly how you feel.  Same thing happened to me at SXSWi2005.  In almost the exact same way…Flickr account, addiction, blog, first post, not knowing what I’d write about…but damn sure that I wasn’t just going to take…that I must know something that I could give back.
+    %p So…thanks for joining the conversation and giving us a view that is uniquely Lach.
+
+#c2.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/61831453/funkycoda_red.png", :height => "96", :alt => "A guest: Ajay Ranipeta", :width => "96"}
+    %a.url.fn{:href => "http://www.aggregatedsolutions.com/", :title => "View Ajay Ranipeta's website"} Ajay Ranipeta
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c2", :title => "Permalink for this comment"} 20070328 at 0343
+  .comment_body
+    %p Finally, Lachlan’s blogging. I remember it was Russ who got me onto flickr, and soon after i got hit by the flickritis. And blogiritis too.. and now twitteritis.. it’s sweet!! totally agree re: ideas growing.
+    %p Looking forward to some interesting logs of stuff Hardy.
+#c3.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/57978691/cp-som-128.png", :height => "96", :alt => "A guest: Cam", :width => "96"}
+    %a.url.fn{:href => "http://campegg.com", :title => "View Cam's website"} Cam
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c3", :title => "Permalink for this comment"} 20070328 at 0611
+  .comment_body
+    %p About bloody time! It’s good to see you writing, Lach.
+
+#c4.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/81990286/avatar_Perth250x250.jpg", :height => "96", :alt => "A guest: Lisa H", :width => "96"}
+    %a.url.fn{:href => "http://scenarioseven.com.au", :title => "View Lisa H's website"} Lisa H
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c4", :title => "Permalink for this comment"} 20070328 at 0816
+  .comment_body
+    %p I like the idea of ‘giving something back’. I think that’s really important in any community, but I hadn’t thought of doing it via a blog.
+    %p As you can see, I’m giving something back by not having any content on my site - still!
+    %p Perhaps all that is about to change.
+    %p Great first article Lachlan, I really can’t wait to see more and I know they’re going to be great. You have so much passion for this web stuff ;)
+
+#c5.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/131189655/avatar_darkroom.png", :height => "96", :alt => "A guest: Scott G", :width => "96"}
+    %a.url.fn{:href => "http://www.standardzilla.com", :title => "View Scott G's website"} Scott G
+  .comment_details
+    posted on
+    %a{:href => "/articles/joining-the-conversation/#c5", :title => "Permalink for this comment"} 20070328 at 0912
+  .comment_body
+    %p hooray! I have been subscribed to this feed for a while now and it’s been a bit dormant :-P
+    %p keep it coming dude.
+    %p s.
+    
+#c6.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/52131142/mypictr_last.fm.jpg", :height => "96", :alt => "A guest: Lucas Chan", :width => "96"}
+    %a.url.fn{:href => "http://lucaschan.com/", :title => "View Lucas Chan's website"} Lucas Chan
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c6", :title => "Permalink for this comment" } 20070328 at 0941
+  .comment_body
+    %p Yay!  Welcome.  :)
+    
+#c7.comment
+  .vcard
+    %img.photo{:src => "http://farm1.static.flickr.com/24/buddyicons/73368812@N00.jpg?1176715849#73368812@N00", :height => "96", :alt => "A guest: Andrew K.", :width => "96"}
+    %a.url.fn{:href => "http://leftjustified.net/", :title => "View Andrew K.'s website"} Andrew K.
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c7", :title => "Permalink for this comment" } 20070328 at 1134
+  .comment_body
+    %p Ur in my feedreaderz, spreading ur propagandaz.
+    %p And I like it ;)
+    
+#c8.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/61695375/Picture_4.png", :height => "96", :alt => "A guest: mattymcg", :width => "96"}
+    %a.url.fn{:href => "http://magain.com/blog/", :title => "View mattymcg's website"} mattymcg
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c8", :title => "Permalink for this comment" } 20070328 at 1420
+  .comment_body
+    %p Yee ha, let it out!
+      
+#c9.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/15021332/Untitled-1.gif", :height => "96", :alt => "A guest: Cameron Adams", :width => "96"}
+    %a.url.fn{:href => "http://www.themaninblue.com/", :title => "View Cameron Adams's website"} Cameron Adams
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c9", :title => "Permalink for this comment" } 20070329 at 1233
+  .comment_body
+    %p I like how you’ve worn your artistic influences on your sleeve and gone for the Mondrian stark boxes, contrasting negative and positive space with sparse flourishes of colour.
+    %p You’ve depths I never knew you had!
+      
+#c10.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/35061902/200ok_stamp_rescanned_100x99.jpg", :height => "96", :alt => "A guest: Ben Buchanan", :width => "96"}
+    %a.url.fn{:href => "http://weblog.200ok.com.au/", :title => "View Ben Buchanan's website"} Ben Buchanan
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c10", :title => "Permalink for this comment" } 20070329 at 1330
+  .comment_body
+    %p Welcome to the cirus&#133;er&#133;blogobuzzwordsphere&#133; whatever, I look forward to seeing what you post :)
+      
+#c11.comment
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/63722230/ss-adam-avatar-73-filter.jpg", :height => "96", :alt => "A guest: Adam Schilling", :width => "96"}
+    %a.url.fn{:href => "http://sabrestyle.com/", :title => "View Adam Schilling's website"} Adam Schilling
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c11", :title => "Permalink for this comment" } 20070330 at 1804
+  .comment_body
+    %p All right &mdash; nice article, Lach! Hope to be reading more from you soon. :-)
+    
+#c13.comment.lachstock
+  .vcard
+    %img.photo{:src => "http://s3.amazonaws.com/twitter_production/profile_images/53728289/avatar-512x512.jpg", :height => "96", :alt => "Your host: Lachlan Hardy", :width => "96"}
+    %a.url.fn{:href => "http://lachstock.com.au", :title => "View Lachlan Hardy's website"} Lachlan Hardy
+  .comment_details
+    posted on
+    %a{ :href => "/articles/joining-the-conversation/#c13", :title => "Permalink for this comment" } 20070402 at 0816
+  .comment_body
+    %p Can you feel the love in the room?
+    %p Thanks, folks, you rock!
+    %p Cam… What’s a Mondria?
+    %p Ben, I reckon you’re looking for Lachlan Hunt ;)
