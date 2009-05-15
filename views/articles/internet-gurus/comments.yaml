@@ -1,25 +1,21 @@
-
-#c211.comment_content
-.comment_author
-%a{ :href => "http://www.soocial.com", :title => "View Daniel's website" }
-Daniel
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/8/18/internet-gurus/#c211", :title => "Permalink for this comment" }
-20080818 at 2219
-.comment_body
-%p
-1.
-• iPhone Apps in general
-• Twitter
-• Social news sites ( reddit / digg / HN )
-%ol
-%li
-%p
-  iPhone 3G, because it makes me feel like a Jedi Master!
-%li
-%p
-  \&lt;shameless plug&gt; http://www.soocial.com  ;) &lt;/shameless plug&gt;
+- 
+    name: Daniel
+    username: danielspronk
+    url: http://www.soocial.com
+    timestamp: 20080818 at 2219
+    body: |
+        <ol>
+            <li>
+                <ul>
+                    <li>iPhone Apps in general</li>
+                    <li>Twitter</li>
+                    <li>Social news sites ( reddit / digg / HN )</li>
+                </ul>
+            </li>
+            <li>iPhone 3G, because it makes me feel like a Jedi Master!</li>
+            <li>&lt;shameless plug&gt; http://www.soocial.com  ;) &lt;/shameless plug&gt;</li>
+        </ol>
+        
 #c212.comment_content
 .comment_author
 %a{ :href => "http://blog.markpesce.com/", :title => "View Mark Pesce's website" }
