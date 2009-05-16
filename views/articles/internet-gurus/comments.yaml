@@ -16,86 +16,74 @@
             <li>&lt;shameless plug&gt; http://www.soocial.com  ;) &lt;/shameless plug&gt;</li>
         </ol>
         
-#c212.comment_content
-.comment_author
-%a{ :href => "http://blog.markpesce.com/", :title => "View Mark Pesce's website" }
-Mark Pesce
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/8/18/internet-gurus/#c212", :title => "Permalink for this comment" }
-20080818 at 2219
-.comment_body
-%p
-1a) Streaming radio/media over 3G networks;
-1b) Qik-style broadcasting from anywhere to anyone;
-1c) Pervasive wireless broadband in general.
-%p
-2) Mobile, of course.  Without it you’re just not connected to the human network.  And anything could happen.
-%p
-3) Touch.  Obviously.
-#c213.comment_content
-.comment_author
-%a{ :href => "http://www.reactiondynamics.com", :title => "View Mo Kargas's website" }
-Mo Kargas
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/8/18/internet-gurus/#c213", :title => "Permalink for this comment" }
-20080818 at 2223
-.comment_body
-%ol
-%li
-LHC, have a dark fascination with the world asploding
-%li
-Technology news
-%li
-Networking and relationship building.
-#c214.comment_content
-.comment_author
-%a{ :href => "http://www.soocial.com", :title => "View Daniel's website" }
-Daniel
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/8/18/internet-gurus/#c214", :title => "Permalink for this comment" }
-20080818 at 2225
-.comment_body
-%p
-OK, redoing question three for my first post. I’ve got a tie for question number 3.
-%p
-Everyblock.com is awesome.
-#c215.comment_content
-.comment_author
-%a{ :href => "http://twitter.com/misswired", :title => "View Miss Wired's website" }
-Miss Wired
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/8/18/internet-gurus/#c215", :title => "Permalink for this comment" }
-20080818 at 2225
-.comment_body
-%ol
-%li
-%p
-  Google maps, looking at listening history and chartst on last.fm, and green industrial design innovations.
-%li
-%p
-  My mobile, which is also a camera so I can post to Flickr.com, and an mp3 player, so I can have a soundtrack as I travel.
-%li
-%p
-  Better user-generated content geo-location. Face it, Flickr.com map sucks, but they get the idea.
-#c216.comment_content
-.comment_author
-%a{ :href => "http://www.rosshill.com.au", :title => "View Ross Hill's website" }
-Ross Hill
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2008/8/18/internet-gurus/#c216", :title => "Permalink for this comment" }
-20080818 at 2229
-.comment_body
-%p
-1a) Search.Twitter.com; 1b) Cloud Services; 1c) The long reach of pervasive networks.
-%p
-2) iPhone - immense amounts of data at my fingertips.
-%p
-3) Location. YOUR location, forget the tech.
+- 
+    name: Mark Pesce
+    username: mpesce
+    url: http://blog.markpesce.com/
+    timestamp: 20080818 at 2219
+    body: |
+        <ol>
+            <li>
+                <ol>
+                    <li>Streaming radio/media over 3G networks;</li>
+                    <li>Qik-style broadcasting from anywhere to anyone;</li>
+                    <li>Pervasive wireless broadband in general.</li>
+                </ol>
+            </li>
+            <li>Mobile, of course.  Without it you’re just not connected to the human network.  And anything could happen.</li>
+            <li>Touch.  Obviously.</li>
+        </ol>
+
+- 
+    name: Mo Kargas
+    username: ~
+    url: http://www.reactiondynamics.com
+    timestamp: 20080818 at 2223
+    body: |
+        <ol>
+            <li>LHC, have a dark fascination with the world asploding</li>
+            <li>Technology news</li>
+            <li>Networking and relationship building.</li>
+        </ol>
+
+- 
+    name: Daniel
+    username: danielspronk
+    url: http://www.soocial.com
+    timestamp: 20080818 at 2225
+    body: |
+        <p>OK, redoing question three for my first post. I’ve got a tie for question number 3.</p>
+        <p>Everyblock.com is awesome.</p>
+        
+- 
+    name: Miss Wired
+    username: misswired
+    url: http://twitter.com/misswired
+    timestamp: 20080818 at 2225
+    body: |
+        <ol>
+            <li>Google maps, looking at listening history and chartst on last.fm, and green industrial design innovations.</li>
+            <li>My mobile, which is also a camera so I can post to Flickr.com, and an mp3 player, so I can have a soundtrack as I travel.</li>
+            <li>Better user-generated content geo-location. Face it, Flickr.com map sucks, but they get the idea.</li>
+        </ol>
+
+- 
+    name: Ross Hill
+    username: rosshill
+    url: http://www.rosshill.com.au
+    timestamp: 20080818 at 2229
+    body: |
+        <ol>
+            <li>
+                <ol>
+                    <li>Search.Twitter.com;</li>
+                    <li>Cloud Services;</li>
+                    <li>The long reach of pervasive networks.</li>
+                </ol>
+            </li>
+            <li>iPhone - immense amounts of data at my fingertips.</li>
+            <li>Location. YOUR location, forget the tech.</li>
+        </ol>
 #c217.comment_content
 .comment_author
 %a{ :href => "http://www.wolfcat.com.au/randomrants", :title => "View Wolf Cocklin's website" }
