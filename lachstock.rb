@@ -37,8 +37,8 @@ get '*/' do
 end
 
 helpers do
-  def comment_avatars(username)
-    # Twitter.user(username)[:profile_image_url].gsub(/_normal/, "") unless Twitter.user(username)
+  def prettify_date(base)
+    Time.parse(base.gsub(/(.+)\sat\s(.+)/, '\1\2')).strftime("%H%Mh %A, %d %B %Y")    
   end
   def comment_builder
     unless @name.nil?
@@ -47,6 +47,9 @@ helpers do
         haml(:"_comments", :layout => false)
       end
     end
+  end
+  def comment_avatars(username)
+    # Twitter.user(username)[:profile_image_url].gsub(/_normal/, "") unless Twitter.user(username)
   end
   def filtered_filenames(paths)
     paths ||= []

@@ -42,6 +42,7 @@
       - unless @category == "home"
         %p.category= "#{@category_title}:"
         .column
+          = partial :post_title
           = yield
           = comment_builder
       - else

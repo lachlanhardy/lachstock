@@ -1,43 +1,34 @@
 - @title = "Gitjour: the Quickening"
+- @published_date = "20081019 at 1926"
 
-.item_details
-  %h1= @title
-  %p
-    %strong
-      Posted by
-      %a{ :href => "http://log.lachstock.com.au/past/authors/2", :title => "View all posts by lachlanhardy" } lachlanhardy
-      on
-      %a{ :href => "http://log.lachstock.com.au/past/2008/10/19/gitjour-the-quickening/", :title => "Permalink for this post" } 20081019 at 1926
+%p Back in June, a whole lot of folks in the Ruby world were getting excited about <a href="http://github.com/chad/gitjour/">Gitjour</a> and it&rsquo;s *jour brethren. Read <a href="http://drnicwilliams.com/2008/06/18/what-is-gitjour-gemjour-starjour/">Dr Nic for the lowdown</a>. He was particularly excited about the potential of using all these automated DNSSD-powered advertising services at the forthcoming <a href="http://railscamp08.org/">Railscamp #3</a>. And so was I.
+%p I installed every one of those suckers, and fired them up, and had a play. They were awesome ideas but I thought they were a bit limited in their execution. Don’t get me wrong, as a quick conference hack, they’re brilliant. And for quickly sharing some cool shiz with your friends in the back of a session - perfect. Not so good for 4 days of intense hackery with 60-something coders on the one network. Not so good as a day-to-day tool in a work environment.
 
-.item_content
-  %p Back in June, a whole lot of folks in the Ruby world were getting excited about <a href="http://github.com/chad/gitjour/">Gitjour</a> and it&rsquo;s *jour brethren. Read <a href="http://drnicwilliams.com/2008/06/18/what-is-gitjour-gemjour-starjour/">Dr Nic for the lowdown</a>. He was particularly excited about the potential of using all these automated DNSSD-powered advertising services at the forthcoming <a href="http://railscamp08.org/">Railscamp #3</a>. And so was I.
-  %p I installed every one of those suckers, and fired them up, and had a play. They were awesome ideas but I thought they were a bit limited in their execution. Don’t get me wrong, as a quick conference hack, they’re brilliant. And for quickly sharing some cool shiz with your friends in the back of a session - perfect. Not so good for 4 days of intense hackery with 60-something coders on the one network. Not so good as a day-to-day tool in a work environment.
+%h2 Railscamp #3
+%p I spent the first portion of Friday night at Railscamp catching up with folks, as you do. Having a few beers, seeing what they&rsquo;ve been doing and talking about what we&rsquo;re going to build over the weekend. I think I might have pointed out the potential for new features in Gitjour just a few times. Just once or twice, you know?
+%p
+  Finally,
+  %span.vcard
+    %a.fn.url{ :href => "http://mike.bailey.net.au/", :rel => "friend met colleague" } Mike Bailey
+  calls me on it and we get coding. And everybody I’d whinged to about the potential of Gitjour joins in.
+%p By the end of last Railscamp, we’d refactored significantly, squished many bugs, added proxies for cloning and remotes as well as a search. Not to mention spawned a couple of side-projects: <a href="http://git.railscamp.net/projects/gitman">Gitman</a> and <a href="http://github.com/benschwarz/gitnotify/">Gitnotify</a>.
+%p
+  %img{ :src => "http://img.skitch.com/20081023-be2q1xifsbu54ddpjxyc6m254i.jpg", :alt => "Graph demonstrating complexity of code contributions", :style => "border: 1px solid #eee; float: none; margin: 0; padding: 0; width: 590px;" }
+%p All our code ended up in <a href="http://git.railscamp.net/projects/gitjour">the Railscamp repo</a> where, except for <a href="http://smartbomb.com.au/2008/6/25/rails-camp-three">an excellent summary post from Lachie Cox</a>, <strong>we all forgot about it</strong>.
 
-  %h2 Railscamp #3
-  %p I spent the first portion of Friday night at Railscamp catching up with folks, as you do. Having a few beers, seeing what they&rsquo;ve been doing and talking about what we&rsquo;re going to build over the weekend. I think I might have pointed out the potential for new features in Gitjour just a few times. Just once or twice, you know?
-  %p
-    Finally,
-    %span.vcard
-      %a.fn.url{ :href => "http://mike.bailey.net.au/", :rel => "friend met colleague" } Mike Bailey
-    calls me on it and we get coding. And everybody I’d whinged to about the potential of Gitjour joins in.
-  %p By the end of last Railscamp, we’d refactored significantly, squished many bugs, added proxies for cloning and remotes as well as a search. Not to mention spawned a couple of side-projects: <a href="http://git.railscamp.net/projects/gitman">Gitman</a> and <a href="http://github.com/benschwarz/gitnotify/">Gitnotify</a>.
-  %p
-    %img{ :src => "http://img.skitch.com/20081023-be2q1xifsbu54ddpjxyc6m254i.jpg", :alt => "Graph demonstrating complexity of code contributions", :style => "border: 1px solid #eee; float: none; margin: 0; padding: 0; width: 590px;" }
-  %p All our code ended up in <a href="http://git.railscamp.net/projects/gitjour">the Railscamp repo</a> where, except for <a href="http://smartbomb.com.au/2008/6/25/rails-camp-three">an excellent summary post from Lachie Cox</a>, <strong>we all forgot about it</strong>.
+%h2 Fedex IX
+%p <a href="http://atlassian.com/">Atlassian</a> has a quarterly hacking event called <a href="http://blogs.atlassian.com/developer/fedex/">Fedex</a> (&ldquo;deliver overnight&rdquo;). Basically, everybody gets from 2pm Thursday (in Sydney) to 4pm Friday to hack up whatever they like as long as it is <em>somewhat</em> associated with the company. Then they present, and everybody votes for awesomeness. You’ll have heard of similar events at other companies etc.
+%p
+  Fedex IX was a week ago, and
+  %span.vcard
+    %a.fn.url{ :href => "http://www.jroller.com/mrdon/", :rel => "friend met colleague" } Don Brown
+  hit me up, asking for a method to allow easy local sharing of git repositories. He has a grand master plan I&rsquo;m sure he will reveal in time.
+%p That’s when I realised we never told anybody about our revamp of Gitjour. We never pimped all the badass improvements we made. That’s dumb for so many reasons, but the biggest is easily that there are hackers out there who need a sweet tool for sharing git repos with colleagues and friends and we didn’t tell them. This makes me sad.
+%p So, my Fedex project quickly became shaping our Gitjour into something nice and stable for everybody else to enjoy. I forked <a href="http://github.com/chad/gitjour/">Chad Fowler&rsquo;s original</a> and I worked out how to mash it together with ours. There are probably faster and neater methods, but I found one that worked. Boy, did I learn a few things about Git that day!
+%p Then I made a couple of bug fixes, tidied things up, battled multiple methods of gem building until I got them to work and made my first ever pull request on Github. Hopefully, Chad will be happy to merge all our work in, but meanwhile you can get all that railscamping goodness <a href="http://github.com/lachlanhardy/gitjour/">on my Github account</a>, or just install the gem:
+%p
+  %code sudo gem install lachlanhardy-gitjour
 
-  %h2 Fedex IX
-  %p <a href="http://atlassian.com/">Atlassian</a> has a quarterly hacking event called <a href="http://blogs.atlassian.com/developer/fedex/">Fedex</a> (&ldquo;deliver overnight&rdquo;). Basically, everybody gets from 2pm Thursday (in Sydney) to 4pm Friday to hack up whatever they like as long as it is <em>somewhat</em> associated with the company. Then they present, and everybody votes for awesomeness. You’ll have heard of similar events at other companies etc.
-  %p
-    Fedex IX was a week ago, and
-    %span.vcard
-      %a.fn.url{ :href => "http://www.jroller.com/mrdon/", :rel => "friend met colleague" } Don Brown
-    hit me up, asking for a method to allow easy local sharing of git repositories. He has a grand master plan I&rsquo;m sure he will reveal in time.
-  %p That’s when I realised we never told anybody about our revamp of Gitjour. We never pimped all the badass improvements we made. That’s dumb for so many reasons, but the biggest is easily that there are hackers out there who need a sweet tool for sharing git repos with colleagues and friends and we didn’t tell them. This makes me sad.
-  %p So, my Fedex project quickly became shaping our Gitjour into something nice and stable for everybody else to enjoy. I forked <a href="http://github.com/chad/gitjour/">Chad Fowler&rsquo;s original</a> and I worked out how to mash it together with ours. There are probably faster and neater methods, but I found one that worked. Boy, did I learn a few things about Git that day!
-  %p Then I made a couple of bug fixes, tidied things up, battled multiple methods of gem building until I got them to work and made my first ever pull request on Github. Hopefully, Chad will be happy to merge all our work in, but meanwhile you can get all that railscamping goodness <a href="http://github.com/lachlanhardy/gitjour/">on my Github account</a>, or just install the gem:
-  %p
-    %code sudo gem install lachlanhardy-gitjour
-
-  %h2 Railscamp #4
-  %p Very soon, <a href="http://railscamp08.org/">a bunch of hackers are going to be stuck in the middle of nowhere on one network</a> and need to share their work. And I’m going to be there, pointing out what’s wrong with Gitjour and why we should merge in Gitnotify and Gitman so that we have one seriously badass tool that&rsquo;ll make working with Git the easiest thing you’ve ever done. Sharing those repos can be easier than it is now. And it should be.
-  %p And when we’ve built more crazy awesomeness, I&rsquo;m going to remember to scream it from the rooftops because I want everybody to know that the tools are already here - they just need a little more work. <a href="http://github.com/lachlanhardy/gitjour/fork">Do you want to help?</a>
+%h2 Railscamp #4
+%p Very soon, <a href="http://railscamp08.org/">a bunch of hackers are going to be stuck in the middle of nowhere on one network</a> and need to share their work. And I’m going to be there, pointing out what’s wrong with Gitjour and why we should merge in Gitnotify and Gitman so that we have one seriously badass tool that&rsquo;ll make working with Git the easiest thing you’ve ever done. Sharing those repos can be easier than it is now. And it should be.
+%p And when we’ve built more crazy awesomeness, I&rsquo;m going to remember to scream it from the rooftops because I want everybody to know that the tools are already here - they just need a little more work. <a href="http://github.com/lachlanhardy/gitjour/fork">Do you want to help?</a>
