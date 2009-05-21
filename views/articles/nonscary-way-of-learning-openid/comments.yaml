@@ -1,98 +1,37 @@
- #c114.comment_content
-.comment_author
-%a{ :href => "http://mozdawg.blogspot.com", :title => "View Ben Tremblay's website" }
-Ben Tremblay
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2007/12/20/nonscary-way-of-learning-openid/#c114", :title => "Permalink for this comment" }
-20071220 at 1628
-.comment_body
-%p
-Earlier this evening I slipped and fell into OAuth … I looked … I read … I sighed … I left.
-%p
-\!j/k
-%p
-–bentrem
-%p
-p.s. MozDev 0.98a? Someone with a name like you, or a style like you … gawwwwd those late hours on IRC
-%em
-shudder
-%p
-cheers
-#c115.comment_content
-.comment_author
-%a{ :href => "http://mozdawg.blogspot.com", :title => "View Ben Tremblay's website" }
-Ben Tremblay
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2007/12/20/nonscary-way-of-learning-openid/#c115", :title => "Permalink for this comment" }
-20071220 at 1628
-.comment_body
-%p
-In French: “Ostine moi pas!”
-%p
-http://oauth.net/
-#c116.comment_content
-.comment_author
-%a{ :href => "http://drnicwilliams.com", :title => "View Dr Nic 's website" }
-Dr Nic
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2007/12/20/nonscary-way-of-learning-openid/#c116", :title => "Permalink for this comment" }
-20071220 at 1658
-.comment_body
-%p
-A wise man once said “If they blog comments doth not support OpenID, thou shalt ne’er discuss OpenID”.
-#c117.comment_content
-.comment_author
-%a{ :href => "http://www.standardzilla.com", :title => "View Scott G's website" }
-Scott G
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2007/12/20/nonscary-way-of-learning-openid/#c117", :title => "Permalink for this comment" }
-20071221 at 0836
-.comment_body
-%p
-What about non-geek types? It all sounds pretty complicated for the standard web user.
-%p
-Is this the case? … and how will that impact the mainstream adoption of OpenID?
-#c118.comment_content
-.comment_author
-%a{ :href => "http://lachstock.com.au/", :title => "View Lachlan Hardy's website" }
-Lachlan Hardy
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2007/12/20/nonscary-way-of-learning-openid/#c118", :title => "Permalink for this comment" }
-20071221 at 1109
-.comment_body
-%p
-@Ben I really struggle to keep up with you. And I have no idea what ‘ostine’ means :)
-%p
-@Nic Fair call. People have been asking for it in SimpleLog for nearly a year, but no dice. I got cracking this morning, so we’ll see how long that takes me ;)
-%p
-@Scott The user experience is OpenID’s single biggest issue. It shouldn’t be as hard as it is.
-%p
-I reckon it’s mostly due to complexity. For folks to be convinced that it is a good idea, they want to know some things about it and explanations get complicated very very quickly. In terms of actually just using it, it’s easy. The problem is convincing folks to use it.
-%p
-I think
-%a{ :href => "https://myvidoop.com/" }
-myVidoop’s
-video explanation is one of the best, but it still gets way too jargonistic after a while:
-%a{ :href => "http://uk.youtube.com/watch?v=xcmY8Pk-qEk" }
-OpenID according to Dave
-\.
-#c125.comment_content
-.comment_author
-%a{ :href => "http://weblog.200ok.com.au/", :title => "View Ben Buchanan's website" }
-Ben Buchanan
-.comment_details
-posted on
-%a{ :href => "http://log.lachstock.com.au/past/2007/12/20/nonscary-way-of-learning-openid/#c125", :title => "Permalink for this comment" }
-20071229 at 1608
-.comment_body
-%p
-I’ve poked about looking for an answer to this one but so far nothing definitive… are there any issues delegating more than one URL back to a single openid?
-%p
-Obviously each extra URL is one more site to “keep safe” but otherwise it seems ok to me; but then I don’t know if openid servers will chuck a wobbly if more than one site gets delegated.
-%p
-Thoughts?
+- 
+    name: Dr Nic
+    username: drnic
+    url: http://drnicwilliams.com
+    timestamp: 20071220 at 1658
+    body: |
+        <p>A wise man once said “If they blog comments doth not support OpenID, thou shalt ne’er discuss OpenID”.
+        
+- 
+    name: Scott G
+    username: gleddy
+    url: http://www.standardzilla.com
+    timestamp: 20071221 at 0836
+    body: |
+        <p>What about non-geek types? It all sounds pretty complicated for the standard web user.</p>
+        <p>Is this the case? … and how will that impact the mainstream adoption of OpenID?</p>
+          
+- 
+    name: Lachlan Hardy
+    username: lachlanhardy
+    url: http://lachstock.com.au/
+    timestamp: 20071221 at 1109
+    body: |
+        <p>@Nic Fair call. People have been asking for it in SimpleLog for nearly a year, but no dice. I got cracking this morning, so we’ll see how long that takes me ;)</p>
+        <p>@Scott The user experience is OpenID’s single biggest issue. It shouldn’t be as hard as it is.</p>
+        <p>I reckon it’s mostly due to complexity. For folks to be convinced that it is a good idea, they want to know some things about it and explanations get complicated very very quickly. In terms of actually just using it, it’s easy. The problem is convincing folks to use it.</p>
+        <p>I think <a href="https://myvidoop.com/">myVidoop’s</a> video explanation is one of the best, but it still gets way too jargonistic after a while: <a href="http://uk.youtube.com/watch?v=xcmY8Pk-qEk">OpenID according to Dave</a>.</p>
+        
+- 
+    name: Ben Buchanan
+    username: 200ok
+    url: http://weblog.200ok.com.au/
+    timestamp: 20071229 at 1608
+    body: |
+        <p>I’ve poked about looking for an answer to this one but so far nothing definitive… are there any issues delegating more than one URL back to a single openid?</p>
+        <p>Obviously each extra URL is one more site to “keep safe” but otherwise it seems ok to me; but then I don’t know if openid servers will chuck a wobbly if more than one site gets delegated.</p>
+        <p>Thoughts?</p>
