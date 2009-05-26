@@ -59,6 +59,14 @@ helpers do
       name == "index.haml" || name == "test"
     }
   end
+  def tag_builder
+    unless @name.nil?
+      if File.exist? "#{options.views}/#{@category}/#{@name}/tags.yaml"
+        @tags = YAML.load_file("views/#{@category}/#{@name}/tags.yaml")
+        haml(:"_tags", :layout => false)
+      end
+    end
+  end
   def view(view)
     haml view, :options => {:format => :html5,
                               :attr_wrapper => '"'}

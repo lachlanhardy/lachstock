@@ -41,6 +41,7 @@
     
       - unless @category == "home"
         %p.category= "#{@category_title}:"
+        = tag_builder
         .column
           - unless @name.nil?
             = partial :post_title
