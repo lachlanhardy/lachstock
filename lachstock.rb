@@ -10,7 +10,6 @@ require 'pp' # only for dev work
 # homepage
 get '/' do
   @category = "home"
-  @folders = Dir.glob("views/*/")
   @items = filtered_filenames(Dir.glob("views/*/*"))
   view :index
 end
@@ -18,16 +17,22 @@ end
 get '/:category' do 
   @category = params[:category]
   @category_title = params[:category]
-  @folders = Dir.glob("views/*/")
   @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
   view File.join(@category, "/index").to_sym
+end
+
+get '/:category/tags' do 
+  @category = params[:category]
+  @category_title = params[:category].gsub(/(.+)s$/, '\1')
+  @tags = tagspace(filtered_filenames(Dir.glob("views/#{@category}/*")))
+  view :tagspace
 end
 
 get '/:category/:name' do 
   @category = params[:category]
   @category_title = params[:category].gsub(/(.+)s$/, '\1')
   @name = params[:name]
-  @folders = Dir.glob("views/*/")
+  
   view File.join(@category, "/", @name, "/index").to_sym
 end
 
@@ -62,10 +67,19 @@ helpers do
   def tag_builder
     unless @name.nil?
       if File.exist? "#{options.views}/#{@category}/#{@name}/tags.yaml"
-        @tags = YAML.load_file("views/#{@category}/#{@name}/tags.yaml")
+        @tags = YAML.load_file("views/#{@category}/#{@name}/tags.yaml").sort_by {|tag| tag.downcase}
         haml(:"_tags", :layout => false)
       end
     end
+  end
+  def tagspace(folders)
+    test = []
+    folders.each do |folder|
+      if File.exist? "#{options.views}/#{@category}/#{folder}/tags.yaml"
+        test = test | YAML.load_file("#{options.views}/#{@category}/#{folder}/tags.yaml")
+      end
+    end
+    return test.sort_by {|tag| tag.downcase}
   end
   def view(view)
     haml view, :options => {:format => :html5,
