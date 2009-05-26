@@ -1,4 +1,15 @@
 - if @tags
   %ul#tagspace
     - @tags.each do |tag|
-      %li= tag
+      %li
+        %a{:href => "/#{@category}/tags/#{tag}"}= tag
+        
+- if @tag
+  #tagged
+    %h1= @tag
+    %ul
+      - @tagged.each do |tagged_file|
+        -# %li= tagged_file
+        - name = tagged_file.gsub(/views\/.+\/(.+)/, '\1')
+        %li
+          %a{:href => "/#{@category}/#{name}"}= name

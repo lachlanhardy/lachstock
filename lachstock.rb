@@ -23,8 +23,16 @@ end
 
 get '/:category/tags' do 
   @category = params[:category]
-  @category_title = params[:category].gsub(/(.+)s$/, '\1')
+  @category_title = "Tags"
   @tags = tagspace(filtered_filenames(Dir.glob("views/#{@category}/*")))
+  view :tagspace
+end
+
+get '/:category/tags/:tag' do 
+  @category = params[:category]
+  @category_title = "Tag"
+  @tag = params[:tag]
+  @tagged = find_tagged(@tag, filtered_filenames(Dir.glob("views/#{@category}/*")))
   view :tagspace
 end
 
@@ -63,6 +71,17 @@ helpers do
     }.reject { |name|
       name == "index.haml" || name == "test"
     }
+  end
+  def find_tagged(tag, tagfiles)
+    tagged = []
+    tagfiles.each do |tagfile|
+      if File.exist? "#{options.views}/#{@category}/#{tagfile}/tags.yaml"
+        if (YAML.load_file("#{options.views}/#{@category}/#{tagfile}/tags.yaml").include?(tag))
+          tagged.push(tagfile)
+        end
+      end
+    end
+    return tagged
   end
   def tag_builder
     unless @name.nil?
