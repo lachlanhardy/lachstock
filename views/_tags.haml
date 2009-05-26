@@ -5,20 +5,4 @@
     %ul
       - @tags.each do |tag|
         %li
-          = tag
-      
-      
-      
-      -# .tag{:id => tag_id, :class => (tag['username'] == "lachlanhardy" ? "lachstock" : "")}
-      -#         .vcard
-      -#           - unless tag['username'].nil?
-      -#             %img.photo{:src => tag_avatars(tag['username']), :height => "96", :alt => "A guest: #{tag['name']}", :width => "96"}
-      -#           - if tag['url'] != nil
-      -#             %a.url.fn{:href => tag['url'], :title => "View #{tag['name']}'s website"}= tag['name']
-      -#           - else
-      -#             %span.fn= tag['name']
-      -#         .tag_details
-      -#           posted on
-      -#           %a{:href => tag_id, :title => "Permalink for this tag"}= tag['timestamp']
-      -#         .tag_body
-      -#           = tag['body']
+          %a{:href => "/#{@category}/tags/#{tag}"}= tag
