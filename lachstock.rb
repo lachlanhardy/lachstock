@@ -72,5 +72,8 @@ helpers do
   def versioned_javascript(js)
     "/javascripts/#{js}.js?" + File.mtime(File.join(Sinatra::Application.public, "javascripts", "#{js}.js")).to_i.to_s
   end
+  def versioned_favicon
+    "/favicon.ico?" + File.mtime(File.join(Sinatra::Application.public, "favicon.ico")).to_i.to_s
+  end
 end
 
