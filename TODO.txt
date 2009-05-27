@@ -1,6 +1,7 @@
 Tasks to be done before launch, in priority order:
 
  - refactor global tagging
+ - add styling for EMs and STRONGs
  - Sort out archive naming action
  - Sort out page navigation
  - Sort out site navigation

@@ -1,15 +1,41 @@
-- if @tags
-  %ul#tagspace
-    - @tags.each do |tag|
-      %li
-        %a{:href => "#{(@category == "*" ? "/" : "/#{@category}/")}tags/#{tag}"}= tag
-        
-- if @tag
+- if @tag.nil?
+  #tagspace
+    %h1= (@category == "*" ? "Sitewide" : "#{@category}").capitalize
+    
+    - if @tags != []
+      %ul
+        - @tags.each do |tag|
+          %li
+            %a{:href => "#{(@category == "*" ? "/" : "/#{@category}/")}tags/#{tag}"}= tag
+    - else
+      %p Nothing in this section has been tagged yet.
+    
+- else
   #tagged
     %h1= @tag
-    %ul
-      - @tagged.each do |tagged_file|
-        - name = tagged_file.split("/").last
-        - pp tagged_file
-        %li
-          %a{:href => "/#{tagged_file}"}= name
+    
+    - if @tags != []
+      %ul
+        - @tags.each do |tagged_file|
+          %li
+            %a{:href => "/#{tagged_file}"}= tagged_file.split("/").last
+    - else
+      - unless @category == "*"
+        %p
+          Nothing in the 
+          %strong
+            =@category.capitalize
+          section has been tagged with
+          %em
+            = @tag + "."
+        %p 
+          You can check if 
+          %a{:href => "/tags/#{@tag}"}
+            %em
+              = @tag
+            has been used sitewide
+      - else
+        %p
+          Nothing on this site has been tagged with
+          %em
+            = @tag + "."
