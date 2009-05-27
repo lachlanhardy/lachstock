@@ -1,12 +1,12 @@
 Tasks to be done before launch, in priority order:
 
  - Sort out archive naming action
- - Sort out page navigation
- - Sort out site navigation
+ - Sort out article page navigation
  - Set up caching for API requests
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
  - set up proper IMG stylings in CSS
+ - style BLOCKQUOTE and Q
  - review whole site and QA
 
 

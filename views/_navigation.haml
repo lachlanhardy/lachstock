@@ -1,0 +1,9 @@
+#nav
+  %ul
+    - @nav_items.each do |item|
+      %li
+        - if item == @category || @category == "*" && item == "tags"
+          %span= item.capitalize
+        - else
+          %a{:href => "/#{item}"}= item.capitalize
+        

@@ -10,7 +10,6 @@ require 'pp' # only for dev work
 # homepage
 get '/' do
   @category = "home"
-  @items = filtered_filenames(Dir.glob("views/*/*"))
   view :index
 end
 
@@ -66,6 +65,12 @@ helpers do
       name == "index.haml" || name == "test"
     }
   end
+  
+  def nav_builder
+    @nav_items = ["articles", "tags", "about"]
+    haml(:"_navigation", :layout => false)
+  end
+  
   def tagspace(tag, folders)
     @directories = []
     tag_list = [] 
