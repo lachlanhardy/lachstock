@@ -29,27 +29,26 @@
     %meta{:name => "verify-v1", :content => "Ai0t9Ys7j76GMrjSEP+rDLIhtNL/ruGT8Lu9frCnBUg="}
 
   %body{:id => "lachstock-com-au", :class => (@category == "*" ? nil : @category)}
-    #header
-      - if @category == "home"
-        %h1 Lachstock
-      - else
-        %p.site-title 
-          %a{:href => "/"} Lachstock
-      #status
-        %p thinks less is the new more.
-    #page
-    
-      - unless @category == "home"
-        %p.category= "#{@category_title}:"
-        = tag_builder
-        .column
-          - unless @name.nil?
-            = partial :post_title
+    #wrapper
+      #header
+        - if @category == "home"
+          %h1 Lachstock
+        - else
+          %p.site-title 
+            %a{:href => "/"} Lachstock
+        #status
+          %p thinks less is the new more.
+      #page
+        - unless @category == "home"
+          %p.category= "#{@category_title}:"
+          = tag_builder
+          .column
+            - unless @name.nil?
+              = partial :post_title
+            = yield
+            = comment_builder
+        - else
           = yield
-          = comment_builder
-      - else
-        = yield
-      
     #footer
       %p 
         I write 

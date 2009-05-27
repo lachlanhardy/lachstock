@@ -57,9 +57,12 @@ TOC
 
 
 /* - =Structure - */
+html,
+body {height: 100%;}
+
 body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roman", Times, serif; margin: 0; padding: 0;}
 
-#page {border: 1em solid #BFE4FF; border-left: none; border-right: none; font-size: 1.5em; padding: 0 1em 0 0; overflow: auto; position: relative;}
+#wrapper {min-height: 100%; overflow: hidden;}
 
   #header {background: #0e0e0e; border-bottom: 2px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
     #header h1,
@@ -81,42 +84,40 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
       #status #status-link {margin: 0 0 0 0.8em; position: relative; top: 0.14em; visibility: hidden;}
       #status:hover #status-link {visibility: visible;}
 
-  /* -- =Columns -- */
-/*   .column {border-left: 1em solid #bfe4ff; float: left; margin: 0 0 0 1em; padding: 1em 0 6em 1em; position: relative; width: 19em;}
-    .articles .column {margin: 0 0 0 16em; width: 36em;} */
+  #page {border-top: 1em solid #BFE4FF; font-size: 1.5em; padding: 0 1em 0 0; position: relative;}
+  
+    /* -- =Columns -- */    
+    .column {border-left: 1em solid #bfe4ff; float: left; margin: 0 0 -80em 16em; min-height:  100%; padding: 1em 0 90em 1em; position: relative; width: 36em;}
+      .home .column {margin: 0 0 -80em 1em; width: 19em;}
+      .item {margin: 0 0 1em 0;}
     
-  .column {border-left: 1em solid #bfe4ff; float: left; margin: 0 0 0 16em; padding: 1em 0 6em 1em; position: relative; width: 36em;}
-    .home .column {margin: 0 0 0 1em; width: 19em;}
-    .column span.marker {border-left: 1em solid #80c9ff; display: block; left: -1em; line-height: 1; position: absolute; top: -1em;}
-    .item {margin: 0 0 1em 0;}
+      .featured,
+      #post-comment {background: #bfe4ff; border-left: 1em solid #80c9ff; margin: 0 0 1em -2em; padding: 0 0 1em 1em;}
     
-    .featured,
-    #post-comment {background: #bfe4ff; border-left: 1em solid #80c9ff; margin: 0 0 1em -2em; padding: 0 0 1em 1em;}
-    
-      #page .item ul li {list-style-type: none;}
+        #page .item ul li {list-style-type: none;}
       
-      p.category {color: #555; float: left; font-size: 3em; left: 0; position: absolute; text-align: right; text-transform: capitalize; top: 0.4em; width: 5em;}
+        p.category {color: #555; float: left; font-size: 3em; left: 0; position: absolute; text-align: right; text-transform: capitalize; top: 0.4em; width: 5em;}
      
-     #imgtest {background: #fff; border:1em solid #bfe4ff; margin: 2em 0 2em -17em; padding: 1em; overflow: auto;}
-        #imgtest img {}
-        #imgtest p {color: #555; font-size: 0.8em; float: right; margin: 0; width: auto;}
+       #imgtest {background: #fff; border:1em solid #bfe4ff; margin: 2em 0 2em -17em; padding: 1em; overflow: auto;}
+          #imgtest img {}
+          #imgtest p {color: #555; font-size: 0.8em; float: right; margin: 0; width: auto;}
         
-    #comments {border-top: 1em solid #bfe4ff; margin: 3em 0 1em -2em; padding: 0 0 1em 2em;}
-        #comments p.blurb {font-size: 1.5em; margin: 0 0 1em 0;}
-        #comments .comment {margin: 0 0 2em 0; min-height: 96px; position: relative;}
-            .comment .vcard {position: relative;}
-                .comment .vcard img.photo {border: 2px solid #bfe4ff; left: -145px; position: absolute; top: 0;}
-                #comments .lachstock .photo {border-color: #ff8000;}
-                .comment .vcard .fn {background: #fff; color: #000; display: block; font-size: 2em; line-height: 1;}
-                  .comment .vcard a.fn:link,
-                  .comment .vcard a.fn:visited {background: #fff; color: #0e0e0e; text-decoration: none;}
-                  .comment .vcard a.fn:hover,
-                  .comment .vcard a.fn:active,
-                  .comment .vcard a.fn:focus {background: #fff; color: #ff8000;}
+      #comments {border-top: 1em solid #bfe4ff; margin: 3em 0 1em -2em; padding: 0 0 1em 2em;}
+          #comments p.blurb {font-size: 1.5em; margin: 0 0 1em 0;}
+          #comments .comment {margin: 0 0 2em 0; min-height: 96px; position: relative;}
+              .comment .vcard {position: relative;}
+                  .comment .vcard img.photo {border: 2px solid #bfe4ff; left: -145px; position: absolute; top: 0;}
+                  #comments .lachstock .photo {border-color: #ff8000;}
+                  .comment .vcard .fn {background: #fff; color: #000; display: block; font-size: 2em; line-height: 1;}
+                    .comment .vcard a.fn:link,
+                    .comment .vcard a.fn:visited {background: #fff; color: #0e0e0e; text-decoration: none;}
+                    .comment .vcard a.fn:hover,
+                    .comment .vcard a.fn:active,
+                    .comment .vcard a.fn:focus {background: #fff; color: #ff8000;}
             
-            .comment .comment-details {background: #fff; color: #555; font-size: 0.8em; margin: 0.4em 0 0.4em 0.1em;}
+              .comment .comment-details {background: #fff; color: #555; font-size: 0.8em; margin: 0.4em 0 0.4em 0.1em;}
         
-        #post-comment {margin: 3em 0 1em -2em; padding: 0 1em 1em 1em;}
+          #post-comment {margin: 3em 0 1em -2em; padding: 0 1em 1em 1em;}
      
 
   .home .vcard a.fn,
@@ -156,9 +157,9 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
         #tags li {}
         
         
-	/* -- =Footer -- */
-	#footer {background: #0e0e0e; border-top: 2px solid #666; clear: both; color: #fff; font-size: 1.5em; padding: 1em; text-align: center;}
-    #footer p {}
+  /* -- =Footer -- */
+  #footer {background: #0e0e0e; border-top: 1em solid #BFE4FF; clear: both; color: #fff; font-size: 1.5em; margin: -4.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
+    #footer p {border-top: 2px solid #666; padding: 1em;}
       #footer a:link {color: #0066B3;}
       #footer a:visited {color: #fff;}
       #footer a:hover, a:active, a:focus {color: #FF8000;}

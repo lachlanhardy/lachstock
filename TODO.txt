@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - force footer to bottom
  - Sort out archive naming action
  - Sort out page navigation
  - Sort out site navigation
