@@ -14,6 +14,26 @@ get '/' do
   view :index
 end
 
+["/tags", "/:category/tags"].each do |path|
+  get path do
+    @category = (params[:category].nil? ? "*" : params[:category])
+    @category_title = "Tags"
+    @tags = tagspace(filtered_filenames(Dir.glob("views/#{@category}/*")))
+    pp filtered_filenames(Dir.glob("views/#{@category}/*"))
+    view :tagspace
+  end
+end
+
+["/tags/:tag", "/:category/tags/:tag"].each do |path| 
+  get path do
+    @category = (params[:category].nil? ? "*" : params[:category])
+    @category_title = "Tag"
+    @tag = params[:tag]
+    @tagged = find_tagged(@tag, filtered_filenames(Dir.glob("views/#{@category}/*")))
+    view :tagspace
+  end
+end
+
 get '/:category' do 
   @category = params[:category]
   @category_title = params[:category]
@@ -21,20 +41,14 @@ get '/:category' do
   view File.join(@category, "/index").to_sym
 end
 
-get '/:category/tags' do 
-  @category = params[:category]
-  @category_title = "Tags"
-  @tags = tagspace(filtered_filenames(Dir.glob("views/#{@category}/*")))
-  view :tagspace
-end
 
-get '/:category/tags/:tag' do 
-  @category = params[:category]
-  @category_title = "Tag"
-  @tag = params[:tag]
-  @tagged = find_tagged(@tag, filtered_filenames(Dir.glob("views/#{@category}/*")))
-  view :tagspace
-end
+# get '/:category/tags' do 
+#   @category = params[:category]
+#   @category_title = "Tags"
+#   @tags = tagspace(filtered_filenames(Dir.glob("views/#{@category}/*")))
+#   view :tagspace
+# end
+
 
 get '/:category/:name' do 
   @category = params[:category]
@@ -73,11 +87,25 @@ helpers do
     }
   end
   def find_tagged(tag, tagfiles)
+    @directories = []
     tagged = []
-    tagfiles.each do |tagfile|
-      if File.exist? "#{options.views}/#{@category}/#{tagfile}/tags.yaml"
-        if (YAML.load_file("#{options.views}/#{@category}/#{tagfile}/tags.yaml").include?(tag))
-          tagged.push(tagfile)
+    
+    if @category == "*"
+      Dir.glob("views/*").each do |contents|
+        if (File.ftype(contents) == "directory")
+          @directories.push(contents.split("/").last)
+        end
+      end
+    else
+      @directories.push(@category)
+    end
+
+    @directories.each do |directory|
+      tagfiles.each do |tagfile|
+        if File.exist? "#{options.views}/#{directory}/#{tagfile}/tags.yaml"
+          if (YAML.load_file("#{options.views}/#{directory}/#{tagfile}/tags.yaml").include?(tag))
+            tagged.push(directory + "/" + tagfile)
+          end
         end
       end
     end
@@ -92,13 +120,27 @@ helpers do
     end
   end
   def tagspace(folders)
-    test = []
-    folders.each do |folder|
-      if File.exist? "#{options.views}/#{@category}/#{folder}/tags.yaml"
-        test = test | YAML.load_file("#{options.views}/#{@category}/#{folder}/tags.yaml")
+    @directories = []
+    tag_list = [] 
+    
+    if @category == "*"
+      Dir.glob("views/*").each do |contents|
+        if (File.ftype(contents) == "directory")
+          @directories.push(contents.split("/").last)
+        end
+      end
+    else
+      @directories.push(@category)
+    end
+
+    @directories.each do |directory|
+      folders.each do |folder|
+        if File.exist? "#{options.views}/#{directory}/#{folder}/tags.yaml"
+          tag_list = tag_list | YAML.load_file("#{options.views}/#{directory}/#{folder}/tags.yaml")
+        end
       end
     end
-    return test.sort_by {|tag| tag.downcase}
+    return tag_list.sort_by {|tag| tag.downcase}
   end
   def view(view)
     haml view, :options => {:format => :html5,
