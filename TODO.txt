@@ -8,6 +8,7 @@ Tasks to be done before launch, in priority order:
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
  - set up proper IMG stylings in CSS
+ - review whole site and QA
 
 
 Others things to do, in priority order:
