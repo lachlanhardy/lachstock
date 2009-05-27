@@ -1,6 +1,6 @@
 Tasks to be done before launch, in priority order:
 
- - add styling for EMs and STRONGs
+ - force footer to bottom
  - Sort out archive naming action
  - Sort out page navigation
  - Sort out site navigation
