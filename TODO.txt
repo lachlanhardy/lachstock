@@ -1,7 +1,7 @@
 Tasks to be done before launch, in priority order:
 
+ - refactor global tagging
  - Sort out archive naming action
- - Set up global tagging
  - Sort out page navigation
  - Sort out site navigation
  - Set up caching for API requests
