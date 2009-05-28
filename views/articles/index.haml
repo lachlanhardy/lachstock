@@ -1,8 +1,10 @@
-- if @items
-  %ul
-  - @items.each do |item| 
-    - name = item.gsub(/views\/.+\/(.+)/, '\1')
-    %li
-      %a{:href => "/#{@category_title}/#{name}"}= name
+.index
+  %h1 Index
+  - if @items
+    %ul
+      - @items.each do |item| 
+        - name = item.gsub(/views\/.+\/(.+)/, '\1')
+        %li
+          %a{:href => "/#{@category_title}/#{name}"}= name
   
 
