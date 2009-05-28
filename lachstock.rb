@@ -6,6 +6,11 @@ require 'yaml'
 
 require 'pp' # only for dev work
 
+load "#{File.dirname(__FILE__)}/lib/metadata.rb"
+
+before do
+  @metadata = Metadata.all.sort
+end
 
 # homepage
 get '/' do
@@ -26,7 +31,15 @@ end
 get '/:category' do 
   @category = params[:category]
   @category_title = params[:category]
-  @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
+  # @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
+  
+  @articles_by_year_then_month = @metadata.inject({}) do |acc, article|
+    acc[article.published.year] ||= {}
+    acc[article.published.year][article.published.month] ||= []
+    acc[article.published.year][article.published.month] << article
+    acc
+  end
+  
   view File.join(@category, "/index").to_sym
 end
 

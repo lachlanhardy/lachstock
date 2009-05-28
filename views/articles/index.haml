@@ -1,10 +1,17 @@
 .index
   %h1 Index
-  - if @items
-    %ul
-      - @items.each do |item| 
-        - name = item.gsub(/views\/.+\/(.+)/, '\1')
-        %li
-          %a{:href => "/#{@category_title}/#{name}"}= name
-  
+
+  %ol
+    - for year in @articles_by_year_then_month.keys.sort.reverse
+      %li
+        %h2= year
+        %ol
+          - for month in @articles_by_year_then_month[year].keys.sort.reverse
+            %li
+              %h3= Time.local(2008, month, 1).strftime("%B")
+              %ol
+                - for article in @articles_by_year_then_month[year][month].sort
+                  %li
+                    %h4
+                      %a{:href => "/#{@category}/#{article.slug}"}= article.title
 

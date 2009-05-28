@@ -1,7 +1,13 @@
 Tasks to be done before launch, in priority order:
 
  - Sort out archive naming action
+ - Passing :options => {} to haml is deprecated; merge options directly into hash instead.
  - Sort out article page navigation
+ - Make selected nav more tightly scoped
+ - Add Atom feed(s)
+ - Microformat tags
+ - Microformat comments
+ - Microformat posts?
  - Set up caching for API requests
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
@@ -9,6 +15,7 @@ Tasks to be done before launch, in priority order:
  - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
  - review whole site and QA
+
 
 
 Others things to do, in priority order:
