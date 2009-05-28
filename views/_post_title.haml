@@ -1,5 +1,5 @@
 .post-title
-  %a{:href => "/#{@category}/#{@name}/", :title => "Permalink for this post" }= prettify_date (@published_date)
   %h1= @title
   %p
     %strong By Lachlan Hardy
+    %a{:href => "/#{@category}/#{@name}/", :title => "Permalink for this post" }= prettify_date(@published_date)
