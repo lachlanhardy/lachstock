@@ -27,7 +27,7 @@ end
 get '/:category' do 
   @category = params[:category]
   @category_title = params[:category]
-  @items = Metadata.type("@category.to_sym").all.sort.inject({}) do |acc, item|
+  @items = Metadata.type(@category.to_sym).all.sort.inject({}) do |acc, item|
     acc[item.published.year] ||= {}
     acc[item.published.year][item.published.month] ||= []
     acc[item.published.year][item.published.month] << item
