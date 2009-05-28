@@ -8,10 +8,6 @@ require 'pp' # only for dev work
 
 load "#{File.dirname(__FILE__)}/lib/metadata.rb"
 
-before do
-  @metadata = Metadata.all.sort
-end
-
 # homepage
 get '/' do
   @category = "home"
@@ -31,15 +27,12 @@ end
 get '/:category' do 
   @category = params[:category]
   @category_title = params[:category]
-  # @items = filtered_filenames(Dir.glob("views/" + @category + "/*"))
-  
-  @articles_by_year_then_month = @metadata.inject({}) do |acc, article|
-    acc[article.published.year] ||= {}
-    acc[article.published.year][article.published.month] ||= []
-    acc[article.published.year][article.published.month] << article
+  @items = Metadata.type("@category.to_sym").all.sort.inject({}) do |acc, item|
+    acc[item.published.year] ||= {}
+    acc[item.published.year][item.published.month] ||= []
+    acc[item.published.year][item.published.month] << item
     acc
   end
-  
   view File.join(@category, "/index").to_sym
 end
 

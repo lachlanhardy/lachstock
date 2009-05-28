@@ -1,20 +1,21 @@
 class Metadata
+  # I cargo culted this class from Tim Lucas's work on his own blog.
+  # I've modified it a bit, but I still don't understand all of it.
+  # You can find the original here:
+  # http://github.com/toolmantim/toolmantim/blob/f479d008806ca2ae8f0028543c8f693b69bcc329/lib/article.rb
+  
   def self.all
     self.files.collect {|f| new(f, File.read(f))}
   end
-
   def self.files
     Dir.glob(File.expand_path("views/*/*/index.haml"))
   end
-  
   def self.path=(path)
     @path = path
   end
-
   def self.path(article_slug=nil)
     article_slug ? File.join(@path, "#{article_slug}.haml") : @path
   end
-
   def self.[](slug)
     path = path(slug)
     File.exist?(path) && new(path, File.read(path))
@@ -33,7 +34,6 @@ class Metadata
     @template = file_contents
   end
   def slug
-    # File.basename(self.path, ".haml")
     File.basename(File.join("#{self.path.split("/")[-3]}/#{self.path.split("/")[-2]}"))
   end
   alias :dom_id :slug
@@ -60,5 +60,13 @@ class Metadata
   end
   def path_without_extension
     self.path.sub(".haml", "")
+  end
+  def self.type(type)
+    Class.new(self).class_eval <<-CODE
+      def self.files
+        Dir.glob(File.expand_path("views/#{type}/*/index.haml"))
+      end
+      self
+    CODE
   end
 end

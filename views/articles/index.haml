@@ -2,16 +2,16 @@
   %h1 Index
 
   %ol
-    - for year in @articles_by_year_then_month.keys.sort.reverse
+    - for year in @items.keys.sort.reverse
       %li
         %h2= year
         %ol
-          - for month in @articles_by_year_then_month[year].keys.sort.reverse
+          - for month in @items[year].keys.sort.reverse
             %li
               %h3= Time.local(2008, month, 1).strftime("%B")
               %ol
-                - for article in @articles_by_year_then_month[year][month].sort
+                - for item in @items[year][month].sort
                   %li
                     %h4
-                      %a{:href => "/#{@category}/#{article.slug}"}= article.title
+                      %a{:href => "/#{@category}/#{item.slug}"}= item.title
 
