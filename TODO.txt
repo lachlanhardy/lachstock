@@ -1,6 +1,7 @@
 Tasks to be done before launch, in priority order:
 
  - make article index hot
+ - Get proper titling onto tag pages
  - Sort out article page navigation
  - Make selected nav more tightly scoped
  - Add Atom feed(s)
