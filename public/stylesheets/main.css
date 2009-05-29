@@ -113,18 +113,19 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
   
   /* -- =Index -- */
   .index {}
-    .index ol {margin: 0 0 0 18em;}
-      .index ol li {list-style-type: none; position: relative;}
-        .index ol li h2 {left: -8.6em; margin: 0; position: absolute; top: 0;}
+    .index ol {margin: 0 0 0 12em;}
+      .index ol li {list-style-type: none; margin: 0 0 4em 0; position: relative;}
+        .index ol li h2 {font-size: 1.5em; left: -7.6em; line-height: 1; margin: 0; position: absolute; top: -0.23em;}
         .index ol li a {}
         
         .index ol ol {margin: 0;}
-          .index ol ol li {}
-            .index ol ol li h3 {left: -5.5em; margin: 0; position: absolute; top: 0;}
+          .index ol ol li {margin: 0 0 2em 0;}
+            .index ol ol li h3 {font-size: 1.2em; left: -5.5em; line-height: 1; margin: 0; position: absolute; text-align: right; top: -0.03em; width: 5em;}
             .index ol ol li a {}
             
             .index ol ol ol {}
-              .index ol ol ol li {}
+              .index ol ol ol li {margin: 0 0 0.5em 0;}
+                .index ol ol ol li h4 {font-size: 1em; line-height: 1; margin: 0;}
                 .index ol ol ol li a {}
   
   

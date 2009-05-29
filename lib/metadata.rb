@@ -53,7 +53,7 @@ class Metadata
     self.class.template_variable(self.template, name)
   end
   def <=>(other)
-    [other.published.year, other.published.month, other.published.day] <=> [self.published.year, self.published.month, self.published.day]
+    [other.published.year, other.published.month, other.title] <=> [self.published.year, self.published.month, self.title]
   end
   def ==(other)
     other.respond_to?(:slug) && self.slug == other.slug

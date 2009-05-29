@@ -10,8 +10,8 @@
             %li
               %h3= Time.local(2008, month, 1).strftime("%B")
               %ol
-                - for item in @items[year][month].sort
+                - for item in @items[year][month].sort.reverse
                   %li
                     %h4
-                      %a{:href => "/#{@category}/#{item.slug}"}= item.title
+                      %a{:href => "/#{@category}/#{item.slug}/"}= item.title
 
