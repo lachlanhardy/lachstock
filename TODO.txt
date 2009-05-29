@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - add About page
  - make article index hot
  - Sort out article page navigation
  - Make selected nav more tightly scoped
@@ -14,7 +13,6 @@ Tasks to be done before launch, in priority order:
  - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
  - review whole site and QA
-
 
 
 Others things to do, in priority order:
