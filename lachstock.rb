@@ -8,10 +8,12 @@ require 'pp' # only for dev work
 
 load "#{File.dirname(__FILE__)}/lib/metadata.rb"
 
+set :haml, {:format => :html5, :attr_wrapper => '"'}
+
 # homepage
 get '/' do
   @category = "home"
-  view :index
+  haml :index
 end
 
 ["/tags", "/tags/:tag", "/:category/tags", "/:category/tags/:tag"].each do |path|
@@ -20,7 +22,7 @@ end
     @category_title = (params[:tag].nil? ? "Tags" : "Tag")
     @tag = (params[:tag].nil? ? nil : params[:tag])
     @tags = tagspace(@tag, filtered_filenames(Dir.glob("views/#{@category}/*")))
-    view :tagspace
+    haml :tagspace
   end
 end
 
@@ -33,14 +35,14 @@ get '/:category' do
     acc[item.published.year][item.published.month] << item
     acc
   end
-  view File.join(@category, "/index").to_sym
+  haml File.join(@category, "/index").to_sym
 end
 
 get '/:category/:name' do 
   @category = params[:category]
   @category_title = params[:category].gsub(/(.+)s$/, '\1')
   @name = params[:name]
-  view File.join(@category, "/", @name, "/index").to_sym
+  haml File.join(@category, "/", @name, "/index").to_sym
 end
 
 # Hot redirect for consistent URLs
@@ -114,10 +116,6 @@ helpers do
         haml(:"_tags", :layout => false)
       end
     end
-  end
-  def view(view)
-    haml view, :options => {:format => :html5,
-                              :attr_wrapper => '"'}
   end
   def partial(name)
     haml(:"_#{name}", :layout => false)
