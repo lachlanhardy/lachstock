@@ -16,7 +16,7 @@ get '/' do
   haml :index
 end
 
-["/tags", "/tags/:tag", "/:category/tags", "/:category/tags/:tag"].each do |path|
+["/tags/", "/tags/:tag/", "/:category/tags/", "/:category/tags/:tag/"].each do |path|
   get path do
     @category = (params[:category].nil? ? "*" : params[:category])
     @category_title = (params[:tag].nil? ? "Tags" : "Tag")
@@ -26,7 +26,7 @@ end
   end
 end
 
-get '/:category' do 
+get '/:category/' do 
   @category = params[:category]
   @category_title = params[:category]
   @items = Metadata.type(@category.to_sym).all.sort.inject({}) do |acc, item|
@@ -38,16 +38,11 @@ get '/:category' do
   haml File.join(@category, "/index").to_sym
 end
 
-get '/:category/:name' do 
+get '/:category/:name/' do 
   @category = params[:category]
   @category_title = params[:category].gsub(/(.+)s$/, '\1')
   @name = params[:name]
   haml File.join(@category, "/", @name, "/index").to_sym
-end
-
-# Hot redirect for consistent URLs
-get '*/' do
-  redirect params[:splat].to_s
 end
 
 helpers do

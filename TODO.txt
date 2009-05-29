@@ -1,8 +1,8 @@
 Tasks to be done before launch, in priority order:
 
+ - add About page
  - make article index hot
  - Sort out article page navigation
- - Tidy up "*/" redirect - 301 and inverted(?)
  - Make selected nav more tightly scoped
  - Add Atom feed(s)
  - Microformat comments
@@ -19,6 +19,8 @@ Tasks to be done before launch, in priority order:
 
 Others things to do, in priority order:
 
+ - extract TrailingSlash
+ - encode tags
  - Set up post-commit hook action for redeploy
  - Transform avatars to 96x96 and store locally against username and origin
  - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
