@@ -1,12 +1,10 @@
 Tasks to be done before launch, in priority order:
 
- - Passing :options => {} to haml is deprecated; merge options directly into hash instead.
  - make article index hot
  - Sort out article page navigation
  - Tidy up "*/" redirect - 301 and inverted(?)
  - Make selected nav more tightly scoped
  - Add Atom feed(s)
- - Microformat tags
  - Microformat comments
  - Microformat posts?
  - Set up caching for API requests
