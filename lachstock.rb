@@ -105,36 +105,6 @@ helpers do
     return tag_list.sort_by {|item| item.kind_of?(Array) ? item[1].downcase : item.downcase}
   end
   
-  def tagspace_old(tag, folders)
-    @directories = []
-    tag_list = [] 
-    
-    if @category == "*"
-      Dir.glob("views/*").each do |contents|
-        if (File.ftype(contents) == "directory")
-          @directories.push(contents.split("/").last)
-        end
-      end
-    else
-      @directories.push(@category)
-    end
-    
-    @directories.each do |directory|
-      folders.each do |folder|
-        if File.exist? "#{options.views}/#{directory}/#{folder}/tags.yaml"
-          if tag.nil?
-            tag_list = tag_list | YAML.load_file("#{options.views}/#{directory}/#{folder}/tags.yaml")
-          else
-            if (YAML.load_file("#{options.views}/#{directory}/#{folder}/tags.yaml").include?(tag))
-              tag_list.push(directory + "/" + folder)
-            end
-          end
-        end
-      end
-    end
-    return tag_list.sort_by {|item| item.downcase}
-  end
-  
   def tag_builder
     unless @name.nil?
       if File.exist? "#{options.views}/#{@category}/#{@name}/tags.yaml"
