@@ -2,7 +2,6 @@ Tasks to be done before launch, in priority order:
 
  - Sort out article page navigation
  - Make selected nav more tightly scoped
- - make tags sort case-insensitive
  - Add Atom feed(s)
  - Microformat comments
  - Microformat posts?

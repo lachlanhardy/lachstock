@@ -102,7 +102,7 @@ helpers do
         end
       end
     end
-    return tag_list.sort
+    return tag_list.sort_by {|item| item.kind_of?(Array) ? item[1].downcase : item.downcase}
   end
   
   def tagspace_old(tag, folders)
