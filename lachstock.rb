@@ -21,7 +21,7 @@ end
     @category = (params[:category].nil? ? "*" : params[:category])
     @category_title = (params[:tag].nil? ? "Tags" : "Tag")
     @tag = (params[:tag].nil? ? nil : params[:tag])
-    @tags = tagspace(@tag, filtered_filenames(Dir.glob("views/#{@category}/*")))
+    @tags = tagspace(@tag, Metadata.type(@category.to_sym).all)
     haml :tagspace
   end
 end
@@ -75,6 +75,37 @@ helpers do
   end
   
   def tagspace(tag, folders)
+    @directories = []
+    tag_list = [] 
+    
+    if @category == "*"
+      Dir.glob("views/*").each do |contents|
+        if (File.ftype(contents) == "directory")
+          @directories.push(contents.split("/").last)
+        end
+      end
+    else
+      @directories.push(@category)
+    end
+
+    @directories.each do |directory|
+      folders.each do |folder|
+        article = folder.path.split("/")[-2]
+        if File.exist? "#{options.views}/#{directory}/#{article}/tags.yaml"
+          if tag.nil?
+            tag_list = tag_list | (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml"))
+          else
+            if (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml").include?(tag))
+              tag_list.push([directory + "/" + article, folder.title])
+            end
+          end
+        end
+      end
+    end
+    return tag_list.sort
+  end
+  
+  def tagspace_old(tag, folders)
     @directories = []
     tag_list = [] 
     

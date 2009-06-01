@@ -18,7 +18,7 @@
       %ul
         - @tags.each do |tagged_file|
           %li
-            %a{:href => "/#{tagged_file}/"}= tagged_file.split("/").last
+            %a{:href => "/#{tagged_file[0]}/"}= tagged_file[1]
     - else
       - unless @category == "*"
         %p

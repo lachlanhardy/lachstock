@@ -1,8 +1,8 @@
 Tasks to be done before launch, in priority order:
 
- - Get proper titling onto tag pages
  - Sort out article page navigation
  - Make selected nav more tightly scoped
+ - make tags sort case-insensitive
  - Add Atom feed(s)
  - Microformat comments
  - Microformat posts?
@@ -10,6 +10,7 @@ Tasks to be done before launch, in priority order:
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
  - set up proper IMG stylings in CSS
+ - reposition #tags element
  - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
  - review whole site and QA
@@ -19,6 +20,7 @@ Others things to do, in priority order:
 
  - extract TrailingSlash
  - encode tags
+ - make tags case-insensitive
  - Set up post-commit hook action for redeploy
  - Transform avatars to 96x96 and store locally against username and origin
  - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
