@@ -1,5 +1,6 @@
 Tasks to be done before launch, in priority order:
 
+ - style http://0.0.0.0:4567/articles/internet-gurus/
  - Sort out article page navigation
  - Make selected nav more tightly scoped
  - Add Atom feed(s)

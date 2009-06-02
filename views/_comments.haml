@@ -7,7 +7,7 @@
       -# %a{ :href => "#post", :title => "Post your own" } Post your own
   
     - @comments.each_with_index do |comment, index|
-      - comment_id = "#c#{index + 1}"
+      - comment_id = "c#{index + 1}"
       .comment{:id => comment_id, :class => (comment['username'] == "lachlanhardy" ? "lachstock" : "")}
         .vcard
           - unless comment['username'].nil?
@@ -18,7 +18,7 @@
             %span.fn= comment['name']
         .comment_details
           posted on
-          %a{:href => comment_id, :title => "Permalink for this comment"}= comment['timestamp']
+          %a{:href => "##{comment_id}", :title => "Permalink for this comment"}= comment['timestamp']
         .comment_body
           = comment['body']
           
