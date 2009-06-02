@@ -48,6 +48,10 @@ TOC
 			.column ul li {font-size: 1.07em; list-style-position: inside; list-style-type: disc;}
 		.column ol {}
 			.column ol li {font-size: 1.07em; list-style-position: inside; list-style-type: decimal;}
+		  .column ol ol,
+		  .column ol ul,
+		  .column ul ol,
+		  .column ul ul {margin: 0 0 0.5em 1em;}
 			
 		.amp {background: #0e0e0e; color: #666; font: italic 100 1.25em Baskerville, "Goudy Old Style", "Palatino", Georgia, "Book Antiqua", serif; position: relative; top: 2px;}
 		
