@@ -5,7 +5,7 @@
     timestamp: 20081030 at 0938
     body: |
         <p>Nice one! I saw you create the repository the other day and wondered what would grow within it.</p>
-        <p>I’ve got a feature request/suggestion. How about ajaxy pagination between commits? Ordered by date I suppose.</p>
+        <p>I&rsquo;ve got a feature request/suggestion. How about ajaxy pagination between commits? Ordered by date I suppose.</p>
         
 - 
     name: Lachlan Hardy
@@ -13,5 +13,5 @@
     url: http://lachstock.com.au
     timestamp: 20081031 at 1147
     body: |
-        <p>Yeah, I extracted it from my Lachstock code. Which means we lost the history, but that’s cool.</p>
+        <p>Yeah, I extracted it from my Lachstock code. Which means we lost the history, but that&rsquo;s cool.</p>
         <p>Sweet idea! Should definitely add that.</p>

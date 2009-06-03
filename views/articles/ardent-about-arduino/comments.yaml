@@ -15,7 +15,7 @@
     url: http://leftjustified.net/
     timestamp: 20080508 at 1617
     body: |
-        <p>I’m stoked to see that a) you’re into this Lach and b) there’s going to be a workshop down here in Melbourne!</p>
+        <p>I&rsquo;m stoked to see that a) you&rsquo;re into this Lach and b) there&rsquo;s going to be a workshop down here in Melbourne!</p>
 
 -
     name: Matt Allen
@@ -32,7 +32,7 @@
     url: http://scenariogirl.com
     timestamp: 20080508 at 1640
     body: |
-        <p>Wow that looks cool! I can’t program, but it looks like a stack of fun.</p>
+        <p>Wow that looks cool! I can&rsquo;t program, but it looks like a stack of fun.</p>
         <p>Are there a lot of experimental projects evolving out of Arduino?</p>
         
 -
@@ -41,8 +41,8 @@
     url: http://valhallaisland.com
     timestamp: 20080508 at 1650
     body: |
-        <p>This kind of stuff all looks so cool. Lego has been doing this kind of stuff for ages with Robolab. You can start by making apps visually in Robolab but there’s also a Java API that hooks into everything, the robots have engines, different kinds of sensors, etc. It would be a great thing to give young children but for the software programmer, it’s extremely cool to see physical results of your code.</p>
-        <p>I think it’s time I moved to Sydney or Melbourne, where all the action is.</p>
+        <p>This kind of stuff all looks so cool. Lego has been doing this kind of stuff for ages with Robolab. You can start by making apps visually in Robolab but there&rsquo;s also a Java API that hooks into everything, the robots have engines, different kinds of sensors, etc. It would be a great thing to give young children but for the software programmer, it&rsquo;s extremely cool to see physical results of your code.</p>
+        <p>I think it&rsquo;s time I moved to Sydney or Melbourne, where all the action is.</p>
         
 -
     name: Rob Sharp
@@ -60,5 +60,5 @@
     body: |
         <p>I just bought my ticket!</p>
         <p>Thanks for the discount code, Marcus! Very cool :)</p>
-        <p>You’d be very welcome in Sydney, Jim! But don’t you have that little degree thing to finish? ;)</p>
+        <p>You&rsquo;d be very welcome in Sydney, Jim! But don&rsquo;t you have that little degree thing to finish? ;)</p>
         <p>Thanks for the links, Rob!</p>

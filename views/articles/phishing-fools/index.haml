@@ -5,10 +5,10 @@
   This morning,
   %a{ :href => "http://blog.flickr.net/en/2008/03/31/find-your-friends/" }
     Flickr released a new feature
-  \. One that let’s you
+  \. One that let&rsquo;s you
   %a{ :href => "http://www.flickr.com/import/people/" }
     find your friends
-  from your existing address books on Yahoo! Mail, Gmail and Hotmail. All without providing usernames or passwords. Aren’t APIs wonderful?
+  from your existing address books on Yahoo! Mail, Gmail and Hotmail. All without providing usernames or passwords. Aren&rsquo;t APIs wonderful?
 %p
   I
   %a{ :href => "http://twitter.com/lachlanhardy/statuses/780466512", :rel => "me" }
@@ -22,7 +22,7 @@
   asking
   %a{ :href => "http://twitter.com/explode/statuses/780470773" }
     %q{ :cite => "http://twitter.com/explode/statuses/780470773" }
-      isn’t that encouraging people to get phished?
+      isn&rsquo;t that encouraging people to get phished?
   \.
 %p In a nutshell, the answer is <strong>yes</strong>.
 
@@ -38,13 +38,13 @@
   called the
   %a{ :href => "http://adactio.com/journal/1357" }
     Password Anti-pattern
-  \. And I’m one of them. The Password Anti-pattern is a Bad Thing&trade;. I don’t think anyone would disagree with that.
-%p Removing the Anti-pattern means that the authenticating site doesn’t get full unlimited access to the account in question. In Flickr’s new feature, they get access to only the details of who is in my Gmail address book - not my emails and certainly not access to any other Google products I may have enabled on that account. Google’s authentication page confirms for me that Flickr is requesting access to only my contacts and only for a one-time use:
+  \. And I&rsquo;m one of them. The Password Anti-pattern is a Bad Thing&trade;. I don&rsquo;t think anyone would disagree with that.
+%p Removing the Anti-pattern means that the authenticating site doesn&rsquo;t get full unlimited access to the account in question. In Flickr&rsquo;s new feature, they get access to only the details of who is in my Gmail address book - not my emails and certainly not access to any other Google products I may have enabled on that account. Google&rsquo;s authentication page confirms for me that Flickr is requesting access to only my contacts and only for a one-time use:
 %blockquote
   %p
     %strong
       Flickr.com
-    is requesting access to your Google Contacts account so that it can access Google Accounts on your behalf. You can revoke access at any time under ‘My Account’. Flickr.com will not have access to your password or any personal information.
+    is requesting access to your Google Contacts account so that it can access Google Accounts on your behalf. You can revoke access at any time under &lsquo;My Account&rsquo;. Flickr.com will not have access to your password or any personal information.
     %a{ :href => "https://www.google.com/support/accounts/bin/answer.py?answer=41192" }
       Learn more
     \.
@@ -56,30 +56,30 @@
       one-time access
     \. If it needs to access Google on your behalf in the future, you will be prompted again for permission.
 %p
-  All of this is hot, hot, hot! As long as you’re actually on Google’s authentication page.
+  All of this is hot, hot, hot! As long as you&rsquo;re actually on Google&rsquo;s authentication page.
 
 %h2 Phishes away!
 %p
   A major argument Jeremy stated against the Password Anti-pattern is that
   %q{ :cite => "http://adactio.com/journal/1357" }
     it teaches people how to be phished
-  , but these new authentication methods don’t fix that. They
+  , but these new authentication methods don&rsquo;t fix that. They
   %strong
     still
-  teach users that allowing your existing site to authenticate to a third party site is a Good Thing&trade;. It’s a simple matter to produce the appearance of following that authentication process while actually harvesting details.
-%p The solution to this is the same it has always been. The user needs to check the URL of the page they’re on and make the call. The problem with <em>that</em> is also the same as it has always been. Some users, possibly most users, don’t do it.
+  teach users that allowing your existing site to authenticate to a third party site is a Good Thing&trade;. It&rsquo;s a simple matter to produce the appearance of following that authentication process while actually harvesting details.
+%p The solution to this is the same it has always been. The user needs to check the URL of the page they&rsquo;re on and make the call. The problem with <em>that</em> is also the same as it has always been. Some users, possibly most users, don&rsquo;t do it.
 
 %h3 Are we making things worse?
 %p The new authentication methods may actually train users to phished even more readily than before because there is less of a cognitive cost to the process. Ever since computers came into use, users have been hammered with warnings about the importance of passwords. The web has damaged that somewhat with our profligate password ways, but I reckon there are still plenty of mental alarms to ring when somebody asks for your password.
-%p Using sexy protocols and APIs don’t cause that hesitation. The process has been designed to create a neatly streamlined user experience. Just click a few buttons and it’s over.
+%p Using sexy protocols and APIs don&rsquo;t cause that hesitation. The process has been designed to create a neatly streamlined user experience. Just click a few buttons and it&rsquo;s over.
 %p A phishing site is unlikely to do that, of course. These days API access requires registering for a key, allowing the API providers to track usage. Providers have varying levels of diligence, but it seems unlikely that an application could do phishing on a significant scale without being caught.
-%p The most likely alternative is that they simply pretend you’re not currently authenticated with the third party site and request your username and password. Hopefully, that’s enough to give pause. Particularly if the app is telling you you’re not authenticated with Hotmail when you have Hotmail open in the next tab over.
+%p The most likely alternative is that they simply pretend you&rsquo;re not currently authenticated with the third party site and request your username and password. Hopefully, that&rsquo;s enough to give pause. Particularly if the app is telling you you&rsquo;re not authenticated with Hotmail when you have Hotmail open in the next tab over.
 
-%h2 What’s my scene?
-%p In the Password Anti-pattern article, Jeremy took a moral stand: <q cite="http://adactio.com/journal/1357">even if it costs me a contract in the short-term, I will refuse to implement any kind of interface that involves asking the user for a password from a third-party site. I urge you to do the same.</q> That was admirable and eminently reasonable. Many agreed. He provided what he thought was a viable alternative by pointing to the same authentication methods I’m discussing here.
-%p I thought it was the right choice at the time, too. I stood with him. I don’t know if his stance has changed now, but I know mine has.
+%h2 What&rsquo;s my scene?
+%p In the Password Anti-pattern article, Jeremy took a moral stand: <q cite="http://adactio.com/journal/1357">even if it costs me a contract in the short-term, I will refuse to implement any kind of interface that involves asking the user for a password from a third-party site. I urge you to do the same.</q> That was admirable and eminently reasonable. Many agreed. He provided what he thought was a viable alternative by pointing to the same authentication methods I&rsquo;m discussing here.
+%p I thought it was the right choice at the time, too. I stood with him. I don&rsquo;t know if his stance has changed now, but I know mine has.
 
 %h3 What is the alternative?
 %p Authentication APIs and protocols have their benefits and they have their costs. Do these cancel each other out? Should we refuse to implement this functionality?
 %p If you agree with my points here, maybe you think that. But what do you implement instead? There will be a lot of demand for this functionality as it becomes easier and easier (no more screen-scraping!).
-%p Personally, I’m for it. I have reservations now, but the practical benefits of isolating and securing access to my data wins over the hypothetically higher risk of phishing. And on that day when I’m so tired, hungover or ill that I absentmindedly just click through the process and hand over the keys to my kingdom, I hope some small flicker of self-preservation will alert me so that I can correct it in time.
+%p Personally, I&rsquo;m for it. I have reservations now, but the practical benefits of isolating and securing access to my data wins over the hypothetically higher risk of phishing. And on that day when I&rsquo;m so tired, hungover or ill that I absentmindedly just click through the process and hand over the keys to my kingdom, I hope some small flicker of self-preservation will alert me so that I can correct it in time.

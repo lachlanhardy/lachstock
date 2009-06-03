@@ -4,7 +4,7 @@
     url: http://drnicwilliams.com
     timestamp: 20071220 at 1658
     body: |
-        <p>A wise man once said “If they blog comments doth not support OpenID, thou shalt ne’er discuss OpenID”.
+        <p>A wise man once said “If they blog comments doth not support OpenID, thou shalt ne&rsquo;er discuss OpenID”.
         
 - 
     name: Scott G
@@ -21,10 +21,10 @@
     url: http://lachstock.com.au/
     timestamp: 20071221 at 1109
     body: |
-        <p>@Nic Fair call. People have been asking for it in SimpleLog for nearly a year, but no dice. I got cracking this morning, so we’ll see how long that takes me ;)</p>
-        <p>@Scott The user experience is OpenID’s single biggest issue. It shouldn’t be as hard as it is.</p>
-        <p>I reckon it’s mostly due to complexity. For folks to be convinced that it is a good idea, they want to know some things about it and explanations get complicated very very quickly. In terms of actually just using it, it’s easy. The problem is convincing folks to use it.</p>
-        <p>I think <a href="https://myvidoop.com/">myVidoop’s</a> video explanation is one of the best, but it still gets way too jargonistic after a while: <a href="http://uk.youtube.com/watch?v=xcmY8Pk-qEk">OpenID according to Dave</a>.</p>
+        <p>@Nic Fair call. People have been asking for it in SimpleLog for nearly a year, but no dice. I got cracking this morning, so we&rsquo;ll see how long that takes me ;)</p>
+        <p>@Scott The user experience is OpenID&rsquo;s single biggest issue. It shouldn&rsquo;t be as hard as it is.</p>
+        <p>I reckon it&rsquo;s mostly due to complexity. For folks to be convinced that it is a good idea, they want to know some things about it and explanations get complicated very very quickly. In terms of actually just using it, it&rsquo;s easy. The problem is convincing folks to use it.</p>
+        <p>I think <a href="https://myvidoop.com/">myVidoop&rsquo;s</a> video explanation is one of the best, but it still gets way too jargonistic after a while: <a href="http://uk.youtube.com/watch?v=xcmY8Pk-qEk">OpenID according to Dave</a>.</p>
         
 - 
     name: Ben Buchanan
@@ -32,6 +32,6 @@
     url: http://weblog.200ok.com.au/
     timestamp: 20071229 at 1608
     body: |
-        <p>I’ve poked about looking for an answer to this one but so far nothing definitive… are there any issues delegating more than one URL back to a single openid?</p>
-        <p>Obviously each extra URL is one more site to “keep safe” but otherwise it seems ok to me; but then I don’t know if openid servers will chuck a wobbly if more than one site gets delegated.</p>
+        <p>I&rsquo;ve poked about looking for an answer to this one but so far nothing definitive… are there any issues delegating more than one URL back to a single openid?</p>
+        <p>Obviously each extra URL is one more site to “keep safe” but otherwise it seems ok to me; but then I don&rsquo;t know if openid servers will chuck a wobbly if more than one site gets delegated.</p>
         <p>Thoughts?</p>

@@ -4,11 +4,11 @@
     url: http://weblog.200ok.com.au/
     timestamp: 20080123 at 2301
     body: |
-        <p>(1 and 4) I think many businesses will decide that it makes no financial/resourcing sense to build for IE8. They’ll just argue that if it works in IE7, lock it down and move on. Why spend time/money to build/tweak/upgrade for new versions when you can just party like it’s 2006 from here on out? What motivation does The Business have?</p>
-        <p>So if something doesn’t work in IE7, forget about it chombatta - you don’t get to use it. Could have been worse. Could have been IE6.</p>
-        <p>(2) From the look of it, they’ll see standards mode but only as close as IE7 can render it.</p>
+        <p>(1 and 4) I think many businesses will decide that it makes no financial/resourcing sense to build for IE8. They&rsquo;ll just argue that if it works in IE7, lock it down and move on. Why spend time/money to build/tweak/upgrade for new versions when you can just party like it&rsquo;s 2006 from here on out? What motivation does The Business have?</p>
+        <p>So if something doesn&rsquo;t work in IE7, forget about it chombatta - you don&rsquo;t get to use it. Could have been worse. Could have been IE6.</p>
+        <p>(2) From the look of it, they&rsquo;ll see standards mode but only as close as IE7 can render it.</p>
         <p>(3) Not sure yet.</p>
-        <p>(5) Well… specific sites will be able to keep trying new stuff. But in a broad sense I can’t see this helping promote innovation. Really committed people will still do cool stuff, lazy developers will stay lazy (or get worse).</p>
+        <p>(5) Well… specific sites will be able to keep trying new stuff. But in a broad sense I can&rsquo;t see this helping promote innovation. Really committed people will still do cool stuff, lazy developers will stay lazy (or get worse).</p>
         <p>(6) Not until IE6 is dead in any case. Most of my bugfixing is still based on IE6.</p>
         <p>(7) We spend forever specifying that we really meant the DOCTYPE. It has a greater impact on crappy-practice methodologies, as they are legitimised. “Hey Microsoft said it was ok to keep building in quirks mode forever!”</p>
         <p>(8) Does it qualify as a redhead cluster phenomenon? Get Joe Clark on the case!</p>
@@ -43,10 +43,10 @@
             </li>
         </ul>
         <p>On point 1, if IE8 adoption is as slow as that of IE7,  it will be incredibly tempting to solve IE8 breakage with X-UA-Compatible - at least until such a time as the UI is overhauled (not very frequently).</p>
-        <p>3-4: It’s business as usual until IE8 breaks out of niche browser status.</p>
-        <p>5: MSIE has always been broken, but this hasn’t prevented innovation so much as forced devs to innovate around it.</p>
+        <p>3-4: It&rsquo;s business as usual until IE8 breaks out of niche browser status.</p>
+        <p>5: MSIE has always been broken, but this hasn&rsquo;t prevented innovation so much as forced devs to innovate around it.</p>
         <p>6: Probably not. As you can see from our figures, we still need to work around IE6. IE8 is meant to be mostly standards compliant, so I imagine most development will occur FF–&gt;IE7(bugfix)–&gt;IE6(bugfix)</p>
-        <p>7: No place whatsoever. It’s a horrible hack.</p>
+        <p>7: No place whatsoever. It&rsquo;s a horrible hack.</p>
         <p>I should mention that those browser stats are for the Australian market.</p>
 
 -
@@ -56,7 +56,7 @@
     timestamp: 20080125 at 0134
     body: |
         <p> Lets be honest here, the reason we include bug fixes (hacks) in our pages is because we actually care about cross browser viability of what we produce.  We will do what needs to be done to get our content out there so just pass the cool aid.</p>
-        <p>However, what happens when the version given is wrong?  If the developer is lazy or really doesn’t have a clue how will IE handle it?</p>
+        <p>However, what happens when the version given is wrong?  If the developer is lazy or really doesn&rsquo;t have a clue how will IE handle it?</p>
         <p>This may (heavy doubts here) be a great advancement but what happens when the information provided is wrong?</p>
 
 -
@@ -77,7 +77,7 @@
     body: |
         <p>I love this quote by Chris Wilson from the ie8 blog: “The answer is that developers of many sites had worked around many of the shortcomings or outright errors in IE6, and now expected IE7 to work just like IE6.”</p>
         <p>It is just so wrong that it makes me want to extract my brains with a yabbie pump. We <em>want</em> something better than IE6 which we know is a fundamentally <strong>bad</strong> browser; we want IE7 to behave <em>less</em> like IE6.</p>
-        <p> To answer one of your pertinent questions, it may save some time when you’re firing up 3 versions of IE for checking; but if you’re keen, you’ll still have to spend time checking in win2k, XP, vista etc and we’ll still have to wrangle our CSS to cater for 3 browsers. I think they should focus their energies on trying to make people upgrade rather than making them comfortable living in the past. pah! :)</p>
+        <p> To answer one of your pertinent questions, it may save some time when you&rsquo;re firing up 3 versions of IE for checking; but if you&rsquo;re keen, you&rsquo;ll still have to spend time checking in win2k, XP, vista etc and we&rsquo;ll still have to wrangle our CSS to cater for 3 browsers. I think they should focus their energies on trying to make people upgrade rather than making them comfortable living in the past. pah! :)</p>
         
 -
     name: pauldwaite
@@ -96,7 +96,7 @@
     timestamp: 20080603 at 1530
     body: |
         <p>@Cam MacRae</p>
-        <p>I think those browser stats go across the board. They’re pretty similar in Europe.</p>
+        <p>I think those browser stats go across the board. They&rsquo;re pretty similar in Europe.</p>
 
 -
     name: Mirko
@@ -120,7 +120,7 @@
     url: http://lachstock.com.au
     timestamp: 20090118 at 1315
     body: |
-        <p>@bob It’ll have no effect on IE6. IE6 simply doesn’t recognise X-UA-Compatible.</p>
+        <p>@bob It&rsquo;ll have no effect on IE6. IE6 simply doesn&rsquo;t recognise X-UA-Compatible.</p>
         
 -
     name: Alexander

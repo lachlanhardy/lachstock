@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - encode all ' etc
  - Microformat comments
  - Microformat posts
  - Set up caching for API requests
