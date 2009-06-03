@@ -1,9 +1,8 @@
 Tasks to be done before launch, in priority order:
 
- - Sort out article page navigation
  - encode all ' etc
  - Microformat comments
- - Microformat posts?
+ - Microformat posts
  - Set up caching for API requests
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
@@ -26,6 +25,7 @@ Others things to do, in priority order:
  - Transform avatars to 96x96 and store locally against username and origin
  - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
  - Set up commenting
+ - Set up article page navigation
  - Add Photos section (and Atom)
  - Add Pool Room (and Atom)
  - Add bookmarks (and Atom)
