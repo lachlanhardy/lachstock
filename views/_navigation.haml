@@ -2,8 +2,9 @@
   %ul
     - @nav_items.each do |item|
       %li
-        - if item == @category || @category == "*" && item == "tags"
+        - if item == request.env['REQUEST_PATH'].split("/").last
           %span= item.capitalize
         - else
           %a{:href => "/#{item}/"}= item.capitalize
+        
         
