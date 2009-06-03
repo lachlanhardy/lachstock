@@ -1,7 +1,6 @@
 Tasks to be done before launch, in priority order:
 
  - Microformat comments
- - http://microformats.org/wiki/rel-home
  - style tagspace
  - rev=tag??
  - rel="bookmark"
@@ -12,6 +11,7 @@ Tasks to be done before launch, in priority order:
  - reposition #tags element
  - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
+ - update Github activity
  - deploy to server
  - Test Atom feed(s)
  - review whole site and QA
