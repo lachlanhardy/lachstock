@@ -1,5 +1,10 @@
 .post-title
-  %h1= @title
-  %p
-    %strong By Lachlan Hardy
-    %a{:href => "/#{@category}/#{@name}/", :title => "Permalink for this post" }= prettify_date(@published)
+  %h1.entry-title= @title
+  %address.author.vcard
+    %span.fn By Lachlan Hardy
+  %abbr{:class => "published #{@updated.nil? ? nil : "updated"}", :title => atomify_dates(Time.parse(@published.gsub(/(.+)\sat\s(.+)/, '\1\2')))}= prettify_date(@published)
+  %a{:href => "/#{@category}/#{@name}/", :title => "Permalink for this post", :rel => "bookmark" } Permalink
+  - unless @updated.nil?
+    %p
+      %strong Updated:
+      %abbr{:class => "updated", :title => atomify_dates(Time.parse(@updated.gsub(/(.+)\sat\s(.+)/, '\1\2')))}= prettify_date(@updated)

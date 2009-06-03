@@ -1,7 +1,7 @@
 Tasks to be done before launch, in priority order:
 
  - Microformat comments
- - Microformat posts
+ - http://microformats.org/wiki/rel-home
  - style tagspace
  - rev=tag??
  - rel="bookmark"
