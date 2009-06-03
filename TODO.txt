@@ -2,6 +2,9 @@ Tasks to be done before launch, in priority order:
 
  - Microformat comments
  - Microformat posts
+ - style tagspace
+ - rev=tag??
+ - rel="bookmark"
  - Set up caching for API requests
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
