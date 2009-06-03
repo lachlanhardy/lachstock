@@ -1,0 +1,23 @@
+!!! XML
+%feed{:xmlns => "http://www.w3.org/2005/Atom"}
+ 
+  %title= "Lachstock #{@category.capitalize}"
+  %link{:href => "http://lachstock.com.au/feeds/#{@category}/", :rel => "self", :hreflang => "en", :type => "application/atom+xml"}/
+  %link{:href => "http://lachstock.com.au/#{@category}/", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
+   
+  %author
+    %name Lachlan Hardy
+    %uri http://lachstock.com.au/
+    %email lachlan@lachstock.com
+
+  %id= "tag:lachstock.com.au,2009-06-03:/#{@category}/"
+  %updated= atomify_dates(@items.first.updated || @items.first.published)
+
+  - for item in @items[0..9]
+    %entry
+      %id= "tag:lachstock.com.au,#{item.published.strftime("%Y-%m-%d")}:/#{item.path.split("/")[-3]}/#{item.published.strftime("%Y%m%d%H%M%S")}"
+      %title{:type => "html"}= item.title
+      %published= atomify_dates(item.published)
+      %updated= atomify_dates(item.updated || item.published)
+      %link{:href => "http://lachstock.com.au/#{item.path.split("/")[-3]}/#{item.path.split("/")[-2]}/", :rel => "alternate", :hreflang => "en", :type => "text/html"}
+      %content{:type => "html"}&= render_html(item.template)

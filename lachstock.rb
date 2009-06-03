@@ -16,6 +16,13 @@ get '/' do
   haml :index
 end
 
+get '/feeds/:category/' do 
+  @category = params[:category]
+  @items = Metadata.type(@category.to_sym).all.sort_by {|item| item.published}.reverse
+  content_type 'application/atom+xml', :charset => 'utf-8'
+  haml :feeds, {:format => :xhtml, :layout => false}
+end
+
 ["/tags/", "/tags/:tag/", "/:category/tags/", "/:category/tags/:tag/"].each do |path|
   get path do
     @category = (params[:category].nil? ? "*" : params[:category])
@@ -46,6 +53,12 @@ get '/:category/:name/' do
 end
 
 helpers do
+  def render_html(item)
+    haml(item, :layout => false)
+  end
+  def atomify_dates(date)
+    date.strftime("%Y-%m-%dT%H:%M:%SZ")
+  end
   def prettify_date(base)
     Time.parse(base.gsub(/(.+)\sat\s(.+)/, '\1\2')).strftime("%H%Mh %A, %d %B %Y")    
   end

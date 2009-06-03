@@ -1,7 +1,7 @@
 Tasks to be done before launch, in priority order:
 
  - Sort out article page navigation
- - Add Atom feed(s)
+ - encode all ' etc
  - Microformat comments
  - Microformat posts?
  - Set up caching for API requests
@@ -11,6 +11,8 @@ Tasks to be done before launch, in priority order:
  - reposition #tags element
  - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
+ - deploy to server
+ - Test Atom feed(s)
  - review whole site and QA
 
 
@@ -19,12 +21,15 @@ Others things to do, in priority order:
  - extract TrailingSlash
  - encode tags
  - make tags case-insensitive
+ - add google sitemap
  - Set up post-commit hook action for redeploy
  - Transform avatars to 96x96 and store locally against username and origin
  - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
  - Set up commenting
- - Add Photos section
- - Add Pool Room
- - Add bookmarks
- - Add tweets
+ - Add Photos section (and Atom)
+ - Add Pool Room (and Atom)
+ - Add bookmarks (and Atom)
+ - Add tweets (and Atom)
+ - Add <rights> etc to feeds
+ - feeds should not contain OBJECT, SCRIPT, inline styles etc
 
