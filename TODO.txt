@@ -1,12 +1,12 @@
 Tasks to be done before launch, in priority order:
 
- - Set up caching for API requests
- - set up URI rewrites
  - set up proper IMG stylings in CSS
  - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
  - update Github activity
+ - Set up caching for API requests
  - deploy to server
+ - set up URI rewrites
  - review whole site and QA
 
 
