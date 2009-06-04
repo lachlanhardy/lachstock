@@ -1,0 +1,8 @@
+- if @tags != []
+  %ul.taglist
+    - @tags.each do |tag|
+      %li
+        %a{:href => "#{(@category == "*" || @category_title == "Error" ? "/" : "/#{@category}/")}tags/#{tag}/"}= tag
+
+- else
+  %p Nothing in this section has been tagged yet.

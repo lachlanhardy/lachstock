@@ -1,7 +1,6 @@
 Tasks to be done before launch, in priority order:
 
  - Set up caching for API requests
- - Catch exceptions in case calls fuck up
  - set up URI rewrites
  - set up proper IMG stylings in CSS
  - style BLOCKQUOTE and Q
@@ -19,6 +18,7 @@ Others things to do, in priority order:
  - make tags case-insensitive
  - set up weighted tagging
  - Set up post-commit hook action for redeploy
+ - Make error page cooler
  - Transform avatars to 96x96 and store locally against username and origin
  - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
  - Set up commenting

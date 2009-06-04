@@ -10,6 +10,14 @@ load "#{File.dirname(__FILE__)}/lib/metadata.rb"
 
 set :haml, {:format => :html5, :attr_wrapper => '"'}
 
+error do
+  handle_fail
+end
+
+not_found do
+  handle_fail
+end
+
 # homepage
 get '/' do
   @category = "home"
@@ -53,6 +61,19 @@ get '/:category/:name/' do
 end
 
 helpers do
+  def handle_fail
+    @category = "articles"
+    @category_title = "Error"
+    @name = nil
+    @items = Metadata.type(@category.to_sym).all.sort.inject({}) do |acc, item|
+      acc[item.published.year] ||= {}
+      acc[item.published.year][item.published.month] ||= []
+      acc[item.published.year][item.published.month] << item
+      acc
+    end
+    @tags = tagspace(nil, Metadata.type(@category.to_sym).all)
+    haml :error
+  end
   def render_html(item)
     haml(item, :layout => false)
   end

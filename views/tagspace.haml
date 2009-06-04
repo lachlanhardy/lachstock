@@ -2,13 +2,7 @@
   #tagspace
     %h1= (@category == "*" ? "Sitewide" : "#{@category}").capitalize
     
-    - if @tags != []
-      %ul
-        - @tags.each do |tag|
-          %li
-            %a{:href => "#{(@category == "*" ? "/" : "/#{@category}/")}tags/#{tag}/"}= tag
-    - else
-      %p Nothing in this section has been tagged yet.
+    = partial :tagcloud
     
 - else
   #tagged

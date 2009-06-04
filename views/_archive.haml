@@ -1,0 +1,13 @@
+%ol.archive
+  - for year in @items.keys.sort.reverse
+    %li
+      %h2= year
+      %ol
+        - for month in @items[year].keys.sort.reverse
+          %li
+            %h3= Time.local(2008, month, 1).strftime("%B")
+            %ol
+              - for item in @items[year][month].sort.reverse
+                %li
+                  %h4
+                    %a{:href => "/#{@category}/#{item.slug}/"}= item.title
