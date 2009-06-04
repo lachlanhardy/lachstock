@@ -136,10 +136,11 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
   /* -- =Posts -- */ 
     .post-title {margin:  0 0 1em 0;}
       .post-title h1 {margin: 0;}
-      .post-title address {display: inline; font-size: 1.3em; font-weight: 300; margin: 0 0.8em 0 0;}
-        .post-title .published {margin: 0 1em 0 0;}
       .post-title p {margin: 1em 0 0 0;}
 
+    
+      .hentry address {display: inline; font-size: 1.3em; margin: 0 0.8em 0 0;}
+        .hentry .published {margin: 0 1em 0 0;}
     
        #imgtest {background: #fff; border:1em solid #bfe4ff; float: left; margin: 2em 0 2em -17em; padding: 1em; overflow: auto; width: auto;}
           #imgtest img {}
@@ -148,8 +149,8 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
       
       #comments {border-top: 1em solid #bfe4ff; margin: 3em 0 1em -2em; padding: 0 0 1em 2em;}
           #comments p.blurb {font-size: 1.5em; margin: 0 0 1em 0;}
-          #comments .comment {margin: 0 0 2em 0; min-height: 96px; position: relative;}
-              .comment .vcard {position: relative;}
+          #comments .comment {margin: 0 0 2em 0; position: relative;}
+              .comment .vcard {display: block; margin: 0 0 0.3em 0; position: relative;}
                   .comment .vcard img.photo {border: 2px solid #bfe4ff; left: -145px; position: absolute; top: 0;}
                   #comments .lachstock .photo {border-color: #ff8000;}
                   .comment .vcard .fn {background: #fff; color: #000; display: block; font-size: 2em; line-height: 1;}
@@ -158,9 +159,8 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
                     .comment .vcard a.fn:hover,
                     .comment .vcard a.fn:active,
                     .comment .vcard a.fn:focus {background: #fff; color: #ff8000;}
-            
-              .comment .comment-details {background: #fff; color: #555; font-size: 0.8em; margin: 0.4em 0 0.4em 0.1em;}
-        
+              .comment .entry-content {margin: 1em 0 0 0;}
+              
           #post-comment {margin: 3em 0 1em -2em; padding: 0 1em 1em 1em;}
      
 
@@ -212,7 +212,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roma
     #footer p {border-top: 2px solid #666; padding: 1em;}
       #footer a:link {color: #0066B3;}
       #footer a:visited {color: #fff;}
-      #footer a:hover, a:active, a:focus {color: #FF8000;}
+      #footer a:hover, #footer a:active, #footer a:focus {color: #FF8000;}
 
 /* - =JS enabled - */
 

@@ -11,13 +11,13 @@
     %email lachlan@lachstock.com
 
   %id= "tag:lachstock.com.au,2009-06-03:/#{@category}/"
-  %updated= atomify_dates(@items.first.updated || @items.first.published)
+  %updated= atomify_date(@items.first.updated || @items.first.published)
 
   - for item in @items[0..9]
     %entry
       %id= "tag:lachstock.com.au,#{item.published.strftime("%Y-%m-%d")}:/#{item.path.split("/")[-3]}/#{item.published.strftime("%Y%m%d%H%M%S")}"
       %title{:type => "html"}= item.title
-      %published= atomify_dates(item.published)
-      %updated= atomify_dates(item.updated || item.published)
+      %published= atomify_date(item.published)
+      %updated= atomify_date(item.updated || item.published)
       %link{:href => "http://lachstock.com.au/#{item.path.split("/")[-3]}/#{item.path.split("/")[-2]}/", :rel => "alternate", :hreflang => "en", :type => "text/html"}
       %content{:type => "html"}&= render_html(item.template)

@@ -1,5 +1,5 @@
 - if @comments
-  #comments
+  #comments.hfeed
     %h2 Comments
     %p.notice Comments are currently disabled on this site.
     %p.blurb
@@ -8,19 +8,17 @@
   
     - @comments.each_with_index do |comment, index|
       - comment_id = "c#{index + 1}"
-      .comment{:id => comment_id, :class => (comment['username'] == "lachlanhardy" ? "lachstock" : "")}
-        .vcard
+      .comment.hentry{:id => comment_id, :class => (comment['username'] == "lachlanhardy" ? "lachstock" : nil)}
+        %address.author.entry-title.vcard
           - unless comment['username'].nil?
             %img.photo{:src => comment_avatars(comment['username']), :height => "96", :alt => "A guest: #{comment['name']}", :width => "96"}
           - if comment['url'] != nil
             %a.url.fn{:href => comment['url'], :title => "View #{comment['name']}'s website"}= comment['name']
           - else
             %span.fn= comment['name']
-        .comment_details
-          posted on
-          %a{:href => "##{comment_id}", :title => "Permalink for this comment"}= comment['timestamp']
-        .comment_body
-          = comment['body']
+        %abbr{:class => "published updated", :title => "#{atomify_date(make_base_date(comment['timestamp']))}"}= prettify_date(comment['timestamp'])
+        %a{:href => "##{comment_id}", :rel => "bookmark", :title => "Permalink for this comment"} Permalink
+        .entry-content= comment['body']
           
   - #post-comment
   -#   %h2 Heckle me

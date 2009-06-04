@@ -24,7 +24,7 @@ class Metadata
     text[/-\s@#{name}\s=\s"(.+)"/, 1]
   end
   def self.parse_date(date_string)
-    date_string && Time.parse(date_string.gsub(/(.+)\sat\s(.+)/, '\1\2'))
+    date_string && make_base_date(date_string)
   end
   
   attr_reader :path, :template

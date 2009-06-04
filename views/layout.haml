@@ -44,12 +44,13 @@
       #page
         - unless @category == "home"
           %p.category= "#{@category_title}:"
-          .column{:class => (@name.nil? ? nil : "hentry")}
+          .column
             - unless @name.nil?
-              = partial :post_title
-              = tag_builder
-              .entry-content
-                = yield
+              .hentry
+                = partial :post_title
+                = tag_builder
+                .entry-content
+                  = yield
               = comment_builder
             - else
               = yield

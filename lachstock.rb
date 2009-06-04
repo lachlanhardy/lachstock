@@ -56,11 +56,14 @@ helpers do
   def render_html(item)
     haml(item, :layout => false)
   end
-  def atomify_dates(date)
+  def make_base_date(date)
+    Time.parse(date.gsub(/(.+)\sat\s(.+)/, '\1\2'))
+  end
+  def atomify_date(date)
     date.strftime("%Y-%m-%dT%H:%M:%SZ")
   end
   def prettify_date(base)
-    Time.parse(base.gsub(/(.+)\sat\s(.+)/, '\1\2')).strftime("%H%Mh %A, %d %B %Y")    
+    make_base_date(base).strftime("%H%Mh %A, %d %B %Y")    
   end
   def comment_builder
     unless @name.nil?

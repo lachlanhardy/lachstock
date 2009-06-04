@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - Microformat comments
  - style tagspace
  - rev=tag??
  - rel="bookmark"
