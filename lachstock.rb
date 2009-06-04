@@ -62,8 +62,11 @@ helpers do
   def atomify_date(date)
     date.strftime("%Y-%m-%dT%H:%M:%SZ")
   end
-  def prettify_date(base)
+  def prettify_base_date(base)
     make_base_date(base).strftime("%H%Mh %A, %d %B %Y")    
+  end
+  def prettify_date(date)
+    date.strftime("%H%Mh %A, %d %B %Y")    
   end
   def comment_builder
     unless @name.nil?
@@ -112,13 +115,13 @@ helpers do
             tag_list = tag_list | (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml"))
           else
             if (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml").include?(tag))
-              tag_list.push([directory + "/" + article, folder.title])
+              tag_list.push([directory + "/" + article, folder.title, (folder.updated || folder.published)])
             end
           end
         end
       end
     end
-    return tag_list.sort_by {|item| item.kind_of?(Array) ? item[1].downcase : item.downcase}
+    return tag_list.sort_by {|item| item.kind_of?(Array) ? item[2] : item.downcase}
   end
   
   def tag_builder

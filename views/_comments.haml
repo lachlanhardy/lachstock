@@ -16,7 +16,7 @@
             %a.url.fn{:href => comment['url'], :title => "View #{comment['name']}'s website"}= comment['name']
           - else
             %span.fn= comment['name']
-        %abbr{:class => "published updated", :title => "#{atomify_date(make_base_date(comment['timestamp']))}"}= prettify_date(comment['timestamp'])
+        %abbr{:class => "published updated", :title => "#{atomify_date(make_base_date(comment['timestamp']))}"}= prettify_base_date(comment['timestamp'])
         %a{:href => "##{comment_id}", :rel => "bookmark", :title => "Permalink for this comment"} Permalink
         .entry-content= comment['body']
           

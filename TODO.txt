@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - style tagspace
  - rev=tag??
  - rel="bookmark"
  - Set up caching for API requests
@@ -19,9 +18,10 @@ Tasks to be done before launch, in priority order:
 Others things to do, in priority order:
 
  - extract TrailingSlash
+ - add google sitemap
  - encode tags
  - make tags case-insensitive
- - add google sitemap
+ - set up weighted tagging
  - Set up post-commit hook action for redeploy
  - Transform avatars to 96x96 and store locally against username and origin
  - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
