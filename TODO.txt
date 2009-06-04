@@ -1,17 +1,13 @@
 Tasks to be done before launch, in priority order:
 
- - rev=tag??
- - rel="bookmark"
  - Set up caching for API requests
  - Catch exceptions in case calls fuck up
  - set up URI rewrites
  - set up proper IMG stylings in CSS
- - reposition #tags element
  - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
  - update Github activity
  - deploy to server
- - Test Atom feed(s)
  - review whole site and QA
 
 
