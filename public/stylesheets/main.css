@@ -153,7 +153,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
     .entry-content { width: 36em;}
     
     .post-body p:first-child:first-line {font-weight: 700; line-height: 2.1;}
-    .post-body p:first-child:first-letter {float: left; font-size: 2em; font-weight: 300; width: auto;}
+    .post-body p:first-child:first-letter {float: left; font: 300 2.1em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; width: auto;}
     
        #imgtest {background: #fff; border:1em solid #bfe4ff; clear: both; float: left; margin: 2em 0 2em -17em; padding: 1em; overflow: auto; width: auto;}
           #imgtest img {}
@@ -216,9 +216,9 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
           #tagged strong {float: left; font-size: 1.2em; font-weight: 300; margin: 0 1em 0 0; text-align: right; width: 6em;}
           #tagged a {line-height: 1.7;}
         
-    #tags {color: #444; float: left; margin: -2.8em 0 1em -12.5em; width: 9em;}
+    #tags {color: #444; float: left; margin: 0 0 1em -12.5em; text-align: right; width: 9em;}
       #tags h2 {font-size: 1.5em; margin: 0 0 0.2em 0;}
-      #tags ul {background: #fafafa; border: 1px solid #aaa; margin: 0 0 0.5em 0; padding: 0.5em 1em 0.5em 1em;}
+      #tags ul {margin: 0 0 0.5em 0; padding: 0;}
         #tags li {list-style-type: none; margin: 0 0 0.2em 0;}
   
   /* -- =About -- */
