@@ -6,9 +6,7 @@
     / This is invalid in HTML 5 but I can't find a way around it yet. Lame.
     %meta{:"http-equiv" => "X-XRDS-Location", :content => "http://lachstock.com.au/xrds"}
     
-    %title
-      Lachlan Hardy Presents: 
-      = @title
+    %title= "Lachlan Hardy Presents: #{@title}"
     
     %link{:href => versioned_stylesheet("reset"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
     
