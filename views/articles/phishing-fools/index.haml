@@ -42,18 +42,14 @@
 %p Removing the Anti-pattern means that the authenticating site doesn&rsquo;t get full unlimited access to the account in question. In Flickr&rsquo;s new feature, they get access to only the details of who is in my Gmail address book - not my emails and certainly not access to any other Google products I may have enabled on that account. Google&rsquo;s authentication page confirms for me that Flickr is requesting access to only my contacts and only for a one-time use:
 %blockquote
   %p
-    %strong
-      Flickr.com
+    %strong Flickr.com
     is requesting access to your Google Contacts account so that it can access Google Accounts on your behalf. You can revoke access at any time under &lsquo;My Account&rsquo;. Flickr.com will not have access to your password or any personal information.
-    %a{ :href => "https://www.google.com/support/accounts/bin/answer.py?answer=41192" }
-      Learn more
+    %a{:href => "https://www.google.com/support/accounts/bin/answer.py?answer=41192"} Learn more
     \.
   %p
-    %strong
-      Flickr.com
+    %strong Flickr.com
     is only requesting
-    %strong
-      one-time access
+    %strong one-time access
     \. If it needs to access Google on your behalf in the future, you will be prompted again for permission.
 %p
   All of this is hot, hot, hot! As long as you&rsquo;re actually on Google&rsquo;s authentication page.
@@ -61,11 +57,9 @@
 %h2 Phishes away!
 %p
   A major argument Jeremy stated against the Password Anti-pattern is that
-  %q{ :cite => "http://adactio.com/journal/1357" }
-    it teaches people how to be phished
+  %q{ :cite => "http://adactio.com/journal/1357" }it teaches people how to be phished
   , but these new authentication methods don&rsquo;t fix that. They
-  %strong
-    still
+  %strong still
   teach users that allowing your existing site to authenticate to a third party site is a Good Thing&trade;. It&rsquo;s a simple matter to produce the appearance of following that authentication process while actually harvesting details.
 %p The solution to this is the same it has always been. The user needs to check the URL of the page they&rsquo;re on and make the call. The problem with <em>that</em> is also the same as it has always been. Some users, possibly most users, don&rsquo;t do it.
 

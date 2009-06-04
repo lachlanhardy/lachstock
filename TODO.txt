@@ -1,7 +1,6 @@
 Tasks to be done before launch, in priority order:
 
  - set up proper IMG stylings in CSS
- - style BLOCKQUOTE and Q
  - re-architect and tidy CSS
  - update Github activity
  - Set up caching for API requests

@@ -43,12 +43,11 @@ caption, th, td {
 	text-align: left;
 	font-weight: normal;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
-}
-blockquote, q {
-	quotes: "" "";
-}
+
+blockquote:before,
+q:before {content: open-quote;}
+blockquote:after,
+q:after {content: close-quote;}
+blockquote, q {quotes: "“" "”" "‘" "’";}
 em {font-style: italic;}
 strong {font-weight: 700;}

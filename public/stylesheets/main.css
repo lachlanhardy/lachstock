@@ -22,7 +22,17 @@ TOC
 /* - =Generic Rules - */
 
 	/* -- =Generic Text -- */
-
+    
+    blockquote {background: #fafafa; border: 1px solid #aaa; -moz-border-radius: 5px; -webkit-border-radius: 5px; color: #444; margin: 1em; padding: 0 1em 0 1em;}
+    
+    blockquote:before,
+    blockquote:after {color: #aaa; font-size: 1em;}
+    
+    blockquote:before {content: "start quote";}
+    blockquote:after {content: "end quote";}
+    
+    q {font-size: 1.1em;}
+    
 		/* --- =Links --- */
 		a:link {color: #0066B3;}
 		a:visited {color: #464646;}
@@ -64,7 +74,7 @@ TOC
 html,
 body {height: 100%;}
 
-body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 Georgia, "Times New Roman", Times, serif; margin: 0; padding: 0;}
+body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif; margin: 0; padding: 0;}
 
 #wrapper {min-height: 100%; overflow: hidden;}
 
