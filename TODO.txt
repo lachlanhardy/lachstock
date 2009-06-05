@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - set up proper IMG stylings in CSS
  - re-architect and tidy CSS
  - update Github activity
  - Set up caching for API requests
@@ -11,6 +10,7 @@ Tasks to be done before launch, in priority order:
 
 Others things to do, in priority order:
 
+ - extract .figure-box into partial action
  - extract TrailingSlash
  - add google sitemap
  - encode tags

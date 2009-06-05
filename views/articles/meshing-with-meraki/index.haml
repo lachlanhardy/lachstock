@@ -1,18 +1,20 @@
 - @title = "Meshing with Meraki"
 - @published = "20071015 at 2009"
 
+.figure-box.minor
+  .figure
+    %a{:href => "http://www.flickr.com/photos/lachlanhardy/1577657986/", :title => "Meraki Mini Packaging by Lachlan Hardy, on Flickr"}
+      %img{:src => "http://farm3.static.flickr.com/2004/1577657986_cc46801f83_m.jpg", :width => "240", :alt => "Meraki Mini packaging"}
+    %p
+      Meraki Mini Packaging:
+      %a{:href => "http://www.flickr.com/photos/lachlanhardy/1577657986/"} Lachlan Hardy
 %p
-  %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1577657986/" }
-    %img{ :src => "http://farm3.static.flickr.com/2004/1577657986_cc46801f83_m.jpg", :alt => "Meraki Mini box" }
   Given all the excitement caused by mentions in
-  %a{ :href => "http://blog.futurestreetconsulting.com/?p=39" }
-    Mark Pesce&rsquo;s phenomenal closing keynote
+  %a{ :href => "http://blog.futurestreetconsulting.com/?p=39" } Mark Pesce&rsquo;s phenomenal closing keynote
   for
-  %a{ :href => "http://webdirections.org/" }
-    Web Directions
+  %a{ :href => "http://webdirections.org/" } Web Directions
   , it&rsquo;s about time I wrote something about my favourite bit of hardware, the
-  %a{ :href => "http://meraki.com/oursolution/hardware/mini/" }
-    Meraki Mini
+  %a{ :href => "http://meraki.com/oursolution/hardware/mini/" } Meraki Mini
   \.
 %p
   %a{ :href => "http://scenariogirl.com/" }
@@ -23,87 +25,82 @@
   %a{ :href => "http://www.dynalink.com.au/modemsadsl_cur.htm?prod=RTA1025W" }
     Dynalink RTA1025W
   , an excellent bit of kit that still serves as our ADSL 2 modem, firewall etc) didn&rsquo;t have the range to reach the front room of our house from the very back wall where our phone point is located. I&rsquo;d been reading about some cool new wifi tech from a couple of startups:
-  %a{ :href => "http://www.fon.com/" }
-    Fon
+  %a{ :href => "http://www.fon.com/" } Fon
   ,
-  %a{ :href => "http://whisher.com/" }
-    Whisher
+  %a{ :href => "http://whisher.com/" } Whisher
   and
-  %a{ :href => "http://meraki.com/" }
-    Meraki
+  %a{ :href => "http://meraki.com/" } Meraki
   \. The latter sounded like it had less complications and dependencies, so I signed up for beta testing.
-%p
-  I bought three Minis because it was the default purchase bundle and I wanted to have some flexibility, but it turns out that two cover the length of our house quite nicely. The third typically ensures strong signal throughout our network, but it gets unplugged and moved around as necessary if we want that powerpoint.
-%p
-  Enough history, let&rsquo;s set these babies up!
-%h2
-  Installing a Meraki Network
-%h3
-  Preliminaries
+%p I bought three Minis because it was the default purchase bundle and I wanted to have some flexibility, but it turns out that two cover the length of our house quite nicely. The third typically ensures strong signal throughout our network, but it gets unplugged and moved around as necessary if we want that powerpoint.
+%p Enough history, let&rsquo;s set these babies up!
+%h2 Installing a Meraki Network
+%h3 Preliminaries
 %p
   Firstly, go
-  %a{ :href => "https://store.meraki.com/" }
-    buy your beauties
+  %a{ :href => "https://store.meraki.com/" } buy your beauties
   \. Choose Standard Edition if you just want to do your house or office.  Pro is for those whose plans require either more control or billing. Note that Pro Minis cost $100 US more each. There&rsquo;s no difference in hardware, but they&rsquo;re charging you for the use to which you could put it (billing…)
 %p
   Make sure to select the appropriate country type of power adapter when ordering. I spent a whole Sunday afternoon trawling
-  %a{ :href => "http://www.paddysmarkets.com.au/" }
-    Paddy&rsquo;s Markets
+  %a{ :href => "http://www.paddysmarkets.com.au/" } Paddy&rsquo;s Markets
   looking for cheap US/AU converters after my Minis arrived. They now offer Australian ones, as well as US, UK and EU, but they didn&rsquo;t then.
 %p
   Next, wait impatiently for them to arrive, refreshing the UPS tracking notifications every 1-2 minutes.
-  %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1577654750/" }
-    %img{ :src => "http://farm3.static.flickr.com/2261/1577654750_b6330e44cd_m.jpg", :alt => "Packaging strewn everywhere" }
-%p
-  Once they arrive, leave work early, rush home, ignore your loved ones and tear the boxes open.
-%p
-  Put the little suckers together, making sure you&rsquo;ve got all the bits. Record the IP, serial number and MAC address on the bottom/back of each one.
-%h3
-  The Hookup
-%p
-  Configuration is easiest if you plug them all into one powerboard next to your computer. You can move them afterwards without a flutter - the joys of mesh networks!
-%p
-  Grab the Mini of your choice. It doesn&rsquo;t matter which one, they&rsquo;re all the same. Connect it to the net. This will be your gateway.
-%p
-  Mine&rsquo;s connected in through the aforementioned Dynalink, but you can plug it straight into any kind of modem, firewall, router, patch-board or whatever.
-%p
-  Jump on your nearest computer, pull up your browser of choice, open a new tab/window and head to the IP address you recorded from your gateway Mini. Should be something like: http://6.1.24.190. This hosts the admin console for that specific Mini. The username is &lsquo;admin&rsquo; and the password will be your serial number.
-%p
-  Here&rsquo;s where you check your signal strength etc. You&rsquo;ll need it later, when you spread them out. You can also register them to your network here, but it&rsquo;s probably easiest to do them all in bulk on the main admin console.
-%p
-  %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1576766127/" }
-    %img{ :src => "http://farm3.static.flickr.com/2183/1576766127_a1d414e325_m.jpg", :alt => "Functioning Meraki Mini" }
+.figure-box.minor
+  .figure
+    %a{:href => "http://www.flickr.com/photos/lachlanhardy/1577654750/", :title => "Excitement! by Lachlan Hardy, on Flickr"}
+      %img{:src => "http://farm3.static.flickr.com/2261/1577654750_b6330e44cd_m.jpg", :width => "240", :alt => "Packaging strewn everywhere"}
+    %p
+      Excitement!:
+      %a{:href => "http://www.flickr.com/photos/lachlanhardy/1577654750/"} Lachlan Hardy
+
+%p Once they arrive, leave work early, rush home, ignore your loved ones and tear the boxes open.
+%p Put the little suckers together, making sure you&rsquo;ve got all the bits. Record the IP, serial number and MAC address on the bottom/back of each one.
+
+%h3 The Hookup
+%p Configuration is easiest if you plug them all into one powerboard next to your computer. You can move them afterwards without a flutter - the joys of mesh networks!
+%p Grab the Mini of your choice. It doesn&rsquo;t matter which one, they&rsquo;re all the same. Connect it to the net. This will be your gateway.
+%p Mine&rsquo;s connected in through the aforementioned Dynalink, but you can plug it straight into any kind of modem, firewall, router, patch-board or whatever.
+%p Jump on your nearest computer, pull up your browser of choice, open a new tab/window and head to the IP address you recorded from your gateway Mini. Should be something like: http://6.1.24.190. This hosts the admin console for that specific Mini. The username is &lsquo;admin&rsquo; and the password will be your serial number.
+%p Here&rsquo;s where you check your signal strength etc. You&rsquo;ll need it later, when you spread them out. You can also register them to your network here, but it&rsquo;s probably easiest to do them all in bulk on the main admin console.
+
+.figure-box.minor
+  .figure
+    %a{:href => "http://www.flickr.com/photos/lachlanhardy/1576766127/", :title => "Meraki Mini by Lachlan Hardy, on Flickr"}
+      %img{:src => "http://farm3.static.flickr.com/2183/1576766127_a1d414e325_m.jpg", :width => "240", :alt => "A functioning Meraki Mini"}
+    %p
+      Meraki Mini:
+      %a{:href => "http://www.flickr.com/photos/lachlanhardy/1576766127/"} Lachlan Hardy
+
 %p
   Head to
-  %a{ :href => "http://dashboard.meraki.com/" }
-    http://dashboard.meraki.com/
+  %a{ :href => "http://dashboard.meraki.com/" } http://dashboard.meraki.com/
   and log in to your account. Once you get over the fact that you just bought hardware that has a serious well-developed and reasonably designed site interface, go to the Configure tab and choose Add Nodes. From there, it&rsquo;s just a matter of plugging in your order details and some MAC addresses (from the back of the repeaters).
-%p
-  You now have a mesh network!
-%p
-  (Okay, you already did, from the second you connected the first Mini to the internet. But now you can see it!)
-%h3
-  Playing with Meraki Mesh
-%p
-  %a{ :href => "http://www.flickr.com/photos/lachlanhardy/1576768047/" }
-    %img{ :src => "http://farm3.static.flickr.com/2082/1576768047_a171559359_m.jpg", :alt => "Functioning Meraki Mini" }
-  Spread your repeaters through the house, making sure you get them in good positions by checking signal strength in the console. Place them as close to windows as you can. Try to face them out into the world. Your place will be covered by proximity, anyway, so you want to make sure that your free public tier is available to as many others as possible.
+%p You now have a mesh network!
+%p (Okay, you already did, from the second you connected the first Mini to the internet. But now you can see it!)
+
+%h3 Playing with Meraki Mesh
+%p Spread your repeaters through the house, making sure you get them in good positions by checking signal strength in the console. Place them as close to windows as you can. Try to face them out into the world. Your place will be covered by proximity, anyway, so you want to make sure that your free public tier is available to as many others as possible.
+
+.figure-box.featured
+  .figure
+    %a{:href => "http://www.flickr.com/photos/lachlanhardy/1576768047/", :title => "Meraki Admin Console Device Listing by Lachlan Hardy, on Flickr"}
+      %img{:src => "http://farm3.static.flickr.com/2082/1576768047_daf5eaaa48_o.png", :width => "750", :alt => "A screenshot of the Meraki Admin Console"}
+    %p
+      Meraki Admin Console Device Listing:
+      %a{:href => "http://www.flickr.com/photos/lachlanhardy/1576766127/"} Lachlan Hardy
 %p
   Check out all the options in the console. Depending on which edition you bought, there are quite a few! You can place your repeaters on a Google map, make private networks, set bandwidth throttles, ban hoggish users, set up personalised messages and branding, analyse your usage data or device use and heaps more. There&rsquo;s even an API that lets your publish your data (
-  %a{ :href => "http://dashboard.meraki.com/api/network/FreeTheNet" }
-    here&rsquo;s mine
+  %a{ :href => "http://dashboard.meraki.com/api/network/FreeTheNet" } here&rsquo;s mine
   ).
-%h2
-  Free The Net
+
+%h2 Free The Net
 %p
   If I know my geeks, and I&rsquo;m damn sure I do, you&rsquo;re now champing at the bit to get yourself some hot Meraki-on-Meraki action. That&rsquo;s awesome.
-  %a{ :href => "https://store.meraki.com/" }
-    Do it
+  %a{ :href => "https://store.meraki.com/" } Do it
   \!
 %p
   But consider this, the true benefits of a mesh network don&rsquo;t lie in making a sexy little hardware system for your personal use. The benefits come
-  %a{ :href => "http://sf.meraki.com/" }
-    when you convince your neighbours to do it too
+  %a{ :href => "http://sf.meraki.com/" } when you convince your neighbours to do it too
   \. And then you and they convince their neighbours. And before you know it, you have free wifi network access at that cafe on the corner or that park around the block with the cool bench. That&rsquo;s just the start of the vision Mark Pesce was talking about at Web Directions. That&rsquo;s just the start of everything that&rsquo;s coming.
 %p
   Convince your friends. Convince your families. Buy them for friends&rsquo; birthdays. Talk to the folks in the local cafes, restaurants and community stores. Give one to your grandma. Tell the user groups you belong to.

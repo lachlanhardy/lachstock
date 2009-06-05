@@ -1,37 +1,37 @@
 - @title = "Local Government on the Open Web"
 - @published = "20080825 at 1519"
 
-%div{ :style => "float: right;" }
-  %a{ :href => "http://www.flickr.com/photos/200ok/2788848051/" }
-    %img{ :src => "http://farm4.static.flickr.com/3288/2788848051_19b980a4ba_m.jpg", :alt => "Lachlan" }
-  %p{ :style => "text-align: right; margin: 0 0 1em 0;" }
-    Photo:
-    %a{ :href => "http://www.flickr.com/photos/200ok/2788848051/" } Ben Buchanan
+.figure-box
+  .figure
+    %a{:href => "http://www.flickr.com/photos/200ok/2788848051/", :title => "Lachlan by Ben Buchanan, on Flickr"}
+      %img{:src => "http://farm4.static.flickr.com/3288/2788848051_19b980a4ba.jpg", :width => "500", :alt => "Photo of Lachlan Hardy presenting"}
+    %p
+      Lachlan:
+      %a{:href => "http://www.flickr.com/photos/200ok/2788848051/"} Ben Buchanan
+
 %h2 The Presentation
 %p The awesome team of Diana Mounter and Reem Abdelaty from the <a href="http://lgwebnetwork.org/">LGwebnetwork</a> asked if I would deliver the closing keynote for their first ever web conference, <a href="http://lgwebnetwork.org/conference/">WE Believe in Community</a>. I was honoured to accept.
 %p I wanted to show people what I see in the web. What I see happening. Where I think everything is going. But I&rsquo;m a firm believer in showing people techniques and technologies they can use right now. All of which made it very easy for me to talk about the Open Web. There&rsquo;s an entire blog post I&rsquo;ve been meaning to write for a long time about that, so we won&rsquo;t get into it here. This is just to post my slides and to say that video and a podcast will be forthcoming at some point in the future. (I hear end of the week.)
 %p 
   %strong Update: 
   <a href="http://lgwebnetwork.org/2008/09/04/local-government-on-the-open-web/">Video is now available</a>.
-%div{ :style => "width:425px;text-align:left; margin:1em auto;" }
-  %object{ :height => "355", :style => "margin:0px", :width => "425" }
-    %param{ :name => "movie", :value => "http://static.slideshare.net/swf/ssplayer2.swf?doc=lgonopenwebnotes-1219634762388858-9&stripped_title=l-gon-open-webnotes-presentation&pid=48b246f4a5a20d21" }
-    %param{ :name => "allowFullScreen", :value => "true" }
-    %param{ :name => "allowScriptAccess", :value => "always" }
-    %embed{ :src => "http://static.slideshare.net/swf/ssplayer2.swf?doc=lgonopenwebnotes-1219634762388858-9&stripped_title=l-gon-open-webnotes-presentation&pid=48b246f4a5a20d21", :type => "application/x-shockwave-flash", :allowfullscreen => "true", :allowscriptaccess => "always", :height => "355", :width => "425" }
-  %p{ :style => "text-align: right; margin: 0 0 1em 0;" } 
-    view
-    %a{ :href => "http://slideshare.net/lachlanhardy/l-gon-open-webnotes-presentation?src=embed", :title => "Local Government on the Open Web", :style => "text-decoration:underline;" } presentation
-    tags:
-    %a{ :href => "http://slideshare.net/tag/eaut", :style => "text-decoration:underline;" }
-      eaut
-    %a{ :href => "http://slideshare.net/tag/oauth", :style => "text-decoration:underline;" }
-      oauth
-    %a{ :href => "http://slideshare.net/tag/microid", :style => "text-decoration:underline;" }
-      microid
-    %a{ :href => "http://slideshare.net/tag/openid", :style => "text-decoration:underline;" }
-      openid
 
+.figure-box
+  .figure
+    %object{:height => "355", :width => "425" }
+      %param{ :name => "movie", :value => "http://static.slideshare.net/swf/ssplayer2.swf?doc=lgonopenwebnotes-1219634762388858-9&stripped_title=l-gon-open-webnotes-presentation&pid=48b246f4a5a20d21" }
+      %param{ :name => "allowFullScreen", :value => "true" }
+      %param{ :name => "allowScriptAccess", :value => "always" }
+      %embed{ :src => "http://static.slideshare.net/swf/ssplayer2.swf?doc=lgonopenwebnotes-1219634762388858-9&stripped_title=l-gon-open-webnotes-presentation&pid=48b246f4a5a20d21", :type => "application/x-shockwave-flash", :allowfullscreen => "true", :allowscriptaccess => "always", :height => "355", :width => "425" }
+    %p 
+      view
+      %a{ :href => "http://slideshare.net/lachlanhardy/l-gon-open-webnotes-presentation?src=embed", :title => "Local Government on the Open Web", :style => "text-decoration:underline;" } presentation
+      tags:
+      %a{ :href => "http://slideshare.net/tag/eaut", :style => "text-decoration:underline;" } eaut
+      %a{ :href => "http://slideshare.net/tag/oauth", :style => "text-decoration:underline;" } oauth
+      %a{ :href => "http://slideshare.net/tag/microid", :style => "text-decoration:underline;" } microid
+      %a{ :href => "http://slideshare.net/tag/openid", :style => "text-decoration:underline;" } openid
+ 
 %h2 The conference
 %p Put together in only a few months to meet a pressing need for stronger networking and more formal professional development for local government web workers, the entire experience was amazing. Both Reem and Diana radiate energy and passion and they communicated this to every attendee. There was a huge buzz of engagement and involvement. It was a real privilege to be a part of it!
 %p
@@ -54,14 +54,16 @@
   %span.vcard
     %a.fn.url{ :href => "http://www.ruthellison.com/", :rel => "acquaintance met" } Ruth Ellison&rsquo;s
   as she was just before me (and I was in the tea room doing the obsessive compulsive slide check), but she has her (and Adrian&rsquo;s) slides up already along with a
-  %a{ :href => "http://www.ruthellison.com/2008/08/24/local-government-web-network-conference-2008-writeup/" }
-    great summation of each presentation she saw
+  %a{ :href => "http://www.ruthellison.com/2008/08/24/local-government-web-network-conference-2008-writeup/" } great summation of each presentation she saw
   \. There were lots of other great speakers, so hopefully they&rsquo;ll be putting their slides up soon too.
-%div{ :style => "float: right;" }
-  %a{ :href => "http://www.flickr.com/photos/200ok/2788848051/" }
-    %img{ :src => "http://farm4.static.flickr.com/3009/2790291709_f38407c7c6_m.jpg", :alt => "My very first Apple product" }
-  %p{ :style => "text-align: right; margin: 0 0 1em 0;" }
-    Photo:
-    %a{ :href => "http://www.flickr.com/photos/laruth/2790291709/" } Ruth Ellison
+  
+.figure-box.minor
+  .figure
+    %a{:href => "http://www.flickr.com/photos/laruth/2790291709/", :title => "My Very First Apple Product by Ruth Ellison, on Flickr"}
+      %img{:src => "http://farm4.static.flickr.com/3009/2790291709_f38407c7c6_m.jpg", :width => "240", :alt => "Photo of Lachlan Hardy presenting"}
+    %p
+      My very first Apple product:
+      %a{:href => "http://www.flickr.com/photos/laruth/2790291709/"} Ruth Ellison
+
 %p All up, a fantastic couple of days. Thanks to all the great new people I met for arguing with me over drinks about the open web and why it&rsquo;s important. And thanks again to Diana and Reem for creating such a charged event! Not to mention the incredibly generous gift thanking speakers &emdash; a customised iPod Shuffle.
 %p See more <a href="http://www.flickr.com/photos/tags/lgwn08/">photos</a> and <a href="http://search.twitter.com/search?q=lgwn08">tweets</a> on the Open Web.
