@@ -1,8 +1,7 @@
 Tasks to be done before launch, in priority order:
 
- - re-architect and tidy CSS
- - update Github activity
  - Set up caching for API requests
+ - re-architect and tidy CSS
  - deploy to server
  - set up URI rewrites
  - review whole site and QA
@@ -16,6 +15,7 @@ Others things to do, in priority order:
  - encode tags
  - make tags case-insensitive
  - set up weighted tagging
+ - update Github activity 
  - Set up post-commit hook action for redeploy
  - Make error page cooler
  - Transform avatars to 96x96 and store locally against username and origin

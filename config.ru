@@ -9,7 +9,8 @@ require 'lachstock'
  
 Sinatra::Application.default_options.merge!(
   :run => false,
-  :env => :production
+  # :env => :production
+  :env => :development
 )     
 
 
