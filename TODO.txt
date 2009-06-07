@@ -1,6 +1,9 @@
 Tasks to be done before launch, in priority order:
 
- - Set up caching for API requests
+ - remove test article
+ - check column widths
+ - Add Home to menu
+ - redo homepage
  - re-architect and tidy CSS
  - deploy to server
  - set up URI rewrites
@@ -18,8 +21,8 @@ Others things to do, in priority order:
  - update Github activity 
  - Set up post-commit hook action for redeploy
  - Make error page cooler
- - Transform avatars to 96x96 and store locally against username and origin
  - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
+ - Add avatar path to comment_builder
  - Set up commenting
  - Set up article page navigation
  - Add Photos section (and Atom)

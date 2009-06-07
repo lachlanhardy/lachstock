@@ -1,7 +1,7 @@
 
 # the middlewares
 require 'rack'
-require 'lib/rack/trailingslash' 
+require 'lib/rack/trailingslash'
 
 # the app
 require 'sinatra'
@@ -15,5 +15,5 @@ Sinatra::Application.default_options.merge!(
 
 
 use TrailingSlash
-# use Rack::Lint
+# use Rack::Lint # for Rack dev
 run Sinatra::Application
