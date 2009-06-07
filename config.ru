@@ -6,13 +6,8 @@ require 'lib/rack/trailingslash'
 # the app
 require 'sinatra'
 require 'lachstock'
- 
-Sinatra::Application.default_options.merge!(
-  :run => false,
-  # :env => :production
-  :env => :development
-)     
 
+set :options, {:run => false, :env => :development}
 
 use TrailingSlash
 # use Rack::Lint
