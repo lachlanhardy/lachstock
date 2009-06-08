@@ -40,6 +40,9 @@ class Metadata
   def title
     template_variable("title")
   end
+  def blurb
+    template_variable("blurb")
+  end
   def published
     @published ||= self.class.parse_date(template_variable("published"))
   end

@@ -1,5 +1,6 @@
 Tasks to be done before launch, in priority order:
 
+ - line up header p.site-title
  - Set up caching for API requests
  - re-architect and tidy CSS
  - deploy to server
