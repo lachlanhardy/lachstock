@@ -28,7 +28,7 @@
     / Googly verification
     %meta{:name => "verify-v1", :content => "Ai0t9Ys7j76GMrjSEP+rDLIhtNL/ruGT8Lu9frCnBUg="}
 
-  %body{:id => "lachstock-com-au", :class => (@category == "*" ? "tags" : @category)}
+  %body{:id => "lachstock-com-au", :class => (@layout ? @layout : (@category == "*" ? "tags" : @category))}
     #wrapper
       #header
         - if @category == "home"
@@ -40,7 +40,7 @@
           %p thinks less is the new more.
       = nav_builder
       #page
-        - unless @category == "home"
+        - unless (@category == "home" || @category == "about")
           %p.category= "#{@category_title}:"
           .column
             - unless @name.nil?
