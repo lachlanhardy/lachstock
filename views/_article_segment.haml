@@ -2,6 +2,6 @@
 
 .item
   %h2= @items.first.title
-  = render_html(@items.first.blurb)
+  = @items.first.blurb
   %p.read-more
     %a{:href => "/#{@items.first.path.split("/")[-3]}/#{@items.first.path.split("/")[-2]}/"} Continue reading&#133;
