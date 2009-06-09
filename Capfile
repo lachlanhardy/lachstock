@@ -19,7 +19,7 @@ set :deploy_via, :remote_cache
 set :scm, 'git'
 set :branch, 'master'
 set :scm_verbose, true
-set :use_sudo, false
+set :use_sudo, true
 set :group, "deploy"
 set :ssh_options, { :forward_agent => true } # this is so we don't need a appdeploy key
  
