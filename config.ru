@@ -5,7 +5,6 @@ require 'rack'
 require 'lib/rack/trailingslash'
 
 # the app
-require 'minigems'
 require 'sinatra'
 require 'lachstock'
 
@@ -13,8 +12,7 @@ set :options, {
   :views => File.join(root_dir, 'views'),
   :app_file => File.join(root_dir, 'lachstock.rb'),
   :run => false, 
-  # :env => ENV['RACK_ENV'] ? ENV["RACK_ENV"].to_sym : "development"
-  :env => "development"
+  :env => ENV['RACK_ENV'] ? ENV["RACK_ENV"].to_sym : "development"
   }
 
 use TrailingSlash
