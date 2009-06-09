@@ -38,7 +38,7 @@
             %a{:href => "/", :rel => "home"} Lachstock
       = nav_builder
       #page
-        - unless (@category == "home" || @category == "about")
+        - unless @layout
           %p.category= "#{@category_title}:"
           .column
             - unless @name.nil?
