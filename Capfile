@@ -17,7 +17,7 @@ set :repository, "git@github.com:lachlanhardy/#{application}.git"
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
 set :scm, 'git'
-set :branch, 'master'
+set :branch, 'rb'
 set :scm_verbose, true
 set :use_sudo, true
 set :group, "deploy"
