@@ -8,7 +8,7 @@ default_run_options[:pty] = true
  
 # be sure to change these
 set :user, 'lachstock'
-set :domain, 'lachstock.com.au'
+set :domain, '173.45.234.65'
 set :application, 'lachstock'
  
 # the rest should be good
