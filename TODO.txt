@@ -1,10 +1,9 @@
 Tasks to be done before launch, in priority order:
 
- - re-architect and tidy CSS
  - deploy to server
  - set up URI rewrites
  - review whole site and QA
-
+ - re-architect and tidy CSS
 
 Others things to do, in priority order:
 
