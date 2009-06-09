@@ -4,6 +4,9 @@ Tasks to be done before launch, in priority order:
  - set up URI rewrites
  - review whole site and QA
  - re-architect and tidy CSS
+ - port mail to GApps
+ - sort out DNS shizzle
+ - revert /var/www/index.html
 
 Others things to do, in priority order:
 

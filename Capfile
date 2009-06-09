@@ -15,11 +15,11 @@ set :application, 'lachstock'
 # set :repository, "#{user}@#{domain}:git/#{application}.git"
 set :repository, "git@github.com:lachlanhardy/#{application}.git"
 set :deploy_to, "/var/www/#{application}"
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :scm, 'git'
 set :branch, 'rb'
 set :scm_verbose, true
-set :use_sudo, true
+set :use_sudo, false
 set :group, "deploy"
 set :ssh_options, { :forward_agent => true } # this is so we don't need a appdeploy key
  
