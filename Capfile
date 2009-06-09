@@ -1,31 +1,32 @@
 # load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 # Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 # load 'config/deploy'
-
+ 
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
-
+ 
 default_run_options[:pty] = true
-
+ 
 # be sure to change these
-set :domain, 'atlassian.com'
-set :application, 'aui'
-
+set :user, 'lachstock'
+set :domain, 'lachstock.com.au'
+set :application, 'lachstock'
+ 
 # the rest should be good
-# set :repository,  "#{user}@#{domain}:git/#{application}.git" 
-set :repository,  "https://svn.atlassian.com/svn/private/atlassian/ui/aui-rb"
-set :deploy_to, "/var/www/domains/#{domain}/#{application}" 
-# set :deploy_via, :remote_cache
-#set :scm, 'svn'
-set :branch, 'trunk'
+# set :repository, "#{user}@#{domain}:git/#{application}.git"
+set :repository, "git@github.com:lachlanhardy/#{application}.git"
+set :deploy_to, "/var/www/#{application}"
+set :deploy_via, :remote_cache
+set :scm, 'git'
+set :branch, 'master'
 set :scm_verbose, true
 set :use_sudo, false
 set :group, "deploy"
 set :ssh_options, { :forward_agent => true } # this is so we don't need a appdeploy key
-
-server "aui.atlassian.com", :app
-
+ 
+server domain, :app, :web
+ 
 namespace :deploy do
   task :restart do
-    run "touch #{current_path}/tmp/restart.txt" 
+    run "touch #{current_path}/tmp/restart.txt"
   end
 end
