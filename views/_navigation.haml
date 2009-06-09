@@ -7,9 +7,9 @@
         %a{:href => "/", :rel => "home"} Home
     - @nav_items.each do |item|
       %li
-        - if item == request.env['REQUEST_PATH'].split("/").last
-          %span= item.capitalize
-        - else
-          %a{:href => "/#{item}/"}= item.capitalize
+        -# - if item == request.env['REQUEST_PATH'].split("/").last
+          -# %span= item.capitalize
+        -# - else
+        %a{:href => "/#{item}/"}= item.capitalize
         
         
