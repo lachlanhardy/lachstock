@@ -16,13 +16,13 @@ configure do
   configure_avatars(Dir.glob("public/images/userlist.yaml")[0])
 end
 
-# error do
-#   handle_fail
-# end
-# 
-# not_found do
-#   handle_fail
-# end
+error do
+  handle_fail
+end
+
+not_found do
+  handle_fail
+end
 
 # homepage
 get '/' do
