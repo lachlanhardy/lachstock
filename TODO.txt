@@ -1,8 +1,7 @@
 Tasks to be done before launch, in priority order:
 
  - line up header p.site-title
- - check column widths
- - Add Home to menu
+ - check column widths  
  - re-architect and tidy CSS
  - deploy to server
  - set up URI rewrites

@@ -40,11 +40,11 @@ function twitterCallback2(json) {
 }
 
 var addTwitter = function() {
+    if ($("#status").length != 0) {
+        var script = $(document.createElement("script"));
+          script.attr("src", "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10");
 
-  var script = $(document.createElement("script"));
-  script.attr("src", "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10");
-  //test URL
-  //script.attr("src", "test/lachlanhardy.json";);
-  
-  $("body").append(script);
+          $("body").append(script);
+
+    }
 };
