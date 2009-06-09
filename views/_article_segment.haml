@@ -1,8 +1,7 @@
 - @items = Metadata.type(:articles).all.sort_by {|item| item.published}.reverse
 
 .item
-  %h2 Latest Article
-  %h3= @items.first.title
+  %h2= @items.first.title
   = render_html(@items.first.blurb)
   %p.read-more
     %a{:href => "/#{@items.first.path.split("/")[-3]}/#{@items.first.path.split("/")[-2]}/"} Continue reading&#133;

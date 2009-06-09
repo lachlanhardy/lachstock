@@ -23,7 +23,7 @@ function twitterCallback2(json) {
       
       $(status).html(statusText);  
       
-      var statusLink = $(document.createElement("a")); 
+      var statusLink = $("<a>Permalink</a>"); 
       statusLink.attr({
         href: "http://twitter.com/" + username + "/statuses/" + twitters[i].id,
         id: "status-link"
@@ -32,14 +32,6 @@ function twitterCallback2(json) {
       break;
     }
   }
-  
-  var twitterLogo = $(document.createElement("img"));
-  twitterLogo.attr({
-    alt: "link to status", 
-    src: "/javascripts/images/twitter-link.png"
-  });
-  
-  statusLink.append(twitterLogo);
 
   var para = $(document.createElement("p"));
   para.append(status).append(statusLink);
