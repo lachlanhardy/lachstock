@@ -1,3 +1,6 @@
+# Why do we care?
+# See http://alicious.com/2009/trailing-slash-for-domains/ for an up-to-date response
+
 class TrailingSlash
   def initialize(app)
     @app = app
