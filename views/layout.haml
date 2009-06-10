@@ -27,7 +27,7 @@
 
   %body{:id => "lachstock-com-au", :class => (@layout ? @layout : (@category == "*" ? "tags" : @category))}
     #wrapper
-      #header
+      %header
         - if @category == "home"
           %h1 Lachstock
         - else

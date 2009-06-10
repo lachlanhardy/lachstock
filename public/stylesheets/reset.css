@@ -51,3 +51,11 @@ q:after {content: close-quote;}
 blockquote, q {quotes: "“" "”" "‘" "’";}
 em {font-style: italic;}
 strong {font-weight: 700;}
+
+/* Makes HTML5 structural elements structural */
+article,
+aside,
+footer,
+header,
+nav,
+section {display: block;}
