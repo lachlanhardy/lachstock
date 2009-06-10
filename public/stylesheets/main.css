@@ -49,19 +49,19 @@ TOC
 
 		
 		/* --- =Body Text --- */
-		.column p,
-		.column li,
-		.column ol,
-		.column ul {margin: 0 0 0.5em;}
-		.column p {font-size: 1.07em; line-height: 1.5;}
-		.column ul {}
-			.column ul li {font-size: 1.07em; list-style-position: inside; list-style-type: disc;}
-		.column ol {}
-			.column ol li {font-size: 1.07em; list-style-position: inside; list-style-type: decimal;}
-		  .column ol ol,
-		  .column ol ul,
-		  .column ul ol,
-		  .column ul ul {margin: 0 0 0.5em 1em;}
+		article p,
+		article li,
+		article ol,
+		article ul {margin: 0 0 0.5em;}
+		article p {font-size: 1.07em; line-height: 1.5;}
+		article ul {}
+			article ul li {font-size: 1.07em; list-style-position: inside; list-style-type: disc;}
+		article ol {}
+			article ol li {font-size: 1.07em; list-style-position: inside; list-style-type: decimal;}
+		  article ol ol,
+		  article ol ul,
+		  article ul ol,
+		  article ul ul {margin: 0 0 0.5em 1em;}
 			
 		.amp {background: #0e0e0e; color: #666; font: italic 100 1.25em Baskerville, "Goudy Old Style", "Palatino", Georgia, "Book Antiqua", serif; position: relative; top: 2px;}
 		
@@ -78,34 +78,33 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 
 #wrapper {min-height: 100%; overflow: hidden;}
 
-  header {background: #0e0e0e; border-bottom: 1px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
-    header h1,
-    header p.site-title {background: #0e0e0e; color: #ff8000; float: left; font: 700 3em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; letter-spacing: 0.06em; margin: 0; width: auto;}
-    header p.site-title a:link,
-    header p.site-title a:visited {background: #0e0e0e; color: #ff8000; text-decoration: none;}
-    header p.site-title a:hover,
-    header p.site-title a:active,
-    header p.site-title a:focus {background: #0e0e0e; color: #ff8000; text-decoration: underline;}
+  header.layout {background: #0e0e0e; border-bottom: 1px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
+    header.layout h1 {background: #0e0e0e; color: #ff8000; float: left; font: 700 3em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; letter-spacing: 0.06em; margin: 0; width: auto;}
+    header.layout h1 a:link,
+    header.layout h1 a:visited {background: #0e0e0e; color: #ff8000; text-decoration: none;}
+    header.layout h1 a:hover,
+    header.layout h1 a:active,
+    header.layout h1 a:focus {background: #0e0e0e; color: #ff8000; text-decoration: underline;}
 
-  #nav {background: #222; border-bottom: 2px solid #666; color: #fff; overflow: auto;}
-    #nav ul {border: 2px solid #444; border-bottom: none; border-top: none; float: left; margin: 0 0 0 1em; width: auto;}
-      #nav ul li {float: left; width: auto;}
-        #nav ul li a,
-        #nav ul li span {border: 2px solid #444; border-bottom: none; border-top: none; display: block; font-size: 1.4em; font-weight: 700; padding: 0.5em 1.2em;}
-        #nav ul li span {background: #222; color: #fff;}
-        #nav ul li a:link,
-        #nav ul li a:visited {background: #111; color: #fff; text-decoration: none;}
-        #nav ul li a:hover,
-        #nav ul li a:active,
-        #nav ul li a:focus {border-color: #ff9900; background: #ff8000; color: #111;}
+  nav {background: #222; border-bottom: 2px solid #666; color: #fff; overflow: auto;}
+    nav ul {border: 2px solid #444; border-bottom: none; border-top: none; float: left; margin: 0 0 0 1em; width: auto;}
+      nav ul li {float: left; width: auto;}
+        nav ul li a,
+        nav ul li span {border: 2px solid #444; border-bottom: none; border-top: none; display: block; font-size: 1.4em; font-weight: 700; padding: 0.5em 1.2em;}
+        nav ul li span {background: #222; color: #fff;}
+        nav ul li a:link,
+        nav ul li a:visited {background: #111; color: #fff; text-decoration: none;}
+        nav ul li a:hover,
+        nav ul li a:active,
+        nav ul li a:focus {border-color: #ff9900; background: #ff8000; color: #111;}
   
   #page {border-top: 1em solid #BFE4FF; font-size: 1.5em; padding: 0 1em 0 0; position: relative;}
 
     /* -- =Columns -- */    
-    .column {border-left: 1em solid #bfe4ff; float: left; margin: 0 0 -80em 16em; min-height:  100%; padding: 1em 0 90em 1em; position: relative; width: auto;}
-    .layout-abb .column {margin: 0 0 -80em 1em; width: 22.5em;}  
+    section {border-left: 1em solid #bfe4ff; float: left; margin: 0 0 -80em 16em; min-height:  100%; padding: 1em 0 90em 1em; position: relative; width: auto;}
+    .layout-abb section {margin: 0 0 -80em 1em; width: 22.5em;}  
     .layout-abb #twitter {width: 12em;}
-    body.tags .column {width: 50em;}
+    body.tags section {width: 50em;}
       
       .item {margin: 0 0 1em 0;}
       .layout-abb .item {margin: 5em 0 1em 0;}
@@ -231,11 +230,13 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
   
         
   /* -- =Footer -- */
-  #footer {background: #0e0e0e; border-top: 1em solid #BFE4FF; clear: both; color: #fff; font-size: 1.5em; margin: -4.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
-    #footer p {border-top: 2px solid #666; padding: 1em;}
-      #footer a:link {color: #0066B3;}
-      #footer a:visited {color: #fff;}
-      #footer a:hover, #footer a:active, #footer a:focus {color: #FF8000;}
+  footer.layout {background: #0e0e0e; border-top: 1em solid #BFE4FF; clear: both; color: #fff; font-size: 1.5em; margin: -4.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
+    footer.layout p {border-top: 2px solid #666; padding: 1em;}
+      footer.layout a:link {color: #0066B3;}
+      footer.layout a:visited {color: #fff;}
+      footer.layout a:hover, 
+      footer.layout a:active, 
+      footer.layout a:focus {color: #FF8000;}
 
 /* - =JS enabled - */
 

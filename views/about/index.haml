@@ -1,13 +1,13 @@
 - @title = "Lachlan Hardy"
 - @layout = "layout-abb"
 
-#twitter.column
+%section#twitter
   #status
     %p thinks less is the new more.
   %a{:href => "http://twitter.com/lachlanhardy"}
     %img{:src => "http://s3.amazonaws.com/twitter_production/profile_images/53728289/avatar-512x512.jpg", :height => "96", :alt => "Your host: Lachlan Hardy", :width => "96"}
 
-.column
+%section
   %h1= @title
 
   %p I&rsquo;m a coder, a consultant, an organiser, a talker and a doer.
@@ -22,6 +22,6 @@
 
   = partial :vcard
 
-.column
+%section
   = partial :facets
   = partial :flickr_pic
