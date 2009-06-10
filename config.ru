@@ -17,4 +17,5 @@ set :options, {
 
 use TrailingSlash
 # use Rack::Lint # for Rack dev
-run Sinatra::Application
+# run Sinatra::Application
+run Lachstock::App.new
