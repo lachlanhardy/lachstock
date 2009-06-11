@@ -4,73 +4,81 @@ http://lachstock.com.au
 20090321
 
 TOC
-- =Generic Rules
-	-- =Generic Text
-		 --- =Links
-		 --- =Headings
-		 --- =Body Text
-		 --- =Date, Times etc
-	-- =Generic Forms
-- =Structure
-  -- =Columns
-  -- =Footer
-- =JS Enabled
+=Generic Rules
+  =Generic Text
+    =Links
+    =Headings
+    =Body Text
+    =Date, Times etc
+  =Generic Forms
+=Structure
+  =Header
+  =Nav
+  =Page
+    =Columns
+    =Components
+      =Archive
+      =Posts
+      =Blog
+      =Tags
+      =Tagspace
+      =Tagged
+      =hcard-Lachlan-Hardy
+  =Footer
+=JS
+  =Seinfeld
+  =Github
+  =Flickr-pic
 
 ****/
 
-
-/* - =Generic Rules - */
-
-	/* -- =Generic Text -- */
+/* =Generic Rules */
+  /* =Generic Text */
+  blockquote {background: #fafafa; border: 1px solid #aaa; color: #444; margin: 1em; padding: 0 1em 0 1em;}
+  
+  blockquote:before,
+  blockquote:after {color: #aaa; font-size: 1em;}
+  
+  blockquote:before {content: "start quote";}
+  blockquote:after {content: "end quote";}
+  
+  q {font-size: 1.1em;}
     
-    blockquote {background: #fafafa; border: 1px solid #aaa; color: #444; margin: 1em; padding: 0 1em 0 1em;}
-    
-    blockquote:before,
-    blockquote:after {color: #aaa; font-size: 1em;}
-    
-    blockquote:before {content: "start quote";}
-    blockquote:after {content: "end quote";}
-    
-    q {font-size: 1.1em;}
-    
-		/* --- =Links --- */
-		a:link {color: #0066B3;}
-		a:visited {color: #464646;}
-		a:hover, a:active, a:focus {color: #FF8000;}
-		
-		/* --- =Headings --- */
-		h1, h2, h3, h4, h5, h6 {font-family: 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; margin: 1em 0 0.5em 0;}
-		h1 {font-size: 3em; margin: 0 0 0.5em 0;}
-		h2 {font-size: 2em;}
-		h3 {font-size: 1.8em;}
-		h4 {font-size: 1.5em;}
-		h5 {font-size: 1.3em;}
-		h6 {font-size: 1.1em;}
+  /* =Links */
+  a:link {color: #0066B3;}
+  a:visited {color: #464646;}
+  a:hover, a:active, a:focus {color: #FF8000;}
 
-		
-		/* --- =Body Text --- */
-		article p,
-		article li,
-		article ol,
-		article ul {margin: 0 0 0.5em;}
-		article p {font-size: 1.07em; line-height: 1.5;}
-		article ul {}
-			article ul li {font-size: 1.07em; list-style-position: inside; list-style-type: disc;}
-		article ol {}
-			article ol li {font-size: 1.07em; list-style-position: inside; list-style-type: decimal;}
-		  article ol ol,
-		  article ol ul,
-		  article ul ol,
-		  article ul ul {margin: 0 0 0.5em 1em;}
-			
-		.amp {background: #0e0e0e; color: #666; font: italic 100 1.25em Baskerville, "Goudy Old Style", "Palatino", Georgia, "Book Antiqua", serif; position: relative; top: 2px;}
-		
+  /* =Headings */
+  h1, h2, h3, h4, h5, h6 {font-family: 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; margin: 1em 0 0.5em 0;}
+  h1 {font-size: 3em; margin: 0 0 0.5em 0;}
+  h2 {font-size: 2em;}
+  h3 {font-size: 1.8em;}
+  h4 {font-size: 1.5em;}
+  h5 {font-size: 1.3em;}
+  h6 {font-size: 1.1em;}
 
-		/* --- =Dates, Times etc --- */
-		.date {font: 1em/1.6 Georgia, serif;}
+  /* =Body Text */
+  article p,
+  article li,
+  article ol,
+  article ul {margin: 0 0 0.5em;}
+  article p {font-size: 1.07em; line-height: 1.5;}
+  article ul {}
+  	article ul li {font-size: 1.07em; list-style-position: inside; list-style-type: disc;}
+  article ol {}
+  	article ol li {font-size: 1.07em; list-style-position: inside; list-style-type: decimal;}
+    article ol ol,
+    article ol ul,
+    article ul ol,
+    article ul ul {margin: 0 0 0.5em 1em;}
+	
+  .amp {background: #0e0e0e; color: #666; font: italic 100 1.25em Baskerville, "Goudy Old Style", "Palatino", Georgia, "Book Antiqua", serif; position: relative; top: 2px;}
 
+  /* =Dates, Times etc */
+  .date {font: 1em/1.6 Georgia, serif;}
 
-/* - =Structure - */
+/* =Structure */
 html,
 body {height: 100%;}
 
@@ -78,6 +86,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 
 #wrapper {min-height: 100%; overflow: hidden;}
 
+  /* =Header */
   header.layout {background: #0e0e0e; border-bottom: 1px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
     header.layout h1 {background: #0e0e0e; color: #ff8000; float: left; font: 700 3em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; letter-spacing: 0.06em; margin: 0; width: auto;}
     header.layout h1 a:link,
@@ -85,7 +94,8 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
     header.layout h1 a:hover,
     header.layout h1 a:active,
     header.layout h1 a:focus {background: #0e0e0e; color: #ff8000; text-decoration: underline;}
-
+  
+  /* =Nav */
   nav {background: #222; border-bottom: 2px solid #666; color: #fff; overflow: auto;}
     nav ul {border: 2px solid #444; border-bottom: none; border-top: none; float: left; margin: 0 0 0 1em; width: auto;}
       nav ul li {float: left; width: auto;}
@@ -98,9 +108,10 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
         nav ul li a:active,
         nav ul li a:focus {border-color: #ff9900; background: #ff8000; color: #111;}
   
+  /* =Page */
   #page {border-top: 1em solid #BFE4FF; font-size: 1.5em; padding: 0 1em 0 0; position: relative;}
 
-    /* -- =Columns -- */    
+    /* =Columns */    
     section {border-left: 1em solid #bfe4ff; float: left; margin: 0 0 -80em 16em; min-height:  100%; padding: 1em 0 90em 1em; position: relative; width: auto;}
     .layout-abb section {margin: 0 0 -80em 1em; width: 22.5em;}  
     .layout-abb #twitter {width: 12em;}
@@ -119,48 +130,48 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
       #status p {line-height: 1.2; margin: 0; overflow: hidden;}
         #status #status-link {display: block; font-size: 0.7em; margin: 0.5em 0 0 0; text-align: right;}
     #twitter img {background: #fff url('images/bg-status-img.gif') no-repeat 30% 0; margin: 0.3em 0 0 0; padding: 33px 0 0 0; position: absolute; right: 0; }
-  
-  /* -- =Archive -- */
-  ol.archive {margin: 0 0 0 12em;}
-    ol.archive li {list-style-type: none; margin: 0 0 4em 0; position: relative;}
-      ol.archive li h2 {font-size: 1.5em; left: -7.6em; line-height: 1; margin: 0; position: absolute; top: -0.23em;}
-      ol.archive li a {}
+
+    /* =Components */
+      /* =Archive */
+      ol.archive {margin: 0 0 0 12em;}
+        ol.archive li {list-style-type: none; margin: 0 0 4em 0; position: relative;}
+          ol.archive li h2 {font-size: 1.5em; left: -7.6em; line-height: 1; margin: 0; position: absolute; top: -0.23em;}
+          ol.archive li a {}
       
-      ol.archive ol {margin: 0;}
-        ol.archive ol li {margin: 0 0 2em 0;}
-          ol.archive ol li h3 {font-size: 1.2em; left: -5.5em; line-height: 1; margin: 0; position: absolute; text-align: right; top: -0.03em; width: 5em;}
-          ol.archive ol li a {}
+          ol.archive ol {margin: 0;}
+            ol.archive ol li {margin: 0 0 2em 0;}
+              ol.archive ol li h3 {font-size: 1.2em; left: -5.5em; line-height: 1; margin: 0; position: absolute; text-align: right; top: -0.03em; width: 5em;}
+              ol.archive ol li a {}
           
-          ol.archive ol ol {}
-            ol.archive ol ol li {margin: 0 0 0.5em 0;}
-              ol.archive ol ol li h4 {font-size: 1em; line-height: 1; margin: 0;}
-              ol.archive ol ol li a {}
-  
-  
-  /* -- =Posts -- */ 
-    .post-title {margin:  0 0 1em 0;}
-      .post-title h1 {margin: 0;}
-      .post-title p {margin: 1em 0 0 0;}
-    
-      .hentry address {display: inline; font-size: 1.3em; margin: 0 0.8em 0 0;}
-        .hentry .published {margin: 0 1em 0 0;}
-    
-    .entry-content { width: 36em;}
-    
-    .post-body p:first-child:first-line {font-weight: 700; line-height: 2.1;}
-    .post-body p:first-child:first-letter {float: left; font: 300 2.1em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; width: auto;}
-    
-      .figure-box {float: left; margin: 0 0 1em 0; padding: 1em; width: auto;}
-      .figure-box.minor {float: right; margin: 0 0 1em 1em; width: 18em;}
-      .figure-box.featured {background: #fff url('images/bg-figure.gif') repeat-y 0 0; clear: both; margin: 2em 0 2em -17em;}
-        .figure {background: #fff; border: 1px solid #ccc; overflow: auto; padding: 1em; text-align: center;}
-          .figure img {}
-          .figure object,
-          .figure embed {}
-          .figure p {background: #fff; color: #555; font-size: 0.8em; float: right; margin: 0; width: auto;}
-          .figure-box.minor p {float: none;}
+              ol.archive ol ol {}
+                ol.archive ol ol li {margin: 0 0 0.5em 0;}
+                  ol.archive ol ol li h4 {font-size: 1em; line-height: 1; margin: 0;}
+                  ol.archive ol ol li a {}
+
+      /* =Posts */ 
+      .post-title {margin:  0 0 1em 0;}
+        .post-title h1 {margin: 0;}
+        .post-title p {margin: 1em 0 0 0;}
+
+        .hentry address {display: inline; font-size: 1.3em; margin: 0 0.8em 0 0;}
+          .hentry .published {margin: 0 1em 0 0;}
+
+      .entry-content { width: 36em;}
+
+      .post-body p:first-child:first-line {font-weight: 700; line-height: 2.1;}
+      .post-body p:first-child:first-letter {float: left; font: 300 2.1em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; width: auto;}
+
+        .figure-box {float: left; margin: 0 0 1em 0; padding: 1em; width: auto;}
+        .figure-box.minor {float: right; margin: 0 0 1em 1em; width: 18em;}
+        .figure-box.featured {background: #fff url('images/bg-figure.gif') repeat-y 0 0; clear: both; margin: 2em 0 2em -17em;}
+          .figure {background: #fff; border: 1px solid #ccc; overflow: auto; padding: 1em; text-align: center;}
+            .figure img {}
+            .figure object,
+            .figure embed {}
+            .figure p {background: #fff; color: #555; font-size: 0.8em; float: right; margin: 0; width: auto;}
+            .figure-box.minor p {float: none;}
         
-      
+      /* =Comments */
       #comments {border-top: 1em solid #bfe4ff; margin: 3em 0 1em -2em; padding: 0 0 1em 2em;}
           #comments p.blurb {font-size: 1.5em; margin: 0 0 1em 0;}
           #comments .comment {margin: 0 0 2em 0; position: relative;}
@@ -177,59 +188,45 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
               
           #post-comment {margin: 3em 0 1em -2em; padding: 0 1em 1em 1em;}
      
+      /* =Blog */
+      #blog {border-width: 0.5em; font-size: 2em; margin: 0 0 0 -1em; padding: 0 0 0 0.5em;}
 
-  .home .vcard a.fn,
-  .home .vcard a.fn:link,
-  .home .vcard a.fn:visited,
-  .home .vcard a.fn:hover,
-  .home .vcard a.fn:active,
-  .home .vcard a.fn:focus {background: #fff; color: #0e0e0e; text-decoration: none;}
+      /* =Tags */
+      #tags {color: #444; float: left; margin: 0 0 1em -12.5em; text-align: right; width: 9em;}
+        #tags h2 {font-size: 1.5em; margin: 0 0 0.2em 0;}
+        #tags ul {margin: 0 0 0.5em 0; padding: 0;}
+          #tags li {list-style-type: none; margin: 0 0 0.2em 0;}
+
+      /* =Tagspace */
+      #tagspace {}
+        #tagspace h1 {}
+        #tagspace ul {}
+          ul.taglist li {float: left; list-style-type: none; margin: 0 1em 1em 0; width: auto;}
+            #tagspace em {font-size: 0.8em;}
+      
+      /* =Tagged */
+      #tagged {}
+        #tagged h1 {}
+        #tagged ul {}
+          #tagged li {list-style-type: none;}
+            #tagged strong {float: left; font-size: 1.2em; font-weight: 300; margin: 0 1em 0 0; text-align: right; width: 6em;}
+            #tagged a {line-height: 1.7;}
+
+      /* =hcard-Lachlan-Hardy */
+      #hcard-Lachlan-Hardy {}
+        #hcard-Lachlan-Hardy img {float: right; margin: 0 0 0 1em; width: auto;}
+        #hcard-Lachlan-Hardy ul.tags {margin: 0 0 0.5em 0; overflow: auto;}
+          #hcard-Lachlan-Hardy ul.tags li {float: left; margin: 0 0.5em 0 0; width: auto;}
   
-  #blog {border-width: 0.5em; font-size: 2em; margin: 0 0 0 -1em; padding: 0 0 0 0.5em;}
-  
-  #github {width: 24em;}
-    #github dl {}
-      #github dt {font-weight: 700; margin: 0 0 0.5em 0;}
-        #github dt strong {display: block;}
-          #github dt a {}
-        #github dt span.date {font-size: 0.8em; font-style: italic;}
-      #github dd {margin: 0 0 0 1em;}
-        #github dd.repo {}
-          #github dd.repo a {}
-        #github dd.filenames {background: transparent; color: #666;}
-          #github dd.filenames ul {padding: 0 0 0 1.4em;}
-            #github dd.filenames li {list-style-type: disc; margin: 0;}
-        #github dd.date {}
-        
-  #flickr-pic {}
-    #flickr-pic img {background: #fff; padding: 20px 20px 30px 20px; border: 1px solid #d3dada; margin: 1em;}
-        
-    #tagspace {}
-      #tagspace h1 {}
-      #tagspace ul {}
-        ul.taglist li {float: left; list-style-type: none; margin: 0 1em 1em 0; width: auto;}
-          #tagspace em {font-size: 0.8em;}
-          
-    #tagged {}
-      #tagged h1 {}
-      #tagged ul {}
-        #tagged li {list-style-type: none;}
-          #tagged strong {float: left; font-size: 1.2em; font-weight: 300; margin: 0 1em 0 0; text-align: right; width: 6em;}
-          #tagged a {line-height: 1.7;}
-        
-    #tags {color: #444; float: left; margin: 0 0 1em -12.5em; text-align: right; width: 9em;}
-      #tags h2 {font-size: 1.5em; margin: 0 0 0.2em 0;}
-      #tags ul {margin: 0 0 0.5em 0; padding: 0;}
-        #tags li {list-style-type: none; margin: 0 0 0.2em 0;}
-  
-  /* -- =About -- */
-  #hcard-Lachlan-Hardy {}
-    #hcard-Lachlan-Hardy img {float: right; margin: 0 0 0 1em; width: auto;}
-    #hcard-Lachlan-Hardy ul.tags {overflow: auto;}
-      #hcard-Lachlan-Hardy ul.tags li {float: left; width: auto;}
+          #hcard-Lachlan-Hardy a.fn,
+          #hcard-Lachlan-Hardy a.fn:link,
+          #hcard-Lachlan-Hardy a.fn:visited,
+          #hcard-Lachlan-Hardy a.fn:hover,
+          #hcard-Lachlan-Hardy a.fn:active,
+          #hcard-Lachlan-Hardy a.fn:focus {background: #fff; color: #0e0e0e; font-size: 0.9em; text-decoration: none;}
   
         
-  /* -- =Footer -- */
+  /* =Footer */
   footer.layout {background: #0e0e0e; border-top: 1em solid #BFE4FF; clear: both; color: #fff; font-size: 1.5em; margin: -4.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
     footer.layout p {border-top: 2px solid #666; padding: 1em;}
       footer.layout a:link {color: #0066B3;}
@@ -238,12 +235,11 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
       footer.layout a:active, 
       footer.layout a:focus {color: #FF8000;}
 
-/* - =JS enabled - */
-
+/* =JS */
 html.js {}
 
-/* Calendar About Nothing badge - http://github.com/lachlanhardy/seinfeld-badge */
-.seinfeld-badge {}
+  /* =Seinfeld: Calendar About Nothing badge - http://github.com/lachlanhardy/seinfeld-badge */
+  .seinfeld-badge {}
     .seinfeld-badge #calendar {border-bottom: 1px solid #000; border-top: 2px solid #000; font-size: 0.9em; margin: 1em 0 0 0; padding: 0 5px 5px 5px;}
         .seinfeld-badge table {width: 100%;}
             .seinfeld-badge th.monthName{color: #b20000; font-weight: 700; letter-spacing: 5px; padding: 5px 0; text-align: center; text-transform: uppercase;}
@@ -260,3 +256,23 @@ html.js {}
         .seinfeld-badge p.streaks strong a {font-style: normal; font-weight: 300;}
     .seinfeld-badge .longest {float: right; margin: -1.5em 0 0 0; width: auto;}
     #page .seinfeld-badge p.pimpage {float: right; color: #ccc; font-size: 0.8em; margin: 0.5em 0.4em 0 0.4em; width: auto;}
+    
+  /* =Github */
+  #github {width: 24em;}
+    #github dl {}
+      #github dt {font-weight: 700; margin: 0 0 0.5em 0;}
+        #github dt strong {display: block;}
+          #github dt a {}
+        #github dt span.date {font-size: 0.8em; font-style: italic;}
+      #github dd {margin: 0 0 0 1em;}
+        #github dd.repo {}
+          #github dd.repo a {}
+        #github dd.filenames {background: transparent; color: #666;}
+          #github dd.filenames ul {padding: 0 0 0 1.4em;}
+            #github dd.filenames li {list-style-type: disc; margin: 0;}
+        #github dd.date {}
+
+  /* =Flickr-pic */
+  #flickr-pic {}
+    #flickr-pic img {background: #fff; padding: 20px 20px 30px 20px; border: 1px solid #d3dada; margin: 1em;}
+    
