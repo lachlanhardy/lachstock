@@ -1,8 +1,8 @@
 Tasks to be done before launch, in priority order:
 
  - deploy to server
+ - add ARTICLE elements
  - set up URI rewrites
- - test XRDS
  - review whole site and QA
  - re-architect CSS
  - port mail to GApps
@@ -11,11 +11,15 @@ Tasks to be done before launch, in priority order:
 
 Others things to do, in priority order:
 
+ - validate OBJECTs
+ - validate other character entities 
  - use .date or remove
  - modularize
  - extract .figure-box into partial action
  - extract TrailingSlash
  - add google sitemap
+ - CI
+ - Pass YSlow/Page Speed
  - encode tags
  - make tags case-insensitive
  - set up weighted tagging
