@@ -1,6 +1,6 @@
 - @items = Metadata.type(:articles).all.sort_by {|item| item.published}.reverse
 
-.item
+%article
   %h2= @items.first.title
   = @items.first.blurb
   %p.read-more

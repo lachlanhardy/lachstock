@@ -1,5 +1,8 @@
 module Lachstock
   module Helpers
+    def home_link(text)
+      (@category == "home" ? '<span>' + text + '</span>' : '<a href="/" rel="home">' + text + '</a>')
+    end
     def handle_fail
       @category = "articles"
       @category_title = "Error"

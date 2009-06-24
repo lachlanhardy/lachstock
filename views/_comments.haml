@@ -8,7 +8,7 @@
   
     - @comments.each_with_index do |comment, index|
       - comment_id = "c#{index + 1}"
-      .comment.hentry{:id => comment_id, :class => (comment['username'] == "lachlanhardy" ? "lachstock" : nil)}
+      %article.comment.hentry{:id => comment_id, :class => (comment['username'] == "lachlanhardy" ? "lachstock" : nil)}
         %address.author.entry-title.vcard
           - if comment['url'] != nil
             - unless comment['username'].nil?

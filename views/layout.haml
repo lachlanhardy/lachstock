@@ -29,10 +29,7 @@
     #wrapper
       %header.layout
         %h1
-          - if @category == "home"
-            Lachstock
-          - else
-            %a{:href => "/", :rel => "home"} Lachstock
+          = home_link("Lachstock")
       = nav_builder
       #page
         - unless @layout
