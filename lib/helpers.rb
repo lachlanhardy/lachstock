@@ -75,7 +75,8 @@ module Lachstock
           article = folder.path.split("/")[-2]
           if File.exist? "#{options.views}/#{directory}/#{article}/tags.yaml"
             if tag.nil?
-              tag_list = tag_list | (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml"))
+              # tag_list = tag_list | (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml"))
+              tag_list.concat(YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml"))
             else
               if (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml").include?(tag))
                 tag_list.push([directory + "/" + article, folder.title, (folder.updated || folder.published)])
@@ -84,7 +85,21 @@ module Lachstock
           end
         end
       end
-      return tag_list.sort_by {|item| item.kind_of?(Array) ? item[2] : item.downcase}
+      
+      if tag.nil?
+        tag_counter = tag_list.map do |tag| 
+          count = 0
+          tag_list.each do |item|
+            if (item == tag)
+              count = count + 1
+            end
+          end
+          [tag, count]
+        end
+        tag_list.replace(tag_counter.uniq!)
+      end
+      
+      return tag_list.sort_by {|item| item.kind_of?(Array) ? item[0].downcase : item.downcase}
     end
 
     def tag_builder

@@ -1,7 +1,6 @@
 Tasks to be done before launch, in priority order:
 
  - deploy to server
- - add ARTICLE elements
  - set up URI rewrites
  - review whole site and QA
  - re-architect CSS
@@ -11,6 +10,8 @@ Tasks to be done before launch, in priority order:
 
 Others things to do, in priority order:
 
+ - Add JS switch to show common tags.
+ - Add g.raphael
  - validate OBJECTs
  - validate other character entities 
  - use .date or remove

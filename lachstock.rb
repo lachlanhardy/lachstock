@@ -4,7 +4,6 @@ require 'haml'
 require 'twitter'
 require 'yaml'
 require 'net/http'
-
 require 'pp' # only for dev work
 
 module Lachstock
