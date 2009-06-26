@@ -11,6 +11,7 @@ $(document).ready(function(){
   document.createElement('article');
 
   addTwitter();
+  drawGraphs();
   $("#flickr-pic").flickrPolaroid();
   githubActivity();
   seinfeldBadge();
