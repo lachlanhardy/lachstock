@@ -60,7 +60,10 @@
     %script{:src => versioned_javascript("pretty-date")}
 
     / Adding Raphael for vector graphics hotness - http://raphaeljs.com
-    %script{:src => "http://jscdn.net/raphael-0.7.3.js"}
+    %script{:src => versioned_javascript("raphael")}
+    
+    / And g.Raphael too! - http://raphaeljs.com
+    %script{:src => versioned_javascript("g.raphael")}
 
     / Adding Twitter status
     %script{:src => versioned_javascript("status")}
