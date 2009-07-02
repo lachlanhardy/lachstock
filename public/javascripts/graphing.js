@@ -1,9 +1,6 @@
 var drawGraphs = function () {
   if ($("ul.taglist").length != 0) {
-    
-  
-    
-    
+
     var tags = [],
       tag_count = [],
       tag_label = [],
@@ -22,43 +19,28 @@ var drawGraphs = function () {
       tag_href.push(tags[i].href);
     }
     
-    
-    
-    
-    // tags.each(function(i) {
-    //       var $tag = $(this);
-    //       tag_count.push(parseFloat($tag.attr("data-tag_count")));
-    //       tag_label.push($tag.text());
-    //     });
-    
-    
-    var r = Raphael("graph", 450, 250);
-    
-    // var pie = r.g.piechart(320, 240, 100, [55, 20, 13, 32, 5, 1, 2, 10]);
-    
-    var pie = r.g.piechart(100, 100, 100, tag_count);
-    // r.g.piechart(320, 240, 50, [10, 20, 12, 11, 5]).rotate(180, 320, 240);
-    // pie.legend(["%%.%% – jQuery users", "EMACS users"], "%%.%% others");
+    var r = Raphael("graph", "30em", "16em");
+    var pie = r.g.piechart(120, 120, 100, tag_count);
     pie.legend(tag_label, "%%.%% others");
     pie.hover(function () {
         if (!this.note) {
             pie.inject(this.note = r.g.blob(this.mx, this.my, (this.value * 100 / this.total).toFixed(2) + "%", this.mangle).attr({opacity: 0}));
         }
         this.note.animate({opacity: 1}, 200);
-        // this.sector.stop();
-        // this.sector.scale(1.1, 1.1, this.cx, this.cy);
-        // if (this.label) {
-        //     this.label[0].stop();
-        //     this.label[0].scale(1.5);
-        //     this.label[1].attr({"font-weight": 800});
-        // }
+        this.sector.stop();
+                this.sector.scale(1.1, 1.1, this.cx, this.cy);
+                if (this.label) {
+                    this.label[0].stop();
+                    this.label[0].scale(1.5);
+                    this.label[1].attr({"font-weight": 800});
+                }
     }, function () {
         this.note && this.note.animate({opacity: 0}, 200);
-        // this.sector.animate({scale: [1, 1, this.cx, this.cy]}, 500);
-        // if (this.label) {
-        //     this.label[0].animate({scale: 1}, 500);
-        //     this.label[1].attr({"font-weight": 400});
-        // }
+        this.sector.animate({scale: [1, 1, this.cx, this.cy]}, 500);
+                if (this.label) {
+                    this.label[0].animate({scale: 1}, 500);
+                    this.label[1].attr({"font-weight": 400});
+                }
     });
     // var labels = ["Accessibility – ##", "Adobe – ##", "Advertising – ##", "Ajax – ##", "Android", "Apple", "Aptana", "Articles", "Atlas", "Bespin", "Book Reviews", "Bookmarklets", "Books", "Browsers", "Builds", "Business", "Calendar", "Canvas", "Cappuccino", "Chat", "Chrome", "Cloud", "ColdFusion", "Comet", "Component", "Conferences", "Contests", "CSS", "Database", "Debugging", "Design", "Dojo", "DWR", "Editorial", "Email", "Examples", "Ext", "Firefox", "Flash", "Framework", "Fun", "Games", "Gears", "Google", "GWT", "HTML", "IE", "Interview", "iPhone", "Java", "JavaScript", "jMaki", "jQuery", "JSON", "Library", "LiveEdit", "LiveSearch", "Mac", "Mapping", "Microformat", "Microsoft", "Mobile", "MooTools", "Mozilla", "Office", "Offline", "OpenAjax", "OpenWebPodcast", "Opera", "Performance", "Perl", "PHP", "Plugins", "Podcasts", "Portal", "Pragmatic Ajax", "Presentation", "Programming", "Prototype", "Python", "Qooxdoo", "Rails", "Recording", "Remoting", "RichTextWidget", "Roundup", "Ruby", "Runtime", "Safari", "Screencast", "Scriptaculous", "Security", "Server", "Showcase", "Social Networks", "Sound", "Standards", "Storage", "Survey", "SVG", "Testing", "The Ajax Experience", "TIBCO", "Tip", "Titanium", "Toolkit", "Tutorial", "UI", "Unobtrusive JS", "Usability", "Utility", "Video", "W3C", "Web20", "Widgets", "Workshop", "XmlHttpRequest", "Yahoo!"];
    
