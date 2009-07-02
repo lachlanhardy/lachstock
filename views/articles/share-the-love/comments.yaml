@@ -27,24 +27,24 @@
         <p>Another example is LinkedIn lets you endorse people&rsquo;s work.</p>
         <p>But anyway… If we&rsquo;re going to be social online, we should be sociable! :) People are getting more serious/emotional about their use of online social networking, so the time is long gone when manners could be skipped without repercussions.</p>
         <p>People used to think online communication was utterly trivial (many still do), but now they&rsquo;re realising it&rsquo;s just as real as other communications. At the end of the day it&rsquo;s still 2+ humans with some tech crap in between, same as mail, phones, telegraph, semaphore, smoke signals…</p>
-        
+      
 - 
-    name: Andrew K.
-    username: ~
-    url: http://leftjustified.net/
-    timestamp: 20070517 at 1130
-    body: |
-        <p>You could make a graph of “love / hate over time” Then in the footer or something – “I am currently: feeling the love” or “currently: getting roasted”</p>
-        <p>Probably a sparklines-style graph (bitworking.org has a great web service for generating them) to give an overview of readers opinions.</p>
-        
+   name: Andrew K.
+   username: ~
+   url: http://leftjustified.net/
+   timestamp: 20070517 at 1130
+   body: |
+       <p>You could make a graph of “love / hate over time” Then in the footer or something – “I am currently: feeling the love” or “currently: getting roasted”</p>
+       <p>Probably a sparklines-style graph (bitworking.org has a great web service for generating them) to give an overview of readers opinions.</p>
+         
 - 
-    name: Molly E. Holzschlag
-    username: mollydotcom
-    url: http://molly.com/
-    timestamp: 20070517 at 1955
-    body: |
-        <p>This is reminiscent of the XFN discussions and whether any negative relationships such as “enemy” should be included.</p>
-        <p>It&rsquo;s funny, yes, but Lachlan&rsquo;s point is really important. Appreciation matters. It can, in fact save lives - this written from one who knows.</p>
+   name: Molly E. Holzschlag
+   username: mollydotcom
+   url: http://molly.com/
+   timestamp: 20070517 at 1955
+   body: |
+       <p>This is reminiscent of the XFN discussions and whether any negative relationships such as “enemy” should be included.</p>
+       <p>It&rsquo;s funny, yes, but Lachlan&rsquo;s point is really important. Appreciation matters. It can, in fact save lives - this written from one who knows.</p>
         
 - 
     name: Serdar Kiliç
