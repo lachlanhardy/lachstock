@@ -13,7 +13,9 @@ module Lachstock
   set :haml, {:format => :html5, :attr_wrapper => '"'}
   
   class App < Sinatra::Application
-    require "#{File.dirname(__FILE__)}/lib/helpers.rb"
+    Dir.glob("lib/helpers/*").each do |helper|
+      require "#{File.dirname(__FILE__)}/#{helper}"
+    end
 
     helpers do
       include Lachstock::Helpers
