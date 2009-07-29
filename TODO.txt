@@ -1,11 +1,9 @@
 Tasks to be done before launch, in priority order:
 
  - deploy to server
- - fix up all &emdash;
  - set up URI rewrites
  - review whole site and QA
  - re-architect CSS
- - port mail to GApps
  - sort out DNS shizzle
  - revert /var/www/index.html
 
@@ -13,7 +11,6 @@ Others things to do, in priority order:
 
  - Add JS switch to show common tags.
  - sort out proper citing method
- - Add g.raphael
  - validate OBJECTs
  - validate other character entities 
  - use .date or remove

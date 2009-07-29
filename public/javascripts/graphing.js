@@ -18,6 +18,7 @@ var drawGraphs = function () {
       tag_label.push("%% - " + tags[i].text);
       tag_href.push(tags[i].href);
     }
+    
     $("#tagspace").append($("<div id=\"graph\"/>"));
     var r = Raphael("graph", "30em", "16em");
     var pie = r.g.piechart(300, 120, 100, tag_count).attr({stroke: "#FFF"});
