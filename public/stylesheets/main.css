@@ -27,9 +27,9 @@ TOC
       =hcard-Lachlan-Hardy
   =Footer
 =JS
-  =Seinfeld
   =Github
   =Flickr-pic
+  =Graph
 
 ****/
 
@@ -217,9 +217,6 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
             #tagspace .tagged8times {font-size: 2.2em;}
             #tagspace .tagged9times {font-size: 2.5em;}
       
-      #graph {margin: 2em 0 0 0; width: 30em;}
-        
-      
       /* =Tagged */
       #tagged {}
         #tagged h1 {}
@@ -273,3 +270,6 @@ html.js {}
   #flickr-pic {}
     #flickr-pic img {background: #fff; padding: 20px 20px 30px 20px; border: 1px solid #d3dada; margin: 1em;}
     
+
+  /* =Graph */
+  #graph {margin: -2em 0 0 0; width: 30em;}

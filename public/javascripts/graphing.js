@@ -19,16 +19,11 @@ var drawGraphs = function () {
       tag_href.push(tags[i].href);
     }
     
-    $("#tagspace").append($("<div id=\"graph\"/>"));
+    $("<div id=\"graph\"/>").insertAfter($("h1", "#tagspace"));
     var r = Raphael("graph", "30em", "16em");
-    var pie = r.g.piechart(300, 120, 100, tag_count).attr({stroke: "#FFF"});
-    pie.legend(tag_label, "%%.%% others").moveLegend("west");
+    var pie = r.g.piechart(300, 120, 100, tag_count, {legend: tag_label, legendpos: "west", href: tag_href});
     pie.labels.attr({font: '1.1em "Helvetica Neue"', translation: "-50 0"});
 
-    // for (var j=0, ii = pie.covers.length; j < ii; j++) {
-    //   pie.covers[j].attr("href", tag_href[j]);
-    // };
-    
     pie.hover(function () {
         this.sector.stop();
         this.sector.animate({scale: [1.1, 1.1, this.cx, this.cy]}, 500, "elastic");
