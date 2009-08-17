@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - add webfinger http://groups.google.com/group/webfinger/browse_thread/thread/dd568ba740f515c0
  - deploy to server
  - set up URI rewrites
  - review whole site and QA
@@ -10,6 +9,7 @@ Tasks to be done before launch, in priority order:
 
 Others things to do, in priority order:
 
+ - set up hover state for legends
  - Add JS switch to show common tags.
  - sort out proper citing method
  - validate OBJECTs
@@ -24,6 +24,7 @@ Others things to do, in priority order:
  - encode tags
  - make tags case-insensitive
  - set up weighted tagging
+ - add webfinger http://groups.google.com/group/webfinger/browse_thread/thread/dd568ba740f515c0
  - update Github activity 
  - Set up post-commit hook action for redeploy
  - Make error page cooler
