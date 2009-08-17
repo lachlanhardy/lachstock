@@ -1,5 +1,6 @@
 Tasks to be done before launch, in priority order:
 
+ - add webfinger http://groups.google.com/group/webfinger/browse_thread/thread/dd568ba740f515c0
  - deploy to server
  - set up URI rewrites
  - review whole site and QA
