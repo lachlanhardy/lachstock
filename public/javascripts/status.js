@@ -18,8 +18,6 @@ function twitterCallback2(json) {
       // real comments
       statusText = statusText.replace(/(\s@+[a-zA-Z_]{1,})/gi,'<a href="http://twitter.com/$1">$1</a>');
       
-      console.log(statusText);
-      
       // real comments
       statusText = statusText.replace(/(http:\/\/twitter.com\/\s@)/gi, 'http://twitter.com/');
       
