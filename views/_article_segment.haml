@@ -1,0 +1,7 @@
+- @items = Metadata.type(:articles).all.sort_by {|item| item.published}.reverse
+
+%article
+  %h2= @items.first.title
+  = @items.first.blurb
+  %p.read-more
+    %a{:href => "/#{@items.first.path.split("/")[-3]}/#{@items.first.path.split("/")[-2]}/"} Continue reading&hellip;

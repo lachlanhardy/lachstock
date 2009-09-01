@@ -1,0 +1,134 @@
+- 
+    name: Ben Buchanan
+    username: 200ok
+    url: http://weblog.200ok.com.au/
+    timestamp: 20080123 at 2301
+    body: |
+        <p>(1 and 4) I think many businesses will decide that it makes no financial/resourcing sense to build for IE8. They&rsquo;ll just argue that if it works in IE7, lock it down and move on. Why spend time/money to build/tweak/upgrade for new versions when you can just party like it&rsquo;s 2006 from here on out? What motivation does The Business have?</p>
+        <p>So if something doesn&rsquo;t work in IE7, forget about it chombatta - you don&rsquo;t get to use it. Could have been worse. Could have been IE6.</p>
+        <p>(2) From the look of it, they&rsquo;ll see standards mode but only as close as IE7 can render it.</p>
+        <p>(3) Not sure yet.</p>
+        <p>(5) Well… specific sites will be able to keep trying new stuff. But in a broad sense I can&rsquo;t see this helping promote innovation. Really committed people will still do cool stuff, lazy developers will stay lazy (or get worse).</p>
+        <p>(6) Not until IE6 is dead in any case. Most of my bugfixing is still based on IE6.</p>
+        <p>(7) We spend forever specifying that we really meant the DOCTYPE. It has a greater impact on crappy-practice methodologies, as they are legitimised. “Hey Microsoft said it was ok to keep building in quirks mode forever!”</p>
+        <p>(8) Does it qualify as a redhead cluster phenomenon? Get Joe Clark on the case!</p>
+        
+-
+    name: Andrew K.
+    username: ~
+    url: http://leftjustified.net/
+    timestamp: 20080124 at 1245
+    body: |
+        <p>There is a definite freedom in not giving a shit.</p>
+        <p>Party on Wayne.</p>
+        
+-
+    name: Cam MacRae
+    username: ~
+    url: ~
+    timestamp: 20080124 at 1435
+    body: |
+        <p>You got me thinking about browser market share across our sites, so I took a peek at one of the larger sites. For 3.4m visitors last month:</p>
+        <ul>
+            <li>MSIE has 79.9% share
+                <ul>
+                    <li>51.6% are on IE7</li>
+                    <li>48.1% are on IE6</li>
+                </ul>
+            </li>
+            <li>FF has 15.88% share
+                <ul>
+                    <li>98% are on 2.x</li>
+                </ul>
+            </li>
+        </ul>
+        <p>On point 1, if IE8 adoption is as slow as that of IE7,  it will be incredibly tempting to solve IE8 breakage with X-UA-Compatible - at least until such a time as the UI is overhauled (not very frequently).</p>
+        <p>3-4: It&rsquo;s business as usual until IE8 breaks out of niche browser status.</p>
+        <p>5: MSIE has always been broken, but this hasn&rsquo;t prevented innovation so much as forced devs to innovate around it.</p>
+        <p>6: Probably not. As you can see from our figures, we still need to work around IE6. IE8 is meant to be mostly standards compliant, so I imagine most development will occur FF–&gt;IE7(bugfix)–&gt;IE6(bugfix)</p>
+        <p>7: No place whatsoever. It&rsquo;s a horrible hack.</p>
+        <p>I should mention that those browser stats are for the Australian market.</p>
+
+-
+    name: Brian Farrell
+    username: ~
+    url: ~
+    timestamp: 20080125 at 0134
+    body: |
+        <p> Lets be honest here, the reason we include bug fixes (hacks) in our pages is because we actually care about cross browser viability of what we produce.  We will do what needs to be done to get our content out there so just pass the cool aid.</p>
+        <p>However, what happens when the version given is wrong?  If the developer is lazy or really doesn&rsquo;t have a clue how will IE handle it?</p>
+        <p>This may (heavy doubts here) be a great advancement but what happens when the information provided is wrong?</p>
+
+-
+    name: Aaron Gustafson
+    username: aarongustafson
+    url: http://easy-designs.net
+    timestamp: 20080124 at 1435
+    body: |
+        <p>What is the significance that each of the men linked to in this post have gingery facial hair?</p>
+        <p>Finally, someone put two and two together ;-)</p>
+        <p>But seriously, thanks for the thoughtful post Lach.</p>
+        
+-
+    name: ramon
+    username: ramonjd
+    url: http://www.emotionalmarkup.com
+    timestamp: 20080206 at 2152
+    body: |
+        <p>I love this quote by Chris Wilson from the ie8 blog: “The answer is that developers of many sites had worked around many of the shortcomings or outright errors in IE6, and now expected IE7 to work just like IE6.”</p>
+        <p>It is just so wrong that it makes me want to extract my brains with a yabbie pump. We <em>want</em> something better than IE6 which we know is a fundamentally <strong>bad</strong> browser; we want IE7 to behave <em>less</em> like IE6.</p>
+        <p> To answer one of your pertinent questions, it may save some time when you&rsquo;re firing up 3 versions of IE for checking; but if you&rsquo;re keen, you&rsquo;ll still have to spend time checking in win2k, XP, vista etc and we&rsquo;ll still have to wrangle our CSS to cater for 3 browsers. I think they should focus their energies on trying to make people upgrade rather than making them comfortable living in the past. pah! :)</p>
+        
+-
+    name: pauldwaite
+    username: pauldwaite
+    url: http://pauldwaite.co.uk/
+    timestamp: 20080221 at 0125
+    body: |
+        <p>Why spend time/money to build/tweak/upgrade for new versions when you can just party like it&rsquo;s 2006 from here on out? What motivation does The Business have?</p>
+        <p>Short term, yup. But in the long term, I&rsquo;m hoping that there will be enough cool stuff (CSS 3, HTML 5) to make The Business <em>want</em> to get savvy with the standards, and move on from IE 7.</p>
+        <p>If there isn&rsquo;t, it doesn&rsquo;t say much for the quality of those standards. They&rsquo;re here to serve us, not the other way around.</p>
+        
+-
+    name: Andy Sharp
+    username: ~
+    url: http://www.technoland.info
+    timestamp: 20080603 at 1530
+    body: |
+        <p>@Cam MacRae</p>
+        <p>I think those browser stats go across the board. They&rsquo;re pretty similar in Europe.</p>
+
+-
+    name: Mirko
+    username: ~
+    url: http://www.webtechnik.net
+    timestamp: 20080603 at 1530
+    body: |
+        <p>I try the Internet Explorer 8, and my opinion is, that the Internet Explorer 8 is much better, than the Internet Explorer 7. But everybody has to find the advantages and the disadvantages for his self, because there are so many different individual claims, everybody has in the Internet Explorer. Things that are running better on the Internet Explorer 7 than on the Internet Explorer 8 for some people could be the opponent way for other people. For that reason everybody has to find for his self which Internet Explorer is the best for him and his claims and needs. So it is not that easy way to say which IE is better.</p>        
+
+-
+    name: bob e
+    username: ~
+    url: ~
+    timestamp: 20090113 at 0610
+    body: |
+        <p>What does the IE6 user see if I have “X-UA-Compatible” content=”IE=7” ?</p>
+
+-
+    name: Lachlan Hardy
+    username: lachlanhardy
+    url: http://lachstock.com.au
+    timestamp: 20090118 at 1315
+    body: |
+        <p>@bob It&rsquo;ll have no effect on IE6. IE6 simply doesn&rsquo;t recognise X-UA-Compatible.</p>
+        
+-
+    name: Alexander
+    username: ~
+    url: http://www.pflege-erfahrung.de
+    timestamp: 20090310 at 2247
+    body: |
+        <p>I would like to write something about question one.</p>
+        <p>In my opinion, it is a matter of how many people we want to serve with our website and how much effort we want to put into that. I mean of course we want to serve everyone but lets think about the trade off. Could we achieve more visitors when we spend our time with other activities instead of trying to make our website okay for every browser?</p>
+        <p>Cheers alex</p>
+        

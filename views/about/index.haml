@@ -1,0 +1,29 @@
+- @title = "Lachlan Hardy"
+- @layout = "layout-abb"
+
+%section#twitter
+  %article
+    #status
+      %p thinks less is the new more.
+    %a{:href => "http://twitter.com/lachlanhardy"}
+      %img{:src => "http://s3.amazonaws.com/twitter_production/profile_images/53728289/avatar-512x512.jpg", :height => "96", :alt => "Your host: Lachlan Hardy", :width => "96"}
+
+%section
+  %h1= @title
+
+  %article
+    %p I&rsquo;m a coder, a consultant, an organiser, a talker and a doer.
+
+    %p I work at <a href="http://atlassian.com/">Atlassian</a> where my job is to bring usable functional design into all their products and web philosophies into their thinking. (By the way, it&rsquo;s incredibly unlikely that anything I say should be taken as representing an official Atlassian viewpoint.)
+
+    %p One of the team behind the <a href="http://webjam.com.au/">Webjam</a> events, I&rsquo;m very keen on promoting innovation and helping people push the boundaries of the web.
+
+    %p I&rsquo;m available for freelance consulting and coding as long as your project is entirely amazing and you want it rock even harder.
+
+    %p I&rsquo;m also available for coffees, beers, and crazy fantastical web-dreaming discussion.
+
+  = partial :vcard
+
+%section
+  = partial :facets
+  = partial :flickr_pic

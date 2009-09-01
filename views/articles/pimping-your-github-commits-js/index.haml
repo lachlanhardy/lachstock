@@ -1,0 +1,93 @@
+- @title = "Pimping your Github Commits JS-styley"
+- @published = "20081029 at 2352"
+- @blurb = "<p>If you, like me, have developed strong feelings towards the geeky hotness that is <a href='http://git-scm.com/'>Git</a> sometime in the last 12 or so months, then you&rsquo;ve probably also got pretty excited about the convivial oldskool swap meet for Git repos known as <a href='http://github.com/'>Github</a>. If not, please do <strong>try</strong> to keep up. The first day of the rest of your life begins <a href='http://ma.gnolia.com/people/lachlanhardy/tags/git'>here</a>.</p><p>For a long list of dumb reasons beginning with the fact I&rsquo;ve not yet written my own roughly passable blogging engine to replace this shopworn and shabby edifice constructed with Simplelog 2, I am unable to write server-side shenanigans for <a href='http://lachstock.com.au/' rel='me'>my homepage</a> and so have taken to Frankensteining it experimentally with concoctions made of HTML5 and jQuery. One of these little monsters shows glimmers of potential and thus is being released into the world to find its destiny.</p>"
+
+%p If you, like me, have developed strong feelings towards the geeky hotness that is <a href="http://git-scm.com/">Git</a> sometime in the last 12 or so months, then you&rsquo;ve probably also got pretty excited about the convivial oldskool swap meet for Git repos known as <a href="http://github.com/">Github</a>. If not, please do <strong>try</strong> to keep up. The first day of the rest of your life begins <a href="http://ma.gnolia.com/people/lachlanhardy/tags/git">here</a>.
+%p
+  For a long list of dumb reasons beginning with the fact I&rsquo;ve not yet written my own roughly passable blogging engine to replace this shopworn and shabby edifice constructed with Simplelog 2, I am unable to write server-side shenanigans for
+  %a{ :href => "http://lachstock.com.au/", :rel => "me" } my homepage
+  and so have taken to Frankensteining it experimentally with concoctions made of HTML5 and jQuery. One of these little monsters shows glimmers of potential and thus is being released into the world to find its destiny.
+
+%h2 You want to brag about your Github commits?
+%p
+  Wouldn't you love a JavaScript badge that looks
+  %strong just like this
+  ?! Me too! Boy, have you come to the right place!
+
+.figure-box.featured
+  .figure
+    %a{:href => "http://www.flickr.com/photos/lachlanhardy/2984397016/", :title => "Github Activity Badge by Lachlan Hardy, on Flickr"}
+      %img{:src => "http://farm4.static.flickr.com/3207/2984397016_dc8b8426ca.jpg", :width => "750", :alt => "Github Activity Badge"}
+    %p
+      Skitchshot:
+      %a{:href => "http://www.flickr.com/photos/lachlanhardy/2984397016/"} Lachlan Hardy
+%p
+  I assumed such a badge would already exist. I knew, of course, of
+  %a{ :href => "http://drnicwilliams.com/2008/05/03/github-badge-for-your-blog/" } Dr Nic&rsquo;s project-based badge
+  and I quickly discovered the
+  %a{ :href => "http://github.com/heipei/github-commit-badge" } commit badge by Johannes Gilger
+  \. The former doesn&rsquo;t show commits and the latter is targeted at the latest commit of a specific project. Neither of these met my needs in terms of function or code, thus
+  %a{ :href => "http://github.com/lachlanhardy/github-activity-badge" } my own Github commit badge 
+  project was born!
+
+%h2 How does it work?
+%p One of the current limitations of the Github API is that it doesn&rsquo;t provide any methods to gain details about other people&rsquo;s projects you might be committing to. Given a project, you can check that. But given a user, you can&rsquo;t see what projects belonging to other users they&rsquo;ve contributed to. Which is at least two thirds of the fun of Github! Luckily, they publish that kind of data in your <a href="http://github.com/blog/4-activity-feeds-are-go">public activity feed</a>.
+%p So, given a username, the script calls a specially crafted <a href="http://pipes.yahoo.com/lachlanhardy/githubactivity">Yahoo! Pipe</a> that converts Github&rsquo;s Atom into delicious usable JSONP for processing into a badass little badge for your blog.
+
+%h2 How do I set it up?
+%p Here&rsquo;s the juicy bit. Be sure to follow along at home for maximum enjoyment. You can download the files from <a href="http://github.com/lachlanhardy/github-activity-badge">Github</a>.
+
+%h3 Dependencies
+%p
+  %strong jQuery 1.2.6
+  \- as you&rsquo;ll
+  %a{ :href => "http://github.com/lachlanhardy/github-activity-badge/tree/master/index.html#L11-13" } see in the example file
+  , I just point to those nice folks at Google who are hosting jQuery for me.
+%p
+  %strong JavaScript Pretty Date
+  \- I also grabbed a copy of
+  %a{ :href => "http://ejohn.org/projects/javascript-pretty-date" } John Resig&rsquo;s Pretty Date
+  to save myself long hours in front of the mirror getting ready.
+
+%h3 The Action
+%p
+  %strong github-activity.js
+  is where the main action goes down. You&rsquo;ll need that one.
+%p
+  Then you need to add a
+  %code div
+  with an
+  %code id
+  of &lsquo;github&rsquo;, containing a
+  %code p
+  , somewhere on your page. There&rsquo;s
+  %a{ :href => "http://github.com/lachlanhardy/github-activity-badge/tree/master/index.html#L33-36" } a nice sample
+  in the example file.
+%p
+  After that, you just need to call the function
+  %code githubActivity();
+  onDOMready. I have a
+  %a{ :href => "http://github.com/lachlanhardy/github-activity-badge/tree/master/inc/js/go.js" } Go
+  file for that, but you can do it directly in your document if you like.
+%p
+  I&rsquo;ve
+  %a{ :href => "http://github.com/lachlanhardy/github-activity-badge/tree/master/inc/css/screen.css" } included some sample CSS
+  to get you started on prettifying the whole shebang. It includes blank selectors for every element created, just in case you want to go buck wild in Style Town.
+%p
+  All things being equal, you should end up with something that looks pretty much like
+  %a{ :href => "http://lachstock.com.au/examples/github-activity/" } this one I prepared earlier
+  \.
+
+%h2 What next?
+%p You&rsquo;ll have noticed that I keep calling my commit badge an &lsquo;activity badge&rsquo;. That&rsquo;s because it feels like such a waste to pull down all that other data and not use it. There&rsquo;s no reason we can&rsquo;t publish Follow, Gist, Wiki and Member events too. And any others Github may have up their sleeves. I plan on setting it up with defaults and options to make it easily customisable.
+%p
+  The glaringly ugly bit of code (to my eyes, but please point out any you see) is the
+  %a{ :href => "http://github.com/lachlanhardy/github-activity-badge/tree/master/inc/js/github-activity.js#L100-112" }
+    %code parseDate()
+    function
+  \. It&rsquo;s ugly, dumb, badly written, and inaccurate. Kindly suggest replacements or write them yourselves and let me know.
+%p
+  I&rsquo;m going to keep working on functionality, but in the interest of
+  %a{ :href => "http://www.slash7.com/articles/2008/4/5/just-ship-seriously" } Just Fucking Shipping
+  , here it is, a Github Commit Badge that&rsquo;s still got some room to grow. Feel free to use it, change it, fix it, share it and abuse it.
+%p Let me know what you think!

@@ -1,0 +1,41 @@
+- @title = "A Twitterrific Troll Filter"
+- @published = "20080803 at 1120"
+
+%p
+  Talking to some friends recently about the signal-to-noise ratio on Twitter, I realised they hadn&rsquo;t seen the
+  %a{ :href => "http://www.marusin.com/2008/02/12/setting-twitterific-power-user-preferences/" } Twitterific readme
+  file. It contains some &ldquo;Power User&rdquo; settings that you can run in your terminal. Some you may find useful; others not so much.
+%p
+  I only use two. The first is straightforward. The discontinuity of real names in Twitterific jars me. I prefer the consistency of usernames everywhere, so I use a simple switch to
+  %code displayScreenName
+  instead. The real value, however, lies in the
+  %code tweetTextFilter
+  command.
+%p
+  This command allows you to define an
+  %a{ :href => "http://icu-project.org/userguide/regexp.html" } ICU regular expression
+  to filter pretty much anything under the sun. My example below isn&rsquo;t very complicated. It simply blocks all tweets that mention either Techcrunch, or &lsquo;griefer&rsquo;, or refer to a user by name of &lsquo;fanboi&rsquo;. The difference between the last two being that I see no references to &lsquo;griefer&rsquo; at all, whereas I can still see when &lsquo;fanboi&rsquo; replies to me but not when others reply to, or reference, her or him. The first file is just my .gitignore file to exclude the actual filter I use.
+%p
+  %strong Update:
+  I&rsquo;ve added the &lsquo;Olympics&rsquo; and &lsquo;080808&rsquo; because I&rsquo;m a grouch. (Well, partly because I&rsquo;m stupidly busy, but mostly because I&rsquo;m a grouch.)
+%script{ :src => "http://gist.github.com/4061.js" }
+%p
+  I decided to post this after seeing
+  %span.vcard
+    %a.fn.url{ :href => "http://tantek.com/", :rel => "colleague friend met" }  Tantek&apos;s
+    work towards a
+    %a{ :href => "http://tantek.pbwiki.com/TrollFilter" } Troll Filter for Twitter searches
+    \. There are people and sites I prefer to exclude from my life where possible. Mostly because they continually take time and energy for little return.
+%p
+  This is a simple method for cutting those sites/people from at least one part of your life. I still follow the occasional link to Techcrunch and similar sites that&rsquo;s been encoded by TinyURL et al because I&rsquo;m not quite ready for a
+  %a{ :href => "http://gilesbowkett.blogspot.com/2008/07/web-distraction-blocking-temporary.html" } scorched earth
+  policy, but every other mention slips me by. And guess what? I don&rsquo;t miss it at all.
+%p As for the infrequent and occasional griefer or fanboi-inspiring micro-celebrity in my life, I carry on blissfully ignorant of whatever negative emotions they typically cause in me that earned them the brand.
+%p
+  I&apos;ve posted the
+  %a{ :href => "http://gist.github.com/4061" } commands on Github&rsquo;s Gist
+  for anybody who wants to fork it and add their own parameters (and because I wanted to try out
+  %a{ :href => "http://gist.github.com/" } Gist
+  ). I&rsquo;d love to see anybody expand on this, or any of the other power options. If you want to confirm your regular expressions do what you planned, there is a
+  %a{ :href => "http://demo.icu-project.org/icu-bin/redemo" } live testing page available
+  \.

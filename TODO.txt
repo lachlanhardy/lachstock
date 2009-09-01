@@ -1,0 +1,41 @@
+Tasks to be done before launch, in priority order:
+
+ - deploy to server
+ - set up URI rewrites
+ - review whole site and QA
+ - re-architect CSS
+ - sort out DNS shizzle
+ - revert /var/www/index.html
+
+Others things to do, in priority order:
+
+ - set up hover state for legends
+ - Add JS switch to show common tags.
+ - sort out proper citing method
+ - validate OBJECTs
+ - validate other character entities 
+ - use .date or remove
+ - modularize
+ - extract .figure-box into partial action
+ - extract TrailingSlash
+ - add google sitemap
+ - CI
+ - Pass YSlow/Page Speed
+ - encode tags
+ - make tags case-insensitive
+ - set up weighted tagging
+ - add webfinger http://groups.google.com/group/webfinger/browse_thread/thread/dd568ba740f515c0
+ - update Github activity 
+ - Set up post-commit hook action for redeploy
+ - Make error page cooler
+ - Add other origins for avatars: gravatar, Flickr(?), Disqus etc(?)
+ - Add avatar path to comment_builder
+ - Set up commenting
+ - Set up article page navigation
+ - Add Photos section (and Atom)
+ - Add Pool Room (and Atom)
+ - Add bookmarks (and Atom)
+ - Add tweets (and Atom)
+ - Add <rights> etc to feeds
+ - feeds should not contain OBJECT, SCRIPT, inline styles etc
+
