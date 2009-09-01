@@ -20,7 +20,7 @@ set :options, {
   STDOUT.reopen(log)
   STDERR.reopen(log)
 
-use TrailingSlash
+# use TrailingSlash
 # use Rack::Lint # for Rack dev
 # run Sinatra::Application
 run Lachstock::App.new
