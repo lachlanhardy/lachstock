@@ -13,9 +13,10 @@ Others things to do, in priority order:
  - iPhone version
  - Get my Smoke on
  - Add JS switch to show common tags.
+ - update Sinatra, Rack etc
  - sort out proper citing method
  - validate OBJECTs
- - validate other character entities 
+ - validate other character entities
  - use .date or remove
  - modularize
  - kill Feedburner
