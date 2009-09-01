@@ -1,21 +1,24 @@
 Tasks to be done before launch, in priority order:
 
- - deploy to server
  - set up URI rewrites
  - review whole site and QA
+ - get feedback from Lisa
  - re-architect CSS
- - sort out DNS shizzle
  - revert /var/www/index.html
 
 Others things to do, in priority order:
 
+ - upgrade Raphaël
  - set up hover state for legends
+ - iPhone version
+ - Get my Smoke on
  - Add JS switch to show common tags.
  - sort out proper citing method
  - validate OBJECTs
  - validate other character entities 
  - use .date or remove
  - modularize
+ - Generic mobile site
  - extract .figure-box into partial action
  - extract TrailingSlash
  - add google sitemap
