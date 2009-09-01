@@ -18,6 +18,8 @@ function twitterCallback2(json) {
       // real comments
       statusText = statusText.replace(/(\s@+[a-zA-Z_]{1,})/gi,'<a href="http://twitter.com/$1">$1</a>');
       
+      console.log(statusText);
+      
       // real comments
       statusText = statusText.replace(/(http:\/\/twitter.com\/\s@)/gi, 'http://twitter.com/');
       
@@ -32,11 +34,14 @@ function twitterCallback2(json) {
       break;
     }
   }
-
-  var para = $(document.createElement("p"));
-  para.append(status).append(statusLink);
   
-  $("#status").empty().append(para);
+  // just in case I've managed to do 10 replies without a straight-up tweet
+  if (!$(status).text() == "") {
+    var para = $(document.createElement("p"));
+    para.append(status).append(statusLink);
+
+    $("#status").empty().append(para);
+  }
 }
 
 var addTwitter = function() {
