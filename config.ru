@@ -16,9 +16,11 @@ set :options, {
   :raise_errors => true
   }
   
+if ENV['RACK_ENV'] != 'production'
   log = File.new("sinatra.log", "a")
   STDOUT.reopen(log)
   STDERR.reopen(log)
+end
 
 use TrailingSlash
 # use Rack::Lint # for Rack dev
