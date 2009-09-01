@@ -2,7 +2,7 @@ http://log.lachstock.com.au/
 http://log.lachstock.com.au/pages/about/
 http://log.lachstock.com.au/archives
 http://log.lachstock.com.au/past/
-http://feeds.feedburner.com/lachstock
+http://log.lachstock.com.au/past/tags/
 
 http://log.lachstock.com.au/past/2008/10
 http://log.lachstock.com.au/past/2008/09
@@ -39,7 +39,74 @@ http://log.lachstock.com.au/past/2007/5/16/share_the_love/
 http://log.lachstock.com.au/past/2007/4/3/bitter_twitches/
 http://log.lachstock.com.au/past/2007/3/28/joining_the_conversation/
 
-http://log.lachstock.com.au/past/tags/
+DONE
+
+<VirtualHost *:80>
+  ServerName lachstock.com.au
+
+  DocumentRoot "/var/www/lachstock/current/public"
+
+  PassengerDefaultUser lachstock
+
+  RailsEnv development
+
+  <directory "/var/www/lachstock/current/public">
+    Order allow,deny
+    Allow from all
+  </directory>
+</VirtualHost>
+<VirtualHost *:80>
+  ServerName www.lachstock.com.au
+
+  RewriteEngine On
+
+  RewriteRule ^(.*)$ http://lachstock.com.au$1 [R=301,L]
+</VirtualHost>
+<VirtualHost *:80>
+  ServerName log.lachstock.com.au
+
+  RewriteEngine On
+
+  # Articles
+  RewriteRule ^/past/2008/10/29/pimping-your-github-commits-js.*$ http://lachstock.com.au/articles/pimping-your-github-commits-js/ [R=301,L]
+  RewriteRule ^/past/2008/10/19/gitjour-the-quickening.*$ http://lachstock.com.au/articles/gitjour-the-quickening/ [R=301,L]
+  RewriteRule ^/past/2008/9/4/podcast-for-your-pleasure.*$ http://lachstock.com.au/articles/podcast-for-your-pleasure/ [R=301,L]
+  RewriteRule ^/past/2008/8/25/local-government-open-web.*$ http://lachstock.com.au/articles/local-government-open-web/ [R=301,L]
+  RewriteRule ^/past/2008/8/18/internet-gurus.*$ http://lachstock.com.au/articles/internet-gurus/ [R=301,L]
+  RewriteRule ^/past/2008/8/3/twitterrific-troll-filter.*$ http://lachstock.com.au/articles/twitterrific-troll-filter/ [R=301,L]
+  RewriteRule ^/past/2008/7/27/action-reaction.*$ http://lachstock.com.au/articles/action-reaction/ [R=301,L]
+  RewriteRule ^/past/2008/5/24/remix-australia-rocked.*$ http://lachstock.com.au/articles/remix-australia-rocked/ [R=301,L]
+  RewriteRule ^/past/2008/5/8/ardent-about-arduino.*$ http://lachstock.com.au/articles/ardent-about-arduino/ [R=301,L]
+  RewriteRule ^/past/2008/4/1/phishing-fools.*$ http://lachstock.com.au/articles/phishing-fools/ [R=301,L]
+  RewriteRule ^/past/2008/3/18/74-twitter-adds-breakdown.*$ http://lachstock.com.au/articles/74-twitter-adds-breakdown/ [R=301,L]
+  RewriteRule ^/past/2008/1/23/X-UA-Compatible-past-thoughts-of-children.*$ http://lachstock.com.au/articles/X-UA-Compatible-past-thoughts-of-children/ [R=301,L]
+  RewriteRule ^/past/2007/12/20/nonscary-way-of-learning-openid.*$ http://lachstock.com.au/articles/nonscary-way-of-learning-openid/ [R=301,L]
+  RewriteRule ^/past/2007/10/22/sun-said-what.*$ http://lachstock.com.au/articles/sun-said-what/ [R=301,L]
+  RewriteRule ^/past/2007/10/17/meraki-madness.*$ http://lachstock.com.au/articles/meraki-madness/ [R=301,L]
+  RewriteRule ^/past/2007/10/15/meshing-with-meraki/.*$ http://lachstock.com.au/articles/meshing-with-meraki/ [R=301,L]
+  RewriteRule ^/past/2007/5/20/make-the-leap.*$ http://lachstock.com.au/articles/make-the-leap/ [R=301,L]
+  RewriteRule ^/past/2007/5/16/share_the_love.*$ http://lachstock.com.au/articles/share-the-love/ [R=301,L]
+  RewriteRule ^/past/2007/4/3/bitter_twitches.*$ http://lachstock.com.au/articles/bitter-twitches/ [R=301,L]
+  RewriteRule ^/past/2007/3/28/joining_the_conversation.*$ http://lachstock.com.au/articles/joining-the-conversation/ [R=301,L]
+  
+  # Tags
+  RewriteRule ^/past/tags/(.*)$ http://lachstock.com.au/tags/$1/ [R=301,L]
+  
+  # Others
+  RewriteRule ^/pages/about.* http://lachstock.com.au/about/ [R=301,L]
+  RewriteRule ^/archives.* http://lachstock.com.au/articles/ [R=301,L]
+  RewriteRule ^/past/tags.* http://lachstock.com.au/tags/ [R=301,L]
+  RewriteRule ^/past.*$ http://lachstock.com.au/articles/ [R=301,L]
+  RewriteRule ^/past/200.*$ http://lachstock.com.au/articles/ [R=301,L]
+
+  RewriteRule ^(.*)$ http://lachstock.com.au$1 [R=301,L]
+
+</VirtualHost>
+
+
+Single words are done... Need to do specifics for those I changed to be two words
+
+
 http://log.lachstock.com.au/past/tags/API
 http://log.lachstock.com.au/past/tags/AaronGustafson
 http://log.lachstock.com.au/past/tags/Amanda
