@@ -12,8 +12,13 @@ set :options, {
   :views => File.join(root_dir, 'views'),
   :app_file => File.join(root_dir, 'lachstock.rb'),
   :run => false, 
-  :env => ENV['RACK_ENV'] ? ENV["RACK_ENV"].to_sym : "development"
+  :env => ENV['RACK_ENV'] ? ENV["RACK_ENV"].to_sym : "development",
+  :raise_errors => true
   }
+  
+  log = File.new("sinatra.log", "a")
+  STDOUT.reopen(log)
+  STDERR.reopen(log)
 
 use TrailingSlash
 # use Rack::Lint # for Rack dev
