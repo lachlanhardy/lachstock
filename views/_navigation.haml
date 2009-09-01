@@ -4,9 +4,10 @@
       = home_link("Home")
     - @nav_items.each do |item|
       %li
-        - if item == request.env['REQUEST_PATH'].split("/").last
-          %span= item.capitalize
-        - else
-          %a{:href => "/#{item}/"}= item.capitalize
+        - if request.env['REQUEST_PATH']
+          - if item == request.env['REQUEST_PATH'].split("/").last
+            %span= item.capitalize
+          - else
+            %a{:href => "/#{item}/"}= item.capitalize
         
         
