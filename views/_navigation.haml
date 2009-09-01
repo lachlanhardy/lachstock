@@ -1,13 +1,14 @@
 %nav
+  = "REQUEST_PATH: " + request.env['REQUEST_PATH']
   %ul
     %li
       = home_link("Home")
     - @nav_items.each do |item|
       %li
-        - if request.env['REQUEST_PATH']
-          - if item == request.env['REQUEST_PATH'].split("/").last
-            %span= item.capitalize
-          - else
-            %a{:href => "/#{item}/"}= item.capitalize
+        - test = request.env['REQUEST_PATH'] == "/" ? request.env['REQUEST_PATH'] : request.env['REQUEST_PATH'].split("/").last
+        - if item == test
+          %span= item.capitalize
+        - else
+          %a{:href => "/#{item}/"}= item.capitalize
         
         
