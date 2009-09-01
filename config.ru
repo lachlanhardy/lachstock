@@ -2,7 +2,7 @@ root_dir = File.dirname(__FILE__)
 
 # the middlewares
 require 'rack'
-# require 'lib/rack/trailingslash'
+require 'lib/rack/trailingslash'
 
 # the app
 require 'sinatra'
@@ -20,7 +20,7 @@ set :options, {
   STDOUT.reopen(log)
   STDERR.reopen(log)
 
-# use TrailingSlash
+use TrailingSlash
 # use Rack::Lint # for Rack dev
 # run Sinatra::Application
 run Lachstock::App.new
