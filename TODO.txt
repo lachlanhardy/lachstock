@@ -18,6 +18,7 @@ Others things to do, in priority order:
  - validate other character entities 
  - use .date or remove
  - modularize
+ - kill Feedburner
  - Generic mobile site
  - extract .figure-box into partial action
  - extract TrailingSlash
