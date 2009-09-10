@@ -8,7 +8,6 @@ Tasks to be done before launch, in priority order:
 
 Others things to do, in priority order:
 
- - upgrade Raphaël
  - set up hover state for legends
  - iPhone version
  - Get my Smoke on
