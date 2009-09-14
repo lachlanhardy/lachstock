@@ -1,0 +1,1 @@
+$(document).ready(function(){$("html").addClass("js");addTwitter();drawGraphs();$("#flickr-pic").flickrPolaroid();githubActivity()});

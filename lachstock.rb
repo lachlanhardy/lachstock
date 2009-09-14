@@ -11,6 +11,7 @@ module Lachstock
   load "#{File.dirname(__FILE__)}/lib/avatars.rb"
 
   set :haml, {:format => :html5, :attr_wrapper => '"'}
+  # set :environment => 'production' # for testing minification etc
   
   class App < Sinatra::Application
     Dir.glob("lib/helpers/*").each do |helper|
