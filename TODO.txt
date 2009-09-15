@@ -1,5 +1,6 @@
 Tasks to be done before launch, in priority order:
 
+ - Rewrite HTML to use SECTION correctly: http://html5doctor.com/the-section-element/
  - Make TrailingSlash work in production!
  - review whole site and QA
  - get feedback from Lisa
