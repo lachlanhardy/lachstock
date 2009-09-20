@@ -14,12 +14,12 @@ namespace :minifier do
  
   desc "minify javascript"
   task :minify_js do
-    minify(FileList['public/javascripts/**/*.js'])
+    minify(FileList['public/javascripts/*.js'])
   end
  
   desc "minify css"
   task :minify_css do
-    minify(FileList['public/stylesheets/**/*.css'])
+    minify(FileList['public/stylesheets/*.css'])
   end
   
 end
