@@ -1,5 +1,8 @@
 Tasks to be done fucking immediately, in priority order:
 
+ - Rewrite HTML to use SECTION correctly
+   - http://html5doctor.com/the-section-element/
+   - http://html5.org/tools/web-apps-tracker?from=3795&to=3796
  - Make TrailingSlash work in production!
  - review whole site and QA
  - get feedback from Lisa
@@ -16,6 +19,8 @@ Others things to do, in priority order:
  - Add JS switch to show common tags.
  - update Sinatra, Rack etc
  - sort out proper citing method
+ - Rewrite comments correctly
+    - http://html5.org/tools/web-apps-tracker?from=3798&to=3799
  - validate OBJECTs
  - validate other character entities
  - use .date or remove
