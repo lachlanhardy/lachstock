@@ -97,6 +97,8 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
     header.layout h1 a:hover,
     header.layout h1 a:active,
     header.layout h1 a:focus {background: #0e0e0e; color: #ff8000; text-decoration: underline;}
+    
+    header.layout p {background: #0e0e0e; color: #999; float: left; font: 300 2em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; letter-spacing: 0.06em; margin: 0.43em 0 0 1em; width: auto;}
   
   /* =Nav */
   nav {background: #222; border-bottom: 2px solid #666; color: #fff; overflow: auto;}
@@ -112,21 +114,22 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
         nav ul li a:focus {border-color: #ff9900; background: #ff8000; color: #111;}
   
   /* =Page */
-  #page {border-top: 1em solid #BFE4FF; font-size: 1.5em; padding: 0 1em 0 0; position: relative;}
+  #page {font-size: 1.5em; padding: 1em 1em 1em 0; position: relative;}
 
     /* =Columns */    
-    section {border-left: 1em solid #bfe4ff; float: left; margin: 0 0 -80em 16em; min-height:  100%; padding: 1em 0 90em 1em; position: relative; width: auto;}
-    .layout-abb section {margin: 0 0 -80em 1em; width: 22.5em;}  
-    .layout-abb #twitter {width: 12em;}
+    section {float: left; margin: 0 0 -80em 16em; min-height:  100%; padding: 1em 0 90em 1em; position: relative; width: auto;}
+    body.layout-abb section {margin: 0 0 -80em 1em; width: 24.5em;}  
+    body.layout-abb #twitter {margin: 0 0 -80em 0; width: 12em;}
     body.tags section {width: 50em;}
       
       article {margin: 0 0 1em 0;}
-      .home article {margin: 0 0 1em 0;}
+      body.home article {margin: 0 0 1em 0;}
         article h2 {margin: 1em 0 0.2em 0;}
+        body.home article h2 {margin: 0 0 0.2em 0;}
 
 /*        #page article ul li {list-style-type: none;}*/
       
-        p.category {color: #555; float: left; font-size: 3em; left: 0; position: absolute; text-align: right; text-transform: capitalize; top: 0.34em; width: 5em;}
+        p.category {color: #999; float: left; font-size: 3em; left: 0; position: absolute; text-align: right; text-transform: capitalize; top: 0.65em; width: 5em;}
     
     #twitter #status {border: 2px solid #aaa; -moz-border-radius: 5px; -safari-border-radius: 5px; padding: 1em;}
       #status p {line-height: 1.2; margin: 0; overflow: hidden;}
@@ -165,7 +168,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 
         .figure-box {float: left; margin: 0 0 1em 0; padding: 1em; width: auto;}
         .figure-box.minor {float: right; margin: 0 0 1em 1em; padding: 0.5em 1em 1em 1em; width: 18em;}
-        .figure-box.featured {background: #fff url('images/bg-figure.gif') repeat-y 0 0; clear: both; margin: 1em 0 1em -17em;}
+        .figure-box.featured {clear: both; margin: 1em 0 1em -17em;}
           .figure {background: #fff; border: 1px solid #ccc; overflow: auto; padding: 1em; text-align: center;}
             .figure img {}
             .figure object,
@@ -174,7 +177,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
             .figure-box.minor p {float: none;}
         
       /* =Comments */
-      #comments {border-top: 1em solid #bfe4ff; margin: 3em 0 1em -2em; padding: 0 0 1em 2em;}
+      #comments {margin: 3em 0 1em -2em; padding: 0 0 1em 2em;}
           #comments p.blurb {font-size: 1.5em; margin: 0 0 1em 0;}
           #comments .comment {margin: 0 0 2em 0; position: relative;}
               .comment .vcard {display: block; margin: 0 0 0.3em 0; position: relative;}
@@ -198,10 +201,15 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
         #facets ul li {list-style-type: none;}
 
       /* =Tags */
-      #tags {color: #444; float: left; margin: -0.4em 0 1em -12.5em; text-align: right; width: 9em;}
-        #tags h2 {font-size: 1.5em; margin: 0 0 0.2em 0;}
+      #tags {color: #444; float: left; margin: -0.4em 0 1em -11em; text-align: right; width: 9em;}
+        #tags h1 {color: #999; font-size: 1.5em; margin: 0 0 0.2em 0;}
         #tags ul {margin: 0 0 0.5em 0; padding: 0;}
           #tags li {list-style-type: none; margin: 0 0 0.2em 0;}
+            #tags a:link {color: #555;}
+            #tags a:visited {color: #999;}
+            #tags a:hover,
+            #tags a:active, 
+            #tags a:focus {color: #FF8000;}
 
       /* =Tagspace */
       #tagspace {}
@@ -244,7 +252,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 
 
   /* =Footer */
-  footer.layout {background: #0e0e0e; border-top: 1em solid #BFE4FF; clear: both; color: #fff; font-size: 1.5em; margin: -4.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
+  footer.layout {background: #0e0e0e; clear: both; color: #fff; font-size: 1.5em; margin: -4.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
     footer.layout p {border-top: 2px solid #666; padding: 1em;}
       footer.layout a:link {color: #0066B3;}
       footer.layout a:visited {color: #fff;}
