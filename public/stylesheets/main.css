@@ -53,7 +53,7 @@ TOC
   a:hover, a:active, a:focus {color: #FF8000;}
 
   /* =Headings */
-  h1, h2, h3, h4, h5, h6 {font-family: 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; margin: 1em 0 0.5em 0;}
+  h1, h2, h3, h4, h5, h6 {font-family: Georgia, serif; margin: 1em 0 0.5em 0;}
   h1 {font-size: 3em; margin: 0 0 0.5em 0;}
   h2 {font-size: 2em;}
   h3 {font-size: 1.8em;}
@@ -90,25 +90,25 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 #wrapper {min-height: 100%; overflow: hidden;}
 
   /* =Header */
-  header.layout {background: #0e0e0e; border-bottom: 1px solid #666; color: #fff; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
-    header.layout h1 {background: #0e0e0e; color: #ff8000; float: left; font: 700 3em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; letter-spacing: 0.06em; margin: 0; width: auto;}
+  header.layout {background: #fff; border-bottom: 2px solid #666; color: #000; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
+    header.layout h1 {background: #fff; color: #000; float: left; font: 700 3em Georgia, serif; letter-spacing: 0.06em; margin: 0; width: auto;}
     header.layout h1 a:link,
-    header.layout h1 a:visited {background: #0e0e0e; color: #ff8000; text-decoration: none;}
+    header.layout h1 a:visited {background: #fff; color: #000; text-decoration: none;}
     header.layout h1 a:hover,
     header.layout h1 a:active,
-    header.layout h1 a:focus {background: #0e0e0e; color: #ff8000; text-decoration: underline;}
+    header.layout h1 a:focus {background: #fff; color: #ff8000; text-decoration: underline;}
     
-    header.layout p {background: #0e0e0e; color: #999; float: left; font: 300 2em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; letter-spacing: 0.06em; margin: 0.43em 0 0 1em; width: auto;}
+    header.layout p {background: #fff; color: #999; float: left; font: 300 2em Georgia, serif; letter-spacing: 0.06em; margin: 0.43em 0 0 1em; width: auto;}
   
   /* =Nav */
-  nav {background: #222; border-bottom: 2px solid #666; color: #fff; overflow: auto;}
+  nav {background: #aaa; border-bottom: 2px solid #666; color: #fff; overflow: auto;}
     nav ul {border: 2px solid #444; border-bottom: none; border-top: none; float: left; margin: 0 0 0 1em; width: auto;}
       nav ul li {float: left; width: auto;}
         nav ul li a,
         nav ul li span {border: 2px solid #444; border-bottom: none; border-top: none; display: block; font-size: 1.4em; font-weight: 700; padding: 0.5em 1.2em;}
-        nav ul li span {background: #222; color: #fff;}
+        nav ul li span {background: #aaa; color: #666;}
         nav ul li a:link,
-        nav ul li a:visited {background: #111; color: #fff; text-decoration: none;}
+        nav ul li a:visited {background: #999; color: #111; text-decoration: none;}
         nav ul li a:hover,
         nav ul li a:active,
         nav ul li a:focus {border-color: #ff9900; background: #ff8000; color: #111;}
@@ -164,7 +164,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
       .entry-content { width: 36em;}
 
       .post-body p:first-child:first-line {font-weight: 700; line-height: 2.1;}
-      .post-body p:first-child:first-letter {float: left; font: 300 2.1em 'Archer Semibold', 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', Georgia, serif; width: auto;}
+      .post-body p:first-child:first-letter {float: left; font: 300 2.1em Georgia, serif; width: auto;}
 
         .figure-box {float: left; margin: 0 0 1em 0; padding: 1em; width: auto;}
         .figure-box.minor {float: right; margin: 0 0 1em 1em; padding: 0.5em 1em 1em 1em; width: 18em;}
@@ -252,8 +252,8 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 
 
   /* =Footer */
-  footer.layout {background: #0e0e0e; clear: both; color: #fff; font-size: 1.5em; margin: -4.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
-    footer.layout p {border-top: 2px solid #666; padding: 1em;}
+  footer.layout {background: #aaa; clear: both; color: #111; font-size: 1.5em; margin: -2.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
+    footer.layout p {border-top: 2px solid #666; padding: 0.5em;}
       footer.layout a:link {color: #0066B3;}
       footer.layout a:visited {color: #fff;}
       footer.layout a:hover, 
