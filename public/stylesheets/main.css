@@ -1,7 +1,7 @@
 /****
 Lachstock
 http://lachstock.com.au
-20090321
+20091111
 
 TOC
 =Generic Rules
@@ -53,7 +53,7 @@ TOC
   a:hover, a:active, a:focus {color: #FF8000;}
 
   /* =Headings */
-  h1, h2, h3, h4, h5, h6 {font-family: Georgia, serif; margin: 1em 0 0.5em 0;}
+  h1, h2, h3, h4, h5, h6 {font-family: "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif; margin: 1em 0 0.5em 0;}
   h1 {font-size: 3em; margin: 0 0 0.5em 0;}
   h2 {font-size: 2em;}
   h3 {font-size: 1.8em;}
@@ -90,15 +90,15 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 #wrapper {min-height: 100%; overflow: hidden;}
 
   /* =Header */
-  header.layout {background: #fff; border-bottom: 2px solid #666; color: #000; overflow: auto; padding: 0.2em 1em 0.5em 1em;}
-    header.layout h1 {background: #fff; color: #000; float: left; font: 700 3em Georgia, serif; letter-spacing: 0.06em; margin: 0; width: auto;}
+  header.layout {background: #ff8000; color: #fff; min-height: 6em; margin: 0 0 12em 0; padding: 0.2em 1em 0 1em; position: relative;}
+    header.layout h1 {background: transparent; color: #fff; font: 700 5em "Courier New", monospace; left: 0.2em; letter-spacing: 0.2em; margin: 0; position: absolute; text-transform: uppercase; top: 0.46em; width: auto;}
     header.layout h1 a:link,
     header.layout h1 a:visited {background: #fff; color: #000; text-decoration: none;}
     header.layout h1 a:hover,
     header.layout h1 a:active,
     header.layout h1 a:focus {background: #fff; color: #ff8000; text-decoration: underline;}
     
-    header.layout p {background: #fff; color: #999; float: left; font: 300 2em Georgia, serif; letter-spacing: 0.06em; margin: 0.43em 0 0 1em; width: auto;}
+    header.layout p {background: transparent; color: #fff; font: 300 2em "Courier New", monospace; left: 19em; letter-spacing: 0.1em; margin: 0; position: absolute; top: 2.25em; width: auto;}
   
   /* =Nav */
   nav {background: #aaa; border-bottom: 2px solid #666; color: #fff; overflow: auto;}
