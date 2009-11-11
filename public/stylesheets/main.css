@@ -254,8 +254,8 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 
 
   /* =Footer */
-  footer.layout {background: #aaa; clear: both; color: #111; font-size: 1.5em; margin: -2.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
-    footer.layout p {border-top: 2px solid #666; padding: 0.5em;}
+  footer.layout {background: #111; clear: both; color: #fff; font-size: 1.5em; margin: -2.4em 0 0 0; position: relative; bottom: 0; text-align: center; width: 100%;}
+    footer.layout p {border-top: 2px solid #444; padding: 0.5em;}
       footer.layout a:link {color: #0066B3;}
       footer.layout a:visited {color: #fff;}
       footer.layout a:hover, 
