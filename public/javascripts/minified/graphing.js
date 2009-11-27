@@ -1,6 +1,6 @@
 /*
- For perusal of source code, check the 'hubs: 
- http://github.com/lachlanhardy/lachstock/blob/master/public/javascripts/graphing.js 
+   For readable source code, check the 'hubs: 
+   http://github.com/lachlanhardy/lachstock/blob/master/public/javascripts/graphing.js 
 */
 
 var drawGraphs=function(){if($("ul.taglist").length!=0){var b=[],h=[],f=[],g=[];$("a:not(.common)","ul.taglist").each(function(k){var j=$(this);b.push({value:parseFloat(j.attr("data-tag_count")),text:j.text(),href:j.attr("href")})});b=b.sort(function(j,i){return i.value-j.value}).splice(0,10);for(var c=0,d=b.length;c<d;c++){h.push(b[c].value);f.push("%% - "+b[c].text);g.push(b[c].href)}$('<div id="graph"/>').insertAfter($("h1","#tagspace"));var e=Raphael("graph","30em","16em");var a=e.g.piechart(300,120,100,h,{legend:f,legendpos:"west",href:g});a.labels.attr({font:'1.1em "Helvetica Neue"',translation:"-50 0"});$(a.labels).each(function(j){a.labels[j].attr({href:g[j]})});a.hover(function(){this.sector.stop();this.sector.animate({scale:[1.1,1.1,this.cx,this.cy]},500,"elastic");if(this.label){this.label[0].stop();this.label[0].animate({scale:1.5},250);this.label[1].attr({fill:"#ff8000"})}},function(){this.sector.animate({scale:[1,1,this.cx,this.cy]},500,"bounce");if(this.label){this.label[0].animate({scale:1},250);this.label[1].attr({fill:"#000"})}})}};
