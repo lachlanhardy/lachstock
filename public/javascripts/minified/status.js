@@ -1,1 +1,6 @@
+/*
+ For perusal of source code, check the 'hubs: 
+ http://github.com/lachlanhardy/lachstock/blob/master/public/javascripts/status.js 
+*/
+
 function twitterCallback2(j){var c=$(document.createElement("strong"));var f=j;var d="";var g="";for(var e=0,h=f.length;e<h;e++){d=f[e].user.screen_name;g=f[e].text;if(g.substr(0,1)!="@"){var b=f[e].text.replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1">$1</a>');b=b.replace(/(\s@+[a-zA-Z_]{1,})/gi,'<a href="http://twitter.com/$1">$1</a>');b=b.replace(/(http:\/\/twitter.com\/\s@)/gi,"http://twitter.com/");$(c).html(b);var a=$("<a>Permalink</a>");a.attr({href:"http://twitter.com/"+d+"/statuses/"+f[e].id,id:"status-link"});break}}if(!$(c).text()==""){var k=$(document.createElement("p"));k.append(c).append(a);$("#status").empty().append(k)}}var addTwitter=function(){if($("#status").length!=0){var a=$(document.createElement("script"));a.attr("src","http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10");$("body").append(a)}};
