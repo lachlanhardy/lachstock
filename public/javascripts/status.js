@@ -1,3 +1,5 @@
+/*requires graphing.js*/
+
 function twitterCallback2(json) {
 
   var status = $(document.createElement("strong"));

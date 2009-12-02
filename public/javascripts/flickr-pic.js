@@ -1,3 +1,5 @@
+/*requires github-activity.js*/
+
 (function($){  
     $.fn.flickrPolaroid = function(options) {  
 

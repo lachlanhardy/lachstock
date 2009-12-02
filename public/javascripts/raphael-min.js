@@ -1,3 +1,5 @@
+/*requires pretty-date.js*/
+
 /*
  * Raphael 1.0 RC1.1 - JavaScript Vector Library
  *

@@ -1,3 +1,5 @@
+/*requires g.pie-min.js*/
+
 var drawGraphs = function () {
   if ($("ul.taglist").length != 0) {
 

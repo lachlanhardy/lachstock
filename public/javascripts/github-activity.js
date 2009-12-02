@@ -1,3 +1,5 @@
+/*requires status.js*/
+
 function githubActivity() {
   if ($("#github").length != 0) {
 

@@ -1,3 +1,5 @@
+/*requires jquery-1.3.2.min.js*/
+
 /*
  * JavaScript Pretty Date
  * Copyright (c) 2008 John Resig (jquery.com)

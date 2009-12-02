@@ -1,3 +1,5 @@
+/*requires raphael-min.js*/
+
 /*
  * g.Raphael 0.3 - Charting library, based on Raphaël
  *
