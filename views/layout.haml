@@ -63,8 +63,7 @@
     - if options.environment == :production
       %script{:src => versioned_javascript("production/minified"), :type => "text/javascript"}=""
     - else
-      / Sexy JS CDN from Lindsay Evans - http://jscdn.net/ (You've got to admire the front of a man willing to compete with the Google)
-      / %script{:src => "http://jscdn.net/jquery-1.3.2.js"}
+      / jQuery - for the hottness
       %script{:src => versioned_javascript("jquery-1.3.2.min"), :type => "text/javascript"}=""
 
       / John Resig's sexy little Pretty Date http://ejohn.org/projects/javascript-pretty-date
