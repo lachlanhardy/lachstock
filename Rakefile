@@ -1,4 +1,18 @@
+task :deploy => "minifier:check" do
+  puts "deploy"
+  cmd = 'cap deploy'
+  puts cmd
+  ret = system (cmd)
+  raise "guck it" if !ret
+end
+
 namespace :minifier do
+  
+  desc "check"
+  task :check do
+    raise "You've uncommitted changes" unless `git status`.include?("working directory clean")
+    `rake minifier:minify && git commit -am "Minifying changed JS & CSS for production" && git push origin master`
+  end
  
   def minify(file, file_type)
     file_path = "#{file.gsub(file.split("/")[-1], "")}"
@@ -23,14 +37,15 @@ namespace :minifier do
  
   desc "minify javascript"
   task :minify_js do
+    puts "js"
     file_type = "js"
     combine("public/javascripts/", file_type)
     minify('public/javascripts/production/combined.js', file_type)
-    
   end
  
   desc "minify css"
   task :minify_css do
+    puts "css"
     file_type = "css"
     combine("public/stylesheets/", file_type)
     minify('public/stylesheets/production/combined.css', file_type)
