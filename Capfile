@@ -2,6 +2,13 @@
 # Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 # load 'config/deploy'
  
+# This shizlit runs the auto-minification of CSS & JS before deploy
+cmd = 'rake minifier:check'
+puts cmd
+ret = system(cmd)
+raise "minify shizzy failed :(" if !ret
+
+
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
  
 default_run_options[:pty] = true
