@@ -1,5 +1,5 @@
 namespace :minifier do
-  
+
   desc "check"
   task :check do
     raise "You've uncommitted changes" unless `git status`.include?("working directory clean")
