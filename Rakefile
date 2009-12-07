@@ -2,7 +2,7 @@ task :deploy => "minifier:check" do
   puts "deploy"
   cmd = 'cap deploy'
   puts cmd
-  ret = system (cmd)
+  ret = system(cmd)
   raise "guck it" if !ret
 end
 
