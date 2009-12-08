@@ -2,9 +2,12 @@ namespace :minifier do
 
   desc "check"
   task :check do
-    raise "You've uncommitted changes" unless `git status`.include?("working directory clean")
+    exit(1) unless `git status`.include?("working directory clean")
     `rake minifier:minify && git commit -am "Minifying changed JS & CSS for production" && git push origin master`
   end
+
+  # funky cold medina
+  # no
   
   desc "minify"
   task :minify => [:minify_js, :minify_css]

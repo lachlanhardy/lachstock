@@ -4,9 +4,8 @@
  
 # This shizlit runs the auto-minification of CSS & JS before deploy
 cmd = 'rake minifier:check'
-puts cmd
-ret = system(cmd)
-raise "minify shizzy failed :(" if !ret
+system cmd
+raise "minify shizzy failed :(" unless $?.success?
 
 
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
