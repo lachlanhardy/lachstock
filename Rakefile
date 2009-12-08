@@ -6,15 +6,11 @@ namespace :minifier do
     `rake minifier:minify && git commit -am "Minifying changed JS & CSS for production" && git push origin master`
   end
 
-  # funky cold medina
-  # no
-  
   desc "minify"
   task :minify => [:minify_js, :minify_css]
  
   desc "minify javascript"
   task :minify_js do
-    puts "js"
     file_type = "js"
     combine("public/javascripts/", file_type)
     minify('public/javascripts/production/combined.js', file_type)
@@ -22,7 +18,6 @@ namespace :minifier do
  
   desc "minify css"
   task :minify_css do
-    puts "css"
     file_type = "css"
     combine("public/stylesheets/", file_type)
     minify('public/stylesheets/production/combined.css', file_type)
