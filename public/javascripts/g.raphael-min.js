@@ -1,6 +1,6 @@
 /*requires raphael-min.js*/
 
-/*
+/*!
  * g.Raphael 0.3 - Charting library, based on Raphaël
  *
  * Copyright (c) 2009 Dmitry Baranovskiy (http://g.raphaeljs.com)
