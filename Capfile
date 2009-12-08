@@ -6,6 +6,7 @@
 cmd = 'rake minifier:check'
 system cmd
 raise "minify shizzy failed :(" unless $?.success?
+puts "it worked, bitches"
 
 
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
