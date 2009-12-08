@@ -36,7 +36,10 @@ namespace :minifier do
     cmd = "java -jar lib/yuicompressor-2.4.2.jar #{file} -o #{output_path}"
     puts cmd
     ret = system(cmd)
-    File.open(output_path, "r+") {|f| f.write("/* For readable source code, check the 'hubs: \n   #{github_path}  */\n\n" + File.read(output_path))}
+    File.open(output_path, "r+") do |f| 
+      f.write("/* For readable source code, check the 'hubs: \n   #{github_path}  */\n\n" +
+        File.read(output_path))
+    end
     raise "Minification failed for #{file}" if !ret
   end
   
