@@ -1,4 +1,4 @@
-/*requires status.js*/
+/*requires add-rss-button.js*/
 
 function githubActivity() {
   if ($("#github").length != 0) {

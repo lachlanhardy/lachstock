@@ -36,6 +36,8 @@
         %h1
           = home_link("Lachstock")
         %p less is the new more.
+        %a#rss-button{:href => "/feeds/articles/"}
+          %span RSS
       = nav_builder
       #page
         - unless @layout
@@ -82,6 +84,9 @@
 
       / Adding Twitter status
       %script{:src => versioned_javascript("status"), :type => "text/javascript"}=""
+
+      / Adding RSS icon
+      %script{:src => versioned_javascript("add-rss-button"), :type => "text/javascript"}=""
 
       / Adding Github commits
       %script{:src => versioned_javascript("github-activity"), :type => "text/javascript"}=""
