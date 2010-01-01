@@ -45,11 +45,26 @@ function twitterCallback2(json) {
 }
 
 var addTwitter = function() {
-    if ($("#status").length != 0) {
-        var script = $(document.createElement("script"));
-          script.attr("src", "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10");
 
-          $("body").append(script);
+  // drawing bubbles
+  var paper = Raphael("twitter-avatar", "100", "33"),
+      bubbles = paper.set();
 
-    }
+  bubbles.push(
+    paper.circle(22, 9, 7),
+    paper.circle(31, 18, 5),
+    paper.circle(38, 24, 4),
+    paper.circle(44, 29, 3)
+  ).attr({
+    fill : "#aaa",
+    stroke : "transparent"
+  });
+
+  // Calling Twitter feed
+  if ($("#status").length != 0) {
+    var script = $(document.createElement("script"));
+    script.attr("src", "http://twitter.com/statuses/user_timeline/lachlanhardy.json?callback=twitterCallback2&count=10");
+
+    $("body").append(script);
+  }
 };
