@@ -16,14 +16,15 @@ module Lachstock
 
       @directories.each do |directory|
         folders.each do |folder|
-          article = folder.path.split("/")[-2]
-          if File.exist? "#{options.views}/#{directory}/#{article}/tags.yaml"
+          item = folder.path.split("/")[-2]
+          tag_file_path = "#{options.views}/#{directory}/#{item}/tags.yaml"
+          if File.exist? tag_file_path
             if tag.nil?
-              # tag_list = tag_list | (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml"))
-              tag_list.concat(YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml"))
+              # tag_list = tag_list | (YAML.load_file("#{options.views}/#{directory}/#{item}/tags.yaml"))
+              tag_list.concat(YAML.load_file(tag_file_path))
             else
-              if (YAML.load_file("#{options.views}/#{directory}/#{article}/tags.yaml").include?(tag))
-                tag_list.push([directory + "/" + article, folder.title, (folder.updated || folder.published)])
+              if (YAML.load_file(tag_file_path).include?(tag))
+                tag_list.push([directory + "/" + item, folder.title, (folder.updated || folder.published)])
               end
             end
           end
@@ -40,7 +41,7 @@ module Lachstock
           end
           [tag, count]
         end
-        tag_list.replace(tag_counter.uniq!)
+        tag_list.replace(tag_counter.uniq)
       end
       
       return tag_list.sort_by {|item| item.kind_of?(Array) ? item[0].downcase : item.downcase}

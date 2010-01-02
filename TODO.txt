@@ -11,12 +11,15 @@ Tasks to be done fucking immediately, in priority order:
 
 Others things to do, in priority order:
 
- - Add visible Feed button
- - Concatenate static files into one
+ - Add Tag link for section indices such as Articles and Code
+ - get Tag graph working again
+ - Write common segment code for promoting latest item
+ - Test GitHub mojo and remove if obsolete
  - set up hover state for legends
  - iPhone version
  - Get my Smoke on
  - Add JS switch to show common tags.
+ - Write display logic for evaluating what constitutes a common tag for that section
  - update Sinatra, Rack etc
  - sort out proper citing method
  - Rewrite comments correctly
