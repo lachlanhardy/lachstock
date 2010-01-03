@@ -1,12 +1,12 @@
 /*requires status.js*/
 
-var addRSSbutton = function() {
-  var $rssLink = $("#rss-button"),
-      paper = Raphael("rss-button", "60", "60"),
+var addFeedButton = function() {
+  var $feedLink = $("#feed-button"),
+      paper = Raphael("feed-button", "60", "60"),
       icon = paper.set();
 
-  $rssLink.children("span").hide();
-  $rssLink.css({
+  $feedLink.children("span").hide();
+  $feedLink.css({
     background: "transparent",
     margin: 0,
     width: "51px"
