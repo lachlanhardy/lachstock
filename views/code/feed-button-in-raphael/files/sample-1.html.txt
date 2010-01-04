@@ -1,0 +1,3 @@
+<a href="/feeds/articles/" id="feed-button">
+  <span>Subscribe</span>
+</a>

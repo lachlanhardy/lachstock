@@ -1,0 +1,6 @@
+.code
+  %pre
+    %code{:class => @code_class}= @code_sample
+  %span.download 
+    Download file:
+    %a{:href => "files/#{@filename}"}= @filename

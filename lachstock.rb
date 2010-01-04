@@ -75,5 +75,16 @@ module Lachstock
       @name = params[:name]
       haml File.join(@category, "/", @name, "/index").to_sym
     end
+
+    get '/*/files/:filename' do
+      file = "#{options.views}/#{params[:splat]}/files/#{params[:filename]}.txt"
+      if File.exists? file
+        content_type 'text/plain'
+        send_file(file)
+      else
+        raise not_found
+      end
+    end
+
   end
 end
