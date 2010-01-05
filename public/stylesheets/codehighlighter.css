@@ -1,0 +1,6 @@
+/*requires main.css*/
+
+.code code.html {}
+  .code code.html .tag {color: #1a79d6;}
+  .code code.html .attribute {color: #910166;}
+  .code code.html .string {color: #01B03F;}

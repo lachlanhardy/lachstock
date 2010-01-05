@@ -13,6 +13,7 @@
     - else
       %link{:href => versioned_stylesheet("reset"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("main"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+      %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
 
     %link{:rel => "icon", :href => versioned_favicon, :type => "image/x-icon"}
         
@@ -96,3 +97,18 @@
 
       / Run site scripts
       %script{:src => versioned_javascript("go"), :type => "text/javascript"}=""
+
+      / Adding Dan Webb's Code Highlighter
+      %script{:src => versioned_javascript("code_highlighter"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - CSS
+      %script{:src => versioned_javascript("codehighlighter-css"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - HTML
+      %script{:src => versioned_javascript("codehighlighter-html"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - JavaScript
+      %script{:src => versioned_javascript("codehighlighter-javascript"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - Ruby
+      %script{:src => versioned_javascript("codehighlighter-ruby"), :type => "text/javascript"}=""
