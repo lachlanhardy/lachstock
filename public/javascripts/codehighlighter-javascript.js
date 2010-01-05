@@ -1,4 +1,4 @@
-/*requires code_highlighter-html.js*/
+/*requires codehighlighter-html.js*/
 
 CodeHighlighter.addStyle("javascript",{
 	comment : {
@@ -17,3 +17,5 @@ CodeHighlighter.addStyle("javascript",{
 		exp  : /\b(toString|valueOf|window|element|prototype|constructor|document|escape|unescape|parseInt|parseFloat|setTimeout|clearTimeout|setInterval|clearInterval|NaN|isNaN|Infinity)\b/
 	}
 });
+
+

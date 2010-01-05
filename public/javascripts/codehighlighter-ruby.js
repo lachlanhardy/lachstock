@@ -1,4 +1,4 @@
-/*requires code_highlighter-javascript.js*/
+/*requires codehighlighter-javascript.js*/
 
 CodeHighlighter.addStyle("ruby",{
 	comment : {
@@ -18,3 +18,4 @@ CodeHighlighter.addStyle("ruby",{
 	  exp : /([^:])(:[A-Za-z0-9_!?]+)/
 	}
 });
+

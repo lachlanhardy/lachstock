@@ -1,4 +1,4 @@
-/*requires code_highlighter-css.js*/
+/*requires codehighlighter-css.js*/
 
 CodeHighlighter.addStyle("html", {
 	comment : {
@@ -19,3 +19,4 @@ CodeHighlighter.addStyle("html", {
 		exp: /&lt;!DOCTYPE([^&]|&[^g]|&g[^t])*&gt;/
 	}
 });
+
