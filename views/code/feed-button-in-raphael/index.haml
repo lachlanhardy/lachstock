@@ -15,11 +15,31 @@
 
 %p The styling isn't particularly relevant. In this case, I just positioned the element so the link will still work nicely if if the graphic isn't drawn.
 
-%h2 JS
+%h2 JavaScript
 
 = code_sample("sample-2.js")
 
+%p The scripting is very simple. 
+
+%ol
+  %li Grab the <code>#feed-button</code> element with jQuery, clear the text out of the way, and style it appropriately for the graphic;
+  %li Create a Raphaël canvas;
+  %li Create a Raphaël set within that;
+  %li Draw the graphical components of the icon inside the set; and
+  %li Set the attributes of the set to render it white.
+
+%h2 SVG
 %p 
+  Step 4 was the only tricky part. I spent a bunch of time learning <a href="http://www.w3.org/TR/SVG/paths.html">SVG path syntax</a> to draw my own before it clicked:
+  %strong Raphaël's use of the standard SVG path syntax means that any existing SVG representation of the standard feed icon will work perfectly!
 
+%p I remembered that Wikipedia store a lot of images in SVG and a quick search located the <a href="http://en.wikipedia.org/wiki/File:Feed-icon.svg">Feed-icon.svg</a> file. Opened up in Illustrator, and some experimentation provided me with the paths I'm using now.
 
+= code_sample("sample-3.svg")
+
+%h2 Summary
+
+%p I used a Raphaël set for the first time and learned a lot about SVG paths. Looks like I'll have to go re-write my other uses of Raphaël now to bring them up to scratch.
+
+%p The result is a neat simple feed icon that doesn't cost an extra HTTP request and loads much faster.
 

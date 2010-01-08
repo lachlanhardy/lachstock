@@ -79,7 +79,7 @@ module Lachstock
     get '/*/files/:filename' do
       file = "#{options.views}/#{params[:splat]}/files/#{params[:filename]}.txt"
       if File.exists? file
-        content_type 'text/plain'
+        content_type 'text/plain', :charset => 'utf-8'
         send_file(file)
       else
         raise not_found

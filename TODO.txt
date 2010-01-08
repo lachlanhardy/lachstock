@@ -1,5 +1,12 @@
 Tasks to be done fucking immediately, in priority order:
 
+ - Add Code Section to Atom
+ - Set up sectional and combined feeds
+ - Add autodiscovery for new feeds
+ - Set up Feeds page to explain all three feeds
+ - Link Feed icon to Feeds page
+ - Write Article introducing new section and explaining new feed setup
+
  - Rewrite HTML to use SECTION correctly
    - http://html5doctor.com/the-section-element/
    - http://html5.org/tools/web-apps-tracker?from=3795&to=3796
@@ -11,7 +18,10 @@ Tasks to be done fucking immediately, in priority order:
 
 Others things to do, in priority order:
 
+ - Upgrade Raphaël
  - Add Tag link for section indices such as Articles and Code
+ - Work out method of zipping Code Files for combined download (then give them a pretty download icon off to the side under Tags)
+ - upgrade gRaphaël
  - get Tag graph working again
  - Write common segment code for promoting latest item
  - Test GitHub mojo and remove if obsolete

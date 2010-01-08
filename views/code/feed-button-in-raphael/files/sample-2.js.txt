@@ -1,5 +1,5 @@
 var addFeedButton = function() {
-
+  
   // Declaring variables
   var $feedLink = $("#feed-button"), // The original anchor as a jQuery object
       paper = Raphael("feed-button", "60", "60"), // Creating the Raphaël canvas
