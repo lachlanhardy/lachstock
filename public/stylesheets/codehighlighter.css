@@ -1,6 +1,15 @@
 /*requires main.css*/
 
-.code code.html {}
+.code code.html {color: #333;}
   .code code.html .tag {color: #1a79d6;}
   .code code.html .attribute {color: #910166;}
   .code code.html .string {color: #01B03F;}
+
+.code code.javascript {color: #333;}
+  .code code.javascript .brackets {color: #000;}
+  .code code.javascript .comment {color: #666;}
+  .code code.javascript .keywords {color: #1a79d6;}
+  .code code.javascript .numbers {color: #a3a;}
+  .code code.javascript .string {color: #01B03F;}
+  .code code.javascript .symbols {color: #d36;}
+  .code code.javascript .variable {color: #910166;}
