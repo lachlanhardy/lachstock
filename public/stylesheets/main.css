@@ -174,9 +174,9 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
       .post-body p:first-child:first-line {font-weight: 700; line-height: 2.1;}
       .post-body p:first-child:first-letter {float: left; font: 300 2.1em Georgia, serif; width: auto;}
 
-        .figure-box {float: left; margin: 0 0 1em 0; padding: 1em; width: auto;}
+        .figure-box {float: left; padding: 1em 1em 1em 0; width: auto;}
         .figure-box.minor {float: right; margin: 0 0 1em 1em; padding: 0.5em 1em 1em 1em; width: 18em;}
-        .figure-box.featured {clear: both; margin: 1em 0 1em -16.3em;}
+        .figure-box.featured {clear: both; margin: 1em 0 1em -21.3em; padding: 1em 0 1em 1em;}
           .figure {background: #fff; border: 1px solid #ccc; overflow: auto; padding: 1em; text-align: center;}
             .figure img {}
             .figure object,
