@@ -19,5 +19,6 @@
       %title{:type => "html"}= item.title
       %published= atomify_date(item.published)
       %updated= atomify_date(item.updated || item.published)
-      %link{:href => "http://lachstock.com.au/#{item.path.split("/")[-3]}/#{item.path.split("/")[-2]}/", :rel => "alternate", :hreflang => "en", :type => "text/html"}
+      - @name = item.path.split("/")[-2]
+      %link{:href => "http://lachstock.com.au/#{@category}/#{@name}/", :rel => "alternate", :hreflang => "en", :type => "text/html"}
       %content{:type => "html"}&= render_html(item.template)

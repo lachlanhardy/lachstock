@@ -1,6 +1,5 @@
 Tasks to be done fucking immediately, in priority order:
 
- - Add Code Section to Atom
  - Set up sectional and combined feeds
  - Add autodiscovery for new feeds
  - Set up Feeds page to explain all three feeds
