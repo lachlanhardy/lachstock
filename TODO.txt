@@ -1,9 +1,9 @@
 Tasks to be done fucking immediately, in priority order:
 
- - Set up sectional and combined feeds
- - Add autodiscovery for new feeds
- - Set up Feeds page to explain all three feeds
- - Link Feed icon to Feeds page
+ - Re-architect for /:category/feed/ rather than /feeds/:category/
+ - Set up combined feed
+ - Add autodiscovery for combined feed
+ - Add combined feed to Feeds page
  - Write Article introducing new section and explaining new feed setup
 
  - Rewrite HTML to use SECTION correctly

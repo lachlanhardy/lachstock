@@ -46,6 +46,12 @@ module Lachstock
       content_type 'application/atom+xml', :charset => 'utf-8'
       haml :feeds, {:format => :xhtml, :layout => false}
     end
+    
+    get '/feeds/' do 
+      @category = "feeds"
+      @category_title = @category
+      haml File.join("/feeds/index").to_sym
+    end
 
     ["/tags/", "/tags/:tag/", "/:category/tags/", "/:category/tags/:tag/"].each do |path|
       get path do
