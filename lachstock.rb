@@ -40,7 +40,15 @@ module Lachstock
       haml :index
     end
     
-    get '/feeds/:category/' do 
+    get '/:category/feed/' do 
+      @category = params[:category]
+      @items = Metadata.type(@category.to_sym).all.sort_by {|item| item.published}.reverse
+      content_type 'application/atom+xml', :charset => 'utf-8'
+      haml :feeds, {:format => :xhtml, :layout => false}
+    end
+
+    # This is now obsolete, replace with mod_rewrite rule
+    get '/feeds/:category' do 
       @category = params[:category]
       @items = Metadata.type(@category.to_sym).all.sort_by {|item| item.published}.reverse
       content_type 'application/atom+xml', :charset => 'utf-8'

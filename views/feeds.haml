@@ -2,7 +2,7 @@
 %feed{:xmlns => "http://www.w3.org/2005/Atom"}
  
   %title= "Lachstock #{@category.capitalize}"
-  %link{:href => "http://lachstock.com.au/feeds/#{@category}/", :rel => "self", :hreflang => "en", :type => "application/atom+xml"}/
+  %link{:href => "http://lachstock.com.au/#{@category}/feed/", :rel => "self", :hreflang => "en", :type => "application/atom+xml"}/
   %link{:href => "http://lachstock.com.au/#{@category}/", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
    
   %author

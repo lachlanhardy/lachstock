@@ -1,6 +1,5 @@
 Tasks to be done fucking immediately, in priority order:
 
- - Re-architect for /:category/feed/ rather than /feeds/:category/
  - Set up combined feed
  - Add autodiscovery for combined feed
  - Add combined feed to Feeds page
@@ -17,6 +16,7 @@ Tasks to be done fucking immediately, in priority order:
 
 Others things to do, in priority order:
 
+ - Strip /feeds/:category/ and replace with mod_rewrite rule
  - Upgrade Raphaël
  - Add Tag link for section indices such as Articles and Code
  - Work out method of zipping Code Files for combined download (then give them a pretty download icon off to the side under Tags)
