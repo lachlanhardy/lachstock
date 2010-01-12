@@ -1,3 +1,5 @@
+/*requires status.js*/
+
 var addFeedButton = function() {
 
   // Declaring variables

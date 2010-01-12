@@ -10,5 +10,12 @@ module Lachstock
       end
       haml(:"_code_sample", :layout => false)
     end
+    def code_download
+      file = "#{options.views}/#{@category}/#{@name}/files/#{@name}.zip"
+      if File.exist? file
+        @download_url = "#{@name}.zip"
+        haml(:"_code_download", :layout => false)
+      end
+    end
   end
 end

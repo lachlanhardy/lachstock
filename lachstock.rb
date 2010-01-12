@@ -90,11 +90,16 @@ module Lachstock
       haml File.join(@category, "/", @name, "/index").to_sym
     end
 
-    get '/*/files/:filename' do
-      file = "#{options.views}/#{params[:splat]}/files/#{params[:filename]}.txt"
-      if File.exists? file
-        content_type 'text/plain', :charset => 'utf-8'
-        send_file(file)
+    get '/*/files/:filename.:filetype' do
+      filetype = params[:filetype]
+      file = "#{options.views}/#{params[:splat]}/files/#{params[:filename]}.#{filetype}"
+      if (filetype == "txt") || (filetype == "zip")
+        if File.exists? file
+          content_type 'text/plain', :charset => 'utf-8'
+          send_file(file)
+        else
+          raise not_found
+        end
       else
         raise not_found
       end
