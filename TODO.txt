@@ -5,6 +5,7 @@ Tasks to be done fucking immediately, in priority order:
  - Add combined feed to Feeds page
  - Write Article introducing new section and explaining new feed setup
 
+ - Get CSS caching again
  - Rewrite HTML to use SECTION correctly
    - http://html5doctor.com/the-section-element/
    - http://html5.org/tools/web-apps-tracker?from=3795&to=3796
@@ -24,6 +25,7 @@ Others things to do, in priority order:
  - get Tag graph working again
  - Write common segment code for promoting latest item
  - Test GitHub mojo and remove if obsolete
+ - GZIP
  - set up hover state for legends
  - iPhone version
  - Get my Smoke on
