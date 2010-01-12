@@ -91,15 +91,11 @@ module Lachstock
     end
 
     get '/*/files/:filename.:filetype' do
-      filetype = params[:filetype]
+      filetype = params[:filetype] == "zip" ? "zip" : "#{params[:filetype]}.txt"
       file = "#{options.views}/#{params[:splat]}/files/#{params[:filename]}.#{filetype}"
-      if (filetype == "txt") || (filetype == "zip")
-        if File.exists? file
-          content_type 'text/plain', :charset => 'utf-8'
-          send_file(file)
-        else
-          raise not_found
-        end
+      if File.exists? file
+        content_type 'text/plain', :charset => 'utf-8'
+        send_file(file)
       else
         raise not_found
       end
