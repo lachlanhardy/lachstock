@@ -6214,7 +6214,7 @@ CodeHighlighter.addStyle("javascript",{
 
 
 
-CodeHighlighter.addStyle("ruby",{
+CodeHighlighter.addStyle("rb",{
 	comment : {
 		exp  : /#[^\n]+/
 	},

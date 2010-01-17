@@ -151,17 +151,17 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
   #page {font-size: 1.5em; margin: 0.5em 0 0 0; padding: 1em 1em 1em 0; position: relative;}
 
     /* =Columns */    
-    section {float: left; margin: 0 0 -80em 20.3em; min-height:  100%; padding: 1em 0 90em 1em; position: relative; width: auto;}
+    section {float: left; margin: 0 0 -80em 15em; min-height: 100%; padding: 1em 0 90em 1em; position: relative; width: auto;}
     body.layout-abb section {margin: 0 0 -80em 1em; width: 21.48em;}  
     body.layout-abb #twitter {margin: 0 0 -80em 0; width: 18.3em;}
-    body.tags section {width: 50em;}
+    body.tags section {width: 38em;}
       
       article {margin: 0 0 1em 0;}
       body.home article {margin: 0 0 1em 0;}
         article h2 {margin: 1em 0 0.2em 0;}
         body.home article h2 {background: #ff8000; color: #fff; margin: 0 0 0.2em 0;}
 
-        p.category {color: #999; float: left; font-size: 3em; left: 1.5em; position: absolute; text-align: right; text-transform: capitalize; top: 0.65em; width: 5em;}
+        p.category {color: #999; float: left; font-size: 3em; left: 0.1em; position: absolute; text-align: right; text-transform: capitalize; top: 0.65em; width: 5em;}
     
     #twitter #status {border: 2px solid #aaa; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 1em;}
       #status p {line-height: 1.2; margin: 0; overflow: hidden;}
@@ -169,6 +169,14 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
     #twitter-avatar {float: right; width: auto;}
       #twitter-avatar svg {display: block;}
       #twitter-avatar img {margin: 0.1em 0 0 0; position: absolute; right: 0;}
+
+  #webstock {display: none; padding: 120px 0 0 0; position: absolute; right: 1em; top: 9.5em; width: auto;}
+  body.layout-abb #webstock {left: 4em; position: relative; top: 9em;}
+  body.code #webstock,
+  body.articles #webstock {top: 6.5em;}
+  body.tags #webstock {top: 7em;}
+    #webstock h2 {color: #999; font-size: 1em;}
+    #webstock a {left: -1em; position: absolute; top: 0;}
 
     /* =Components */
       /* =Archive */
@@ -202,7 +210,7 @@ body {background: #fff; color: #0e0e0e; font: 62.5%/1.3 "Helvetica Neue", Helvet
 
         .figure-box {float: left; margin: 0 0 1em 0; padding: 1em; width: auto;}
         .figure-box.minor {float: right; margin: 0 0 1em 1em; padding: 0.5em 1em 1em 1em; width: 18em;}
-        .figure-box.featured {clear: both; margin: 1em 0 1em -21.3em;}
+        .figure-box.featured {clear: both; margin: 1em 0 1em -16.3em;}
           .figure {background: #fff; border: 1px solid #ccc; overflow: auto; padding: 1em; text-align: center;}
             .figure img {}
             .figure object,
@@ -341,3 +349,12 @@ html.js {}
   .code code.javascript .string {color: #01B03F;}
   .code code.javascript .symbols {color: #d36;}
   .code code.javascript .variable {color: #910166;}
+
+.code code.rb {color: #333;}
+  .code code.rb .brackets {color: #000;}
+  .code code.rb .comment {color: #666;}
+  .code code.rb .keywords {color: #1a79d6;}
+  .code code.rb .numbers {color: #a3a;}
+  .code code.rb .string {color: #01B03F;}
+  .code code.rb .symbols {color: #d36;}
+  .code code.rb .variable {color: #910166;}
