@@ -13,3 +13,12 @@
   .code code.javascript .string {color: #01B03F;}
   .code code.javascript .symbols {color: #d36;}
   .code code.javascript .variable {color: #910166;}
+
+.code code.rb {color: #333;}
+  .code code.rb .brackets {color: #000;}
+  .code code.rb .comment {color: #666;}
+  .code code.rb .keywords {color: #1a79d6;}
+  .code code.rb .numbers {color: #a3a;}
+  .code code.rb .string {color: #01B03F;}
+  .code code.rb .symbols {color: #d36;}
+  .code code.rb .variable {color: #910166;}

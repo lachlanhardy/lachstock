@@ -1,6 +1,6 @@
 /*requires codehighlighter-javascript.js*/
 
-CodeHighlighter.addStyle("ruby",{
+CodeHighlighter.addStyle("rb",{
 	comment : {
 		exp  : /#[^\n]+/
 	},

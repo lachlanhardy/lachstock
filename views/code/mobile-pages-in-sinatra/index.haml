@@ -1,0 +1,26 @@
+- @title = "Mobile Pages in Sinatra"
+- @published = "20100117 at 1800"
+- @blurb = "<p>I decided this site should have an in-page feed subscription link rather than rely solely on browser autodiscovery. I'm also experimenting with the idea that decorative images, such as those that would be normally served as background images via CSS, may not require an image at all. In some cases it will be simpler, faster, and saves an HTTP request, to draw them using <a href='http://raphaeljs.com/'>Raphaël</a>. So here's how I made my new feed subscription icon.</p>"
+
+
+%p I'm building a Sinatra app that needs to be iPhone and Android capable. So I spent a few hours nutting out the best way I could come up with do it. I welcome <a href="mailto:lachlan@lachstock.com.au">suggestions for improving it</a>!
+
+%p To make it easier to explain, I've extracted my solution into a simplified Sinatra app. I only show the main file below, but you can grab the whole app from the <a href="/code/mobile-pages-in-sinatra/files/mobile-pages-in-sinatra.zip">download link</a> to the left or <a href="http://github.com/lachlanhardy/mobile-pages-in-sinatra">on GitHub</a>. The README has instructions on how to run it for those who aren't Ruby-orientated.
+
+%p The comments have the details covered, I think. Basically, it checks the User Agent string of each request to see if it matches two previously defined strings - extracts of the UA strings from the iPhone and Android browsers.
+
+%p Given a match, it checks for a mobile version of the relevant views, layouts and partials needed for that request and serves them up.
+
+%h2 Ruby
+
+= code_sample("mobile.rb")
+
+%h2 Credit
+%p I should note that I nicked the UA string matching idea from <a href="http://toolmantim.com/">Tim Lucas</a>'s sweet work on the <a href="https://github.com//webjam/webjam">Webjam site</a>.
+
+%h2 Summary
+
+%p It's quite a simple technique and I think the code is pretty neat. The fact I can deliver that much functionality in a 50-odd lines of neatly commented and spaced code is a tribute to <a href="http://www.sinatrarb.com/">Sinatra</a>.
+
+%p Obviously, I'm bound to hit edgecases as I go and I really should account for those who occasionally want to browse the full site, but I'll worry about those as when I need to. I can always post improvements later!
+
