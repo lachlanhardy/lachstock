@@ -44,7 +44,6 @@
       #page
         - unless @layout
           %p.category= "#{@category_title}:"
-          = partial :webstock
           %section
             - unless @name.nil?
               %article.hentry
