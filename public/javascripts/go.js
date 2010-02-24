@@ -5,9 +5,9 @@ $(document).ready(function(){
   $("html").addClass("js");
 
   addFeedButton();
-  // downloadIcon();
+  downloadIcon();
   addTwitter();
-  // drawGraphs();
+  drawGraphs();
   $("#flickr-pic").flickrPolaroid();
   githubActivity();
 });
