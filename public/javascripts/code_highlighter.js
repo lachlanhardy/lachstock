@@ -1,6 +1,6 @@
 /*requires go.js*/
 
-/* Unobtrustive Code Highlighter By Dan Webb 11/2005
+/*! Unobtrustive Code Highlighter By Dan Webb 11/2005
    Version: 0.4
 	
 	Usage:
