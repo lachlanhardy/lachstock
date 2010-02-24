@@ -9,5 +9,5 @@ $(document).ready(function(){
   addTwitter();
   drawGraphs();
   $("#flickr-pic").flickrPolaroid();
-  githubActivity();
+  // githubActivity();
 });
