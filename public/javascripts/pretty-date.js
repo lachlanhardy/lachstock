@@ -1,4 +1,4 @@
-/*requires jquery-1.4a1.js*/
+/*requires jquery.js*/
 
 /*
  * JavaScript Pretty Date
