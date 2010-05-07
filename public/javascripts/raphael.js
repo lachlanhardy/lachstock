@@ -1,3 +1,5 @@
+/*requires jquery.js*/
+
 /*!
  * Raphael 1.4 - JavaScript Vector Library
  *
