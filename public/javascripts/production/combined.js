@@ -6241,7 +6241,7 @@ window.jQuery = window.$ = jQuery;
 
 
 /*!
- * Raphael 1.4 - JavaScript Vector Library
+ * Raphael 1.4.1 - JavaScript Vector Library
  *
  * Copyright (c) 2010 Dmitry Baranovskiy (http://raphaeljs.com)
  * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
@@ -6261,7 +6261,7 @@ Raphael = (function () {
         }
         return create[apply](R, arguments);
     }
-    R.version = "1.4";
+    R.version = "1.4.1";
     var separator = /[, ]+/,
         elements = /^(circle|rect|path|ellipse|text|image)$/,
         proto = "prototype",
@@ -8729,7 +8729,7 @@ Raphael = (function () {
             return function (obj, type, fn, element) {
                 var f = function (e) {
                     if (supportsTouch) {
-                        for (var i = 0, ii = e.targetTouches.length; i < ii; i++) {
+                        for (var i = 0, ii = e.targetTouches && e.targetTouches.length; i < ii; i++) {
                             if (e.targetTouches[i].target == obj) {
                                 var olde = e;
                                 e = e.targetTouches[i];
@@ -8795,7 +8795,7 @@ Raphael = (function () {
     Element[proto].drag = function (onmove, onstart, onend) {
         this._drag = {};
         var el = this.mousedown(function (e) {
-            e.preventDefault();
+            (e.originalEvent ? e.originalEvent : e).preventDefault();
             this._drag.x = e.clientX;
             this._drag.y = e.clientY;
             this._drag.id = e.identifier;
@@ -8813,7 +8813,7 @@ Raphael = (function () {
                         if (touch.identifier == el._drag.id) {
                             x = touch.clientX;
                             y = touch.clientY;
-                            e.preventDefault();
+                            (e.originalEvent ? e.originalEvent : e).preventDefault();
                             break;
                         }
                     }
