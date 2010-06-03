@@ -1,4 +1,4 @@
-/*requires download-icon.js*/
+/*requires seinfeld-badge.js*/
 
 $(document).ready(function(){
   // making sexy unobtrusive CSS possible since 2006
