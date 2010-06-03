@@ -300,3 +300,8 @@ html.js {}
 
   /* =Graph */
   #graph {margin: -2em 0 0 0; width: 30em;}
+  
+
+  /* X Marks the Spot badge code */
+  body.code .seinfeld-badge {position: absolute; right: -350px; top: 5.2em; width: 300px;}
+  
