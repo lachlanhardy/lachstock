@@ -15,6 +15,60 @@
       %link{:href => versioned_stylesheet("main"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
 
+    - if options.environment == :production
+      %script{:src => versioned_javascript("production/minified"), :type => "text/javascript"}=""
+    - else
+      / jQuery - for the hottness
+      %script{:src => versioned_javascript("jquery"), :type => "text/javascript"}=""
+
+      / John Resig's sexy little Pretty Date http://ejohn.org/projects/javascript-pretty-date
+      %script{:src => versioned_javascript("pretty-date"), :type => "text/javascript"}=""
+
+      / Adding Raphael for vector graphics hotness - http://raphaeljs.com
+      %script{:src => versioned_javascript("raphael"), :type => "text/javascript"}=""
+
+      / And g.Raphael too! - http://g.raphaeljs.com
+      %script{:src => versioned_javascript("g.raphael-min"), :type => "text/javascript"}=""
+
+      / And g.pie! - http://g.raphaeljs.com
+      %script{:src => versioned_javascript("g.pie-min"), :type => "text/javascript"}=""
+
+      / my delicious graphs
+      %script{:src => versioned_javascript("graphing"), :type => "text/javascript"}=""
+
+      / Adding Twitter status
+      %script{:src => versioned_javascript("status"), :type => "text/javascript"}=""
+
+      / Adding RSS icon
+      %script{:src => versioned_javascript("add-feed-button"), :type => "text/javascript"}=""
+
+      / Adding Github commits
+      %script{:src => versioned_javascript("github-activity"), :type => "text/javascript"}=""
+
+      / Adding Flickr pic
+      %script{:src => versioned_javascript("flickr-pic"), :type => "text/javascript"}=""
+
+      / Adding Download icon
+      %script{:src => versioned_javascript("download-icon"), :type => "text/javascript"}=""
+
+      / Run site scripts
+      %script{:src => versioned_javascript("go"), :type => "text/javascript"}=""
+
+      / Adding Dan Webb's Code Highlighter
+      %script{:src => versioned_javascript("code_highlighter"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - CSS
+      %script{:src => versioned_javascript("codehighlighter-css"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - HTML
+      %script{:src => versioned_javascript("codehighlighter-html"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - JavaScript
+      %script{:src => versioned_javascript("codehighlighter-javascript"), :type => "text/javascript"}=""
+
+      / Adding Code Highlighter - Ruby
+      %script{:src => versioned_javascript("codehighlighter-ruby"), :type => "text/javascript"}=""
+
     %link{:rel => "icon", :href => versioned_favicon, :type => "image/x-icon"}
         
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Lachstock Articles", :href => "/articles/feed/"}
@@ -65,56 +119,3 @@
         and
         %a{:href => "http://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=http%3A%2F%2Flachstock.com.au%2F"} CSS 3
 
-    - if options.environment == :production
-      %script{:src => versioned_javascript("production/minified"), :type => "text/javascript"}=""
-    - else
-      / jQuery - for the hottness
-      %script{:src => versioned_javascript("jquery"), :type => "text/javascript"}=""
-
-      / John Resig's sexy little Pretty Date http://ejohn.org/projects/javascript-pretty-date
-      %script{:src => versioned_javascript("pretty-date"), :type => "text/javascript"}=""
-
-      / Adding Raphael for vector graphics hotness - http://raphaeljs.com
-      %script{:src => versioned_javascript("raphael"), :type => "text/javascript"}=""
-    
-      / And g.Raphael too! - http://g.raphaeljs.com
-      %script{:src => versioned_javascript("g.raphael-min"), :type => "text/javascript"}=""
-    
-      / And g.pie! - http://g.raphaeljs.com
-      %script{:src => versioned_javascript("g.pie-min"), :type => "text/javascript"}=""
-    
-      / my delicious graphs
-      %script{:src => versioned_javascript("graphing"), :type => "text/javascript"}=""
-
-      / Adding Twitter status
-      %script{:src => versioned_javascript("status"), :type => "text/javascript"}=""
-
-      / Adding RSS icon
-      %script{:src => versioned_javascript("add-feed-button"), :type => "text/javascript"}=""
-
-      / Adding Github commits
-      %script{:src => versioned_javascript("github-activity"), :type => "text/javascript"}=""
-
-      / Adding Flickr pic
-      %script{:src => versioned_javascript("flickr-pic"), :type => "text/javascript"}=""
-
-      / Adding Download icon
-      %script{:src => versioned_javascript("download-icon"), :type => "text/javascript"}=""
-
-      / Run site scripts
-      %script{:src => versioned_javascript("go"), :type => "text/javascript"}=""
-
-      / Adding Dan Webb's Code Highlighter
-      %script{:src => versioned_javascript("code_highlighter"), :type => "text/javascript"}=""
-
-      / Adding Code Highlighter - CSS
-      %script{:src => versioned_javascript("codehighlighter-css"), :type => "text/javascript"}=""
-
-      / Adding Code Highlighter - HTML
-      %script{:src => versioned_javascript("codehighlighter-html"), :type => "text/javascript"}=""
-
-      / Adding Code Highlighter - JavaScript
-      %script{:src => versioned_javascript("codehighlighter-javascript"), :type => "text/javascript"}=""
-
-      / Adding Code Highlighter - Ruby
-      %script{:src => versioned_javascript("codehighlighter-ruby"), :type => "text/javascript"}=""
