@@ -10018,7 +10018,7 @@ $(document).ready(function(){
   
   var addClient = document.createElement('script'); 
   addClient.src = "http://gabbertalk.com/845c0a1287da5c09377574389f310931/bootstrap.js";
-  $("body").append(addClient);
+  $("body").appendChild(addClient);
 
   
 });
