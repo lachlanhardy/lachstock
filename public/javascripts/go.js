@@ -12,9 +12,8 @@ $(document).ready(function(){
   // githubActivity();
   
   
-  var addClient = document.createElement('script'); 
-  addClient.src = "http://gabbertalk.com/845c0a1287da5c09377574389f310931/bootstrap.js";
-  $("body").appendChild(addClient);
+  var addClient = '<script src="http://gabbertalk.com/845c0a1287da5c09377574389f310931/bootstrap.js"></script>'
+  $("body").append(addClient);
 
   
 });
