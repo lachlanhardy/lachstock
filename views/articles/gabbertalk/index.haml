@@ -1,8 +1,23 @@
 - @title = "GabberTalk"
 - @published = "20100830 at 1000"
+- @updated = "20100830 at 1230"
+- @blurb = "<p>This weekend was the first ever <a href='http://nodeknockout.com/'>Node.js Knockout</a>. It&rsquo;s a a 48-hour coding contest using <a href='http://nodejs.org/'>Node.js</a> inspired by <a href='http://railsrumble.com/'>Rails Rumble</a>. Around <a href='http://leaderboard.no.de/'>215 teams from around the world</a> competed. And we were one of them."
 
-%p <a href="http://nodeknockout.com/teams/explorer-sox">We</a> built <a href="http://gabbertalk.com">GabberTalk</a>. Here's a demo:
+%p This weekend was the first ever <a href="http://nodeknockout.com/">Node.js Knockout</a>. It&rsquo;s a a 48-hour coding contest using <a href="http://nodejs.org/">Node.js</a> inspired by <a href="http://railsrumble.com/">Rails Rumble</a>. Around <a href="http://leaderboard.no.de/">215 teams from around the world</a> competed.
+
+%p I&rsquo;ve been fascinated by Node ever since I heard of it and have built a few small things here and there. But this was my first opportunity to build a fully-fledged app.
+
+%p <a href="http://twitter.com/hassox">Dan Neighman</a> contacted me about the contest, saying he had a team and an idea, and I jumped at the chance. Together with <a href="http://twitter.com/dgoodland">Dave Goodlad</a> and <a href="http://twitter.com/lstoll">Lincoln Stoll</a>, we formed the team <a href="http://nodeknockout.com/teams/explorer-sox">Explorer Sox</a>.
+
+%p Our objective was to build a web commenting engine that updates in real-time. This is made possible because of Node&rsquo;s evented design and the gloriousness that is <a href="http://dev.w3.org/html5/websockets/">HTML5&rsquo;s WebSockets specification</a>. Using the <a href="http://socket.io/">Socket.IO library</a>, which provides fallbacks for those browsers that don't support the spec yet, we built <a href="http://gabbertalk.com">GabberTalk</a> on top of a Node web framework called <a href="http://expressjs.com/">Express</a>. For added buzzwords points, we wrote the backend in <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> rather than JavaScript, used the new JS implementation of <a href="http://lesscss.org/">LESS</a> for our CSS, and used <a href="http://jade-lang.com/">Jade</a> for templating. 
+
+%p Our bootstrap file is plain JavaScript, but we offer a client written in jQuery for ease-of-use. Passing <code>?client=none</code> in the bootstrap URL cancels the request for the client and simply connects the sockets and provides an API. You can find more information on this at our <a href="http://gabbertalk.com/help/customizations">Customisations page</a>.
+
+%p We got massive amounts of functionality built in such a short time, but a project like this is all about the details of a tight user experience and we just didn&rsquo;t quite finish it. There are certainly still some bugs, but we plan to continue working on this in future and improving it. Please try the demo below, <a href="http://gabbertalk.com">check out the site</a> to get your own chat room and <a href="http://nodeknockout.com/teams/explorer-sox">throw us some votes for the contest</a> if you like it!
+
+%p Here&rsquo;s a demo of a chatroom that&rsquo;s running simultaneously both here and on <a href="http://lds.li/post/1032271000/gabbertalk">Lincoln&rsquo;s site</a>. Try opening each one in a different browser to see how quickly it passes your messages:
 
 #gabber-talk.gabber-talk
+%script{:src => "http://fbug.googlecode.com/svn/branches/firebug1.5/lite/firebugx.js"}
 %script{:src => "http://gabbertalk.com/845c0a1287da5c09377574389f310931/bootstrap.js"}
-%style{:type => "text/css"} .gabber-talk {float: left;}
+%style{:type => "text/css"} .gabber-talk {float: left; margin: 2em 0 0 0;}
