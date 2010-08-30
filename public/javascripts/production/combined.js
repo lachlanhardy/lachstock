@@ -10016,7 +10016,7 @@ $(document).ready(function(){
   // githubActivity();
   
   
-  var addClient = '<script src="http://gabbertalk.com/845c0a1287da5c09377574389f310931/bootstrap.js"></script>'
+  var addClient = '<script src="http://gabbertalk.com/845c0a1287da5c09377574389f310931/bootstrap.js?client=false"></script>'
   $("body").append(addClient);
 
   
