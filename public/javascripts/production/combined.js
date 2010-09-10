@@ -10014,6 +10014,7 @@ $(document).ready(function(){
   drawGraphs();
   $("#flickr-pic").flickrPolaroid();
   // githubActivity();
+
 });
 
 /*! Unobtrustive Code Highlighter By Dan Webb 11/2005

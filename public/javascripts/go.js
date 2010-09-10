@@ -10,4 +10,5 @@ $(document).ready(function(){
   drawGraphs();
   $("#flickr-pic").flickrPolaroid();
   // githubActivity();
+
 });
