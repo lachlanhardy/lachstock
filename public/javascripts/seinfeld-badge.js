@@ -1,5 +1,3 @@
-/*requires download-icon.js*/
-
 (function seinfeldBadge() {
    $(".seinfeld-badge").each(function() {
         var $seinfeld = $(this),
