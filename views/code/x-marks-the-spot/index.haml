@@ -1,25 +1,55 @@
 - @title = "X marks the spot"
-- @published = "20100518 at 2300"
-- @blurb = "<p>About <a href=\"http://twitter.com/technoweenie/status/13593470393\">a week ago</a> now, <a href=\"http://techno-weenie.net/\">Rick Olson</a> re-launched <a href=\"http://calendaraboutnothing.com/\">Calendar About Nothing</a>, the <a href=\"http://lifehacker.com/software/motivation/jerry-seinfelds-productivity-secret-281626.php\">Seinfeld calendar</a> for your open source commits on <a href=\"http://github.com/\">GitHub</a>.</p><p>Its revival reminded me of an associated project of mine, the <a href=\"http://github.com/lachlanhardy/seinfeld-badge\">Seinfeld Badge</a>. A quick and dirty JavaScript widget to show off your current streak of public commits on your blog, I&rsquo;ve always been dissatisfied with the code. Time to make it right!</p>"
+- @published = "20100910 at 1620"
+- @blurb = "<p>In <a href=\"http://twitter.com/technoweenie/status/13593470393\">early May </a>, <a href=\"http://techno-weenie.net/\">Rick Olson</a> re-launched <a href=\"http://calendaraboutnothing.com/\">Calendar About Nothing</a>, the <a href=\"http://lifehacker.com/software/motivation/jerry-seinfelds-productivity-secret-281626.php\">Seinfeld calendar</a> for your open source commits on <a href=\"http://github.com/\">GitHub</a>.</p><p>Its revival reminded me of an associated project of mine, the <a href=\"http://github.com/lachlanhardy/seinfeld-badge\">Seinfeld Badge</a>. A quick and dirty JavaScript widget to show off your current streak of public commits on your blog, I&rsquo;ve always been dissatisfied with the code. Time to make it right!</p>"
 
-%p About <a href="http://twitter.com/technoweenie/status/13593470393">a week ago</a> now, <a href="http://techno-weenie.net/">Rick Olson</a> re-launched <a href="http://calendaraboutnothing.com/">Calendar About Nothing</a>, the <a href="http://lifehacker.com/software/motivation/jerry-seinfelds-productivity-secret-281626.php">Seinfeld calendar</a> for your open source commits on <a href="http://github.com/">GitHub</a>.
+%p In <a href="http://twitter.com/technoweenie/status/13593470393">early May</a> now, <a href="http://techno-weenie.net/">Rick Olson</a> re-launched <a href="http://calendaraboutnothing.com/">Calendar About Nothing</a>, the <a href="http://lifehacker.com/software/motivation/jerry-seinfelds-productivity-secret-281626.php">Seinfeld calendar</a> for your open source commits on <a href="http://github.com/">GitHub</a>.
 
-%p Its revival reminded me of an associated project of mine, the <a href="http://github.com/lachlanhardy/seinfeld-badge">Seinfeld Badge</a>. A quick and dirty JavaScript widget to show off your current streak of public commits on your blog, I've always been dissatisfied with the code. So dissatisfied that I didn't blog out it the first time I wrote it. Time to make it right!
+%p Its revival reminded me of an associated project of mine, the <a href="http://github.com/lachlanhardy/seinfeld-badge">Seinfeld Badge</a>. A quick and dirty JavaScript widget to show off your current streak of public commits on your blog, I've always been dissatisfied with the code. So dissatisfied that I didn't blog about it the first time I wrote it. Time to make it right!
 
-%p Or at least modernise it somewhat.
+%p Or at least modernise it somewhat (and then forget about this half-written blog post for 4 months while changing jobs and the like).
 
 = partial :seinfeld
 
 %h2 HTML
-The original HTML is pretty straightforward and didn't need changing. The calendar simply gets appended to this content anyway.
-
+%p The original HTML is pretty straightforward and didn't need changing. The calendar simply gets appended to this content anyway.
 
 = code_sample("index.html")
 
+%h2 CSS
+= code_sample("seinfeld-badge.css")
 
+%p The only change here from the original is because I've removed the <code>reset.css</code>. When I originally wrote the widget, I had no idea that Rick would actually incorporate it into the site. But he did and so in this re-write I wanted to strip back complexity for widget users. The <code>reset.css</code> was just too much load and it was confusing some people.
 
+%p The result is that I had to bullet-proof my CSS a bit and in the end, that meant using <code>div</code>s for the content below the calendar, rather than <code>p</code>s.
 
+%h2 JavaScript
+
+%p The JavaScript was the focus of the refactor. I took it from 31 confusing lines with two Ajax requests to 26 easily readable lines with only one Ajax request.
+
+%h3 The old code
+= code_sample("old-seinfeld-badge.js")
+
+%p It's messy, disorganised and doesn't follow any discernible pattern. Variables are defined wherever they're needed. Two HTTP requests means constructing the metadata separately from the calendar itself. There's lots of HTML generated and appended along the way.
+
+%h3 The new code
+= code_sample("seinfeld-badge.js")
+
+%p I've ordered the variables, and organised the structure a bit better, but the real win here lies in a new feature from YQL. I'm a <a href="http://www.slideshare.net/lachlanhardy/yql-and-its-hotness">big fan of YQL</a> but when I saw they'd created a new data format for their responses, I was pretty confused for a while. <strong>What the hell was JSONP-X?!</strong>
+
+%p Once I found <a href="http://developer.yahoo.com/yql/guide/yql-jsonp-x.html">the docs</a>, though, I got it immediately. All you have to do is request an XML response from YQL <em>with a callback</em> and it'll send you XML in a JSON wrapper. It sounds like a monstrosity but this is <strong>perfect</strong> for screenscraping. And perfect for the Seinfeld Badge.
+
+%p This widget has always relied on ripping the <code>table</code> for the calendar directly from a <a href="http://calendaraboutnothing.com/">Calendar About Nothing</a> user page. Constructing all those <code>table</code> cells again to correctly display <em>this</em> month would be inelegant code and an inelegant solution.
+
+%p This was the greatest failing of the old version. I couldn't retrieve the HTML from the page via YQL because it either returned full XML or split up all the data into valid JSON. Hence the two requests: one to grab the HTML calendar from <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=6ff23978d8e18aa8f62b196cd7d0fe78">Yahoo! Pipes</a> and another to grab the metadata.
+
+%p JSONP-X means that YQL can grab me everything I need in <a href="http://developer.yahoo.com/yql/console/#h=select%20*%20from%20html%20where%20url%3D%22http%3A//calendaraboutnothing.com/%7Elachlanhardy%22%20and%20xpath%3D%27//div%27">one request</a> (a link to the YQL console &mdash; requires login). Then I just select which <code>div</code>s I want to display and style them myself.
 
 %h2 Summary
+
+%p I'm much happier with the new version. Although writing it up 4 months after the refactor means I'm already thinking of things I'd do differently now. I guess that's a good thing!
+
+%p Thanks for <a href="http://techno-weenie.net/">Rick</a> and <a href="http://warpspire.com/">Kyle</a> for building Calendar About Nothing. It's a great motivator! Even though my current performance is shabby&hellip;
+
+%p Get your own badge from <a href="http://github.com/lachlanhardy/seinfeld-badge">the GitHub repo</a> (I welcome improvements!) or directly from <a href="http://calendaraboutnothing.com/~lachlanhardy/widget">Calendar About Nothing itself</a>!
 
 

@@ -78,7 +78,7 @@ TOC
     article ul ol,
     article ul ul {margin: 0 0 0.5em 1em;}
 
-  code {font: 1em "Courier New", monospace;}
+  code {font: 1.18em "Courier New", monospace;}
 
   .amp {background: #0e0e0e; color: #666; font: italic 100 1.25em Baskerville, "Goudy Old Style", "Palatino", Georgia, "Book Antiqua", serif; position: relative; top: 2px;}
 
@@ -300,8 +300,8 @@ html.js {}
 
   /* =Graph */
   #graph {margin: -2em 0 0 0; width: 30em;}
-  
+
 
   /* X Marks the Spot badge code */
   body.code .seinfeld-badge {position: absolute; right: -350px; top: 5.2em; width: 300px;}
-  
+
