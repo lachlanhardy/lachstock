@@ -28,8 +28,8 @@ var drawGraphs = function () {
     var r = Raphael("graph", "30em", "16em");
     
     // Draw piechart
-    var pie = r.g.piechart(300, 120, 100, tag_count, {legend: tag_label, legendpos: "west", href: tag_href});
-    pie.labels.attr({font: '1.1em "Helvetica Neue"', translation: "-50 0"});
+    var pie = r.piechart(300, 120, 100, tag_count, {legend: tag_label, legendpos: "west", href: tag_href});
+    pie.labels.attr({font: '0.8em "Helvetica Neue"', translation: "-50 0"});
 
     // Assign hrefs to legend labels
     $(pie.labels).each(function (i) {
@@ -39,17 +39,19 @@ var drawGraphs = function () {
     // Set up funky hover states
     pie.hover(function () {
         this.sector.stop();
-        this.sector.animate({scale: [1.1, 1.1, this.cx, this.cy]}, 500, "elastic");
+        this.sector.scale(1.1, 1.1, this.cx, this.cy);
+
         if (this.label) {
             this.label[0].stop();
-            this.label[0].animate({scale: 1.5}, 250);
-            this.label[1].attr({fill: "#ff8000"});
+            this.label[0].attr({ r: 7.5 });
+            this.label[1].attr({ fill: "#ff8000" });
         }
     }, function () {
-        this.sector.animate({scale: [1, 1, this.cx, this.cy]}, 500, "bounce");
+        this.sector.animate({ transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, "bounce");
+
         if (this.label) {
-            this.label[0].animate({scale: 1}, 250);
-            this.label[1].attr({fill: "#000"});
+            this.label[0].animate({ r: 5 }, 500, "bounce");
+            this.label[1].attr({ fill: "#000" });
         }
     });
   }

@@ -9,7 +9,7 @@ module Lachstock
       end
     end
     def comment_avatars(username)
-      Dir.glob("#{options.public}/images/avatars/#{username}*")[0].split("/").last
+      Dir.glob("#{options.public_folder}/images/avatars/#{username}*")[0].split("/").last
     end
   end
 end
