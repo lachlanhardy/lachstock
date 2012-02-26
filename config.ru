@@ -2,11 +2,11 @@ root_dir = File.dirname(__FILE__)
 
 # the middlewares
 require 'rack'
-# require 'lib/rack/trailingslash'
+require './lib/rack/trailingslash'
 
 # the app
 require 'sinatra'
-require 'lachstock'
+require './lachstock'
 
 set :options, {
   :views => File.join(root_dir, 'views'),
@@ -15,7 +15,7 @@ set :options, {
   :env => ENV['RACK_ENV'] ? ENV["RACK_ENV"].to_sym : "development",
   :raise_errors => true
   }
-  
+
 if ENV['RACK_ENV'] != 'production'
   log = File.new("log/sinatra.log", "a")
   STDOUT.reopen(log)
@@ -23,6 +23,4 @@ if ENV['RACK_ENV'] != 'production'
 end
 
 use TrailingSlash
-# use Rack::Lint # for Rack dev
-# run Sinatra::Application
 run Lachstock::App.new

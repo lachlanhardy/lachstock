@@ -3,7 +3,7 @@ class Metadata
   # I've modified it a bit, but I still don't understand all of it.
   # You can find the original here:
   # http://github.com/toolmantim/toolmantim/blob/f479d008806ca2ae8f0028543c8f693b69bcc329/lib/article.rb
-  
+
   def self.all
     self.files.collect {|f| new(f, File.read(f))}
   end
@@ -26,9 +26,9 @@ class Metadata
   def self.parse_date(date_string)
     date_string && Time.parse(date_string.gsub(/(.+)\sat\s(.+)/, '\1\2'))
   end
-  
+
   attr_reader :path, :template
-  
+
   def initialize(file_path, file_contents)
     @path = file_path
     @template = file_contents

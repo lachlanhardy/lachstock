@@ -11,7 +11,7 @@ module Lachstock
   load "#{File.dirname(__FILE__)}/lib/avatars.rb"
 
   set :haml, {:format => :html5, :attr_wrapper => '"'}
-  # set :environment => 'production' # for testing minification etc
+# set :environment => 'production' # for testing minification etc
   
   class App < Sinatra::Application
     Dir.glob("lib/helpers/*").each do |helper|
@@ -21,7 +21,7 @@ module Lachstock
     helpers do
       include Lachstock::Helpers
     end
-    
+
     configure do
       #configure_avatars(Dir.glob("public/images/userlist.yaml")[0])
     end
@@ -33,13 +33,13 @@ module Lachstock
     not_found do
       handle_fail
     end
-    
+
     # homepage
     get '/' do
       @category = "home"
       haml :index
     end
-    
+
     get '/:category/feed/' do 
       @category = params[:category]
       @items = Metadata.type(@category.to_sym).all.sort_by {|item| item.published}.reverse
@@ -54,7 +54,7 @@ module Lachstock
       content_type 'application/atom+xml', :charset => 'utf-8'
       haml :feeds, {:format => :xhtml, :layout => false}
     end
-    
+
     get '/feeds/' do 
       @category = "feeds"
       @category_title = @category
