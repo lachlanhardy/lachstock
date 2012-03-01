@@ -1,1 +1,3 @@
-$ thin --rackup config.ru start
+$ foreman start
+
+
