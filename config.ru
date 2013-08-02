@@ -2,7 +2,7 @@ root_dir = File.dirname(__FILE__)
 
 # the middlewares
 require 'rack'
-require './lib/rack/trailingslash'
+# require './lib/rack/trailingslash'
 
 # the app
 require 'sinatra'
@@ -22,5 +22,5 @@ if ENV['RACK_ENV'] != 'production'
   STDERR.reopen(log)
 end
 
-use TrailingSlash
+# use TrailingSlash
 run Lachstock::App.new
