@@ -11,9 +11,8 @@
     - if options.environment == :production
       %link{:href => versioned_stylesheet("production/minified"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
     - else
-      %link{:href => versioned_stylesheet("reset"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-      %link{:href => versioned_stylesheet("main"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-      %link{:href => versioned_stylesheet("seinfeld-badge"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+      %link{:href => versioned_stylesheet("pure"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+      %link{:href => versioned_stylesheet("app"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
 
     - if options.environment == :production
