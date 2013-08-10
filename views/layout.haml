@@ -35,8 +35,8 @@
       = nav_builder
       #page.pure-g-r
         - unless @layout
-          %section.pure-u-3-5
-            - unless @name.nil?
+          - unless @name.nil?
+            %section.pure-u-3-5
               %article.hentry
                 = partial :post_title
                 - if @category == "code"
@@ -44,9 +44,9 @@
                 .entry-content
                   = yield
               = comment_builder
-            - else
-              = yield
-          %aside.pure-u-1-5= tag_builder
+            %aside.pure-u-2-5= tag_builder
+          - else
+            = yield
         - else
           = yield
     %footer.layout

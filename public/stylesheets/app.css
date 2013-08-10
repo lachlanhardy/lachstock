@@ -1,6 +1,8 @@
 /* mods for pure.css */
-.pure-g-r > div {
+.pure-g-r > section,
+.pure-g-r > aside {
   box-sizing: border-box; 
+  padding: 1em;
 }
 
 /* mods for pure-skin.css */
@@ -12,9 +14,5 @@
   text-decoration: none;
   white-space: nowrap;
 }
-
-#page {padding: 0.35em 1.4em;}
-
-section {background: gold;}
 
 .entry-content {max-width: 36em;}
