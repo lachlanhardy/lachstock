@@ -1,0 +1,20 @@
+/* mods for pure.css */
+.pure-g-r > div {
+  box-sizing: border-box; 
+}
+
+/* mods for pure-skin.css */
+.pure-skin-mine .pure-menu span {
+  display: block;
+  color: inherit;
+  line-height: 1.5em;
+  padding: 0.35em 1.4em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#page {padding: 0.35em 1.4em;}
+
+section {background: gold;}
+
+.entry-content {max-width: 36em;}

@@ -17,6 +17,7 @@
       %link{:href => versioned_stylesheet("production/minified"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
     - else
       %link{:href => versioned_stylesheet("pure"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+      %link{:href => versioned_stylesheet("pure-skin"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("app"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
 
@@ -29,23 +30,15 @@
     / Googly verification
     %meta{:name => "verify-v1", :content => "Ai0t9Ys7j76GMrjSEP+rDLIhtNL/ruGT8Lu9frCnBUg="}
 
-  %body{:id => "lachstock-com-au", :class => (@layout ? @layout : (@category == "*" ? "tags" : @category))}
+  %body{:id => "lachstock-com-au", :class => "pure-skin-mine"}
     #wrapper
-      %header.layout
-        %h1
-          = home_link("Lachstock")
-        %p less is the new more.
-        %a#feed-button{:href => "/feeds/", :title => "Subscribe"}
-          %span Subscribe
       = nav_builder
-      #page
+      #page.pure-g-r
         - unless @layout
-          %p.category= "#{@category_title}:"
-          %section
+          %section.pure-u-3-5
             - unless @name.nil?
               %article.hentry
                 = partial :post_title
-                = tag_builder
                 - if @category == "code"
                   = code_download
                 .entry-content
@@ -53,6 +46,7 @@
               = comment_builder
             - else
               = yield
+          %aside.pure-u-1-5= tag_builder
         - else
           = yield
     %footer.layout
