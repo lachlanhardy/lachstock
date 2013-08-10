@@ -1,10 +1,11 @@
-%nav
+%nav.pure-menu.pure-menu-open.pure-menu-horizontal
   %ul
     %li
       = home_link("Home")
     - @nav_items.each do |item|
-      %li
-        - if item == request.env['PATH_INFO'].split("/").last
+      - if item == request.env['PATH_INFO'].split("/").last
+        %li.pure-menu-selected
           %span= item.capitalize
-        - else
+      - else
+        %li
           %a{:href => "/#{item}/"}= item.capitalize
