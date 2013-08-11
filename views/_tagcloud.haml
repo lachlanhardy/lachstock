@@ -1,8 +1,0 @@
-- if @tags != []
-  %ul.taglist
-    - @tags.each do |tag|
-      %li
-        %a{:class => (tag[1] >= 2 ? "tagged#{tag[1]}times" : "common"), :"data-tag_count" => tag[1], :href => "#{(@category == "*" || @category_title == "Error" ? "/" : "/#{@category}/")}tags/#{tag[0]}/", :title => "Used #{tag[1]} times"}= tag[0]
-
-- else
-  %p Nothing in this section has been tagged yet.

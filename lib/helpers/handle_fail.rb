@@ -10,7 +10,6 @@ module Lachstock
         acc[item.published.year][item.published.month] << item
         acc
       end
-      @tags = tagspace(nil, Metadata.type(@category.to_sym).all)
       haml :error
     end
   end

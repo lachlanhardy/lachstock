@@ -61,16 +61,6 @@ module Lachstock
       haml File.join("/feeds/index").to_sym
     end
 
-    ["/tags/", "/tags/:tag/", "/:category/tags/", "/:category/tags/:tag/"].each do |path|
-      get path do
-        @category = (params[:category].nil? ? "*" : params[:category])
-        @category_title = (params[:tag].nil? ? "Tags" : "Tag")
-        @tag = (params[:tag].nil? ? nil : params[:tag])
-        @tags = tagspace(@tag, Metadata.type(@category.to_sym).all)
-        haml :tagspace
-      end
-    end
-
     get '/:category/' do 
       @category = params[:category]
       @category_title = params[:category]
