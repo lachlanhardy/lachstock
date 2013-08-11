@@ -27,6 +27,21 @@
 }
 
 /* Layout */
+.soul-glow {
+  background: url("/images/lachlan-hardy.jpg") center center; 
+  background-size: cover; 
+  height: 420px; 
+  width: 100%;
+}
+.humblebrag {
+  background: transparent;
+  color: #fefefe; 
+  font-size: 3em; 
+  left: 40px; 
+  margin: 0; 
+  position: relative; 
+  top: 350px;
+}
 .page {margin: 0 1.3em;}
 #feed-button.pure-menu-heading {float: right; margin: 0.5em 0.5em 0 0 ;}
 .footer {padding: 2.5em;}

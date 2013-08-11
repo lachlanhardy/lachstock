@@ -35,6 +35,9 @@
   %body{:id => "lachstock-com-au", :class => "csstype pure-skin-lachstock"}
     #wrapper
       = nav_builder
+      - if @category == "home"
+        .soul-glow
+          %h1.humblebrag I'm Lachlan Hardy
       .pure-g-r.page
         - unless @layout
           - unless @name.nil?
