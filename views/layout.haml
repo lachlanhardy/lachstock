@@ -35,7 +35,7 @@
   %body{:id => "lachstock-com-au", :class => "csstype pure-skin-mine"}
     #wrapper
       = nav_builder
-      #page.pure-g-r
+      .pure-g-r.page
         - unless @layout
           - unless @name.nil?
             %section.pure-u-3-5
@@ -51,7 +51,7 @@
             = yield
         - else
           = yield
-    %footer.layout
+    %footer.footer
       %p 
         I write 
         %a{:href => "http://validator.w3.org/check?uri=http%3A%2F%2Flachstock.com.au"} HTML 5
