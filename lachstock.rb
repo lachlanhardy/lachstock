@@ -35,6 +35,10 @@ module Lachstock
       haml :index
     end
 
+    get '/about/' do
+      redirect "/", 301
+    end
+
     get '/:category/feed/' do 
       @category = params[:category]
       @items = Metadata.type(@category.to_sym).all.sort_by {|item| item.published}.reverse
@@ -85,6 +89,5 @@ module Lachstock
         raise not_found
       end
     end
-
   end
 end

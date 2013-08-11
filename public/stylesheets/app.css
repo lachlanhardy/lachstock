@@ -44,6 +44,22 @@
 }
 .page {margin: 0 1.3em;}
 #feed-button.pure-menu-heading {float: right; margin: 0.5em 0.5em 0 0 ;}
+
+.package {
+  background: #eee;
+  margin: 3em 0 0 0;
+  padding: 1em;
+}
+.package .list{padding: 0;}
+.package .title {margin-top: 0;}
+.facets .list {padding: 0;}
+
+.pure-g-r > .secondary-home {
+  margin-top: 0;
+}
+.secondary-home article {margin-bottom: 2em;}
+
+
 .footer {padding: 2.5em;}
 
 
