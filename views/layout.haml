@@ -18,6 +18,8 @@
     - else
       %link{:href => versioned_stylesheet("pure"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("pure-skin"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+      %link{:href => versioned_stylesheet("typography"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+      %link{:href => versioned_stylesheet("typography-responsive"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("app"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
       %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
 
@@ -30,7 +32,7 @@
     / Googly verification
     %meta{:name => "verify-v1", :content => "Ai0t9Ys7j76GMrjSEP+rDLIhtNL/ruGT8Lu9frCnBUg="}
 
-  %body{:id => "lachstock-com-au", :class => "pure-skin-mine"}
+  %body{:id => "lachstock-com-au", :class => "csstype pure-skin-mine"}
     #wrapper
       = nav_builder
       #page.pure-g-r
