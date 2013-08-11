@@ -1,9 +1,7 @@
 %nav.pure-menu.pure-menu-open.pure-menu-horizontal
   %h1.pure-menu-heading 
-    = home_link("Lachstock")
+    %a{:href => "/"} Lachstock
   %ul
-    %li
-      = home_link("Home")
     - @nav_items.each do |item|
       - if item == request.env['PATH_INFO'].split("/").last
         %li.pure-menu-selected

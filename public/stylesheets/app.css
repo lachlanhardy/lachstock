@@ -6,7 +6,13 @@
 }
 
 /* mods for pure-skin.css */
-.pure-skin-mine .pure-menu span {
+.pure-skin-lachstock .pure-menu .pure-menu-heading a,
+.pure-skin-lachstock .pure-menu .pure-menu-heading span {
+  color: #1BD02D;
+}
+.pure-skin-lachstock .pure-menu .pure-menu-selected span {
+  background: #1BD02D;
+  color: #fcfcfc;
   display: block;
   color: inherit;
   line-height: 1.5em;
@@ -22,7 +28,9 @@
 
 /* Layout */
 .page {margin: 0 1.3em;}
+#feed-button.pure-menu-heading {float: right; margin: 0.5em 0.5em 0 0 ;}
 .footer {padding: 2.5em;}
+
 
 
 /* Indices */
