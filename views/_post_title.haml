@@ -1,9 +1,9 @@
-%header.post-title
-  %h1.entry-title= @title
-  %address.author.vcard
+%header.post-title.splash
+  %h1.entry-title.splash-head= @title
+  %address.author.vcard.splash-subhead
     %span.fn By Lachlan Hardy
-  %abbr{:class => "published #{@updated.nil? ? nil : "updated"}", :title => atomify_date(make_base_date(@published))}= prettify_base_date(@published)
-  %a{:href => "/#{@category}/#{@name}/", :title => "Permalink for this post", :rel => "bookmark" } Permalink
+  %abbr{:class => "muted published #{@updated.nil? ? nil : "updated"}", :title => atomify_date(make_base_date(@published))}= prettify_base_date(@published)
+  %a.muted{:href => "/#{@category}/#{@name}/", :title => "Permalink for this post", :rel => "bookmark" } Permalink
   - unless @updated.nil?
     %p
       %strong Updated:

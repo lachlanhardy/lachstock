@@ -9,5 +9,5 @@
             %ol
               - for item in @items[year][month].sort.reverse
                 %li.article
-                  %h4
+                  %h4.subtitle
                     %a{:href => "/#{@category}/#{item.slug}/"}= item.title
