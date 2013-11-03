@@ -5,6 +5,11 @@
   margin: 1em;
 }
 
+.pure-skin-lachstock blockquote {
+  margin: 0 0 1em 0;
+}
+
+
 /* mods for pure-skin.css */
 .pure-skin-lachstock .pure-menu .pure-menu-heading a,
 .pure-skin-lachstock .pure-menu .pure-menu-heading span {
