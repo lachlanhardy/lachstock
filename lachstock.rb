@@ -89,5 +89,15 @@ module Lachstock
         raise not_found
       end
     end
+
+    get '/CV-lachlan-hardy-2014.pdf' do
+      file = "/CV-lachlan-hardy-2014.pdf"
+      if File.exists? file
+        content_type 'text/plain', :charset => 'utf-8'
+        send_file(file)
+      else
+        raise not_found
+      end
+    end
   end
 end
