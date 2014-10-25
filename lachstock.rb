@@ -90,8 +90,8 @@ module Lachstock
       end
     end
 
-    get '/CV-lachlan-hardy-2014.pdf' do
-      file = "/CV-lachlan-hardy-2014.pdf"
+    get '/resume-lachlan-hardy-2014.pdf' do
+      file = "/resume-lachlan-hardy-2014.pdf"
       if File.exists? file
         content_type 'text/plain', :charset => 'utf-8'
         send_file(file)
