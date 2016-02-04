@@ -1,9 +1,9 @@
 Tasks to be done fucking immediately, in priority order:
 
- - Get working on Ruby 2.2.4
  - post new bio
  - Get working with pipelines
  - revise all things below for modernity and usefulness
+ - set up modern static build system
 
 Others things to do, in priority order:
 
