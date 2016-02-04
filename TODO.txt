@@ -1,24 +1,22 @@
 Tasks to be done fucking immediately, in priority order:
 
- - Set up combined feed
- - Add autodiscovery for combined feed
- - Add combined feed to Feeds page
- - Write Article introducing new section and explaining new feed setup
-
- - Get CSS caching again
- - Rewrite HTML to use SECTION correctly
-   - http://html5doctor.com/the-section-element/
-   - http://html5.org/tools/web-apps-tracker?from=3795&to=3796
- - Make TrailingSlash work in production!
- - review whole site and QA
- - get feedback from Lisa
- - re-architect CSS
- - revert /var/www/index.html
+ - post new bio
+ - Get working with pipelines
+ - revise all things below for modernity and usefulness
+ - set up modern static build system
 
 Others things to do, in priority order:
 
+ - Set up combined feed
+ - Add autodiscovery for combined feed
+ - Add combined feed to Feeds page
+ - Get CSS caching again
+ - Rewrite HTML
+ - Make TrailingSlash work in production!
+ - review whole site and QA
+ - re-architect CSS
  - Strip /feeds/:category/ and replace with mod_rewrite rule
- - Upgrade Raphaël
+ - Upgrade/replace Raphaël
  - Add Tag link for section indices such as Articles and Code
  - Work out method of zipping Code Files for combined download (then give them a pretty download icon off to the side under Tags)
  - upgrade gRaphaël
@@ -27,8 +25,6 @@ Others things to do, in priority order:
  - Test GitHub mojo and remove if obsolete
  - GZIP
  - set up hover state for legends
- - iPhone version
- - Get my Smoke on
  - Add JS switch to show common tags.
  - Write display logic for evaluating what constitutes a common tag for that section
  - update Sinatra, Rack etc
