@@ -2,28 +2,25 @@
 %html{:lang => "en-au"}
   %head
     %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
-    
+
     /[if IE < 8]
       %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
 
     %title= (@title != "Lachstock" ? "#{@title} at Lachstock" : "Lachlan Hardy Presents: Lachstock^3")
 
     %link{:rel => "icon", :href => versioned_favicon, :type => "image/x-icon"}
-        
+
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Lachstock Articles", :href => "/articles/feed/"}
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Lachstock Code", :href => "/code/feed/"}
-    
-    - if options.environment == :production
-      %link{:href => versioned_stylesheet("production/minified"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    - else
-      %link{:href => versioned_stylesheet("pure"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-      %link{:href => versioned_stylesheet("pure-skin"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-      %link{:href => versioned_stylesheet("typography"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-      %link{:href => versioned_stylesheet("typography-responsive"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-      %link{:href => versioned_stylesheet("app"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-      %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
 
-    / OpenID 
+    %link{:href => versioned_stylesheet("pure"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => versioned_stylesheet("pure-skin"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => versioned_stylesheet("typography"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => versioned_stylesheet("typography-responsive"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => versioned_stylesheet("app"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+
+    / OpenID
     /  see http://claimid.com/openid for how
     /  I think ClaimID might be dead, but I've yet to find a solution I'd like to switch to.
     %link{:rel => "openid.server", :href => "http://openid.claimid.com/server"}
@@ -55,7 +52,7 @@
         - else
           = yield
     %footer.footer
-      %p 
+      %p
         %em Enjoy your problems.
 
   - if options.environment == :production
