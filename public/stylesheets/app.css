@@ -1,7 +1,7 @@
 /* mods for pure.css */
 .pure-g-r > section,
 .pure-g-r > aside {
-  box-sizing: border-box; 
+  box-sizing: border-box;
   margin: 1em;
 }
 
@@ -33,19 +33,18 @@
 
 /* Layout */
 .soul-glow {
-  background: url("/images/lachlan-hardy.jpg") center center; 
-  background-size: cover; 
-  height: 420px; 
+  background: url("/images/new-lachlan.jpeg") center center;
+  background-size: cover;
+  height: 420px;
   width: 100%;
 }
 .humblebrag {
-  background: transparent;
-  color: #fefefe; 
-  font-size: 3em; 
-  left: 40px; 
-  margin: 0; 
-  position: relative; 
-  top: 350px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fefefe;
+  font-size: 3em;
+  padding: 5px 40px;
+  position: relative;
+  top: 355px;
 }
 .page {margin: 0 1.3em;}
 
@@ -84,7 +83,7 @@
 .archive li,
 .archive h2,
 .archive h3 {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 .archive h4 {
@@ -120,6 +119,3 @@
 /* Comments */
 .comments {margin: 3em 0 0 0;}
 .comment {margin: 2em 0 0 0;}
-
-
-
