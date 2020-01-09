@@ -2,7 +2,7 @@
   "name": "lachstock",
   "scripts": {
   },
-  "stack": "heroku-16",
+  "stack": "heroku-18",
   "env": {
     "GEM_PATH": {
       "required": true
