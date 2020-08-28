@@ -73,16 +73,4 @@
     / Adding Code Highlighter - Ruby
     %script{:src => versioned_javascript("codehighlighter-ruby"), :type => "text/javascript"}=""
 
-
-  :javascript
-    var _gauges = _gauges || [];
-    (function() {
-      var t   = document.createElement('script');
-      t.type  = 'text/javascript';
-      t.async = true;
-      t.id    = 'gauges-tracker';
-      t.setAttribute('data-site-id', '4eefaf4bf5a1f5442a000006');
-      t.src = '//secure.gaug.es/track.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(t, s);
-    })();
+    %script{:src => "https://cdn.usefathom.com/script.js", :site => "KBVDWRVL", :defer => "true"}=""
