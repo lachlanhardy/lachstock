@@ -3,20 +3,6 @@
   "scripts": {
   },
   "stack": "heroku-18",
-  "env": {
-    "GEM_PATH": {
-      "required": true
-    },
-    "LANG": {
-      "required": true
-    },
-    "PATH": {
-      "required": true
-    },
-    "RACK_ENV": {
-      "required": true
-    }
-  },
   "addons": [
 
   ]
