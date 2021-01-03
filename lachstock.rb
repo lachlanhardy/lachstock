@@ -9,16 +9,28 @@ require 'pp' # only for dev work
 module Lachstock
   load "#{File.dirname(__FILE__)}/lib/metadata.rb"
 
-# set :haml, {:format => :html5, :attr_wrapper => '"'}
-# set :environment => 'production' # for testing minification etc
 
   class App < Sinatra::Application
     Dir.glob("lib/helpers/*").each do |helper|
       require "#{File.dirname(__FILE__)}/#{helper}"
     end
 
+    configure do
+      set :env, :development
+      set :raise_errors, true
+      set :haml, {:format => :html5, :attr_wrapper => '"'}
+    end
+
     helpers do
       include Lachstock::Helpers
+
+      def development?
+        settings.development?
+      end
+
+      def production?
+        settings.production?
+      end
     end
 
     error do
@@ -85,7 +97,7 @@ module Lachstock
 
     get '/*/files/:filename.:filetype' do
       filetype = params[:filetype] == "zip" ? "zip" : "#{params[:filetype]}.txt"
-      file = "#{options.views}/#{params[:splat]}/files/#{params[:filename]}.#{filetype}"
+      file = "#{views}/#{params[:splat]}/files/#{params[:filename]}.#{filetype}"
       if File.exists? file
         content_type 'text/plain', :charset => 'utf-8'
         send_file(file)

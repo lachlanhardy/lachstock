@@ -36,7 +36,7 @@
       %p
         %em Enjoy your problems.
 
-  - if options.environment == :production
+  - if production?
     %script{:src => versioned_javascript("production/minified"), :type => "text/javascript"}=""
   - else
     / Adding Dan Webb's Code Highlighter
