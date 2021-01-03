@@ -1,14 +1,8 @@
-require 'rubygems'
-require 'sinatra/base'
-require 'haml'
-# require 'twitter'
-require 'yaml'
-require 'net/http'
-require 'pp' # only for dev work
+require "bundler"
+Bundler.require(:default)
 
 module Lachstock
   load "#{File.dirname(__FILE__)}/lib/metadata.rb"
-
 
   class App < Sinatra::Application
     Dir.glob("lib/helpers/*").each do |helper|
