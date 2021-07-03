@@ -3,9 +3,6 @@
   %head
     %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
 
-    /[if IE < 8]
-      %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
-
     %title= (@title != "Lachstock" ? "#{@title} at Lachstock" : "Lachlan Hardy Presents: Lachstock^3")
 
     %link{:rel => "icon", :href => versioned_favicon, :type => "image/x-icon"}
@@ -13,49 +10,33 @@
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Lachstock Articles", :href => "/articles/feed/"}
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Lachstock Code", :href => "/code/feed/"}
 
-    %link{:href => versioned_stylesheet("pure"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("pure-skin"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("typography"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("typography-responsive"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("app"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-
-    / OpenID
-    /  see http://claimid.com/openid for how
-    /  I think ClaimID might be dead, but I've yet to find a solution I'd like to switch to.
-    %link{:rel => "openid.server", :href => "http://openid.claimid.com/server"}
-    %link{:rel => "openid.delegate", :href => "http://openid.claimid.com/lachlanhardy"}
-
     / Googly verification
     %meta{:name => "verify-v1", :content => "Ai0t9Ys7j76GMrjSEP+rDLIhtNL/ruGT8Lu9frCnBUg="}
 
-  %body{:id => "lachstock-com-au", :class => "csstype pure-skin-lachstock"}
+  %body{:id => "lachstock-com-au"}
     #wrapper
       = nav_builder
       - if @category == "home"
-        .soul-glow
-          %h1.humblebrag I'm Lachlan Hardy
-      .pure-g-r.page
-        - unless @layout
-          - unless @name.nil?
-            %section.pure-u-3-5
-              %article.hentry
-                = partial :post_title
-                .entry-content
-                  = yield
-              = comment_builder
-            %aside.pure-u-2-5
-              - if @category == "code"
-                = code_download
-          - else
-            = yield
+        %h1 I'm Lachlan Hardy
+      - unless @layout
+        - unless @name.nil?
+          %article.hentry
+            = partial :post_title
+            .entry-content
+              = yield
+            = comment_builder
+          %aside
+            - if @category == "code"
+              = code_download
         - else
           = yield
+      - else
+        = yield
     %footer.footer
       %p
         %em Enjoy your problems.
 
-  - if options.environment == :production
+  - if production?
     %script{:src => versioned_javascript("production/minified"), :type => "text/javascript"}=""
   - else
     / Adding Dan Webb's Code Highlighter

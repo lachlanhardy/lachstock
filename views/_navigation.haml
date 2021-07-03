@@ -1,14 +1,14 @@
-%nav.pure-menu.pure-menu-open.pure-menu-horizontal
-  %h1.pure-menu-heading 
+%nav
+  %h1
     %a{:href => "/"} Lachstock
   %ul
     - @nav_items.each do |item|
       - if item == request.env['PATH_INFO'].split("/").last
-        %li.pure-menu-selected
+        %li.selected
           %span= item.capitalize
       - else
         %li
           %a{:href => "/#{item}/"}= item.capitalize
 
-  %a#feed-button.pure-menu-heading{:href => "/feeds/", :title => "Subscribe"}
+  %a#feed-button{:href => "/feeds/", :title => "Subscribe"}
     %span Subscribe
