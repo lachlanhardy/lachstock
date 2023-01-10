@@ -17,7 +17,7 @@ set :environment => ENV['RACK_ENV'] ? ENV["RACK_ENV"].to_sym : "development"
 # set :environment => 'production' # for testing minification etc
 set :raise_errors => true
 
-if ENV['RACK_ENV'] != 'production'
+if ENV['RACK_ENV'] == 'development'
   log = File.new("log/sinatra.log", "a")
   STDOUT.reopen(log)
   STDERR.reopen(log)
