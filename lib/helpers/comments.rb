@@ -1,3 +1,5 @@
+require "yaml"
+
 module Lachstock
   module Helpers
     def comment_builder

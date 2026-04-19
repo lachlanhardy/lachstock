@@ -1,11 +1,6 @@
-require 'rubygems'
-require 'sinatra/base'
-require 'haml'
-# require 'twitter'
-require 'yaml'
+require "bundler"
+Bundler.require(:default)
 require 'cgi'
-require 'net/http'
-require 'pp' # only for dev work
 
 module Lachstock
   load "#{File.dirname(__FILE__)}/lib/metadata.rb"
@@ -15,8 +10,21 @@ module Lachstock
       require "#{File.dirname(__FILE__)}/#{helper}"
     end
 
+    configure do
+      set :haml, {:format => :html5, :escape_html => false}
+      set :raise_errors, true
+    end
+
     helpers do
       include Lachstock::Helpers
+
+      def development?
+        settings.development?
+      end
+
+      def production?
+        settings.production?
+      end
     end
 
     error do
@@ -27,7 +35,6 @@ module Lachstock
       handle_fail
     end
 
-    # homepage
     get '/' do
       @category = "home"
       haml :index
@@ -48,7 +55,6 @@ module Lachstock
       haml :feeds, {:format => :xhtml, :layout => false}
     end
 
-    # This is now obsolete, replace with mod_rewrite rule
     get '/feeds/:category' do
       @category = params[:category]
       @items = Metadata.type(@category.to_sym).all.sort_by {|item| item.published}.reverse
@@ -84,7 +90,7 @@ module Lachstock
     get '/*/files/:filename.:filetype' do
       filetype = params[:filetype] == "zip" ? "zip" : "#{params[:filetype]}.txt"
       file = "#{settings.views}/#{params[:splat]}/files/#{params[:filename]}.#{filetype}"
-      if File.exists? file
+      if File.exist? file
         content_type 'text/plain', :charset => 'utf-8'
         send_file(file)
       else
