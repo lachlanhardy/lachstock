@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    haml (6.1.1)
+    haml (7.2.0)
       temple (>= 0.8.2)
       thor
       tilt
@@ -19,15 +19,15 @@ GEM
       rack (~> 2.2, >= 2.2.4)
       rack-protection (= 3.0.5)
       tilt (~> 2.0)
-    temple (0.9.1)
-    thor (1.2.1)
+    temple (0.10.4)
+    thor (1.5.0)
     tilt (2.7.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  haml (= 6.1.1)
+  haml (= 7.2.0)
   puma (= 8.0.0)
   rack (= 2.2.5)
   sinatra (= 3.0.5)
