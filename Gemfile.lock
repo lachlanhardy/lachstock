@@ -1,40 +1,50 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    haml (6.1.1)
+    base64 (0.3.0)
+    haml (7.2.0)
       temple (>= 0.8.2)
       thor
       tilt
-    mustermann (3.0.0)
-      ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.8)
-    puma (6.0.2)
+    logger (1.7.0)
+    mustermann (3.1.1)
+    nio4r (2.7.5)
+    puma (8.0.0)
       nio4r (~> 2.0)
-    rack (2.2.5)
-    rack-protection (3.0.5)
-      rack
-    ruby2_keywords (0.0.5)
-    sinatra (3.0.5)
+    rack (3.2.6)
+    rack-protection (4.2.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.2)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    rackup (2.3.1)
+      rack (>= 3)
+    sinatra (4.2.1)
+      logger (>= 1.6.0)
       mustermann (~> 3.0)
-      rack (~> 2.2, >= 2.2.4)
-      rack-protection (= 3.0.5)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.2.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    temple (0.9.1)
-    thor (1.2.1)
-    tilt (2.0.11)
+    temple (0.10.4)
+    thor (1.5.0)
+    tilt (2.7.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  haml (= 6.1.1)
-  puma (= 6.0.2)
-  rack (= 2.2.5)
-  sinatra (= 3.0.5)
-  tilt (= 2.0.11)
+  haml (= 7.2.0)
+  puma (= 8.0.0)
+  rack (= 3.2.6)
+  rackup (= 2.3.1)
+  sinatra (= 4.2.1)
+  tilt (= 2.7.0)
 
 RUBY VERSION
-   ruby 3.1.3p185
+   ruby 3.4.2p28
 
 BUNDLED WITH
    2.3.26

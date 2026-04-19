@@ -3,6 +3,7 @@ require 'sinatra/base'
 require 'haml'
 # require 'twitter'
 require 'yaml'
+require 'cgi'
 require 'net/http'
 require 'pp' # only for dev work
 
