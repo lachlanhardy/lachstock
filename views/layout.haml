@@ -1,21 +1,21 @@
 !!! 5
 %html{:lang => "en-au"}
   %head
-    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{:charset => "utf-8"}
 
     %title= (@title != "Lachstock" ? "#{@title} at Lachstock" : "Lachlan Hardy Presents: Lachstock^3")
 
-    %link{:rel => "icon", :href => versioned_favicon, :type => "image/x-icon"}
+    %link{:rel => "icon", :href => versioned_favicon}
 
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Lachstock Articles", :href => "/articles/feed/"}
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Lachstock Code", :href => "/code/feed/"}
 
-    %link{:href => versioned_stylesheet("pure"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("pure-skin"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("typography"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("typography-responsive"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("app"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => versioned_stylesheet("pure"), :media => "screen", :rel => "stylesheet"}
+    %link{:href => versioned_stylesheet("pure-skin"), :media => "screen", :rel => "stylesheet"}
+    %link{:href => versioned_stylesheet("typography"), :media => "screen", :rel => "stylesheet"}
+    %link{:href => versioned_stylesheet("typography-responsive"), :media => "screen", :rel => "stylesheet"}
+    %link{:href => versioned_stylesheet("app"), :media => "screen", :rel => "stylesheet"}
+    %link{:href => versioned_stylesheet("codehighlighter"), :media => "screen", :rel => "stylesheet"}
 
     / Googly verification
     %meta{:name => "verify-v1", :content => "Ai0t9Ys7j76GMrjSEP+rDLIhtNL/ruGT8Lu9frCnBUg="}
@@ -46,9 +46,9 @@
       %p
         %em Enjoy your problems.
 
-  %script{:src => versioned_javascript("code_highlighter"), :type => "text/javascript"}=""
-  %script{:src => versioned_javascript("codehighlighter-css"), :type => "text/javascript"}=""
-  %script{:src => versioned_javascript("codehighlighter-html"), :type => "text/javascript"}=""
-  %script{:src => versioned_javascript("codehighlighter-javascript"), :type => "text/javascript"}=""
-  %script{:src => versioned_javascript("codehighlighter-ruby"), :type => "text/javascript"}=""
-  %script{:src => "https://cdn.usefathom.com/script.js", :site => "KBVDWRVL", :defer => "true"}=""
+  %script{:src => versioned_javascript("code_highlighter")}
+  %script{:src => versioned_javascript("codehighlighter-css")}
+  %script{:src => versioned_javascript("codehighlighter-html")}
+  %script{:src => versioned_javascript("codehighlighter-javascript")}
+  %script{:src => versioned_javascript("codehighlighter-ruby")}
+  %script{:src => "https://cdn.usefathom.com/script.js", :site => "KBVDWRVL", :defer => "true"}
