@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gem list:*)",
+      "Bash(bundle outdated:*)",
+      "Bash(bundle update:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(grep:*)",
+      "Bash(git push:*)",
+      "Bash(heroku apps:*)",
+      "Bash(heroku stack:set:*)",
+      "Bash(gh pr:*)",
+      "Bash(git pull:*)",
+      "Bash(~/.rubies/ruby-3.4.2/bin/ruby:*)",
+      "Bash(~/.rubies/ruby-3.4.2/bin/gem install:*)",
+      "Bash(~/.rubies/ruby-3.4.2/bin/bundle-audit check:*)",
+      "Bash(git fetch:*)"
+    ]
+  }
+}
