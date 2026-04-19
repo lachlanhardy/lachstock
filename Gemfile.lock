@@ -34,7 +34,7 @@ DEPENDENCIES
   tilt (= 2.7.0)
 
 RUBY VERSION
-   ruby 3.1.3p185
+   ruby 3.4.2p28
 
 BUNDLED WITH
    2.3.26
